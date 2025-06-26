@@ -22,7 +22,7 @@ repository               : "scottlangford2/scott_langford.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/ChatGPT_Portrait.png"
+  avatar           : "ChatGPT_Portrait.png"
   name             : "Scott Langford"
   pronouns         : # example: "she/her"  
   bio              : "ASU Post-Doc UNC PhD UNCW BS"
