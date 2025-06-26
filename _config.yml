@@ -23,13 +23,13 @@ repository               : "scottlangford2/scott_langford.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Scott Langford"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "ASU Post-Doc UNC PhD UNCW BS"
+  location         : "Chapel Hill, NC"
+  employer         : "Arizona State University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "scott.langford@asu.edu" 
 
   # Academic websites
   academia         : # URL
