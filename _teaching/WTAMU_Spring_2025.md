@@ -1,7 +1,7 @@
 ---
 title: "Statistics for Social and Criminological Research"
 collection: teaching
-type: "Workshop"
+type: "Instructor of Record"
 permalink: /teaching/WTAMU_Spring_2025
 venue: "West Texas A&M, Department of Political Science and Criminal Justice"
 date: 2025-01-01
