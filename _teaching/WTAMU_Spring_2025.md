@@ -9,3 +9,14 @@ location: "Canyon, Texas"
 ---
 
 [Link to Syllabus](https://www.dropbox.com/scl/fi/64qscttx0mvmbcig5h8rb/Syllabus_POSC6388.pdf?rlkey=nexriv4fmcf8blh56xkc2de99&dl=0)
+
+This is a description of a teaching experience. You can use markdown like any other post.
+
+Heading 1
+======
+
+Heading 2
+======
+
+Heading 3
+======
