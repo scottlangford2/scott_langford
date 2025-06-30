@@ -9,14 +9,3 @@ location: "Phoenix, Arizona"
 ---
 
 [Link to Syllabus]([https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=nja4ty6v3gno9ubajc5k6m2q7&dl=0](https://www.dropbox.com/s/2to1b6edu4nvzrf/PAF-573-Syllabus-Spring-2023.pdf?dl=0))
-
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
