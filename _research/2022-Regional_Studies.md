@@ -1,8 +1,8 @@
 ---
 title: "We Miss You George Bailey: The Effect of Local Banking Conditions on the County-Level Timing of the Great Recession."
-collection: publications
+collection: research
 category: manuscripts
-permalink: /publication/2022-Regional_Studies
+permalink: /research/2022-Regional_Studies
 excerpt: 'Community banks have a unique capacity to strengthen economic resilience by alleviating local firm credit constraints during economic downturns. We provide evidence that banking access and community bank market share affected both the county-level timing and duration of the Great Recession in the United States. Using the Cox Proportional Hazards and Heckman Selection models, we find that communities with a higher community bank market share are less likely to experience recession conditions, conditional on local bank health. This suggests community banks have unique institutional structures, allowing them to continue providing funds to firms through economic downturns. This research demonstrates that local financial institutions affect economic resilience, in particular the timing and duration of recession conditions.'
 date: 2022-11-02
 venue: 'Regional Studies'
