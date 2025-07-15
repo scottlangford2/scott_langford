@@ -25,11 +25,11 @@ author:
   avatar           : "ChatGPT_Portrait.png"
   name             : "Scott Langford"
   pronouns         : # example: "she/her"  
-  bio              : "ASU Post-Doc"
-  location         : "Chapel Hill, NC"
-  employer         : "Arizona State University"
+  bio              : "Incoming AP"
+  location         : "San Marcos, TX / Chapel Hill, NC"
+  employer         : "Texas State University"
   uri              : # URL
-  email            : "scott.langford@asu.edu" 
+  email            : "scottlangford@txstate.edu" 
 
   # Academic websites
   academia         : # URL
