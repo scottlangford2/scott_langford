@@ -1,5 +1,5 @@
 ---
-title: "Statistics for Social and Criminological Research"
+title: "Statistics for Social and Criminological Research (MPA)"
 collection: teaching
 type: "Instructor of Record"
 permalink: /teaching/WTAMU_Spring_2025
