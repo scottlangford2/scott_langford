@@ -28,7 +28,7 @@ Technical Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <ul>{% for post in research reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
