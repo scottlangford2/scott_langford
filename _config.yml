@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Scott Langford"
+title                    : "W. Scott Langford, PhD"
 title_separator          : "-"
 name                     : &name "Scott Langford"
 description              : &description "personal description"
@@ -23,7 +23,7 @@ repository               : "scottlangford2/scott_langford.github.io"
 author:
   # Biographic information
   avatar           : "ChatGPT_Portrait.png"
-  name             : "Scott Langford"
+  name             : "W. Scott Langford, PhD"
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor"
   location         : "San Marcos, TX"
@@ -79,8 +79,6 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 research_category:
-  working_papers:
-    title: 'Working Papers'
   manuscripts:
     title: 'Journal Articles'    
 
@@ -131,7 +129,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : @scottlangford22&twitter
 facebook:
   username               :
   app_id                 :
