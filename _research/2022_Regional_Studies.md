@@ -7,7 +7,6 @@ excerpt: 'Community banks have a unique capacity to strengthen economic resilien
 date: 2022-11-02
 venue: 'Regional Studies'
 paperurl: 'https://www.tandfonline.com/doi/full/10.1080/00343404.2022.2141703'
-bibtexurl: 'https://scholar.googleusercontent.com/scholar.bib?q=info:cOjl76Hg93gJ:scholar.google.com/&output=citation&scisdr=CgJo0NYOEPvqj57MbQ8:AAZF9b8AAAAAaF7KdQ-Na6gFwYdjc14HZjo0Vp0&scisig=AAZF9b8AAAAAaF7Kdcn-EFhUnSzn4fGWxBTqFLE&scisf=4&ct=citation&cd=-1&hl=en'
 citation: 'Langford WS, Feldman MP. We Miss You George Bailey: The Effect of Local Banking Conditions on the County-Level Timing of the Great Recession. Regional Studies. (2022)'
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
