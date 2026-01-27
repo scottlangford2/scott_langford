@@ -15,7 +15,7 @@ Education
 * M.S. in Biochemistry and Biophysics, University of North Carolina, Chapel Hill, 2016
 * B.S. in Chemistry, University of North Carolina, Wilmington, 2012
 
-Work experience
+Work Experience
 ======
 * 2022-2025: Post-Doctoral Research Fellow
   * Arizona State University
