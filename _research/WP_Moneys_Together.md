@@ -7,7 +7,6 @@ excerpt: Racial and ethnic minorities disproportionately suffer more severe cons
 date: 2025-01-01
 venue: 'Working Paper - Under Review'
 paperurl: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4231594'
-bibtexurl: 'https://scholar.googleusercontent.com/scholar.bib?q=info:WvjdnLEp_nkJ:scholar.google.com/&output=citation&scisdr=CgJo0NYOEPvqj57fyz0:AAZF9b8AAAAAaF7Z0z0U6xiz7LgFZWP-DhG9uSo&scisig=AAZF9b8AAAAAaF7Z06jqi_u2O3DSwdjSs_YzykM&scisf=4&ct=citation&cd=-1&hl=en'
 citation: 'Langford WS, Roman R, Berger AN, Feldman MP. “Let Us Put Our Moneys Together:” Minority-Owned Banks and Resilience to Crises. SSRN Working Paper #4231594'
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
