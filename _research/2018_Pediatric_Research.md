@@ -7,6 +7,6 @@ excerpt: 'Background: The amount of federal dollars allocated to improving the h
 date: 2018-07-06
 venue: 'Pediatric Research'
 paperurl: 'https://www.nature.com/articles/s41390-018-0035-7'
-citation: 'Gitterman DP, Langford WS, Hay Jr WW. The Uncertain Fate of the National Institutes of Health Pediatric Research Portfolio. Pediatric Research. (2018)
+citation: 'Gitterman DP, Langford WS, Hay Jr WW. The Uncertain Fate of the National Institutes of Health Pediatric Research Portfolio. Pediatric Research. (2018)'
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
