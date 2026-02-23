@@ -26,7 +26,7 @@ Work Experience
 
 Grants & Funding
 ======
-* Kenan Institute for Private Enterprise, University of North Carolina at Chapel Hill
+* Kenan Institute for Private Enterprise, University of North Carolina at Chapel Hill, $10,000
 * Contract, Town of Clayton, $65,000
 
 Technical Skills
