@@ -52,7 +52,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "https://bsky.app/profile/scottlangford2.bsky.social" # Replace this with you Bluesky username
+  bluesky          : "scottlangford2.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -69,7 +69,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : "https://x.com/scottlangford22"
+  twitter          : "scottlangford22"
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
@@ -129,7 +129,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : @scottlangford22&twitter
+  username               : scottlangford22
 facebook:
   username               :
   app_id                 :
@@ -141,7 +141,11 @@ og_description           :  # Social media default site image description
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - "https://x.com/scottlangford22"
+    - "https://bsky.app/profile/scottlangford2.bsky.social"
+    - "https://github.com/scottlangford2"
+    - "https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en"
 
 
 # Analytics
