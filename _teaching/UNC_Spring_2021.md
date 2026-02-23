@@ -2,7 +2,7 @@
 title: "Innovative Solutions to the Social and Economic Problems Exposed by the COVID-19 Epidemic (Undergraduate)"
 collection: teaching
 type: "Instructor of Record"
-permalink: /teaching/UNC_Spring_2021.md
+permalink: /teaching/UNC_Spring_2021
 venue: "University of North Carolina, Chapel Hill, Department of Public Policy"
 date: 2021-01-01
 location: "Chapel Hill, NC"

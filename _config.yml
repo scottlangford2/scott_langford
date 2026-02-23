@@ -61,7 +61,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "scott-langford-b255a8101"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -80,7 +80,9 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 research_category:
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
+  publications:
+    title: 'Working Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

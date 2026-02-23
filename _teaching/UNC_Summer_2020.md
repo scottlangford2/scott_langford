@@ -2,7 +2,7 @@
 title: "The Politics of Public Policy (Undergraduate)"
 collection: teaching
 type: "Instructor of Record"
-permalink: /teaching/UNC_Summer_2020.md
+permalink: /teaching/UNC_Summer_2020
 venue: "University of North Carolina, Chapel Hill, Department of Public Policy"
 date: 2020-06-01
 location: "Chapel Hill, NC"
