@@ -2,7 +2,7 @@
 title: "Applied Econometrics (MPA, MPP, PhD)"
 collection: teaching
 type: "Instructor of Record"
-permalink: /teaching/ASU_Spring_2023_2024.md
+permalink: /teaching/ASU_Spring_2023_2024
 venue: "Arizona State University, School of Public Affairs"
 date: 2024-01-01
 location: "Phoenix, Arizona"

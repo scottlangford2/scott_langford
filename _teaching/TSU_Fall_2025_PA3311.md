@@ -2,7 +2,7 @@
 title: "Analytical Techniques (BA)"
 collection: teaching
 type: "Instructor of Record"
-permalink: /teaching/TSU_Fall_2025
+permalink: /teaching/TSU_Fall_2025_PA3311
 venue: "Texas State University, Department of Political Science"
 date: 2025-08-01
 location: "San Marcos, Texas"
