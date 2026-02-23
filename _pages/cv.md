@@ -41,9 +41,12 @@ Professional Memberships
 
 Publications
 ======
-  <ul>{% for post in site.research reversed %}
+{% for category in site.research_category %}
+<h3>{{ category[1].title }}</h3>
+  <ul>{% for post in site.research reversed %}{% if post.category == category[0] %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endif %}{% endfor %}</ul>
+{% endfor %}
 
 Teaching
 ======
