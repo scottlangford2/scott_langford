@@ -1,18 +1,44 @@
 ---
-title: "RFP Scraper"
-excerpt: "Automated grant and RFP monitoring system that scrapes 19 federal, state, and local procurement portals, scores opportunities using researcher profiles, and delivers personalized weekly digests to a 24-member research team.<br/><a href='https://scottlangford2.github.io/research-scraper/'>Live Dashboard</a>"
+title: "Research RFP Scraper"
+excerpt: "Automated pipeline that scrapes 30 federal, state, and foundation funding sources across all 50 states, scores opportunities against researcher profiles using NLP, and delivers personalized weekly digests."
 collection: portfolio
 ---
 
-An automated pipeline that monitors 19 procurement and grant sources — including SAM.gov, Grants.gov, NSF, NIH RePORTER, and state-level portals across 20 states — for research funding opportunities relevant to a multi-university team of public administration scholars.
+An automated pipeline that aggregates federal, state, local, and foundation funding opportunities from 30 sources across all 50 states. The scraper classifies RFPs by research keywords, extracts key terms via NLP, and delivers personalized weekly email digests to subscribers based on their research profiles.
 
-**Key features:**
+## Sources
 
-- **Research-profile-aware scoring:** Builds researcher profiles from OpenAlex publications, NIH and NSF grant histories, and co-author networks. Scores each RFP using a weighted composite of topic similarity (TF-IDF), concept overlap, co-author expertise, agency familiarity, and keyword match.
-- **Personalized weekly digests:** Each of 24 team members across 10 universities receives their top-ranked RFPs, sorted by relevance to their specific research profile.
-- **Interactive dashboard:** Real-time summary of scrape results with source breakdowns, keyword match rates, and top funding recipients.
-- **Fully automated:** Scheduled daily scrapes and Monday morning email delivery via launchd.
+The pipeline currently scrapes **30 sources** organized into three tiers:
 
-**Built with:** Python, Playwright, scikit-learn, OpenAlex API, NIH RePORTER API, NSF Awards API, Apache Parquet
+**Federal (8):** SAM.gov, Grants.gov, SBIR.gov, NIH RePORTER, NSF Awards, Federal Register, USAspending.gov, ProPublica Nonprofits
 
-[GitHub Repository](https://github.com/scottlangford2/research-scraper) | [Live Dashboard](https://scottlangford2.github.io/research-scraper/)
+**State & Local (9):** Socrata open data portals, BidNet, DemandStar, BuySpeed, JAGGAER, 43 state procurement portals, Texas ESBD, North Carolina eVP, New York NYSCR
+
+**Foundations & Aggregators (13):** Regulations.gov, Robert Wood Johnson Foundation, Russell Sage Foundation, Arnold Ventures, Spencer Foundation, W.T. Grant Foundation, Joyce Foundation, APSA, SSRC, Philanthropy News Digest, Candid, Pivot-RP, OpenGrants
+
+## Pipeline
+
+Each run follows a seven-step pipeline:
+
+1. **Scrape** all 30 sources via REST APIs, HTML parsing, and headless browser automation
+2. **Deduplicate** via SHA-256 hashing
+3. **Classify** against 226 keyword phrases (deductive)
+4. **Extract** key terms via RAKE NLP (inductive)
+5. **Score** relevance using a weighted composite of TF-IDF topic similarity, concept overlap, co-author expertise, agency familiarity, and keyword match
+6. **Generate** an HTML dashboard with interactive state coverage map
+7. **Push** the dashboard to GitHub Pages
+
+## Relevance Scoring
+
+Each subscriber has a research profile built from OpenAlex, NIH RePORTER, and NSF Awards data. The relevance scorer uses a weighted composite:
+
+- Topic similarity (TF-IDF cosine) --- 35%
+- Concept overlap (Jaccard) --- 25%
+- Co-author expertise --- 15%
+- Agency familiarity --- 10%
+- Keyword match fraction --- 15%
+
+## Links
+
+- [Live Dashboard](https://scottlangford2.github.io/research-scraper/)
+- [GitHub Repository](https://github.com/scottlangford2/research-scraper)
