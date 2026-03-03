@@ -1,10 +1,10 @@
 ---
 title: "Research RFP Scraper"
-excerpt: "Automated pipeline that scrapes 30 federal, state, and foundation funding sources across all 50 states, scores opportunities against researcher profiles using NLP, and delivers personalized weekly digests to 30 subscribers across 17 universities."
+excerpt: "Automated pipeline that scrapes 30 federal, state, and foundation funding sources across all 50 states, scores opportunities against researcher profiles using NLP, and delivers personalized weekly digests to 31 subscribers across 17 universities."
 collection: portfolio
 ---
 
-An automated pipeline that aggregates federal, state, local, and foundation funding opportunities from 30 sources across all 50 states. The scraper classifies RFPs by research keywords, extracts key terms via NLP, and delivers personalized weekly email digests to 30 subscribers across 17 universities based on their research profiles.
+An automated pipeline that aggregates federal, state, local, and foundation funding opportunities from 30 sources across all 50 states. The scraper classifies RFPs by research keywords, extracts key terms via NLP, and delivers personalized weekly email digests to 31 subscribers across 17 universities based on their research profiles.
 
 ## Sources
 
