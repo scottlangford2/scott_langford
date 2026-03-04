@@ -30,12 +30,12 @@ Each run follows a seven-step pipeline:
 
 ## Relevance Scoring
 
-Each subscriber has a research profile built from OpenAlex, NIH RePORTER, and NSF Awards data. The TF-IDF vectorizer is trained on 50,000 faculty publications from 62 Texas universities, providing calibrated vocabulary weights across the full breadth of research domains. The relevance scorer uses a weighted composite:
+Each subscriber has a research profile built from OpenAlex, NIH RePORTER, and NSF Awards data. The TF-IDF vectorizer is trained on 100,000 faculty publications from 565 US universities, providing calibrated vocabulary weights across the full breadth of research domains. The relevance scorer uses a weighted composite:
 
 - **Topic similarity (35%)** --- TF-IDF cosine similarity, trained on institutional corpus
-- **Concept overlap (25%)** --- Score-weighted matching with concept-to-term expansion from 30,000+ OpenAlex concepts
+- **Concept overlap (25%)** --- Score-weighted matching with concept-to-term expansion from 35,000+ OpenAlex concepts
 - **Co-author expertise (15%)** --- Collaboration-depth-weighted concept overlap from top co-authors
-- **Agency familiarity (10%)** --- Graduated scoring: personal grants > institutional funders (7,900+ funders)
+- **Agency familiarity (10%)** --- Graduated scoring: personal grants > institutional funders (11,000+ funders)
 - **Keyword match (15%)** --- Max of exact substring fraction and TF-IDF semantic similarity
 
 ## Links
