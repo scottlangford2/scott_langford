@@ -1,10 +1,10 @@
 ---
 title: "Research RFP Scraper"
-excerpt: "Automated pipeline that scrapes 30 federal, state, and foundation funding sources across all 50 states, scores opportunities against researcher profiles using NLP, and delivers personalized weekly digests to 31 subscribers across 17 universities."
+excerpt: "Automated pipeline that scrapes 30 federal, state, and foundation funding sources across all 50 states, scores opportunities against researcher profiles using a five-signal composite trained on an institutional research corpus, and delivers personalized weekly digests to subscribers across multiple universities."
 collection: portfolio
 ---
 
-An automated pipeline that aggregates federal, state, local, and foundation funding opportunities from 30 sources across all 50 states. The scraper classifies RFPs by research keywords, extracts key terms via NLP, and delivers personalized weekly email digests to 31 subscribers across 17 universities based on their research profiles.
+An automated pipeline that aggregates federal, state, local, and foundation funding opportunities from 30 sources across all 50 states. The scraper classifies RFPs by research keywords, extracts key terms via NLP, and scores relevance against individual researcher profiles using an institutional training corpus. Personalized weekly email digests are delivered to subscribers across multiple universities.
 
 ## Sources
 
@@ -24,19 +24,19 @@ Each run follows a seven-step pipeline:
 2. **Deduplicate** via SHA-256 hashing
 3. **Classify** against 226 keyword phrases (deductive)
 4. **Extract** key terms via RAKE NLP (inductive)
-5. **Score** relevance using a weighted composite of TF-IDF topic similarity, concept overlap, co-author expertise, agency familiarity, and keyword match
+5. **Score** relevance using a five-signal weighted composite calibrated by an institutional training corpus
 6. **Generate** an HTML dashboard with interactive state coverage map
 7. **Push** the dashboard to GitHub Pages
 
 ## Relevance Scoring
 
-Each subscriber has a research profile built from OpenAlex, NIH RePORTER, and NSF Awards data. The relevance scorer uses a weighted composite:
+Each subscriber has a research profile built from OpenAlex, NIH RePORTER, and NSF Awards data. The TF-IDF vectorizer is trained on 10,000+ faculty publications from the institutional corpus, providing calibrated vocabulary weights across the full breadth of research domains. The relevance scorer uses a weighted composite:
 
-- Topic similarity (TF-IDF cosine) --- 35%
-- Concept overlap (Jaccard) --- 25%
-- Co-author expertise --- 15%
-- Agency familiarity --- 10%
-- Keyword match fraction --- 15%
+- **Topic similarity (35%)** --- TF-IDF cosine similarity, trained on institutional corpus
+- **Concept overlap (25%)** --- Score-weighted matching with concept-to-term expansion from 12,000+ OpenAlex concepts
+- **Co-author expertise (15%)** --- Collaboration-depth-weighted concept overlap from top co-authors
+- **Agency familiarity (10%)** --- Graduated scoring: personal grants > institutional funders (1,400+ funders)
+- **Keyword match (15%)** --- Max of exact substring fraction and TF-IDF semantic similarity
 
 ## Links
 
