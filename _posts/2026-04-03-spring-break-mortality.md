@@ -119,10 +119,10 @@ spring break calendar.
 
 ---
 
-## Part 3 — Five Counterfactuals
+## Part 3 — Four Counterfactuals
 
 Raw comparisons can mislead. To get closer to the *causal* effect of spring
-break, I ran five counterfactual analyses — each asking a different version of
+break, I ran four counterfactual analyses — each asking a different version of
 "compared to what?"
 
 ### CF1: What if they stayed home?
@@ -138,23 +138,7 @@ The per-day death rate on spring break weekends is comparable to the 4th of
 July and summer weekends generally. Young people die on long weekends. Spring
 break isn't special in that regard.
 
-### CF2: Natural experiment — eliminating spring break
-
-During COVID, many universities canceled or staggered their spring breaks.
-That creates a natural experiment: did counties near those universities see
-fewer deaths in the spring? An event-study difference-in-differences design
-can test this:
-
-![Event-study DiD: universities that eliminated spring break](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/spring-break/blog_cf_natexp.png)
-
-*This figure requires university-level spring break schedule data.* If the
-pre-treatment coefficients are flat (no pre-trend), and the post-treatment
-coefficients are negative, that's evidence that eliminating spring break
-actually saved lives. If the post-treatment coefficients are near zero, it
-suggests that spring break mostly reshuffles risk in time rather than creating
-it.
-
-### CF3: Deaths per million attendees
+### CF2: Deaths per million attendees
 
 How does spring break compare to other mass gatherings on a
 deaths-per-million-attendees basis?
@@ -167,7 +151,7 @@ matters: spring break is *big*. When you normalize by the sheer number of
 people participating, the per-capita risk is less alarming than the raw count
 suggests.
 
-### CF4: Risk substitution
+### CF3: Risk substitution
 
 Here's a question nobody asks: if spring breakers *didn't* go to Florida, would
 they just die somewhere else?
@@ -187,7 +171,7 @@ combination of travel, unfamiliar roads, heavy drinking, and sleep deprivation
 creates danger that wouldn't exist at home — but there's a substitution
 component too.
 
-### CF5: How many deaths are actually *because of* spring break?
+### CF4: How many deaths are actually *because of* spring break?
 
 Finally, the big question. I applied the death rate from non-destination
 counties to the destination-county population to build a counterfactual:
