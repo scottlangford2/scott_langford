@@ -6,6 +6,7 @@ tags:
   - data analysis
   - public health
   - traffic safety
+related: false
 ---
 
 Every March, cable news runs the same reel: ambulances on the beach, students
