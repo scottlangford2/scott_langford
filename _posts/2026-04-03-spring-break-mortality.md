@@ -29,7 +29,7 @@ reported spring-break-related fatality from 2016 through 2025 — car crashes,
 drownings, balcony falls, alcohol poisoning, the works. The year-by-year
 totals:
 
-![News-scraped spring break death counts, 2016–2025](/images/spring-break/blog_deaths_trend.png)
+![News-scraped spring break death counts, 2016–2025](/scott_langford/images/spring-break/blog_deaths_trend.png)
 
 The trend line (excluding the COVID dip in 2020–21) is slightly upward, but
 the numbers bounce around a lot. In any given year the count lands somewhere
@@ -45,7 +45,7 @@ roughly 1.5–3 million students travel for spring break, stay 7–14 days, and
 face 1.5–3x their normal daily risk of dying (from alcohol, driving,
 swimming, sleep deprivation), how many deaths should we expect?
 
-![Monte Carlo simulation of expected deaths](/images/spring-break/blog_monte_carlo.png)
+![Monte Carlo simulation of expected deaths](/scott_langford/images/spring-break/blog_monte_carlo.png)
 
 The simulation's median lands right in the 60–100 window the news reports.
 That's reassuring: the news isn't wildly inflating the count, and the
@@ -67,7 +67,7 @@ roads. I filtered to ages 18–24 and looked at 2016–2023.
 If spring break were uniquely deadly, March and April should jump out of the
 monthly pattern. They don't — at least not in the way you'd expect:
 
-![Seasonal deviation in 18–24 traffic deaths](/images/spring-break/blog_monthly_bars.png)
+![Seasonal deviation in 18–24 traffic deaths](/scott_langford/images/spring-break/blog_monthly_bars.png)
 
 March and April are *below* the annual mean. The real killing season for young
 drivers is summer: June, July, and August. That doesn't mean spring break is
@@ -82,7 +82,7 @@ country. If spring break drives excess deaths, destination states should spike
 in March–April relative to their own baseline *and* relative to
 non-destination states. That's a difference-in-differences design:
 
-![DiD: destination vs. other states](/images/spring-break/blog_did.png)
+![DiD: destination vs. other states](/scott_langford/images/spring-break/blog_did.png)
 
 The DiD estimate is positive — destination states do see a relative uptick —
 but the effect is modest and imprecisely estimated. Spring break probably adds
@@ -96,7 +96,7 @@ Trends data for the search query "spring break death" shows massive spikes
 every March — but those spikes track individual viral stories, not actual death
 counts:
 
-![Google Trends search interest](/images/spring-break/blog_google_trends.png)
+![Google Trends search interest](/scott_langford/images/spring-break/blog_google_trends.png)
 
 A single dramatic incident (a balcony collapse, a mass-casualty crash) can
 spike search interest 10x even though total deaths are flat. Media salience
@@ -108,7 +108,7 @@ Spring break deaths aren't spread evenly. A handful of destination counties —
 South Padre Island, Panama City Beach, Miami-Dade, Myrtle Beach — account for
 a disproportionate share:
 
-![Deaths per county per week](/images/spring-break/blog_concentration.png)
+![Deaths per county per week](/scott_langford/images/spring-break/blog_concentration.png)
 
 But here's the catch: those same counties are dangerous year-round, not just
 during spring break. They have beaches, highways, nightlife, and warm weather
@@ -131,7 +131,7 @@ July, Memorial Day, and Thanksgiving. When you compute per-day death rates
 for 18-to-24-year-olds across all major holiday weekends, spring break is in
 the pack — not an outlier:
 
-![Spring break vs. other high-activity weekends](/images/spring-break/blog_cf_weekends.png)
+![Spring break vs. other high-activity weekends](/scott_langford/images/spring-break/blog_cf_weekends.png)
 
 The per-day death rate on spring break weekends is comparable to the 4th of
 July and summer weekends generally. Young people die on long weekends. Spring
@@ -144,7 +144,7 @@ That creates a natural experiment: did counties near those universities see
 fewer deaths in the spring? An event-study difference-in-differences design
 can test this:
 
-![Event-study DiD: universities that eliminated spring break](/images/spring-break/blog_cf_natexp.png)
+![Event-study DiD: universities that eliminated spring break](/scott_langford/images/spring-break/blog_cf_natexp.png)
 
 *This figure requires university-level spring break schedule data.* If the
 pre-treatment coefficients are flat (no pre-trend), and the post-treatment
@@ -158,7 +158,7 @@ it.
 How does spring break compare to other mass gatherings on a
 deaths-per-million-attendees basis?
 
-![Deaths per million attendees vs. other mass gatherings](/images/spring-break/blog_cf_gatherings.png)
+![Deaths per million attendees vs. other mass gatherings](/scott_langford/images/spring-break/blog_cf_gatherings.png)
 
 Spring break's rate is elevated — but not dramatically so compared to Sturgis,
 Mardi Gras, or even a season of college football Saturdays. The denominator
@@ -177,7 +177,7 @@ it would just move the dots on the map. To test this, I looked at whether
 non-destination states get *safer* during spring break weeks (as their risky
 young people leave):
 
-![Risk substitution: non-destination counties](/images/spring-break/blog_cf_substitution.png)
+![Risk substitution: non-destination counties](/scott_langford/images/spring-break/blog_cf_substitution.png)
 
 The distribution is centered near zero with a slight negative skew: some
 states may get marginally safer when their students leave, but the effect is
@@ -193,7 +193,7 @@ counties to the destination-county population to build a counterfactual:
 how many 18-to-24-year-olds *would have died* in destination counties during
 March 1 – April 15, even without spring break?
 
-![Actual vs. counterfactual deaths](/images/spring-break/blog_cf_causal.png)
+![Actual vs. counterfactual deaths](/scott_langford/images/spring-break/blog_cf_causal.png)
 
 The gap between the red and blue bars is the *causal excess* — deaths
 attributable to the spring break concentration effect. In most years, the
