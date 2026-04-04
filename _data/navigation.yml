@@ -14,14 +14,14 @@ main:
   - title: "Teaching"
     url: /teaching/
 
-  - title: "Southbound 35"
-    url: /year-archive/
-
   - title: "Tools"
     url: /portfolio/
 
   - title: "CV"
     url: /cv/
+
+  - title: "Blog: Southbound 35"
+    url: /year-archive/
 
   # - title: "CV"
   #   url: /cv-json/
