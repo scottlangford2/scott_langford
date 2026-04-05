@@ -7,13 +7,6 @@ tags:
   - Hays County
   - Texas
   - public finance
-  - Southbound 35 series
----
-
-*This is the first in a six-part series on Hays County — its growth,
-its finances, its water, its schools, and the question of who actually
-governs it.*
-
 ---
 
 If you drive south from Austin on I-35, you can feel the moment you
@@ -130,8 +123,6 @@ how it plans for water, funds infrastructure, educates a growing
 student population, and coordinates across the many jurisdictions that
 share responsibility for governing the county.
 
-Over the next five weeks, this series will take those questions one at
-a time.
 
 ---
 
