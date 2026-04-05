@@ -1,6 +1,6 @@
 ---
 title: 'How Dangerous Is Spring Break, Really?'
-date: 2026-04-03
+date: 2026-04-08
 permalink: /posts/2026/04/spring-break-mortality/
 tags:
   - data analysis
