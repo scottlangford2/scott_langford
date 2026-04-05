@@ -1,6 +1,6 @@
 ---
 title: 'Hevel on the Back Nine'
-date: 2026-04-03
+date: 2026-04-10
 permalink: /posts/2026/04/scheffler-ecclesiastes/
 related: false
 tags:
