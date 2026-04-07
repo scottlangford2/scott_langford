@@ -8,3 +8,5 @@ date: 2026-01-01
 location: "San Marcos, Texas"
 ---
 [Link to Syllabus](https://www.dropbox.com/scl/fi/o5socj3omhbie5xkyujla/PA_3311_Syllabus.pdf?rlkey=zu33wf01ploitvxc2typl8s0m&dl=0)
+
+[Link to Textbook](https://scottlangford2.github.io/pa3311-textbook/)
