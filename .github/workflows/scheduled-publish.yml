@@ -6,13 +6,21 @@ on:
     - cron: '0 10 * * *'
   workflow_dispatch: # allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger GitHub Pages rebuild
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Empty commit to trigger Pages rebuild
         run: |
-          curl -s -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/pages/builds"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: scheduled rebuild for post publishing"
+          git push
