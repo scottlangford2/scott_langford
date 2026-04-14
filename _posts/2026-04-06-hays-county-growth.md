@@ -132,6 +132,8 @@ U.S. Census Bureau (decennial census 1990–2020, ACS 2023). City of Kyle
 Economic Development. City of San Marcos. Redfin. CBA Realtors. KXAN.
 KUT. Community Impact News. TxDOT. Hays County Commissioners Court.
 
+Replication code: [southbound-35/posts/hays-growth](https://github.com/scottlangford2/southbound-35/tree/main/posts/hays-growth)
+
 ## Disclosure
 
 This blog post was written with the assistance of Claude (Anthropic).
