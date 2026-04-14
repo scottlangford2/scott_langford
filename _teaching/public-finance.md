@@ -10,5 +10,5 @@ location: "San Marcos, TX"
 
 Graduate seminar on public budgeting, revenue systems, debt management, and fiscal policy for MPA students.
 
-**Texas State University** — Public Finance Administration (PA 5310, MPA)
+**Texas State University**, 2025 — Public Finance Administration (PA 5310, MPA)
 - Fall 2025: [Syllabus](https://www.dropbox.com/scl/fi/68nydvyxnd3tydyrlf9pg/PA-5310_Syllabus_Fall_2025.pdf?rlkey=rh7gzsjxuonw19t5h1c0u0epj&dl=0)
