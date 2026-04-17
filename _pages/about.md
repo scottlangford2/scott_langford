@@ -22,15 +22,6 @@ I write [**Southbound 35**](/year-archive/) — a blog on public finance and eco
 {% for post in site.posts limit:3 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
 {% endfor %}</ul>
 
-## Recent News
-
-<ul>
-<li><strong>April 2026</strong> — Launched <a href="/year-archive/">Southbound 35</a>, a blog on Texas public finance and economic development</li>
-<li><strong>March 2026</strong> — <a href="https://github.com/scottlangford2/southbound-35">Southbound 35 replication packages</a> published on GitHub</li>
-<li><strong>2025</strong> — Joined Texas State University as Assistant Professor in the MPA Program</li>
-<li><strong>2025</strong> — <em>Young and Small Firms and Resilience to Extreme Weather Events</em> published in the <em>Journal of Business Venturing Insights</em></li>
-</ul>
-
 ## Contact
 
 **Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) &nbsp;·&nbsp; **Office:** Texas State University, San Marcos, TX &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2)
