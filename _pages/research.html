@@ -5,13 +5,13 @@ permalink: /research/
 author_profile: true
 ---
 
+{% include base_path %}
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-<p style="font-size: 0.95em; color: #555; margin-top: 0.5em; margin-bottom: 1.5em;">See also: <a href="{{ base_path }}/public-scholarship/">Public Scholarship</a> · <a href="{{ base_path }}/awards/">Awards &amp; Grants</a> · <a href="{{ base_path }}/portfolio/">Tools &amp; Replication</a></p>
-
-{% include base_path %}
+<p style="font-size: 0.95em; color: #555; margin-top: 0.5em; margin-bottom: 1.5em;">See also: <a href="{{ site.url }}{{ site.baseurl }}/public-scholarship/">Public Scholarship</a> · <a href="{{ site.url }}{{ site.baseurl }}/awards/">Awards &amp; Grants</a> · <a href="{{ site.url }}{{ site.baseurl }}/portfolio/">Tools &amp; Replication</a></p>
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.research_category %}
