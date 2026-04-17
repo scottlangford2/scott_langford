@@ -15,22 +15,22 @@ My independent research has been funded by the [Kenan Institute for Private Ente
 
 ## Southbound 35
 
-I write [**Southbound 35**](/year-archive/) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it. The blog bridges research and practice, written for academics who study Texas communities and the state and local officials who govern them.
+I write [**Southbound 35**](/year-archive/) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it.
 
 **Recent posts:**
-{% for post in site.posts limit:3 %}
-- [{{ post.title }}]({{ post.url | relative_url }}) — {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
+<ul>
+{% for post in site.posts limit:3 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+{% endfor %}</ul>
 
 ## Recent News
 
-- **April 2026** — Launched [Southbound 35](/year-archive/), a blog on Texas public finance and economic development
-- **March 2026** — [Southbound 35 replication packages](https://github.com/scottlangford2/southbound-35) published on GitHub
-- **2025** — New at Texas State University, teaching in the MPA Program
-- **2025** — *Young and Small Firms and Resilience to Extreme Weather Events* published in the *Journal of Business Venturing Insights*
+<ul>
+<li><strong>April 2026</strong> — Launched <a href="/year-archive/">Southbound 35</a>, a blog on Texas public finance and economic development</li>
+<li><strong>March 2026</strong> — <a href="https://github.com/scottlangford2/southbound-35">Southbound 35 replication packages</a> published on GitHub</li>
+<li><strong>2025</strong> — Joined Texas State University as Assistant Professor in the MPA Program</li>
+<li><strong>2025</strong> — <em>Young and Small Firms and Resilience to Extreme Weather Events</em> published in the <em>Journal of Business Venturing Insights</em></li>
+</ul>
 
 ## Contact
 
-**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu)
-**Office:** Texas State University, San Marcos, TX
-**Scholar:** [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2)
+**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) &nbsp;·&nbsp; **Office:** Texas State University, San Marcos, TX &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2)
