@@ -92,7 +92,7 @@ future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "custom" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            :
   discourse:
@@ -101,6 +101,18 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+giscus:
+  repo                   : "scottlangford2/scott_langford"
+  repo_id                : "REPLACE_ME"           # e.g. "R_kgDOAbCdEf" — get from https://giscus.app
+  category               : "Blog Comments"
+  category_id            : "REPLACE_ME"           # e.g. "DIC_kwDOAbCdEf4ABc12" — get from https://giscus.app
+  mapping                : "pathname"             # one discussion per URL path
+  strict                 : "0"
+  reactions_enabled      : "1"
+  emit_metadata          : "0"
+  input_position         : "bottom"
+  theme                  : "preferred_color_scheme"
+  lang                   : "en"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -152,9 +164,11 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
+goatcounter:
+  code                   : "REPLACE_ME" # e.g. "southbound35" — dashboard at https://<code>.goatcounter.com
 
 
 # Reading Files
@@ -259,7 +273,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
   # _research
   - scope:
       path: ""
@@ -268,7 +282,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
   # _portfolio
   - scope:
       path: ""
