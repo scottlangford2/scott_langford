@@ -10,15 +10,20 @@ tags:
   - public finance
 ---
 
-Two weeks ago I put a single number at the center of [the Hays County
-growth post][growth]: $135,000. That was the gap, in February 2026,
-between the median home in Travis County and the median home in Hays
-County — the rough math a family is doing when they pull off I-35 in
-Buda or Kyle instead of continuing north.
+Two weeks ago [the Hays County growth post][growth] put a single
+number at the center of the story: $135,000 — the gap, in the ZHVI
+release then current, between the median home in Travis County and
+the median home in Hays County. That was the rough math a family is
+doing when they pull off I-35 in Buda or Kyle instead of continuing
+north.
 
-A reader emailed to ask the obvious follow-up. Has it always been
-$135,000? If Hays County's whole growth story runs on an affordability
-arbitrage, the shape of that arbitrage over time is worth understanding.
+Two caveats, right at the top. First, Zillow revises the series every
+month. The most recent release puts the same gap at about $107K — a
+real narrowing over the intervening weeks, not a coding error. Second,
+a dollar-gap snapshot is only one reading of the affordability
+pressure. The *percentage* premium of Travis over Hays is the
+migration-relevant object, and the shape of that premium over time is
+what this post is actually about.
 
 This post is the answer, with three upgrades over the napkin version: a
 triangulated price series so we aren't relying on one dataset, a full
@@ -41,15 +46,18 @@ the bottom — never breaks.
 
 ## The Dollar Gap Bulged, Then Pulled Back
 
-Subtract, and the absolute Travis-over-Hays gap ran from about $100K
-at the start of 2020, peaked near $175K in July 2022, and has settled
-near $135K.
+Subtract, and the absolute Travis-over-Hays gap ran from about $93K at
+the start of 2020, peaked near $157K in June 2022, and has ground
+back down to $107K as of the March 2026 release. Williamson tracks
+the same shape at a smaller magnitude — never more than about $47K
+over Hays, currently about $34K.
 
 ![Absolute gap over Hays, 2020 → present](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_absolute.png)
 
-That $40K swing is not small. If you stopped here you might conclude
-that Hays's relative advantage eroded during the pandemic boom and
-then partly recovered. You would be reading the wrong statistic.
+That $50K peak-to-today swing in the Travis-Hays gap is not small.
+If you stopped here you might conclude that Hays's relative advantage
+eroded during the pandemic boom and then fully recovered. You would
+be reading the wrong statistic.
 
 ## Triangulate Before Concluding
 
@@ -75,23 +83,33 @@ without running the whole analysis twice.
 ## How Constant Is "Constant"?
 
 Eyeballing a flat line is not a statistical claim. Three tests on the
-premium ratio:
+premium ratio — and the tests contradict the easy reading:
 
 - **Mean and HAC confidence interval.** The full-window mean is
-  **≈ 37 %** with a 95 % Newey–West confidence interval less than a
-  percentage point wide. The migration-relevant fact is where we are
-  on that interval — not whether the ratio is drifting outside it.
+  **≈ 31.7 %**, with a 95 % Newey–West confidence interval of
+  **[30.2, 33.1]** — roughly 3 percentage points wide. That is the
+  band the series has traded in, averaged over the whole window; it
+  does not say the series stays inside it at every date.
 - **AR(1) persistence.** The ratio's first-order autocorrelation is
-  **≈ 0.99**. Monthly shocks dissipate slowly, as you'd expect for a
-  highly sticky relative-price relationship.
+  **≈ 0.996**. Monthly movements are almost entirely persistent —
+  shocks to the premium do not dissipate on any reasonable monthly
+  timescale. That is consistent with a slow-moving relative-price
+  level, not with a stationary oscillation around a fixed mean.
 - **Quandt–Andrews sup-F unknown-break test.** Against a null of a
-  single constant mean, the test rejects — there *is* a detectable
-  small break, visible as the sub-panel below. But the magnitude of
-  the shift is a fraction of a percentage point, and it lives inside
-  the 95 % CI. In plain English: the premium isn't literally constant,
-  but it moves in tenths of a percentage point, not percentage points.
+  single constant mean, the test returns **sup-F = 198.6 at December
+  2021** — more than fifty times the 5 % critical value of 3.84. The
+  test emphatically rejects constancy. The series ran hot through
+  2020 – mid-2021, peaking near **38 %**, and has been reverting
+  toward the low 30s ever since.
 
 ![Premium statistics](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_relative_stats.png)
+
+In plain English: the premium is not a constant. It spent roughly a
+year elevated during the pandemic boom and has been grinding back down
+for the four years since. What is stable, loosely, is the *range* —
+the premium has lived between roughly 29 % and 38 % throughout, never
+collapsing toward zero and never running above 40 %. A range is still
+a useful object for a migration decision. It just isn't a point.
 
 ## Real Dollars, Not Just Nominal
 
@@ -148,25 +166,34 @@ Two honest worry points for the headline premium.
 
 **Is this about the top of the market?** Maybe Travis's "median" is
 pulled up by a Westlake-and-Tarrytown shelf a typical migrator never
-considers. Pulling ZHVI's tiered series answers this directly: the
-*bottom* tier of each county (the 0-to-33rd percentile — what most
-Austin-to-Hays migrators actually buy) shows a Travis-over-Hays
-premium close to the mid-tier number. The story doesn't depend on
-luxury Travis stock.
+considers. ZHVI's tiered series lets us check directly. The three
+tiers run in the expected order — top (~34 %) > mid (~32 %) > bottom
+(~23 %) — and all three are positive and persistent. The story
+weakens at the bottom of the market: a first-time buyer shopping in
+the 0-to-33rd percentile gets a smaller relative discount moving to
+Hays (23 %) than a mid-tier buyer does (32 %). That dependence on tier
+is real, and it would be wrong to claim "the premium is identical at
+every price point." But the premium is positive and economically
+meaningful across the whole distribution, not a Westlake artifact.
 
 ![Robustness across ZHVI tiers](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_tiers.png)
 
-**Is this an Austin-specific oddity?** To test whether "edge county
-discount of ≈ 38 %" is a general Texas metro-edge phenomenon or just
-Austin-specific, compare to the DFW pair most analogous to
-Travis/Hays: Collin (wealthy core suburb) over Denton (faster-growing
-edge). The two series don't overlap perfectly — DFW's premium is
-smaller and has moved more — but the levels are in the same
-neighborhood, and both are remarkably flat. The 38 % number is
-specific to Austin; the *stable-premium* structure appears to be
-general.
+**Is this an Austin-specific oddity?** To test whether a core-over-
+edge premium is a general Texas metro phenomenon or something
+Austin-specific, compare to the DFW pair most analogous to Travis/
+Hays: Collin County (the wealthier core suburb) over Denton County
+(the faster-growing edge). Collin *is* more expensive than Denton,
+consistent with the pattern — but only by about **9 %** on average,
+and that premium has been drifting upward toward roughly 10 %. The
+magnitude is nowhere near Austin's.
 
 ![Austin vs. DFW](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_out_of_metro.png)
+
+So the *existence* of a core-over-edge premium looks general. Its
+*size* — and in particular the Austin-scale ~30 % number — does not.
+Hays County's growth story runs on an unusually large affordability
+arbitrage, not on a universal one. The DFW edge (Denton) is almost as
+expensive as its core (Collin). The Austin edge (Hays) is not.
 
 ## Does the Gap Actually Drive Migration?
 
@@ -196,18 +223,28 @@ right, none of them quite rigorous:
 
 The rigorous version updates each:
 
-1. The absolute nominal gap did narrow from peak. The *real* gap is
-   closer to flat. Both framings survive triangulation across Zillow,
-   FHFA, and Realtor.
-2. The premium isn't literally constant — there's a detectable small
-   break — but its variation lives inside a confidence interval less
-   than a percentage point wide. For migration-decision purposes,
-   treat it as constant.
+1. The absolute nominal gap did narrow from peak — from $157K in
+   June 2022 to about $107K now, a $50K round-trip. The *real* gap
+   (CPI-deflated) is closer to flat. Both framings survive
+   triangulation across Zillow, FHFA, and Realtor.
+2. The premium is *not* constant. It rose from about 32 % at the
+   start of 2020 to a peak near 38 % in mid-2021, and has been
+   drifting back down toward 29 % since. The Quandt sup-F rejects the
+   constant-mean null decisively. What is stable is the *range* — the
+   premium has lived between roughly 29 and 38 percent throughout.
+   For a migration decision a range is still usable; it just isn't a
+   point estimate.
 3. The P&I story is the dominant story, but once you include the
    Hays-specific MUD and insurance surcharges and the Travis-specific
    property-tax premium, the full PITI gap is roughly $150/month
    smaller than P&I alone suggests at today's rates. The doubling
    still happens. It's just a smaller double.
+
+And the cross-metro comparison reframes the claim one more time: the
+Austin core-over-edge premium is unusually large. DFW's Collin-over-
+Denton analog runs at about 9 %. Whatever is driving Hays's growth is
+specifically about Austin's price structure, not a general Texas
+suburbanization force.
 
 None of which changes the punchline: the migration pressure that
 built Hays County over the last fifteen years hasn't eased. If
