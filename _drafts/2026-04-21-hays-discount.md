@@ -73,7 +73,7 @@ the market rather than what's traded.
 
 Three series, one qualitative answer:
 
-![Three sources, one invariant](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_triangulation.png)
+<!-- figure pending: gap_triangulation.png — requires FHFA HPI + Realtor.com listings; fetch_data.py hasn't pulled these yet -->
 
 Levels differ, but all three tell the same story about the *premium*
 of Travis over Hays: it does not trend. That convergence across
@@ -118,7 +118,7 @@ nominal dollars. CPI rose roughly 20 % over the window. In Jan-2020
 dollars the peak gap is smaller, and the narrowing from peak to today
 is less severe: some of the "contraction" was just general inflation.
 
-![Real vs. nominal gap](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_real_nominal.png)
+<!-- figure pending: gap_real_nominal.png — requires CPI-U series (FRED: CPIAUCSL); not yet fetched -->
 
 Not a big correction, but it moves the story from "the gap is closing"
 to "the gap is approximately where it was in real terms."
@@ -149,7 +149,7 @@ monthly bill. Three components that matter:
 Stacking these together, the full PITI monthly-cost gap looks like
 this:
 
-![PITI decomposition](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_piti.png)
+<!-- figure pending: gap_piti.png — requires Freddie Mac 30Y fixed rate (FRED: MORTGAGE30US); not yet fetched -->
 
 Two notes. First, at today's rates the P&I gap alone overstates the
 total cost of choosing Travis by roughly $150/month once MUD and
@@ -203,7 +203,7 @@ Income county-to-county migration data let us at least sketch the
 correlation. Annual in-migration to Hays (exemptions, origin ≠ Hays)
 plotted against the prior-year average Travis → Hays gap:
 
-![Migration response](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/migration_response.png)
+<!-- figure pending: migration_response.png — requires IRS Statistics of Income county-to-county migration data; not yet fetched -->
 
 With only five years of SOI releases and one lag consumed, this is
 illustrative, not inferential — the standard errors are large enough
