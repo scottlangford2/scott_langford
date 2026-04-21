@@ -42,7 +42,7 @@ months of each other in mid-2022, and has been grinding lower since.
 The ordering that makes the growth story work — Travis on top, Hays at
 the bottom — never breaks.
 
-![Central Texas home values, 2020 → present](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_levels.png)
+![Central Texas home values, 2020 → present](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_levels.png)
 
 ## The Dollar Gap Bulged, Then Pulled Back
 
@@ -52,7 +52,7 @@ back down to $107K as of the March 2026 release. Williamson tracks
 the same shape at a smaller magnitude — never more than about $47K
 over Hays, currently about $34K.
 
-![Absolute gap over Hays, 2020 → present](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_absolute.png)
+![Absolute gap over Hays, 2020 → present](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_absolute.png)
 
 That $50K peak-to-today swing in the Travis-Hays gap is not small.
 If you stopped here you might conclude that Hays's relative advantage
@@ -73,7 +73,7 @@ the market rather than what's traded.
 
 Three series, one qualitative answer:
 
-![Three sources, one invariant](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_triangulation.png)
+![Three sources, one invariant](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_triangulation.png)
 
 Levels differ, but all three tell the same story about the *premium*
 of Travis over Hays: it does not trend. That convergence across
@@ -102,7 +102,7 @@ premium ratio — and the tests contradict the easy reading:
   2020 – mid-2021, peaking near **38 %**, and has been reverting
   toward the low 30s ever since.
 
-![Premium statistics](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_relative_stats.png)
+![Premium statistics](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_relative_stats.png)
 
 In plain English: the premium is not a constant. It spent roughly a
 year elevated during the pandemic boom and has been grinding back down
@@ -118,7 +118,7 @@ nominal dollars. CPI rose roughly 20 % over the window. In Jan-2020
 dollars the peak gap is smaller, and the narrowing from peak to today
 is less severe: some of the "contraction" was just general inflation.
 
-![Real vs. nominal gap](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_real_nominal.png)
+![Real vs. nominal gap](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_real_nominal.png)
 
 Not a big correction, but it moves the story from "the gap is closing"
 to "the gap is approximately where it was in real terms."
@@ -149,7 +149,7 @@ monthly bill. Three components that matter:
 Stacking these together, the full PITI monthly-cost gap looks like
 this:
 
-![PITI decomposition](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_piti.png)
+![PITI decomposition](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_piti.png)
 
 Two notes. First, at today's rates the P&I gap alone overstates the
 total cost of choosing Travis by roughly $150/month once MUD and
@@ -176,7 +176,7 @@ is real, and it would be wrong to claim "the premium is identical at
 every price point." But the premium is positive and economically
 meaningful across the whole distribution, not a Westlake artifact.
 
-![Robustness across ZHVI tiers](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_tiers.png)
+![Robustness across ZHVI tiers](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_tiers.png)
 
 **Is this an Austin-specific oddity?** To test whether a core-over-
 edge premium is a general Texas metro phenomenon or something
@@ -187,7 +187,7 @@ consistent with the pattern — but only by about **9 %** on average,
 and that premium has been drifting upward toward roughly 10 %. The
 magnitude is nowhere near Austin's.
 
-![Austin vs. DFW](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/gap_out_of_metro.png)
+![Austin vs. DFW](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/gap_out_of_metro.png)
 
 So the *existence* of a core-over-edge premium looks general. Its
 *size* — and in particular the Austin-scale ~30 % number — does not.
@@ -203,7 +203,7 @@ Income county-to-county migration data let us at least sketch the
 correlation. Annual in-migration to Hays (exemptions, origin ≠ Hays)
 plotted against the prior-year average Travis → Hays gap:
 
-![Migration response](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays-discount/migration_response.png)
+![Migration response](https://raw.githubusercontent.com/scottlangford2/scott_langford/claude/add-hays-discount-post-tL4eQ/images/hays-discount/migration_response.png)
 
 With only five years of SOI releases and one lag consumed, this is
 illustrative, not inferential — the standard errors are large enough
