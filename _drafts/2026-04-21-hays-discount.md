@@ -25,14 +25,15 @@ pressure. The *percentage* premium of Travis over Hays is the
 migration-relevant object, and the shape of that premium over time is
 what this post is actually about.
 
-This post is the answer, with three upgrades over the napkin version: a
-triangulated price series so we aren't relying on one dataset, a full
-PITI monthly cost so we aren't pretending property taxes and
-homeowners' insurance don't exist, and proper statistics on the
-"constant premium" claim. The full code and a data manifest with
-checksums are in the [replication folder][repl] — anyone who wants to
-rerun the analysis on a fresh Zillow release should get the same
-numbers.
+This post takes the "percentage premium is constant" claim and tests
+it properly — mean + HAC confidence interval, AR(1) persistence, and
+an unknown-break sup-F test — on ZHVI mid-tier data from 2020 through
+March 2026. Two follow-up questions (triangulating the premium across
+FHFA and Realtor series, and decomposing the full PITI monthly cost)
+are staged in the [replication folder][repl] but not yet rendered in
+this post; a subsequent rigor-pass post will fold them in. Everything
+here is reproducible on a fresh ZHVI release from the code in that
+folder.
 
 ## Everyone Rode the Same Wave
 
@@ -58,27 +59,6 @@ That $50K peak-to-today swing in the Travis-Hays gap is not small.
 If you stopped here you might conclude that Hays's relative advantage
 eroded during the pandemic boom and then fully recovered. You would
 be reading the wrong statistic.
-
-## Triangulate Before Concluding
-
-Before leaning too hard on one series, it's worth asking whether a
-different source tells a different story. ZHVI is an index of home
-*values* derived from Zillow's own estimates. The Federal Housing
-Finance Agency publishes a repeat-sales index (HPI) that uses only
-arms-length transaction pairs and is therefore immune to compositional
-drift — an important concern in a fast-growing county where the typical
-home this year is newer, bigger, and further out than last year's.
-Realtor.com publishes median *listing* prices, which reflect what's on
-the market rather than what's traded.
-
-Three series, one qualitative answer:
-
-<!-- figure pending: gap_triangulation.png — requires FHFA HPI + Realtor.com listings; fetch_data.py hasn't pulled these yet -->
-
-Levels differ, but all three tell the same story about the *premium*
-of Travis over Hays: it does not trend. That convergence across
-methodologies is the closest we get to a robustness certificate
-without running the whole analysis twice.
 
 ## How Constant Is "Constant"?
 
@@ -110,55 +90,6 @@ for the four years since. What is stable, loosely, is the *range* —
 the premium has lived between roughly 29 % and 38 % throughout, never
 collapsing toward zero and never running above 40 %. A range is still
 a useful object for a migration decision. It just isn't a point.
-
-## Real Dollars, Not Just Nominal
-
-The second napkin-version simplification was quoting the gap in
-nominal dollars. CPI rose roughly 20 % over the window. In Jan-2020
-dollars the peak gap is smaller, and the narrowing from peak to today
-is less severe: some of the "contraction" was just general inflation.
-
-<!-- figure pending: gap_real_nominal.png — requires CPI-U series (FRED: CPIAUCSL); not yet fetched -->
-
-Not a big correction, but it moves the story from "the gap is closing"
-to "the gap is approximately where it was in real terms."
-
-## Rates Did Most of the Work — Until You Count Everything
-
-The first draft claimed "rates did the work": financing $100K at 3 %
-cost $420/month; financing $135K at 7 % costs $890; the monthly cost of
-the gap more than doubled even as the absolute gap narrowed.
-
-That's still directionally right, but it ignores the rest of the
-monthly bill. Three components that matter:
-
-- **Property tax.** Travis's effective rate (county + city + ISD + ESD)
-  runs about 1.8 % of value. Hays's runs closer to 2.1 %, and many
-  Hays neighborhoods sit inside a MUD or PID on top of that. On the
-  *gap* itself, a higher Travis price means a higher Travis tax bill —
-  adding to the cost of choosing north.
-- **Homeowners insurance.** TDI data show Hays households paying
-  modestly more than Travis households — wildfire and hail exposure
-  east of the Balcones escarpment. That partially offsets the extra
-  Travis tax bill.
-- **MUD / PID assessments.** Many new Hays subdivisions carry a MUD
-  rate of $0.75–$1.00 per $100 AV on top of everything else. Travis's
-  mid-tier stock is mostly inside the City of Austin, where MUDs are
-  rare. Choosing Travis typically means escaping the MUD.
-
-Stacking these together, the full PITI monthly-cost gap looks like
-this:
-
-<!-- figure pending: gap_piti.png — requires Freddie Mac 30Y fixed rate (FRED: MORTGAGE30US); not yet fetched -->
-
-Two notes. First, at today's rates the P&I gap alone overstates the
-total cost of choosing Travis by roughly $150/month once MUD and
-insurance offsets are credited — not a trivial difference for a family
-running an affordability calculation. Second, the rate-driven doubling
-of the P&I gap is still the largest single force; the full PITI gap
-roughly doubled over the window even after offsets.
-
-So: *rates did most of the work, but not all of it.*
 
 ## Does the Picture Survive Robustness Checks?
 
@@ -195,94 +126,67 @@ Hays County's growth story runs on an unusually large affordability
 arbitrage, not on a universal one. The DFW edge (Denton) is almost as
 expensive as its core (Collin). The Austin edge (Hays) is not.
 
-## Does the Gap Actually Drive Migration?
-
-Prices are a pressure, not a flow. The Hays migration story has
-assumed that the price gap is the forcing function; IRS Statistics of
-Income county-to-county migration data let us at least sketch the
-correlation. Annual in-migration to Hays (exemptions, origin ≠ Hays)
-plotted against the prior-year average Travis → Hays gap:
-
-<!-- figure pending: migration_response.png — requires IRS Statistics of Income county-to-county migration data; not yet fetched -->
-
-With only five years of SOI releases and one lag consumed, this is
-illustrative, not inferential — the standard errors are large enough
-to swallow any coefficient we report. Still, the slope has the sign
-the story would predict. A post with real identification, not just
-correlation, would need IV on rates or a shift-share pulling gap
-variation out of metro-wide price movements. That is a bigger post.
-
 ## What This Adds Up To
 
-The first version of this analysis made three claims, all roughly
-right, none of them quite rigorous:
+Three findings, all tested on the same ZHVI mid-tier window:
 
-1. The absolute gap is volatile and has narrowed from peak.
-2. The percentage premium is constant.
-3. Rates drove the monthly cost of the gap.
-
-The rigorous version updates each:
-
-1. The absolute nominal gap did narrow from peak — from $157K in
-   June 2022 to about $107K now, a $50K round-trip. The *real* gap
-   (CPI-deflated) is closer to flat. Both framings survive
-   triangulation across Zillow, FHFA, and Realtor.
-2. The premium is *not* constant. It rose from about 32 % at the
-   start of 2020 to a peak near 38 % in mid-2021, and has been
-   drifting back down toward 29 % since. The Quandt sup-F rejects the
-   constant-mean null decisively. What is stable is the *range* — the
-   premium has lived between roughly 29 and 38 percent throughout.
-   For a migration decision a range is still usable; it just isn't a
-   point estimate.
-3. The P&I story is the dominant story, but once you include the
-   Hays-specific MUD and insurance surcharges and the Travis-specific
-   property-tax premium, the full PITI gap is roughly $150/month
-   smaller than P&I alone suggests at today's rates. The doubling
-   still happens. It's just a smaller double.
-
-And the cross-metro comparison reframes the claim one more time: the
-Austin core-over-edge premium is unusually large. DFW's Collin-over-
-Denton analog runs at about 9 %. Whatever is driving Hays's growth is
-specifically about Austin's price structure, not a general Texas
-suburbanization force.
+1. **The absolute dollar gap is volatile.** Travis-over-Hays ran
+   from $93K at the start of 2020 to $157K in June 2022 and back to
+   $107K now — a $50K peak-to-today round-trip. The headline number
+   moves month-to-month, revises with each release, and is a poor
+   summary of affordability pressure on its own.
+2. **The percentage premium is *not* constant.** It rose from about
+   32 % in early 2020 to a peak near 38 % in mid-2021 and has been
+   reverting toward 29 % since. The Quandt sup-F test rejects the
+   constant-mean null decisively (sup-F ≈ 199 at December 2021). What
+   *is* stable is the range — the series has lived between roughly
+   29 % and 38 % throughout. For a migration decision a range is
+   still usable. It just isn't a point estimate.
+3. **The premium isn't universal Texas.** Austin's core-over-edge
+   premium is ~32 % on average. DFW's closest analog — Collin over
+   Denton — is ~9 %. Hays's affordability arbitrage is specifically
+   about Austin's price structure, not a general Texas
+   suburbanization regularity.
 
 None of which changes the punchline: the migration pressure that
-built Hays County over the last fifteen years hasn't eased. If
-anything, at 7 % rates it's heavier on a monthly-payment basis than
-it was when rates were at 3 %.
+built Hays County over the last fifteen years hasn't eased. The
+dollar gap has narrowed and the percentage premium has come off its
+peak, but both remain large enough to keep pulling buyers south of
+I-35.
 
 ## Limitations
 
-A short, honest list of what this analysis does *not* do.
+A short, honest list of what this post does *not* cover.
 
 - **County medians hide city variation.** Kyle ≠ Dripping Springs ≠
   San Marcos. A city-level analog is a next post.
-- **The PITI property-tax and insurance estimates are point values
-  with known dispersion.** Effective rates vary by ISD and by city by
-  ±0.2 percentage points. A full sensitivity pass is in
-  `analysis.breakeven_tax()` (stubbed but not yet rendered as a
-  figure). The MUD assumption (Hays has one, Travis doesn't) holds
-  for mid-tier median addresses; fringe Travis addresses can carry
-  MUDs too.
-- **The migration regression is correlational with n = 3.** Do not
-  read a policy elasticity out of it.
+- **Only one price series is used here.** ZHVI is Zillow's imputed
+  value index; it is not a transaction index. FHFA's all-transactions
+  HPI and Realtor.com's listing series would be useful cross-checks.
+  The replication code pulls them; the cross-check will appear in a
+  follow-up post.
+- **Monthly cost (PITI) is not analyzed.** The property-tax
+  differential, Hays's MUD/PID surcharges, and the mortgage-rate
+  series all matter for the real monthly-payment math and are in the
+  replication code. A full PITI decomposition is a follow-up post.
+- **Migration is not modeled here.** This post documents the *price
+  pressure*. The separate question of how county-to-county migration
+  flows respond to that pressure will use IRS Statistics of Income
+  migration data in a follow-up.
 - **All price series are nominal-dollar, pre-tax.** A household with
   capital-gains-exclusion considerations on an Austin sale will face
-  a different math than the stylized first-time buyer implicit above.
+  different math than the stylized first-time buyer implicit above.
 
 ---
 
 ## Sources
 
 Zillow Home Value Index (all homes, tiered mid / bottom / top, SA,
-smoothed, county). Zillow median price per square foot. FHFA House
-Price Index, all-transactions, county (quarterly). Realtor.com median
-listing price (FRED). Freddie Mac Primary Mortgage Market Survey 30-
-year fixed rate (FRED: `MORTGAGE30US`). BLS CPI-U All items (FRED:
-`CPIAUCSL`). IRS Statistics of Income county-to-county migration
-inflows, 2019–2023. Texas Comptroller Truth-in-Taxation for effective
-property tax rates. Texas Department of Insurance 2024 Home Insurance
-Price Comparison for annual premiums.
+smoothed, county level). Counties analyzed: Travis (48453),
+Williamson (48491), Hays (48209), Collin (48085), Denton (48121).
+Statistical tests (Newey–West HAC standard error of the mean,
+AR(1) persistence via OLS, Quandt–Andrews sup-F unknown-break test)
+computed in `analysis.py`.
 
 Replication code, data manifest, and per-file checksums:
 [southbound-35/posts/affordability-gap][repl].
