@@ -1,0 +1,152 @@
+name: Build Hays-Discount Figures
+
+# Re-renders every PNG in images/hays-discount/ by running the replication
+# pipeline in scottlangford2/southbound-35. Runs on-demand; commits the
+# updated figures to whichever branch triggered the workflow.
+#
+# The pipeline itself is three files in southbound-35:
+#   posts/affordability-gap/fetch_data.py       — pulls Zillow, FHFA, FRED, IRS
+#   posts/affordability-gap/analysis.py         — compute
+#   posts/affordability-gap/build_figures.py    — render 9 PNGs
+#
+# fetch_data.py on southbound-35 does not yet wrap the zhvi_ppsf fetch in
+# try/except. Zillow's ppsf CSV has been intermittently 404-ing, which
+# aborts the whole pipeline. The "Patch fetch_data.py" step applies the
+# try/except inline so a ppsf 404 is logged and skipped. The patch is
+# idempotent — if fetch_data.py is later fixed upstream, the step no-ops.
+
+on:
+  workflow_dispatch:
+    inputs:
+      southbound_ref:
+        description: "southbound-35 ref to pull replication code from"
+        required: true
+        default: "claude/identify-blog-topics-r07p1"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scott_langford (triggering branch)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Clone southbound-35 replication code
+        run: |
+          git clone \
+            --branch "${{ inputs.southbound_ref }}" \
+            --depth 1 \
+            https://github.com/scottlangford2/southbound-35.git \
+            /tmp/southbound-35
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: /tmp/southbound-35/posts/affordability-gap/requirements.txt
+
+      - name: Install Python deps
+        working-directory: /tmp/southbound-35/posts/affordability-gap
+        run: pip install -r requirements.txt
+
+      - name: Patch fetch_data.py (idempotent)
+        working-directory: /tmp/southbound-35/posts/affordability-gap
+        run: |
+          python - <<'PATCH'
+          import pathlib
+          p = pathlib.Path("fetch_data.py")
+          s = p.read_text()
+          old = '''    # Price per sqft (mid)
+              key, out, url = "zhvi_ppsf", DATA / "zhvi_ppsf.csv", ZHVI_PPSF_URL
+              if not (offline and out.exists()):
+                  print(f"→ {key} …")
+                  blob = _http_get(url)
+                  df = pd.read_csv(io.BytesIO(blob))
+                  long = _melt_zillow_wide(df, fips_set, value_name="ppsf")
+                  long.to_csv(out, index=False)
+                  _record(manifest, key, url, blob, out)'''
+          new = '''    # Price per sqft (mid)
+              key, out, url = "zhvi_ppsf", DATA / "zhvi_ppsf.csv", ZHVI_PPSF_URL
+              if not (offline and out.exists()):
+                  print(f"→ {key} …")
+                  try:
+                      blob = _http_get(url)
+                      df = pd.read_csv(io.BytesIO(blob))
+                      long = _melt_zillow_wide(df, fips_set, value_name="ppsf")
+                      long.to_csv(out, index=False)
+                      _record(manifest, key, url, blob, out)
+                  except Exception as e:
+                      print(f"  skipped {key}: {e}")'''
+          if old in s:
+              p.write_text(s.replace(old, new))
+              print("patched fetch_data.py")
+          else:
+              print("fetch_data.py already patched (or upstream changed); continuing")
+          PATCH
+
+      - name: Fetch data
+        working-directory: /tmp/southbound-35/posts/affordability-gap
+        run: python fetch_data.py
+
+      - name: Build figures
+        working-directory: /tmp/southbound-35/posts/affordability-gap
+        run: python build_figures.py
+
+      - name: Flip DFW orientation in gap_out_of_metro.png
+        # analysis.py labels the DFW pair "Denton over Collin", but in current
+        # data Collin is the more expensive county, so that orientation gives
+        # a negative premium and doesn't compare apples-to-apples with
+        # Austin's Travis-over-Hays. Re-render the one figure with the pair
+        # flipped to Collin-over-Denton (core-over-edge, matching Austin).
+        working-directory: /tmp/southbound-35/posts/affordability-gap
+        run: |
+          python - <<'PY'
+          import analysis as A
+          import build_figures as BF
+          import matplotlib.pyplot as plt
+
+          z = A._restrict(A.load_zhvi("mid"))
+          austin = (z["Travis County"] / z["Hays County"] - 1) * 100
+          dfw    = (z["Collin County"] / z["Denton County"] - 1) * 100
+
+          fig, ax = plt.subplots(figsize=(7.5, 4.5))
+          ax.plot(austin.index, austin.values, color=BF.RED,  lw=2.2,
+                  label=f"Austin — Travis over Hays (mean {austin.mean():.1f}%)")
+          ax.plot(dfw.index,    dfw.values,    color=BF.BLUE, lw=2.0,
+                  label=f"DFW — Collin over Denton (mean {dfw.mean():.1f}%)")
+          ax.set_ylabel("Core-over-edge premium (%)")
+          ax.set_title("Is Austin's Core-over-Edge Premium a Texas Constant?")
+          ax.legend(loc="center right")
+          ax.text(0, -0.15,
+                  "Source: Zillow ZHVI mid tier, county level. "
+                  "DFW orientation flipped from analysis.py default so the pair "
+                  "shows the wealthier core (Collin) over the cheaper edge (Denton).",
+                  transform=ax.transAxes, fontsize=7, color=BF.GRAY)
+          fig.savefig("figures/gap_out_of_metro.png", dpi=BF.DPI, bbox_inches="tight")
+          plt.close(fig)
+          print("rebuilt gap_out_of_metro.png with Collin-over-Denton orientation")
+          PY
+
+      - name: Copy figures into images/hays-discount/
+        run: |
+          mkdir -p images/hays-discount
+          cp /tmp/southbound-35/posts/affordability-gap/figures/*.png images/hays-discount/
+          echo "Figures landed:"
+          ls -la images/hays-discount/
+
+      - name: Commit and push (if anything changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/hays-discount/
+          if git diff --cached --quiet; then
+            echo "No figure changes to commit."
+          else
+            git commit -m "chore: rebuild hays-discount figures from southbound-35@${{ inputs.southbound_ref }}"
+            git push
+          fi
