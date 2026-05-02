@@ -2,6 +2,8 @@
 title: 'Did LIV Golfers Get Worse After They Defected?'
 date: 2026-04-30
 permalink: /posts/2026/04/liv-defectors-majors/
+categories:
+  - sports
 tags:
   - data analysis
   - sports

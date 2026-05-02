@@ -3,6 +3,8 @@ title: '254 Counties, One Interstate: The Hays County Growth Story'
 date: 2026-04-06
 permalink: /posts/2026/04/hays-county-growth/
 related: false
+categories:
+  - economic-development
 tags:
   - Hays County
   - Texas

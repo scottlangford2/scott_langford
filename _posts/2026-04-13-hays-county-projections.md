@@ -3,6 +3,8 @@ title: 'Where Is All of This Going?'
 date: 2026-04-13
 permalink: /posts/2026/04/hays-county-projections/
 related: false
+categories:
+  - economic-development
 tags:
   - Hays County
   - Texas
