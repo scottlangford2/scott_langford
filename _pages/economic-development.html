@@ -7,11 +7,10 @@ author_profile: true
 ---
 
 <p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;">
-  <a href="{{ '/year-archive/' | relative_url }}">All posts</a> ·
-  <a href="{{ '/sports/' | relative_url }}">Sports</a> ·
+  <a href="{{ '/year-archive/' | prepend: site.url }}">All posts</a> ·
+  <a href="{{ '/sports/' | prepend: site.url }}">Sports</a> ·
   <strong>Local Economic Development</strong> ·
-  <a href="{{ '/job-market/' | relative_url }}">Job Market Reports</a> ·
-  <a href="{{ '/other/' | relative_url }}">Other</a>
+  <a href="{{ '/other/' | prepend: site.url }}">Other</a>
 </p>
 
 {% include base_path %}
