@@ -2,6 +2,8 @@
 title: 'LIV Defectors at the Majors — Appendix'
 date: 2026-04-30
 permalink: /posts/2026/04/liv-defectors-majors-appendix/
+categories:
+  - sports
 tags:
   - data analysis
   - sports

@@ -1,0 +1,25 @@
+---
+layout: archive
+permalink: /economic-development/
+title: "Southbound 35 — Local Economic Development"
+description: "Local economic development posts from Southbound 35."
+author_profile: true
+---
+
+<p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;">
+  <a href="{{ '/year-archive/' | relative_url }}">All posts</a> ·
+  <a href="{{ '/sports/' | relative_url }}">Sports</a> ·
+  <strong>Local Economic Development</strong> ·
+  <a href="{{ '/job-market/' | relative_url }}">Job Market Reports</a> ·
+  <a href="{{ '/other/' | relative_url }}">Other</a>
+</p>
+
+{% include base_path %}
+{% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains 'economic-development'" %}
+{% if filtered_posts.size == 0 %}
+  <p><em>No posts yet.</em></p>
+{% else %}
+  {% for post in filtered_posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
