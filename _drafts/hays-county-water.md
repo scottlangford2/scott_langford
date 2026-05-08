@@ -100,4 +100,6 @@ Replication code and figures: [github.com/scottlangford2/southbound-35/posts/hay
 
 ## Disclosure
 
+This post was drafted with the assistance of Claude (Anthropic). Claude helped with research, drafting, map rendering, and code. All analytical decisions and editorial judgment are the author's.
+
 The author is an assistant professor at Texas State University in San Marcos and writes here in a personal capacity. The views expressed are his own and do not represent his employer or any of the entities discussed.
