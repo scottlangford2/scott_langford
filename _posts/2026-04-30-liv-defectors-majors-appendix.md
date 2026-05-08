@@ -126,3 +126,7 @@ differences across rounds are within standard-error distance.
 
 Code and cached data: [southbound-35 / posts /
 liv-defectors-majors](https://github.com/scottlangford2/southbound-35/tree/main/posts/liv-defectors-majors).
+
+## Disclosure
+
+This post was drafted with the assistance of Claude (Anthropic). Claude helped with the event-study specification, figure generation, and narrative drafting. All analytical decisions and editorial judgment are the author's.

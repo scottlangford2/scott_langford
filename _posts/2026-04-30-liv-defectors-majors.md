@@ -153,3 +153,7 @@ evidence is consistent with no real change.
 the formal event study, the full per-defector breakdown, and the
 round-distribution view. Code, scraped data, and all figures are in the
 [replication package](https://github.com/scottlangford2/southbound-35/tree/main/posts/liv-defectors-majors).*
+
+## Disclosure
+
+This post was drafted with the assistance of Claude (Anthropic). Claude helped with data scraping, statistical analysis, and drafting the narrative text. All analytical decisions, data interpretation, and editorial judgment are the author's.

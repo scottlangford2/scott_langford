@@ -11,7 +11,7 @@ Writing for non-academic audiences, op-eds, handbook chapters, and other outputs
 
 ## Blog: Southbound 35
 
-[**Southbound 35**](/year-archive/) — Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Written for academics who study Texas communities and the state and local officials who govern them.
+[**Southbound 35**](/year-archive/). Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Posts are drafted with Claude and serve as both an exploration of what an LLM can do alongside an academic researcher and an outlet for short analyses that are too limited in scope to warrant a full academic paper but may still be useful to the people who study Texas communities or to the state and local officials who govern them.
 
 <ul>
 {% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %Y" }}</li>
