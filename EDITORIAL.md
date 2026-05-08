@@ -12,7 +12,7 @@
 
 | Date | Bucket | Working title | Data status |
 |---|---|---|---|
-| 2026-05-11 (Mon) | economic-development | Hays County water: Edwards, Trinity, GMA-9, Kyle's supply contracts | Need TWDB / GMA-9 pull |
+| 2026-05-11 (Mon) | economic-development | Where the Water Will Come From (Hays County water) | **Published** |
 | TBD | sports | TBD (pick from queue) | — |
 | 2026-05-25 (Mon) | economic-development | The 3.5% squeeze: SB 2 vs. a doubling tax base in Hays-area cities | Have it; `mf_scraper` ACFR pipeline |
 | TBD | other | Extreme weather + local finance crossover | Have it; `np_scraper` + `mf_scraper` |
