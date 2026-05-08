@@ -24,6 +24,8 @@ The Trinity Aquifer sits underneath most of the rest of the county. It is the so
 
 These two aquifers do not talk to each other in any meaningful sense. A subdivision on the Trinity cannot pump out of the Edwards even if Edwards has water, and vice versa. So the geographic accident of which aquifer your parcel sits on top of largely determines what your water future looks like.
 
+![Hays cities arrayed east to west by source aquifer](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_aquifer_split.png)
+
 ## The Districts
 
 Texas does not have a single water regulator. It has groundwater conservation districts, which are local, and surface-water authorities, which are regional. In Hays County the relevant districts are:
@@ -45,11 +47,17 @@ The MAG is what permits get measured against. If a district's permits already ad
 
 This is the gap that has shaped the last decade of growth on the Trinity side of the county. Subdivisions get platted. Wells get drilled. Some of those wells produce. Some of them do not. By the time the regional groundwater story catches up, the rooftops are already there.
 
+![Hays County water demand, historical and projected](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_water_demand.png)
+
+The chart above is the heart of the planning problem. Municipal demand has been the dominant category since the 2000s, and it is the line that scales with rooftops. Irrigation, mining, and manufacturing are roughly flat. So whatever growth scenario you accept from the previous post, it translates almost one for one into more municipal demand on top of the same fixed-supply Edwards and Trinity systems.
+
 ## Kyle's Move
 
 Kyle is the clearest example of what a fast-growing Hays city has had to do to keep ahead of the supply curve. The city sits on the eastern edge of the county and was historically dependent on a mix of GBRA surface water and local sources. As the population roughly doubled through the 2010s, both city staff and the council recognized that the existing portfolio would not get them to a build-out population well above today's count.
 
 The answer was the Alliance Regional Water Authority, originally chartered as the Hays Caldwell Public Utility Agency, which Kyle co-founded along with San Marcos, Buda, and the Canyon Regional Water Authority. ARWA's signature project is a Carrizo-Wilcox aquifer wellfield well outside the Hill Country, with treated water piped back into the I-35 corridor. The first phase has come online and is rated for tens of millions of gallons per day across all of the partner cities.
+
+![ARWA imported supply, phase ramp-up](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_arwa_ramp.png)
 
 The Carrizo-Wilcox is a different aquifer entirely. It is regulated by a different groundwater conservation district, in a different basin, paid for through utility bills and through long-term debt issued by the participating cities. From a Hays County perspective, the deal effectively imports water across county and basin lines. That debt shows up in the cities' annual financial reports and is one of the reasons that water-system operating costs are rising even when household consumption is roughly flat.
 
@@ -80,7 +88,9 @@ The economic development story in Hays County is a story about water as much as 
 
 ## Sources
 
-Texas Water Development Board (state water plan, GMA-9 DFCs, Modeled Available Groundwater). Barton Springs/Edwards Aquifer Conservation District. Hays Trinity Groundwater Conservation District. Edwards Aquifer Authority. Alliance Regional Water Authority. Guadalupe-Blanco River Authority. City of Kyle and City of San Marcos annual financial reports. Hill Country Alliance. Region L South Central Texas Regional Water Plan.
+Texas Water Development Board (state water plan, GMA-9 DFCs, Modeled Available Groundwater, county-level historical water use). Barton Springs/Edwards Aquifer Conservation District. Hays Trinity Groundwater Conservation District. Edwards Aquifer Authority. Alliance Regional Water Authority. Guadalupe-Blanco River Authority. City of Kyle and City of San Marcos annual financial reports. Hill Country Alliance. Region L South Central Texas Regional Water Plan.
+
+Replication code and figures: [github.com/scottlangford2/southbound-35/posts/hays-water](https://github.com/scottlangford2/southbound-35/tree/main/posts/hays-water).
 
 ## Disclosure
 
