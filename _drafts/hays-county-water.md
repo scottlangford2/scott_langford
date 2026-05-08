@@ -20,7 +20,7 @@ The county sits on top of two aquifers and beside one big surface-water provider
 
 The Edwards Aquifer runs in a narrow band across the eastern edge of Hays County. The Edwards is famous because Barton Springs in Austin and the San Marcos Springs in San Marcos are both fed by it, and because everything that lands on the recharge zone west of I-35 eventually winds up in those springs. The Edwards is also the most heavily regulated groundwater in Texas. Pumping in the Barton Springs segment is governed by the Barton Springs/Edwards Aquifer Conservation District, which has hard permit caps and aggressive drought triggers. When Barton Springs flow drops, pumping cuts follow.
 
-The Trinity Aquifer sits underneath most of the rest of the county. It is the source for Wimberley, Dripping Springs, the unincorporated subdivisions stretched across the western half of the county, and a lot of the new growth on the FM 150 corridor. Trinity is where the political fights are. The aquifer recharges slowly, the wells go deep, and the regulatory authority is the Hays Trinity Groundwater Conservation District, which has historically had limited fee authority and limited enforcement teeth. Jacob's Well, the iconic Trinity-fed swimming hole at Wimberley, has stopped flowing in recent droughts. That is not a metaphor. It is the underlying water table dropping below the spring vent.
+The Trinity Aquifer sits underneath most of the rest of the county. It is the source for Wimberley, Dripping Springs, the unincorporated subdivisions stretched across the western half of the county, and a lot of the new growth on the FM 150 corridor. Trinity is where the political fights are. The aquifer recharges slowly, the wells go deep, and the regulatory authority is the [Hays Trinity Groundwater Conservation District](https://haysgroundwater.com/), which historically [has been limited to new-well-construction, permit-renewal, and service-connection fees](https://texasgroundwater.org/news-events/news/monthly-feature/edf-case-study-on-hays-trinity-gcd/) rather than the production fees most other Texas GCDs are authorized to charge. Jacob's Well, the iconic Trinity-fed swimming hole at Wimberley, has [stopped flowing six times since 2000](https://www.kut.org/energy-environment/2023-08-02/jacobs-well-swimming-hole-spring-water-flow-wimberley-texas-hill-country), most recently in 2021, 2022, and 2023. That is not a metaphor. It is the underlying water table dropping below the spring vent.
 
 These two aquifers do not talk to each other in any meaningful sense. A subdivision on the Trinity cannot pump out of the Edwards even if Edwards has water, and vice versa. So the geographic accident of which aquifer your parcel sits on top of largely determines what your water future looks like.
 
@@ -32,10 +32,10 @@ The map above is the spatial fact that drives everything else. Trinity covers mo
 
 Texas does not have a single water regulator. It has groundwater conservation districts, which are local, and surface-water authorities, which are regional. In Hays County the relevant districts are:
 
-- Barton Springs/Edwards Aquifer Conservation District (BSEACD), for the Edwards on the east side.
-- Hays Trinity Groundwater Conservation District (HTGCD), for the Trinity on most of the rest.
-- Edwards Aquifer Authority (EAA), for the part of the Edwards that feeds San Marcos Springs and points south.
-- Guadalupe-Blanco River Authority (GBRA), for surface water flowing through the county.
+- [Barton Springs/Edwards Aquifer Conservation District](https://bseacd.org/) (BSEACD), for the Edwards on the east side.
+- [Hays Trinity Groundwater Conservation District](https://haysgroundwater.com/) (HTGCD), for the Trinity on most of the rest.
+- [Edwards Aquifer Authority](https://www.edwardsaquifer.org/) (EAA), for the part of the Edwards that feeds San Marcos Springs and points south.
+- [Guadalupe-Blanco River Authority](https://www.gbra.org/) (GBRA), for surface water flowing through the county.
 
 A house in northeast Hays might be in BSEACD's territory. A house ten miles west might be in HTGCD's. A municipal customer in San Marcos is buying water that came through GBRA from Canyon Lake. The patchwork is not an oversight. It reflects the geology.
 
@@ -43,11 +43,11 @@ A house in northeast Hays might be in BSEACD's territory. A house ten miles west
 
 The district map shows the patchwork directly. HTGCD covers the western two-thirds of the county. BSEACD covers the northeastern corner. EAA covers a southern wedge that includes San Marcos. The small unshaded area near Niederwald is a real gap, not a drawing artifact, and it is part of why the eastern edge of the county has the kind of supply story it has.
 
-What the districts have in common is that they are creatures of the legislature. Their authority comes from chapter 36 of the water code and from special legislation, and that authority varies. BSEACD can shut off pumping during drought. HTGCD has historically had to fight in Austin for even basic production-fee authority on existing wells. The political economy of the two districts is therefore very different. One has tools. The other has had to ask for them.
+What the districts have in common is that they are creatures of the legislature. Their authority comes from [chapter 36 of the water code](https://statutes.capitol.texas.gov/Docs/WA/htm/WA.36.htm) and from special legislation, and that authority varies. BSEACD can shut off pumping during drought. HTGCD has historically had to fight in Austin for even basic production-fee authority on existing wells. The 89th legislature attempted to expand HTGCD's authority through [SB 2660](https://capitol.texas.gov/tlodocs/89R/analysis/html/SB02660I.htm), which would have authorized pumpage fees not to exceed 38 cents per thousand gallons; that bill did not become law. The political economy of the two districts is therefore very different. One has tools. The other has had to ask for them.
 
 ## What GMA-9 Does
 
-Sitting above the local districts is Groundwater Management Area 9, which is a coordinating body that covers the Hill Country including Hays. Every five years GMA-9 sets what is called a Desired Future Condition, or DFC, for each aquifer in the area. The DFC is, in effect, a target for how much the aquifer can fall in average drawdown over the planning horizon. Once the DFC is set, the Texas Water Development Board calculates what is called the Modeled Available Groundwater, or MAG, which is the implied annual pumping ceiling consistent with that condition.
+Sitting above the local districts is [Groundwater Management Area 9](https://www.twdb.texas.gov/groundwater/management_areas/GMA9.asp), which is a coordinating body that covers the Hill Country including Hays. Every five years GMA-9 sets what is called a Desired Future Condition, or [DFC](https://www.twdb.texas.gov/groundwater/dfc/index.asp), for each aquifer in the area. The DFC is, in effect, a target for how much the aquifer can fall in average drawdown over the planning horizon. Once the DFC is set, the Texas Water Development Board calculates what is called the Modeled Available Groundwater, or MAG, which is the implied annual pumping ceiling consistent with that condition.
 
 The MAG is what permits get measured against. If a district's permits already add up to the MAG, additional pumping requests are supposed to be denied or reallocated. In practice the DFC-MAG-permit chain has been contested for years, and the Trinity numbers in particular have been the subject of repeated legislative and legal attention. The mechanism is real, but it does not move quickly, and it does not by itself stop a subdivision from being approved before the supply is locked in.
 
@@ -61,7 +61,7 @@ The chart above is the heart of the planning problem. Municipal demand has been 
 
 Kyle is the clearest example of what a fast-growing Hays city has had to do to keep ahead of the supply curve. The city sits on the eastern edge of the county and was historically dependent on a mix of GBRA surface water and local sources. As the population roughly doubled through the 2010s, both city staff and the council recognized that the existing portfolio would not get them to a build-out population well above today's count.
 
-The answer was the Alliance Regional Water Authority, originally chartered as the Hays Caldwell Public Utility Agency, which Kyle co-founded along with San Marcos, Buda, and the Canyon Regional Water Authority. ARWA's signature project is a Carrizo-Wilcox aquifer wellfield well outside the Hill Country, with treated water piped back into the I-35 corridor. The first phase has come online and is rated for tens of millions of gallons per day across all of the partner cities.
+The answer was the [Alliance Regional Water Authority](https://alliancewater.org/what-we-do), which Kyle co-founded along with San Marcos, Buda, and the Canyon Regional Water Authority. ARWA's signature project is a Carrizo-Wilcox aquifer wellfield in eastern Caldwell and northern Gonzales counties, well outside the Hill Country, with treated water piped back into the I-35 corridor. The Carrizo treatment plant is being built out toward a [design capacity of 39.5 MGD](https://kfriese.com/projects/alliance-water-phase-1b-segment-b-pipeline-design/) across all of the partner cities.
 
 ![ARWA imported supply, phase ramp-up](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_arwa_ramp.png)
 
@@ -94,9 +94,33 @@ The economic development story in Hays County is a story about water as much as 
 
 ## Sources
 
-Texas Water Development Board (state water plan, GMA-9 DFCs, Modeled Available Groundwater, county-level historical water use). Barton Springs/Edwards Aquifer Conservation District. Hays Trinity Groundwater Conservation District. Edwards Aquifer Authority. Alliance Regional Water Authority. Guadalupe-Blanco River Authority. City of Kyle and City of San Marcos annual financial reports. Hill Country Alliance. Region L South Central Texas Regional Water Plan.
+**Aquifers and groundwater regulation**
+- Texas Water Development Board, [Major Aquifers GIS shapefile](https://www.twdb.texas.gov/mapping/gisdata.asp).
+- Texas Water Development Board, [Groundwater Management Area 9](https://www.twdb.texas.gov/groundwater/management_areas/GMA9.asp) and [Desired Future Conditions overview](https://www.twdb.texas.gov/groundwater/dfc/index.asp).
+- [Barton Springs/Edwards Aquifer Conservation District](https://bseacd.org/).
+- [Hays Trinity Groundwater Conservation District](https://haysgroundwater.com/).
+- [Edwards Aquifer Authority](https://www.edwardsaquifer.org/).
+- Texas Alliance of Groundwater Districts, [EDF case study on the Hays Trinity GCD](https://texasgroundwater.org/news-events/news/monthly-feature/edf-case-study-on-hays-trinity-gcd/).
+- Texas Special District Local Laws Code, [Chapter 8843 (HTGCD enabling statute)](https://statutes.capitol.texas.gov/Docs/SD/htm/SD.8843.htm).
+- Texas Water Code, [Chapter 36 (groundwater conservation districts)](https://statutes.capitol.texas.gov/Docs/WA/htm/WA.36.htm).
+- 89th Texas Legislature, [SB 2660 bill analysis](https://capitol.texas.gov/tlodocs/89R/analysis/html/SB02660I.htm).
 
-Replication code and figures: [github.com/scottlangford2/southbound-35/posts/hays-water](https://github.com/scottlangford2/southbound-35/tree/main/posts/hays-water).
+**Springs and drought**
+- KUT, [Jacob's Well stops flowing for sixth time in recorded history (Aug 2023)](https://www.kut.org/energy-environment/2023-08-02/jacobs-well-swimming-hole-spring-water-flow-wimberley-texas-hill-country).
+- Texas Monthly, [Who's Killing Jacob's Well?](https://www.texasmonthly.com/news-politics/jacobs-well-drought-water/).
+
+**Water demand and planning**
+- Texas Water Development Board, [Historical Water Use Estimates](https://www.twdb.texas.gov/waterplanning/waterusesurvey/estimates/).
+- Texas Water Development Board, [2026 RWP Board-Adopted Demand Projections (municipal)](https://www.twdb.texas.gov/waterplanning/data/projections/2027/municipal.asp) and [non-municipal](https://www.twdb.texas.gov/waterplanning/data/projections/2027/projections.asp).
+- [South Central Texas Regional Water Planning Group (Region L)](https://www.twdb.texas.gov/waterplanning/rwp/regions/index.asp).
+
+**ARWA and surface water**
+- [Alliance Regional Water Authority](https://alliancewater.org/what-we-do).
+- [Guadalupe-Blanco River Authority](https://www.gbra.org/).
+- City of Kyle, [Alliance Water partnership](https://www.cityofkyle.gov/city-services/water-utilities/about-kyle-water/alliance-water-partnership/).
+
+**Replication code and figures**
+- [github.com/scottlangford2/southbound-35/posts/hays-water](https://github.com/scottlangford2/southbound-35/tree/main/posts/hays-water).
 
 ## Disclosure
 
