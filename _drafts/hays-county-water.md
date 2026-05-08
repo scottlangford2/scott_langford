@@ -24,7 +24,9 @@ The Trinity Aquifer sits underneath most of the rest of the county. It is the so
 
 These two aquifers do not talk to each other in any meaningful sense. A subdivision on the Trinity cannot pump out of the Edwards even if Edwards has water, and vice versa. So the geographic accident of which aquifer your parcel sits on top of largely determines what your water future looks like.
 
-![Hays cities arrayed east to west by source aquifer](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_aquifer_split.png)
+![Hays County aquifer coverage: Trinity covers most of the county; Edwards runs in a narrow band along the eastern corridor](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_aquifer_map.png)
+
+The map above is the spatial fact that drives everything else. Trinity covers most of the county. Edwards runs in a narrow north-south band along the eastern corridor where the population is densest. Buda, Kyle, and the eastern half of San Marcos sit on top of Edwards. Wimberley and Dripping Springs sit on Trinity. Niederwald, in the southeast, falls outside both major aquifer footprints and depends on imported supply through its retail provider.
 
 ## The Districts
 
@@ -36,6 +38,10 @@ Texas does not have a single water regulator. It has groundwater conservation di
 - Guadalupe-Blanco River Authority (GBRA), for surface water flowing through the county.
 
 A house in northeast Hays might be in BSEACD's territory. A house ten miles west might be in HTGCD's. A municipal customer in San Marcos is buying water that came through GBRA from Canyon Lake. The patchwork is not an oversight. It reflects the geology.
+
+![Hays County groundwater conservation districts: HTGCD (west), BSEACD (northeast), EAA (south)](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/hays/hays_gcd_map.png)
+
+The district map shows the patchwork directly. HTGCD covers the western two-thirds of the county. BSEACD covers the northeastern corner. EAA covers a southern wedge that includes San Marcos. The small unshaded area near Niederwald is a real gap, not a drawing artifact, and it is part of why the eastern edge of the county has the kind of supply story it has.
 
 What the districts have in common is that they are creatures of the legislature. Their authority comes from chapter 36 of the water code and from special legislation, and that authority varies. BSEACD can shut off pumping during drought. HTGCD has historically had to fight in Austin for even basic production-fee authority on existing wells. The political economy of the two districts is therefore very different. One has tools. The other has had to ask for them.
 
