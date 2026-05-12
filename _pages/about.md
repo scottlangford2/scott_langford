@@ -15,11 +15,11 @@ My independent research has been funded by the [Kenan Institute for Private Ente
 
 ## Southbound 35
 
-I write [**Southbound 35**]({{ site.url }}/year-archive/) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it.
+I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it.
 
 **Recent posts:**
 <ul>
-{% for post in site.posts limit:3 %}<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+{% for post in site.posts limit:3 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
 {% endfor %}</ul>
 
 ## Contact
