@@ -119,7 +119,7 @@ A few honest caveats:
   still being *invited* to majors — which positively selects on play. The
   Lee bound on cuts says this could matter a lot.
 - **Pre-trend issue.** A formal event study (in [the
-  appendix](/posts/2026/04/liv-defectors-majors-appendix/)) shows
+  appendix]({{ site.url }}/posts/2026/04/liv-defectors-majors-appendix/)) shows
   defectors were unusually *good* three majors before they signed, which
   fails a parallel-trends test. The matched-control spec is partly
   designed around this; it gives the smallest estimate (+0.25).
@@ -149,7 +149,7 @@ evidence is consistent with no real change.
 
 ---
 
-*See the [appendix](/posts/2026/04/liv-defectors-majors-appendix/) for
+*See the [appendix]({{ site.url }}/posts/2026/04/liv-defectors-majors-appendix/) for
 the formal event study, the full per-defector breakdown, and the
 round-distribution view. Code, scraped data, and all figures are in the
 [replication package](https://github.com/scottlangford2/southbound-35/tree/main/posts/liv-defectors-majors).*

@@ -13,7 +13,7 @@ related: false
 ---
 
 Supplementary figures and discussion for [Did LIV Golfers Get Worse After
-They Defected?](/posts/2026/04/liv-defectors-majors/).
+They Defected?]({{ site.url }}/posts/2026/04/liv-defectors-majors/).
 
 ## A1 — Per-defector breakdown
 
