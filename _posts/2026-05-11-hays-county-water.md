@@ -5,6 +5,7 @@ permalink: /posts/2026/05/hays-county-water/
 related: false
 categories:
   - economic-development
+  - hays-county
 tags:
   - Hays County
   - Texas

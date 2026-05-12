@@ -5,6 +5,7 @@ permalink: /posts/2026/04/hays-county-growth/
 related: false
 categories:
   - economic-development
+  - hays-county
 tags:
   - Hays County
   - Texas
