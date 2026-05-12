@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;"><em>Last updated: {{ "now" | date: "%B %Y" }}. <span style="color: #999;">PDF version available upon request.</span></em></p>
+
 Interests
 ======
 * **Research:** Community & Economic Development; Public Finance; Entrepreneurship
