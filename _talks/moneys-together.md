@@ -13,11 +13,11 @@ Presented at:
 - American Economic Association Annual Meeting, 2024
 - APPAM Annual Research Conference, 2023 *(panel organizer)*
 - Southern Economic Association Annual Meeting *(panel organizer)*
+- **FDIC Bank Research Conference** *(invited; federal regulator policy venue)*
+- **Community Banking Research Conference**, Federal Reserve Bank of St. Louis *(invited; Fed/CSBS joint conference)*
 - ABFM Annual Research Conference
 - SouthEastern Conference For Public Administration
 - Eastern Finance Association
 - Midwest Finance Association
 - Carolina Region Empirical Economics Day, 2022
-- FDIC Bank Research Conference
-- Community Banking Research Conference
 - NARSC Annual Research Conference
