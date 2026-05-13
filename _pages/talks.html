@@ -1,15 +1,40 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks & Speaking"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<div style="background: #f6f8fa; border-left: 4px solid #e3120b; padding: 16px 20px; margin: 0 0 1.75em;">
+  <p style="margin: 0 0 0.5em; font-size: 1.05em;"><strong>Available for speaking engagements.</strong></p>
+  <p style="margin: 0; color: #444;">I'm available to speak with academic audiences, professional associations, government and nonprofit organizations, podcasts, and journalists. Inquiries: <a href="mailto:scottlangford@txstate.edu">scottlangford@txstate.edu</a>.</p>
+</div>
 
-{% endif %}
+<h2 id="topics">Topics</h2>
+
+<ul>
+  <li><strong>Texas state &amp; local public finance</strong> — property taxes, appraisal, school finance and recapture, special districts (MUDs, ESDs), bond elections.</li>
+  <li><strong>Economic development &amp; entrepreneurship</strong> — small business activity, banking deserts, knowledge spillovers, regional industrial composition.</li>
+  <li><strong>Extreme weather &amp; community resilience</strong> — how local finance institutions and entrepreneurship moderate the economic effects of climate shocks.</li>
+  <li><strong>Applied econometrics for policy</strong> — research design, causal inference, and translating administrative data into policy-relevant evidence.</li>
+  <li><strong>Hays County and the I-35 corridor</strong> — growth, water, schools, governance (the subject of the <a href="{{ '/year-archive/' | relative_url }}">Southbound 35</a> blog).</li>
+</ul>
+
+<h2 id="formats">Formats</h2>
+
+<ul>
+  <li>Keynotes and invited lectures</li>
+  <li>Departmental seminars and workshops</li>
+  <li>Panels and moderated discussions</li>
+  <li>Podcast and media interviews</li>
+  <li>Briefings for elected officials and agency staff</li>
+</ul>
+
+<h2 id="conference-presentations">Past conference presentations</h2>
+
+<p style="color: #555; font-size: 0.95em; margin-bottom: 1em;">Peer-reviewed academic conference talks, grouped by project. For invited talks, briefings, and media appearances, please <a href="mailto:scottlangford@txstate.edu">get in touch</a>.</p>
 
 {% for post in site.talks reversed %}
   {% include archive-single-talk.html %}
