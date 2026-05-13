@@ -17,22 +17,16 @@
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-{% if page.url contains '/posts/' %}
-<!-- Justify body paragraphs on blog posts only -->
+<!-- Justify body paragraphs site-wide -->
 <style>
-  .page__content p {
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-  }
-  .page__content li {
+  .page__content p,
+  .page__content li,
+  .archive__item-excerpt {
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
   }
 </style>
-{% endif %}
 
 <!-- end custom head snippets -->
