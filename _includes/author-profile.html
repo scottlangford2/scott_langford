@@ -73,6 +73,9 @@
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
       {% endif %}
+      <!-- Blog subscription -->
+      <li><a href="{{ '/feed.xml' | relative_url }}"><i class="fa fa-fw fa-rss-square icon-pad-right" aria-hidden="true"></i>RSS (Blog)</a></li>
+      <li><a href="{{ '/subscribe/' | relative_url }}"><i class="fa fa-fw fa-envelope-open icon-pad-right" aria-hidden="true"></i>Subscribe</a></li>
 
       <!-- Font Awesome icons / Repositories and software development -->
       {% if author.bitbucket %}

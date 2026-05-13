@@ -1,0 +1,36 @@
+---
+layout: archive
+title: "Search"
+permalink: /search/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p style="font-size: 0.95em; color: #555; margin-top: -0.5em; margin-bottom: 1.5em;">Search posts and pages on this site.</p>
+
+<input type="search" id="search-input" placeholder="Type to search…" autofocus
+       style="width: 100%; max-width: 520px; padding: 10px 14px; font-size: 1em; border: 1px solid #d0d7de; border-radius: 6px; margin-bottom: 1.5em;">
+
+<div id="search-results" style="line-height: 1.6;"></div>
+
+<noscript>
+  <p style="color: #888; font-style: italic;">Search requires JavaScript. <a href="{{ '/sitemap/' | relative_url }}">Browse the sitemap</a> instead.</p>
+</noscript>
+
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate:
+      '<div style="margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #eaeaea;">' +
+        '<a href="{url}" style="font-weight: 600; font-size: 1.05em;">{title}</a>' +
+        '<span style="color: #888; font-size: 0.85em; margin-left: 0.5em;">{category} · {date}</span>' +
+      '</div>',
+    noResultsText: '<p style="color: #888;">No matches.</p>',
+    limit: 20,
+    fuzzy: false
+  });
+</script>
