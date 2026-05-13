@@ -65,6 +65,9 @@
       {% if author.scopus %}
         <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
       {% endif %}
+      {% if author.osf %}
+        <li><a href="{{ author.osf }}"><i class="ai ai-osf ai-fw icon-pad-right"></i>OSF</a></li>
+      {% endif %}
 
       <!-- Primary social (Bluesky promoted up for active PA community) -->
       {% if author.bluesky %}
