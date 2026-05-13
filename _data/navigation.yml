@@ -26,5 +26,8 @@ main:
   - title: "Blog"
     url: /year-archive/
 
+  - title: "Search"
+    url: /search/
+
   # - title: "CV"
   #   url: /cv-json/
