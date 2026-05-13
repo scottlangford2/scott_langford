@@ -42,6 +42,7 @@ author:
   researchgate     : # URL
   scopus           : # URL
   ssrn             : "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746"
+  osf              : "https://osf.io/89q6x/"
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
