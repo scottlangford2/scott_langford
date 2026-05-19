@@ -68,13 +68,13 @@ Before drawing conclusions from a regression coefficient, it helps to verify the
 
 | Player, event (year) | Pos after R3 | Δ (strokes) |
 |---|---:|---:|
-| Jordan Spieth, Masters (2018) — Sunday 64 | 9 | **−6.33** |
-| Tony Finau, Masters (2018) — Sunday 66 | 15 | **−5.67** |
-| Rory McIlroy, U.S. Open (2024) — Pinehurst missed putts | 2 | +0.33 |
-| Bryson DeChambeau, Masters (2024) — led R1, finished 6th | 5 | +2.00 |
-| Will Zalatoris, PGA Championship (2022) — lost playoff | 2 | +3.00 |
-| Cameron Smith, Masters (2022) — final group, finished T3 | 2 | +3.00 |
-| Brooks Koepka, Masters (2023) — led, shot 75 | 1 | **+6.67** |
+| Jordan Spieth, [Masters (2018)](https://en.wikipedia.org/wiki/2018_Masters_Tournament) — Sunday 64 | 9 | **−6.33** |
+| Tony Finau, [Masters (2018)](https://en.wikipedia.org/wiki/2018_Masters_Tournament) — Sunday 66 | 15 | **−5.67** |
+| Rory McIlroy, [U.S. Open (2024)](https://en.wikipedia.org/wiki/2024_U.S._Open_(golf)) — Pinehurst missed putts | 2 | +0.33 |
+| Bryson DeChambeau, [Masters (2024)](https://en.wikipedia.org/wiki/2024_Masters_Tournament) — led R1, finished 6th | 5 | +2.00 |
+| Will Zalatoris, [PGA Championship (2022)](https://en.wikipedia.org/wiki/2022_PGA_Championship) — lost playoff | 2 | +3.00 |
+| Cameron Smith, [Masters (2022)](https://en.wikipedia.org/wiki/2022_Masters_Tournament) — final group, finished T3 | 2 | +3.00 |
+| Brooks Koepka, [Masters (2023)](https://en.wikipedia.org/wiki/2023_Masters_Tournament) — led, shot 75 | 1 | **+6.67** |
 
 The famous clutch rounds (Spieth's 64, Finau's 66) and the famous give-it-back rounds (Koepka, Zalatoris, Smith) are all visibly in the panel. The pattern lives where you'd expect.
 
@@ -110,7 +110,7 @@ There's also a temporal split worth noting. The effect is stronger in 2018–202
 
 The average effect is small, but individuals differ enough to matter. I residualized each player-tournament Δ on player FE, event FE, and the quadratic in through-R3 score — leaving only the part of each Sunday score that the controls don't explain — then averaged across each player's contention appearances. A negative residual means a player consistently outplays their own three-round baseline when they're in the mix. A positive residual means the opposite.
 
-A first cut using top-5 entering R4 produced an interpretable distribution (figure below) with one problem at the tails: Jon Rahm, a multi-major winner, came in near the bottom of the clutch rankings. Inspecting his rounds revealed why. Rahm routinely posts huge 54-hole leads — a *minus-23* through 54 holes at the 2023 American Express, where he shot −4 on Sunday and still won by four — and the mean-reversion control, which is a quadratic, cannot fully neutralize the protective Sunday play that very large leads invite. That's a front-runner effect, not a pressure effect. Of his 30 top-5 appearances, six were outright wins.
+A first cut using top-5 entering R4 produced an interpretable distribution (figure below) with one problem at the tails: Jon Rahm, a multi-major winner, came in near the bottom of the clutch rankings. Inspecting his rounds revealed why. Rahm routinely converts huge 54-hole leads — at the [2020 Memorial Tournament](https://en.wikipedia.org/wiki/2020_Memorial_Tournament), for example, he led at −12 through three rounds, shot a +3 Sunday round of 75, and still won by three strokes — and the mean-reversion control, which is a quadratic, cannot fully neutralize the protective Sunday play that very large leads invite. That's a front-runner effect, not a pressure effect. Of his 30 top-5 appearances in the panel, six were outright wins.
 
 A cleaner cut restricts attention to events where the top-5 spread entering Sunday was four strokes or fewer — *actually* close races. On that subsample (1,351 contention rounds, 47 players with at least eight appearances), the rankings sharpen.
 
@@ -128,7 +128,7 @@ A cleaner cut restricts attention to events where the top-5 spread entering Sund
 | 6 | Scottie Scheffler | −0.54 | 26 |
 | 7 | Rory McIlroy | −0.44 | 27 |
 
-This is a striking list. McIlroy, who has a public reputation for losing leads in majors, is on the clutch side once you control for skill and mean reversion — interesting because it suggests his most-remembered major Sundays loom larger in memory than his routine tight non-major contention does. Scheffler ranking sixth on 26 appearances is the kind of evidence the underlying narrative will eventually catch up with. Finau's number leads the list and is the most statistically robust result in the table — the only player whose individual t-statistic clears 2.
+This is a striking list. McIlroy, who has a [public reputation for losing leads in majors](https://www.bbc.com/sport/golf/articles/cd6e5y2ww25o) (the 2011 Masters collapse and his 2024 U.S. Open finish at Pinehurst being the canonical references), is on the clutch side once you control for skill and mean reversion — interesting because it suggests his most-remembered major Sundays loom larger in memory than his routine tight non-major contention does. Scheffler ranking sixth on 26 appearances is the kind of evidence the underlying narrative will eventually catch up with. Finau's number leads the list and is the most statistically robust result in the table — the only player whose individual t-statistic clears 2.
 
 **Least clutch in tight contention** (gives the most strokes back):
 
@@ -151,7 +151,7 @@ A small enough number that the natural next question is: should anyone care?
 
 Yes, because Sunday leaderboards are tight. In the panel, **52 percent of events** are decided by a margin of one stroke or less, and 72 percent by two strokes or less. The top of a Sunday leaderboard is densely packed: among the top-10 entering R4, the average density at the leaderboard's median is **1.7 players per stroke**. So 0.4 strokes is worth about 0.7 leaderboard positions — close to one full spot, every time you find yourself in contention.
 
-Translated to money: at a 2024-Masters payout structure, the average per-position drop in the top 10 is $340,000. So 0.4 strokes is roughly **$230,000 of expected prize money per Sunday in contention** at a major. Even at a regular Tour stop with flatter payouts ($50K–$100K per top-10 position), that's $50K–$150K per Sunday. For a player like Tony Finau at the top of the clutch rankings, the rough back-of-envelope value of his "clutch premium" over the eight-year window is a few million dollars relative to a typical pro of the same skill — and the inverse for the players at the bottom of the table.
+Translated to money: at the [2024 Masters payout structure](https://www.golfdigest.com/story/2024-masters-tournament-prize-money-payouts-augusta-national), the average per-position drop in the top 10 is $340,000. So 0.4 strokes is roughly **$230,000 of expected prize money per Sunday in contention** at a major. Even at a [regular Tour stop with flatter payouts](https://www.pgatour.com/article/news/latest/2024/01/02/2024-pga-tour-schedule-purses-prize-money-fedex-cup-payouts) (closer to $50K–$100K between top-10 positions), 0.7 leaderboard positions is still tens of thousands of dollars per Sunday. For a player like Tony Finau at the top of the clutch rankings, the rough back-of-envelope value of his "clutch premium" over the eight-year window is a few million dollars relative to a typical pro of the same skill — and the inverse for the players at the bottom of the table.
 
 Translated to wins is harder, but consider: more than half of tournaments are decided by one stroke or fewer. A reliable 1-stroke clutch swing on Sunday is enough, over a career, to turn several near-misses into wins — or the other way.
 
@@ -171,10 +171,10 @@ If a commentator tells you a leader is "due to give back strokes" on Sunday, the
 
 ## References
 
-- Broadie, Mark (2012). "Assessing Golfer Performance on the PGA Tour." *Interfaces* 42(2): 146–165.
-- Broadie, Mark (2014). *Every Shot Counts: Using the Revolutionary Strokes Gained Approach to Improve Your Golf Performance and Strategy*. Gotham Books.
-- Connolly, Robert A., and Richard J. Rendleman, Jr. (2008). "Skill, Luck, and Streaky Play on the PGA Tour." *Journal of the American Statistical Association* 103(481): 74–88.
-- Hickman, Daniel C., and Neil E. Metz (2015). "The impact of pressure on performance: Evidence from the PGA Tour." *Journal of Economic Behavior & Organization* 116: 319–330.
-- Pope, Devin G., and Maurice E. Schweitzer (2011). "Is Tiger Woods Loss Averse? Persistent Bias in the Face of Experience, Competition, and High Stakes." *American Economic Review* 101(1): 129–157.
+- Broadie, Mark (2012). "Assessing Golfer Performance on the PGA Tour." *Interfaces* 42(2): 146–165. [doi:10.1287/inte.1120.0626](https://doi.org/10.1287/inte.1120.0626)
+- Broadie, Mark (2014). *Every Shot Counts: Using the Revolutionary Strokes Gained Approach to Improve Your Golf Performance and Strategy*. Gotham Books. [ISBN 978-1592408139](https://www.worldcat.org/isbn/9781592408139)
+- Connolly, Robert A., and Richard J. Rendleman, Jr. (2008). "Skill, Luck, and Streaky Play on the PGA Tour." *Journal of the American Statistical Association* 103(481): 74–88. [doi:10.1198/016214507000000310](https://doi.org/10.1198/016214507000000310)
+- Hickman, Daniel C., and Neil E. Metz (2015). "The impact of pressure on performance: Evidence from the PGA Tour." *Journal of Economic Behavior & Organization* 116: 319–330. [doi:10.1016/j.jebo.2015.04.007](https://doi.org/10.1016/j.jebo.2015.04.007)
+- Pope, Devin G., and Maurice E. Schweitzer (2011). "Is Tiger Woods Loss Averse? Persistent Bias in the Face of Experience, Competition, and High Stakes." *American Economic Review* 101(1): 129–157. [doi:10.1257/aer.101.1.129](https://doi.org/10.1257/aer.101.1.129)
 
-*Data and code: ESPN PGA Tour leaderboards via the `site.web.api.espn.com` endpoint, 329 stroke-play events, 2018–2025.*
+*Data and code: leaderboards retrieved from [ESPN's PGA leaderboard API](https://site.web.api.espn.com/apis/site/v2/sports/golf/leaderboard?league=pga), 329 stroke-play events, 2018–2025. All regression coefficients, standard errors, p-values, sample counts, and player residuals reported in this post are computed directly from that data; see the project repository for the full pipeline.*
