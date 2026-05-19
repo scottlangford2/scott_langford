@@ -7,6 +7,6 @@ excerpt: 'Racial and ethnic minorities disproportionately suffer more severe con
 date: 2025-01-01
 venue: 'Working Paper - Revise and Resubmit'
 paperurl: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4231594'
-citation: 'Langford WS, Roman R, Berger AN, Feldman MP. “Let Us Put Our Moneys Together:” Minority-Owned Banks and Resilience to Crises. SSRN Working Paper #4231594'
+citation: 'Langford WS, <a href="https://www.philadelphiafed.org/our-people/raluca-a-roman">Roman R</a>, <a href="https://sc.edu/study/colleges_schools/moore/directory/berger_allen.php">Berger AN</a>, <a href="https://search.asu.edu/profile/4215976">Feldman MP</a>. “Let Us Put Our Moneys Together:” Minority-Owned Banks and Resilience to Crises. SSRN Working Paper #4231594'
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.

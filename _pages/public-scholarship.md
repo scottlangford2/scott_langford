@@ -19,15 +19,15 @@ Writing for non-academic audiences, op-eds, handbook chapters, and other outputs
 
 ## Op-Eds
 
-Feldman, MP, Bailey, AN, Lowe Reed, AS, Langford, WS. **Combine Water, Grain, Hops, Yeast and Get — Jobs.** *News and Observer* (Raleigh, NC), 2019.
+<a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Bailey, AN, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed, AS</a>, Langford, WS. **Combine Water, Grain, Hops, Yeast and Get — Jobs.** *News and Observer* (Raleigh, NC), 2019.
 
 ## Book Chapters
 
-Feldman, MP, Langford, WS. **Knowledge Spillovers Informed by Network Theory and Social Network Analysis.** *Handbook of Regional Science*, ed. Fischer, M, Capello, R., 2019.
+<a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Langford, WS. **Knowledge Spillovers Informed by Network Theory and Social Network Analysis.** *Handbook of Regional Science*, ed. Fischer, M, Capello, R., 2019.
 
 ## Policy-Facing Publications
 
-Gitterman, D, Hay Jr., WW, Langford, WS. **The National Institute of Health and Responding to New Forms of Childhood Adversity.** *Children's Health Care*, 2022.
+<a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. **The National Institute of Health and Responding to New Forms of Childhood Adversity.** *Children's Health Care*, 2022.
 
 ## Open-Source Teaching Materials
 
