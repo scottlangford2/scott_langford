@@ -26,7 +26,7 @@ If you played consistently all week, Δ ≈ 0. If you played worse on Sunday, Δ
 
 Sort players by where they stood after Round 3 and the pattern is enormous:
 
-![Naive pattern: leaders shoot much worse on Sunday](/images/golf-clutch-1-naive.png)
+![Naive pattern: leaders shoot much worse on Sunday](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/golf-clutch-1-naive.png)
 
 Leaders play their Sunday round **3.5 strokes worse** than their own Thursday-through-Saturday average. The back-of-pack reference (players 21st or worse entering the round) plays essentially to form. Monotonically, the closer you are to the lead, the worse Sunday goes for you.
 
@@ -50,7 +50,7 @@ Player fixed effects (α<sub>i</sub>) absorb skill. Event fixed effects (θ<sub>
 
 Result:
 
-![After absorbing skill, course, and mean reversion](/images/golf-clutch-2-adjusted.png)
+![After absorbing skill, course, and mean reversion](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/golf-clutch-2-adjusted.png)
 
 | Position after R3 | Naive Δ | Adjusted Δ |
 |---|---:|---:|
@@ -84,7 +84,7 @@ The most romantic version of the choking narrative is specifically about the bac
 
 I re-ran the same regression on Sunday *back-nine* scoring only, controlling for the same things. After mean-reversion adjustment:
 
-![Back-nine effect after mean-reversion control](/images/golf-clutch-3-back9.png)
+![Back-nine effect after mean-reversion control](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/golf-clutch-3-back9.png)
 
 Nothing. The leader's back-nine cost is +0.12 strokes with a confidence interval that comfortably contains zero. The entire back-nine collapse story, once you strip out regression to the mean, is a story we tell ourselves because we remember the salient finishes and forget the routine ones.
 
@@ -114,7 +114,7 @@ A first cut using top-5 entering R4 produced an interpretable distribution (figu
 
 A cleaner cut restricts attention to events where the top-5 spread entering Sunday was four strokes or fewer — *actually* close races. On that subsample (1,351 contention rounds, 47 players with at least eight appearances), the rankings sharpen.
 
-![Heterogeneity across players in contention](/images/golf-clutch-4-players.png)
+![Heterogeneity across players in contention](https://raw.githubusercontent.com/scottlangford2/scott_langford/master/images/golf-clutch-4-players.png)
 
 **Most clutch in tight contention** (mean residual in strokes, more negative = more clutch; n = appearances):
 
