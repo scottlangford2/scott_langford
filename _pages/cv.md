@@ -67,9 +67,9 @@ Works in Progress
 
 Other Writing
 ======
-* Gitterman, D, Hay Jr., WW, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022)
-* Feldman, MP, Bailey, AN, Lowe Reed, AS, Langford, WS. Combine Water, Grain, Hops, Yeast and Get - Jobs. *News and Observer (Raleigh, NC)* (2019)
-* Feldman, MP, Langford, WS. Knowledge Spillovers Informed by Network Theory and Social Network Analysis. *Handbook of Regional Science*. (ed) Fischer, M, Capello, R. (2019)
+* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022)
+* <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Bailey, AN, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed, AS</a>, Langford, WS. Combine Water, Grain, Hops, Yeast and Get - Jobs. *News and Observer (Raleigh, NC)* (2019)
+* <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Langford, WS. Knowledge Spillovers Informed by Network Theory and Social Network Analysis. *Handbook of Regional Science*. (ed) Fischer, M, Capello, R. (2019)
 
 Teaching
 ======
@@ -127,14 +127,14 @@ Professional Experience
 ======
 * **Co-Principal Investigator** — US Census Bureau, Federal Statistical Research Data Center, 2022-Present
   * Title: The Roles of the Opioid and COVID Crises in Entrepreneurship and Innovation
-  * Co-Principal Investigator: Maryann P. Feldman
+  * Co-Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
 * **Research Associate** — CREATE-Kenan Institute of Private Enterprise, 2019-2022
 * **Research Assistant** — North Carolina Entrepreneurship Data Initiative, 2020
-  * Principal Investigator: Maryann P. Feldman
+  * Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
 * **Research Assistant** — Early Stage Evaluation of the Kauffman Foundation's ESHIP Communities Project, 2018-2019
-  * Principal Investigator: Maryann P. Feldman
+  * Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
 * **Research Assistant** — Examining the US Pediatric Research Portfolio, 2016-2018, 2022
-  * Principal Investigator: Daniel P. Gitterman
+  * Principal Investigator: <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Daniel P. Gitterman</a>
 
 Leadership Experience, Awards, and Professional Service
 ======
