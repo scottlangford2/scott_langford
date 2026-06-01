@@ -24,4 +24,4 @@ I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on
 
 ## Contact
 
-**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) &nbsp;·&nbsp; **Office:** Texas State University, San Marcos, TX &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2) · [OSF](https://osf.io/89q6x/)
+**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) &nbsp;·&nbsp; **Office:** Trauth Huffman Hall 355, Texas State University, San Marcos, TX &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2) · [OSF](https://osf.io/89q6x/)
