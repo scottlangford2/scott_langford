@@ -19,7 +19,7 @@ author_profile: true
 
 ## Office Hours
 
-By appointment. Email [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) to set up a time.
+Tuesdays and Thursdays, 1:00–3:00 p.m., and by appointment. Email [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) to set up a time.
 
 ## For Prospective MPA Students at Texas State
 
