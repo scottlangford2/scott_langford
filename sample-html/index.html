@@ -6,15 +6,15 @@
   <meta name="description" content="W. Scott Langford — Assistant Professor of Public Administration, Texas State University.">
   <title>W. Scott Langford</title>
   <link rel="icon" href="../images/favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
   <style>
-    /* Base — modeled after paulgp.com */
+    /* Base — paulgp.com structure with NYT/Economist editorial typography */
     *, *::before, *::after { box-sizing: border-box; }
     body {
       font-family: 'Spectral', Georgia, 'Times New Roman', serif;
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.65;
       color: #1a1a1a;
       background: #faf8f5;
       max-width: 1200px;
@@ -37,7 +37,15 @@
     }
     .banner a { color: #664d03; }
 
-    /* Layout: content left, sidenav right */
+    /* Thin top accent — editorial signature */
+    .accent-bar {
+      height: 4px;
+      background: #b5451b;
+      max-width: 64px;
+      margin: 0 0 1.5rem;
+    }
+
+    /* Layout */
     .wrapper {
       display: grid;
       grid-template-columns: 1fr 240px;
@@ -48,62 +56,125 @@
       .wrapper { grid-template-columns: 1fr; gap: 1.5rem; }
       .sidenav { order: -1; }
     }
+    section { max-width: 680px; }
 
-    section {
-      max-width: 640px;
-    }
-
-    /* Typography */
-    h1, h2, h3 {
+    /* Headline — NYT-style bold serif */
+    h1 {
       font-family: 'Spectral', Georgia, serif;
-      font-weight: 600;
-      line-height: 1.3;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
       color: #1a1a1a;
-      letter-spacing: 0.01em;
-      margin: 1.25rem 0 0.5rem;
+      margin: 0 0 0.25rem;
     }
-    h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
 
-    /* First h3 = subtitle (light gray serif) */
-    section > h3:first-of-type {
+    /* Subtitle — light gray serif (paulgp move) */
+    .subtitle {
       font-family: 'Spectral', Georgia, serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 300;
       color: #666;
-      text-transform: none;
-      letter-spacing: 0;
-      margin-top: 0.25rem;
-      margin-bottom: 1rem;
+      margin: 0 0 1rem;
+      line-height: 1.4;
     }
 
-    /* Other h3 = section label (DM Sans, uppercase, top border) */
-    section > h3:not(:first-of-type) {
+    /* Deck — the positioning sentence, NYT-style italic serif */
+    .deck {
+      font-family: 'Spectral', Georgia, serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.5;
+      margin: 0 0 2rem;
+      max-width: 620px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.5rem;
+    }
+
+    /* Section labels — DM Sans uppercase, with a small leading red dot */
+    h2 {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.72rem;
-      font-weight: 500;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #888;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-      margin-top: 1.75rem;
-      margin-bottom: 0.5rem;
+      letter-spacing: 0.14em;
+      color: #1a1a1a;
+      border-top: 1px solid #d6d6d2;
+      padding-top: 1.25rem;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #b5451b;
+      border-radius: 50%;
     }
 
-    p, ul, ol { margin-bottom: 0.75rem; }
-    li { margin: 0.5rem 0; line-height: 1.6; }
-    li li { margin: 0.25rem 0; }
+    /* Body */
+    p { margin: 0 0 1rem; }
+    ul { padding-left: 1.2em; margin: 0 0 1rem; }
+    li { margin: 0.4rem 0; line-height: 1.6; }
 
-    /* Links — burnt orange, underline on hover */
+    /* Links — burnt orange, paulgp */
     a {
       color: #b5451b;
       text-decoration: none;
       border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
+      transition: border-color 0.15s;
     }
     a:hover { border-bottom-color: currentColor; }
 
-    /* Sidenav */
+    /* Article list — NYT/Economist editorial style for blog posts */
+    .articles {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.5rem;
+    }
+    .articles > li {
+      padding: 14px 0;
+      border-bottom: 1px solid #e6e3dd;
+    }
+    .articles > li:last-child { border-bottom: none; }
+    .article__kicker {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #b5451b;
+      margin: 0 0 4px;
+    }
+    .article__title {
+      font-family: 'Spectral', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin: 0 0 4px;
+    }
+    .article__title a { color: #1a1a1a; }
+    .article__title a:hover { color: #b5451b; border-bottom-color: #b5451b; }
+    .article__meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: #888;
+      margin: 0;
+    }
+
+    /* Inline meta */
+    .muted {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* Sidenav — paulgp */
     .sidenav {
       background: #f5f2ed;
       border-radius: 8px;
@@ -114,21 +185,20 @@
     .sidenav a {
       display: block;
       width: 100%;
-      padding: 0.5rem 1rem;
-      margin: 0.15rem 0;
+      padding: 0.45rem 1rem;
+      margin: 0.1rem 0;
       font-family: 'DM Sans', sans-serif;
       font-size: 0.75rem;
-      font-weight: 400;
+      font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: #666;
-      line-height: 1.6;
+      color: #555;
+      line-height: 1.5;
       border-bottom: none;
       border-radius: 4px;
-      box-sizing: border-box;
-      transition: color 0.2s;
+      transition: color 0.15s, background 0.15s;
     }
-    .sidenav a:hover { color: #b5451b; }
+    .sidenav a:hover { color: #b5451b; background: #ece8df; }
     .sidenav img {
       width: 100%;
       height: auto;
@@ -139,12 +209,24 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    .sidenav__group {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #999;
+      padding: 0.6rem 1rem 0.3rem;
+      margin-top: 0.5rem;
+      border-top: 1px solid #d6d6d2;
+    }
+    .sidenav__group:first-child { border-top: none; margin-top: 0; padding-top: 0; }
   </style>
 </head>
 <body>
 
 <div class="banner">
-  <strong>Sample: redesign mockup, v4 (close to paulgp.com).</strong>
+  <strong>Sample: redesign mockup, v5 (paulgp.com structure with NYT/Economist editorial type).</strong>
   <a href="/scott_langford/">Compare with the live site.</a>
 </div>
 
@@ -152,57 +234,122 @@
 
   <section>
 
+    <div class="accent-bar"></div>
+
     <h1>W. Scott Langford</h1>
-    <h3 id="position">Assistant Professor of Public Administration <br /> Texas State University</h3>
+    <p class="subtitle">Assistant Professor of Public Administration · Texas State University</p>
 
-    <h3 id="cv">CV</h3>
-    <p><a href="/scott_langford/files/Langford_CV.pdf">My CV is available here.</a> An HTML version is at <a href="/scott_langford/cv/">/cv/</a>.</p>
+    <p class="deck">Public finance, economic development, and the institutional plumbing of fast-growing places. I study how local governments absorb shocks and finance growth — and write <a href="/scott_langford/year-archive/">Southbound 35</a>, a blog on the Texas I-35 corridor.</p>
 
-    <h3 id="research">Research</h3>
-    <p><a href="/scott_langford/research/">My published papers and working papers are listed here.</a></p>
-    <p>I study state and local public finance, economic development, and how local institutions absorb economic shocks. Recent work has appeared in the <em>Journal of Business Venturing Insights</em>, <em>Economic Development Quarterly</em>, the <em>Journal of Regional Science</em>, and <em>JAMA Pediatrics</em>.</p>
+    <h2>About</h2>
+    <p>I am an assistant professor in the Department of Political Science at Texas State University, in the MPA program. I previously held a postdoctoral research fellowship in the School of Public Affairs at Arizona State and earned my PhD in Public Policy from UNC Chapel Hill.</p>
+    <p>My research uses applied econometrics on administrative data to answer policy-relevant questions in state and local public finance. Recent work has appeared in the <em>Journal of Business Venturing Insights</em>, <em>Economic Development Quarterly</em>, the <em>Journal of Regional Science</em>, and <em>JAMA Pediatrics</em>. I'm available for invited talks, consulting, and media inquiries — best reached by <a href="mailto:scottlangford@txstate.edu">email</a>.</p>
 
-    <h3 id="teaching">Teaching</h3>
+    <h2>Research</h2>
+
+    <ul class="articles">
+
+      <li>
+        <p class="article__kicker">Journal article · 2025</p>
+        <p class="article__title"><a href="https://www.sciencedirect.com/science/article/pii/S2352673425000289">Young and Small Firms and Resilience to Extreme Weather Events</a></p>
+        <p class="article__meta">Heinzel, Langford, Peters &amp; Sanders · <em>Journal of Business Venturing Insights</em></p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Working paper · under review</p>
+        <p class="article__title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4868821">George Bailey Meets the Tempestates</a></p>
+        <p class="article__meta">Peters, Langford, Sanders &amp; Feldman · SSRN</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Working paper</p>
+        <p class="article__title">Let Us Put Our Moneys Together: Minority-Owned Banks and Resilience to Crises</p>
+        <p class="article__meta">Presented at the Federal Reserve Bank of St. Louis &amp; FDIC</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Working paper</p>
+        <p class="article__title">Extreme Weather and Employment: Differential Effects Across Race and Ethnicity</p>
+        <p class="article__meta">APPAM 2024</p>
+      </li>
+
+    </ul>
+    <p class="muted"><a href="/scott_langford/research/">All publications &amp; working papers →</a></p>
+
+    <h2>Southbound 35</h2>
+    <p style="margin-bottom: 0.5rem;">A blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. New posts on Mondays at 5 AM Central.</p>
+
+    <ul class="articles">
+
+      <li>
+        <p class="article__kicker">Hays County · Governance</p>
+        <p class="article__title"><a href="/scott_langford/posts/2026/05/hays-county-governance/">Who Governs Hays County?</a></p>
+        <p class="article__meta">May 25, 2026 · 12 min read</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Hays County · Schools</p>
+        <p class="article__title"><a href="/scott_langford/posts/2026/05/hays-county-schools/">How Do You Pay for the Schools?</a></p>
+        <p class="article__meta">May 18, 2026 · 9 min read</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Hays County · Water</p>
+        <p class="article__title"><a href="/scott_langford/posts/2026/05/hays-county-water/">Where the Water Will Come From</a></p>
+        <p class="article__meta">May 11, 2026 · 12 min read</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Sports · Golf</p>
+        <p class="article__title"><a href="/scott_langford/posts/2026/04/liv-defectors-majors/">Did LIV Golfers Get Worse After They Defected?</a></p>
+        <p class="article__meta">April 30, 2026 · 7 min read</p>
+      </li>
+
+      <li>
+        <p class="article__kicker">Hays County · Projections</p>
+        <p class="article__title"><a href="/scott_langford/posts/2026/04/hays-county-projections/">Where Is All of This Going?</a></p>
+        <p class="article__meta">April 13, 2026 · 9 min read</p>
+      </li>
+
+    </ul>
+    <p class="muted">
+      <a href="/scott_langford/year-archive/">All posts →</a> &nbsp;·&nbsp;
+      <a href="/scott_langford/subscribe/">Subscribe by email</a> &nbsp;·&nbsp;
+      <a href="/scott_langford/feed.xml">RSS</a>
+    </p>
+
+    <h2>Teaching</h2>
     <p>I teach <a href="/scott_langford/teaching/">quantitative methods and public finance administration</a> in the MPA program at Texas State. The PA 3311 undergraduate textbook is <a href="https://scottlangford2.github.io/pa3311-textbook/">open-access online</a>.</p>
 
-    <h3 id="blog">Blog — Southbound 35</h3>
-    <p><a href="/scott_langford/year-archive/">I write a blog about public finance and economic development on the Texas corridor</a>, with occasional detours into sports, politics, and religion.</p>
-
-    <p>Recent posts:</p>
-    <ol>
-      <li><a href="/scott_langford/posts/2026/05/hays-county-governance/">Who Governs Hays County?</a></li>
-      <li><a href="/scott_langford/posts/2026/05/hays-county-schools/">How Do You Pay for the Schools?</a></li>
-      <li><a href="/scott_langford/posts/2026/05/hays-county-water/">Where the Water Will Come From</a></li>
-      <li><a href="/scott_langford/posts/2026/04/liv-defectors-majors/">Did LIV Golfers Get Worse After They Defected?</a></li>
-      <li><a href="/scott_langford/posts/2026/04/hays-county-projections/">Where Is All of This Going?</a></li>
-    </ol>
-
-    <h3 id="speaking">Speaking</h3>
-    <p>I am available for invited talks, consulting, and media inquiries. <a href="/scott_langford/talks/">Topics, formats, and past venues are listed here</a> — including the Federal Reserve Bank of St. Louis and the FDIC.</p>
-
-    <h3 id="contact">Contact</h3>
+    <h2>Contact</h2>
     <ul>
-      <li>Email: <a href="mailto:scottlangford@txstate.edu">scottlangford@txstate.edu</a></li>
-      <li>Bluesky: <a href="https://bsky.app/profile/scottlangford2.bsky.social">@scottlangford2.bsky.social</a></li>
-      <li>Google Scholar: <a href="https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en">profile</a></li>
-      <li>OSF: <a href="https://osf.io/89q6x/">profile</a></li>
-      <li>GitHub: <a href="https://github.com/scottlangford2">scottlangford2</a></li>
+      <li>Email · <a href="mailto:scottlangford@txstate.edu">scottlangford@txstate.edu</a></li>
+      <li>Bluesky · <a href="https://bsky.app/profile/scottlangford2.bsky.social">@scottlangford2.bsky.social</a></li>
+      <li>Google Scholar · <a href="https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en">profile</a></li>
+      <li>OSF · <a href="https://osf.io/89q6x/">89q6x</a></li>
+      <li>GitHub · <a href="https://github.com/scottlangford2">scottlangford2</a></li>
     </ul>
 
   </section>
 
   <aside class="sidenav">
+    <div class="sidenav__group">Site</div>
     <a href="/scott_langford/">Home</a>
-    <a href="/scott_langford/files/Langford_CV.pdf">CV (PDF)</a>
-    <a href="/scott_langford/cv/">CV (HTML)</a>
     <a href="/scott_langford/research/">Research</a>
     <a href="/scott_langford/teaching/">Teaching</a>
     <a href="/scott_langford/talks/">Talks &amp; Speaking</a>
-    <a href="/scott_langford/year-archive/">Blog<br>(Southbound 35)</a>
-    <a href="https://scottlangford2.github.io/pa3311-textbook/">PA 3311 Textbook</a>
     <a href="/scott_langford/portfolio/">Tools</a>
+    <a href="/scott_langford/cv/">CV</a>
+
+    <div class="sidenav__group">Blog</div>
+    <a href="/scott_langford/year-archive/">Southbound 35</a>
     <a href="/scott_langford/subscribe/">Subscribe</a>
-    <img src="../images/ChatGPT_Portrait.png" alt="Profile">
+
+    <div class="sidenav__group">External</div>
+    <a href="https://scottlangford2.github.io/pa3311-textbook/">PA 3311 Textbook</a>
+    <a href="https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en">Google Scholar</a>
+
+    <img src="../images/ChatGPT_Portrait.png" alt="W. Scott Langford">
   </aside>
 
 </div>
