@@ -2,6 +2,7 @@
 title: "Southbound 35 — Replication Packages"
 excerpt: "Replication code and data for every data-driven post on the Southbound 35 blog."
 collection: portfolio
+category: replication
 ---
 
 Every post on [Southbound 35](/year-archive/) that uses figures or data has a self-contained replication package — Python scripts, data pipelines, and a README for each. Organized by post under `posts/`.
