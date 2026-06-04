@@ -19,6 +19,8 @@ Interests
 Education
 ======
 * Ph.D in Public Policy, University of North Carolina, Chapel Hill, 2022
+  * Dissertation: *Three Essays on Private Firms Under Duress Considering Local Context: How Financial Institutions and Opioid Use Affect Firms*
+  * Advisor: Maryann P. Feldman
 * M.S. in Biochemistry and Biophysics, University of North Carolina, Chapel Hill, 2016
 * B.S. in Chemistry, University of North Carolina, Wilmington, 2012
 
