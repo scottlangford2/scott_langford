@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="W. Scott Langford — Assistant Professor of Public Administration, Texas State University. Public finance, economic development, and Southbound 35.">
+  <title>W. Scott Langford, PhD</title>
+  <link rel="icon" href="../images/favicon.ico">
+  <style>
+    /* ─── Reset + base ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: Charter, 'Bitstream Charter', 'Source Serif Pro', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fdfdfc;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, .nav, .sample-banner, .sidebar__name, .sidebar__bio {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    a { color: #006BA2; text-decoration: none; border-bottom: 1px solid rgba(0, 107, 162, 0.25); }
+    a:hover { color: #003e5e; border-bottom-color: #006BA2; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ─── Banner indicating this is a sample ──────────────────── */
+    .sample-banner {
+      background: #fff3cd;
+      border-bottom: 1px solid #ffc107;
+      color: #664d03;
+      font-size: 13px;
+      padding: 8px 24px;
+      text-align: center;
+    }
+    .sample-banner a { color: #664d03; border-bottom-color: rgba(102, 77, 3, 0.4); }
+
+    /* ─── Top nav ──────────────────────────────────────────────── */
+    .nav {
+      background: #fff;
+      border-bottom: 1px solid #e6e6e3;
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 15px;
+    }
+    .nav__brand {
+      font-weight: 700;
+      color: #1a1a1a;
+      border-bottom: none;
+      margin-right: auto;
+    }
+    .nav__brand:hover { color: #006BA2; }
+    .nav a:not(.nav__brand) {
+      color: #444;
+      border-bottom: none;
+    }
+    .nav a:not(.nav__brand):hover { color: #006BA2; }
+
+    /* ─── Layout ───────────────────────────────────────────────── */
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
+      .sidebar { position: static; }
+    }
+
+    /* ─── Sidebar ──────────────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: 32px;
+      align-self: start;
+      font-size: 14px;
+    }
+    .sidebar__avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #e6e6e3;
+      margin-bottom: 16px;
+    }
+    .sidebar__name {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      color: #1a1a1a;
+    }
+    .sidebar__bio {
+      font-size: 14px;
+      color: #555;
+      margin: 0 0 14px;
+    }
+    .sidebar__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar__list li {
+      padding: 4px 0;
+      color: #444;
+    }
+    .sidebar__list a {
+      color: #444;
+      border-bottom: none;
+    }
+    .sidebar__list a:hover { color: #006BA2; }
+    .sidebar__icon {
+      display: inline-block;
+      width: 18px;
+      color: #888;
+      margin-right: 8px;
+      text-align: center;
+    }
+    .sidebar__heading {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin: 18px 0 6px;
+    }
+
+    /* ─── Main content ─────────────────────────────────────────── */
+    .main { min-width: 0; }
+    .main h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px;
+      color: #1a1a1a;
+    }
+    .main h2 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 40px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e6e6e3;
+      color: #1a1a1a;
+    }
+    .main p { text-align: justify; hyphens: auto; margin: 0 0 16px; }
+    .recent-posts {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .recent-posts li { padding: 8px 0; border-bottom: 1px dotted #ddd; }
+    .recent-posts li:last-child { border-bottom: none; }
+    .recent-posts__date { color: #888; font-size: 14px; }
+    .contact {
+      background: #f6f5f1;
+      border-left: 3px solid #006BA2;
+      padding: 14px 18px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .contact p { margin: 0 0 4px; text-align: left; }
+    .contact p:last-child { margin: 0; }
+
+    /* ─── Footer ───────────────────────────────────────────────── */
+    .footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px 48px;
+      border-top: 1px solid #e6e6e3;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+    }
+    .footer a { color: #666; border-bottom-color: rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<div class="sample-banner">
+  <strong>Sample: pure HTML mockup.</strong>
+  Not the live homepage. <a href="/scott_langford/">Compare with the live Jekyll site.</a>
+</div>
+
+<nav class="nav" aria-label="Primary">
+  <a class="nav__brand" href="/scott_langford/">W. Scott Langford, PhD</a>
+  <a href="/scott_langford/research/">Research</a>
+  <a href="/scott_langford/teaching/">Teaching</a>
+  <a href="/scott_langford/talks/">Talks</a>
+  <a href="/scott_langford/portfolio/">Tools</a>
+  <a href="/scott_langford/cv/">CV</a>
+  <a href="/scott_langford/year-archive/">Blog</a>
+  <a href="/scott_langford/search/">Search</a>
+</nav>
+
+<div class="layout">
+
+  <aside class="sidebar" aria-label="About the author">
+    <img class="sidebar__avatar"
+         src="../images/ChatGPT_Portrait.png"
+         alt="W. Scott Langford">
+    <p class="sidebar__name">W. Scott Langford, PhD</p>
+    <p class="sidebar__bio">Assistant Professor<br>Texas State University<br>San Marcos, TX</p>
+
+    <p class="sidebar__heading">Connect</p>
+    <ul class="sidebar__list">
+      <li><span class="sidebar__icon">✉</span><a href="mailto:scottlangford@txstate.edu">Email</a></li>
+      <li><span class="sidebar__icon">🎓</span><a href="https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en">Google Scholar</a></li>
+      <li><span class="sidebar__icon">📄</span><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746">SSRN</a></li>
+      <li><span class="sidebar__icon">🔬</span><a href="https://osf.io/89q6x/">OSF</a></li>
+      <li><span class="sidebar__icon">🦋</span><a href="https://bsky.app/profile/scottlangford2.bsky.social">Bluesky</a></li>
+      <li><span class="sidebar__icon">💻</span><a href="https://github.com/scottlangford2">GitHub</a></li>
+      <li><span class="sidebar__icon">in</span><a href="https://www.linkedin.com/in/scott-langford-b255a8101">LinkedIn</a></li>
+    </ul>
+
+    <p class="sidebar__heading">Subscribe</p>
+    <ul class="sidebar__list">
+      <li><span class="sidebar__icon">📬</span><a href="/scott_langford/subscribe/">Email list</a></li>
+      <li><span class="sidebar__icon">📡</span><a href="/scott_langford/feed.xml">RSS feed</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h1>Welcome.</h1>
+
+    <p>I am an assistant professor at <a href="https://www.txst.edu/">Texas State University</a> in the <a href="https://www.polisci.txst.edu/">Department of Political Science</a> in the <a href="https://www.polisci.txst.edu/graduate-programs/master-of-public-administration.html">Masters of Public Administration Program</a>. I previously served as a post-doctoral research fellow in the <a href="https://spa.asu.edu/">School of Public Affairs</a> at <a href="https://www.asu.edu/">Arizona State University</a>. I earned my PhD in <a href="https://publicpolicy.unc.edu/">Public Policy</a> at the <a href="https://www.unc.edu/">University of North Carolina at Chapel Hill</a>.</p>
+
+    <p>The central goal of my career is to improve policy using a data-driven approach. I use policy and public administration theoretical frameworks, coupled with rigorous research designs, and advanced econometric methods, to answer policy-relevant questions. Substantively, my interests lie at the intersection of economics, public health, and the environment. I examine how economies react to shocks (e.g., hurricanes), and identify moderating conditions (e.g., entrepreneurship).</p>
+
+    <p>My independent research has been funded by the <a href="https://kenaninstitute.unc.edu/">Kenan Institute for Private Enterprise</a>. My research has appeared in leading journals, such as the <em>Journal of Business Venturing Insights</em>, <em>Economic Development Quarterly</em>, the <em>Journal of Regional Science</em>, and <em>JAMA Pediatrics</em>.</p>
+
+    <h2>Southbound 35</h2>
+
+    <p>I write <a href="/scott_langford/year-archive/"><strong>Southbound 35</strong></a> — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it.</p>
+
+    <p style="font-weight: 600; margin-bottom: 8px;">Recent posts</p>
+    <ul class="recent-posts">
+      <li>
+        <a href="/scott_langford/posts/2026/05/hays-county-governance/">Who Governs Hays County?</a>
+        <span class="recent-posts__date">— May 25, 2026</span>
+      </li>
+      <li>
+        <a href="/scott_langford/posts/2026/05/hays-county-schools/">How Do You Pay for the Schools?</a>
+        <span class="recent-posts__date">— May 18, 2026</span>
+      </li>
+      <li>
+        <a href="/scott_langford/posts/2026/05/hays-county-water/">Where the Water Will Come From</a>
+        <span class="recent-posts__date">— May 11, 2026</span>
+      </li>
+    </ul>
+
+    <h2>Contact</h2>
+
+    <div class="contact">
+      <p><strong>Email:</strong> <a href="mailto:scottlangford@txstate.edu">scottlangford@txstate.edu</a></p>
+      <p><strong>Office:</strong> Texas State University, San Marcos, TX</p>
+      <p><strong>Profiles:</strong>
+        <a href="https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en">Google Scholar</a> ·
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746">SSRN</a> ·
+        <a href="https://osf.io/89q6x/">OSF</a> ·
+        <a href="https://github.com/scottlangford2">GitHub</a>
+      </p>
+    </div>
+
+    <p>For something less formal: <a href="/scott_langford/personal/">a little about me</a>.</p>
+
+  </main>
+
+</div>
+
+<footer class="footer">
+  © 2026 W. Scott Langford, PhD &nbsp;·&nbsp;
+  <a href="/scott_langford/">Live site</a> &nbsp;·&nbsp;
+  <a href="https://github.com/scottlangford2/scott_langford">Source</a>
+</footer>
+
+</body>
+</html>
