@@ -17,7 +17,7 @@
       line-height: 1.55;
       color: #1a1a1a;
       background: #faf8f5;
-      max-width: 1200px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 1.5rem;
     }
@@ -37,26 +37,21 @@
     }
     .banner a { color: #664d03; }
 
-    /* Thin top accent — editorial signature */
-    .accent-bar {
-      height: 4px;
-      background: #501214;
-      max-width: 64px;
-      margin: 0 0 0.9rem;
-    }
-
     /* Layout */
     .wrapper {
       display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 2rem;
+      grid-template-columns: minmax(0, 1fr) 200px;
+      gap: 1.5rem;
       align-items: start;
     }
     @media (max-width: 800px) {
       .wrapper { grid-template-columns: 1fr; gap: 1rem; }
       .sidenav { order: -1; }
     }
-    section { max-width: 680px; }
+    section { min-width: 0; }
+    /* Both columns start at the same y for clean horizontal alignment */
+    section > *:first-child,
+    .sidenav > *:first-child { margin-top: 0; padding-top: 0; }
 
     /* Headline — NYT-style bold serif */
     h1 {
@@ -254,8 +249,6 @@
 <div class="wrapper">
 
   <section>
-
-    <div class="accent-bar"></div>
 
     <h1>W. Scott Langford</h1>
     <p class="subtitle">Assistant Professor of Public Administration · Texas State University</p>
