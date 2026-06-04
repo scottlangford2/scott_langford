@@ -7,11 +7,15 @@ author_profile: true
 
 {% include base_path %}
 
-Writing for non-academic audiences, op-eds, handbook chapters, and other outputs beyond peer-reviewed journal articles.
+Writing for non-academic audiences, op-eds, handbook chapters, media coverage, and other outputs beyond peer-reviewed journal articles.
+
+## Media coverage
+
+**Wall Street Journal** — *"Let Us Put Our Moneys Together:" Minority-Owned Banks and Resilience to Crises* (working paper with Berger, Feldman, and Roman). Coverage of the paper's findings on the role of minority depository institutions during the Global Financial Crisis and COVID-19.
 
 ## Blog: Southbound 35
 
-[**Southbound 35**]({{ '/year-archive/' | relative_url }}). Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Posts are drafted with Claude. The blog serves three purposes: exploring what an LLM can do alongside an academic researcher, giving the author a way to learn about subjects he is curious about, and providing an outlet for short analyses too limited in scope to warrant a full academic paper.
+[**Southbound 35**]({{ '/year-archive/' | relative_url }}). Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. The blog serves three purposes: as an outlet for short analyses too limited in scope for a full academic paper, as a way for the author to learn about subjects he is curious about, and as a venue for research that may be useful to people who study Texas communities and the state and local officials who govern them.
 
 <ul>
 {% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %Y" }}</li>
