@@ -208,6 +208,40 @@
   .page__footer-follow a {
     font-family: 'DM Sans', sans-serif !important;
   }
+
+  /* Blog-post metadata rows (date, read-time, etc.) — muted DM Sans */
+  .page__meta,
+  .page__date {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.8rem !important;
+    color: var(--muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    margin: 0.25rem 0 !important;
+  }
+  .page__date strong { font-weight: 600 !important; }
+
+  /* Constrain post body width for readability */
+  article.page .page__content {
+    max-width: 720px;
+  }
+
+  /* Inline post images — center and constrain */
+  .page__content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+  }
+
+  /* Blockquotes — editorial pull quote style */
+  .page__content blockquote {
+    border-left: 3px solid var(--maroon);
+    margin: 1.5rem 0;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    color: #333;
+    font-style: italic;
+  }
 </style>
 
 <!-- end custom head snippets -->
