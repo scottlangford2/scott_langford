@@ -12,6 +12,59 @@
 <meta name="theme-color" content="#faf8f5"/>
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
+<!-- JSON-LD: Person + WebSite (richer than seo.html default) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#person",
+      "name": "W. Scott Langford",
+      "givenName": "W. Scott",
+      "familyName": "Langford",
+      "jobTitle": "Assistant Professor of Public Administration",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Texas State University",
+        "url": "https://www.txst.edu/"
+      },
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "University of North Carolina at Chapel Hill", "url": "https://www.unc.edu/"},
+        {"@type": "CollegeOrUniversity", "name": "Arizona State University", "url": "https://www.asu.edu/"}
+      ],
+      "email": "mailto:scottlangford@txstate.edu",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746",
+        "https://osf.io/89q6x/",
+        "https://github.com/scottlangford2",
+        "https://bsky.app/profile/scottlangford2.bsky.social"
+      ],
+      "knowsAbout": ["Public Finance", "Economic Development", "Public Administration", "Regional Economics", "Applied Econometrics"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": "W. Scott Langford",
+      "publisher": {"@id": "{{ site.url }}{{ site.baseurl }}/#person"},
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Blog",
+      "@id": "{{ site.url }}{{ site.baseurl }}/year-archive/#blog",
+      "url": "{{ site.url }}{{ site.baseurl }}/year-archive/",
+      "name": "Southbound 35",
+      "description": "Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion.",
+      "author": {"@id": "{{ site.url }}{{ site.baseurl }}/#person"},
+      "publisher": {"@id": "{{ site.url }}{{ site.baseurl }}/#person"}
+    }
+  ]
+}
+</script>
+
 <!-- MathJax -->
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
