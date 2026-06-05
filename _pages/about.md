@@ -1,27 +1,38 @@
 ---
 permalink: /
-title: "Welcome."
+title: "W. Scott Langford"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I am an assistant professor at [Texas State University](https://www.txst.edu/) in the [Department of Political Science](https://www.polisci.txst.edu/) in the [Masters of Public Administration Program](https://www.polisci.txst.edu/graduate-programs/master-of-public-administration.html). I previously served as a post-doctoral research fellow in the [School of Public Affairs](https://spa.asu.edu/) at [Arizona State University](https://www.asu.edu/). I earned my PhD in [Public Policy](https://publicpolicy.unc.edu/) at the [University of North Carolina at Chapel Hill](https://www.unc.edu/).
+<p style="font-size: 1.1rem; color: #666; margin-top: -0.5rem; margin-bottom: 1.25rem; font-weight: 300;">Assistant Professor of Public Administration · Texas State University</p>
 
-The central goal of my career is to improve policy using a data-driven approach. I use policy and public administration theoretical frameworks, coupled with rigorous research designs, and advanced econometric methods, to answer policy-relevant questions. Substantively, my interests lie at the intersection of economics, public health, and the environment. I examine how economies react to shocks (e.g., hurricanes), and identify moderating conditions (e.g., entrepreneurship).
+<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">I study state and local public finance, economic development, and the institutional plumbing of fast-growing places — how local governments absorb shocks and finance growth. I write <a href="{{ '/year-archive/' | relative_url }}">Southbound 35</a>, a blog on the Texas I-35 corridor.</p>
 
-My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/). My research has appeared in leading journals, such as the *Journal of Business Venturing Insights*, *Economic Development Quarterly*, the *Journal of Regional Science*, and *JAMA Pediatrics*.
+## About
+
+I am an assistant professor in the [Department of Political Science](https://www.polisci.txst.edu/) at [Texas State University](https://www.txst.edu/), in the [MPA program](https://www.polisci.txst.edu/graduate-programs/master-of-public-administration.html). I previously held a postdoctoral research fellowship in the [School of Public Affairs](https://spa.asu.edu/) at [Arizona State University](https://www.asu.edu/) and earned my PhD in [Public Policy](https://publicpolicy.unc.edu/) from [UNC Chapel Hill](https://www.unc.edu/).
+
+My research uses applied econometrics on administrative data to answer policy-relevant questions in state and local public finance. Substantively, I sit at the intersection of public administration, regional economics, and public health. Recent work has appeared in the *Journal of Business Venturing Insights*, *Economic Development Quarterly*, the *Journal of Regional Science*, and *JAMA Pediatrics*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
+
+I'm available for invited talks, consulting, and media inquiries — best reached by [email](mailto:scottlangford@txstate.edu).
 
 ## Southbound 35
 
-I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. Texas has 254 counties, thousands of taxing entities, and an interstate that runs through the heart of it.
+I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. New posts on Mondays at 5 AM Central.
 
-**Recent posts:**
 <ul>
-{% for post in site.posts limit:3 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+{% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
 {% endfor %}</ul>
+
+[All posts →]({{ '/year-archive/' | relative_url }}) &nbsp;·&nbsp; [Subscribe]({{ '/subscribe/' | relative_url }}) &nbsp;·&nbsp; [RSS]({{ '/feed.xml' | relative_url }})
 
 ## Contact
 
-**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu) &nbsp;·&nbsp; **Office:** Trauth Huffman Hall 355, Texas State University, San Marcos, TX &nbsp;·&nbsp; **Office Hours:** Tuesdays & Thursdays, 1:00–3:00 p.m. &nbsp;·&nbsp; [Google Scholar](https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en) · [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3067746) · [GitHub](https://github.com/scottlangford2) · [OSF](https://osf.io/89q6x/)
+**Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu)<br>
+**Office:** Trauth Huffman Hall 355, Texas State University, San Marcos, TX<br>
+**Office hours:** Tuesdays & Thursdays, 1:00–3:00 p.m.
+
+For something less formal: [a little about me]({{ '/personal/' | relative_url }}).
