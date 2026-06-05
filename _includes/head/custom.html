@@ -12,6 +12,9 @@
 <meta name="theme-color" content="#faf8f5"/>
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
+<!-- Plausible analytics (privacy-friendly, no cookies, GDPR-clean) -->
+<script defer data-domain="scottlangford2.github.io/scott_langford" src="https://plausible.io/js/script.js"></script>
+
 <!-- JSON-LD: Person + WebSite (richer than seo.html default) -->
 <script type="application/ld+json">
 {
@@ -76,7 +79,7 @@
   :root {
     --bg:         #faf8f5;
     --ink:        #1a1a1a;
-    --muted:      #666;
+    --muted:      #555;
     --hairline:   #d6d6d2;
     --maroon:     #501214;
     --gold:       #D7BD8A;
@@ -294,6 +297,38 @@
     padding: 0.25rem 0 0.25rem 1.25rem;
     color: #333;
     font-style: italic;
+  }
+
+  /* Accessibility: visible focus ring for keyboard users */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--maroon) !important;
+    outline-offset: 2px !important;
+    border-radius: 2px;
+  }
+
+  /* Accessibility: skip link, hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--maroon);
+    color: #fff !important;
+    padding: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    z-index: 9999;
+    text-decoration: none !important;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001s !important;
+      transition-duration: 0.001s !important;
+    }
   }
 
   /* Print stylesheet — clean CV/papers, no chrome */
