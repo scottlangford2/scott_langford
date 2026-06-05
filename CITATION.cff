@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you reference this website, materials, or its associated replication code, please cite it as below."
+type: software
+title: "W. Scott Langford — Academic Website"
+abstract: "Personal academic website of W. Scott Langford, Assistant Professor of Public Administration at Texas State University. Includes research, teaching materials, the Southbound 35 blog on Texas public finance and economic development, and open-source replication packages."
+authors:
+  - family-names: "Langford"
+    given-names: "W. Scott"
+    affiliation: "Texas State University"
+    email: "scottlangford@txstate.edu"
+url: "https://scottlangford2.github.io/scott_langford/"
+repository-code: "https://github.com/scottlangford2/scott_langford"
+license: MIT
+keywords:
+  - public finance
+  - economic development
+  - public administration
+  - regional economics
+  - Texas
