@@ -43,13 +43,32 @@
     font-family: 'Spectral', Georgia, serif !important;
     line-height: 1.65 !important;
   }
+
+  /* Justified body text — site-wide */
+  body p,
+  body li,
   .page__content p,
   .page__content li,
-  .archive__item-excerpt {
+  .archive__item-excerpt,
+  article p,
+  article li,
+  blockquote p {
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
+  }
+  /* …but not in nav, sidebar, footer, or short label rows */
+  .masthead p, .masthead li,
+  .greedy-nav li, .greedy-nav p,
+  .sidebar p, .sidebar li,
+  .author__urls li, .author__urls p,
+  .page__footer p, .page__footer li,
+  .page__footer-follow li, .page__footer-copyright,
+  .page__meta, .page__meta p,
+  .page__date, .page__date p {
+    text-align: left !important;
+    hyphens: none !important;
   }
 
   /* Headings — Spectral for h1, DM Sans for h2/h3 as section labels */
