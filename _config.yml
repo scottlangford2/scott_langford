@@ -137,8 +137,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "og-default.png"  # 1200x630 social-share card
+og_description           : "Assistant Professor of Public Administration at Texas State University. Public finance, economic development, and the institutional plumbing of fast-growing places."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
