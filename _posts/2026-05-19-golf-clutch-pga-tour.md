@@ -2,6 +2,10 @@
 title: "Who's actually clutch on Sunday? Eight years of PGA Tour data."
 date: 2026-05-19
 permalink: /posts/2026/05/golf-clutch-pga-tour/
+related: false
+categories:
+  - detours
+kind: original-analysis
 tags:
   - golf
   - sports analytics

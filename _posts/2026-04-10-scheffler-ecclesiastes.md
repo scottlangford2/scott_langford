@@ -4,7 +4,8 @@ date: 2026-04-10
 permalink: /posts/2026/04/scheffler-ecclesiastes/
 related: false
 categories:
-  - sports
+  - detours
+kind: commentary
 tags:
   - golf
   - theology

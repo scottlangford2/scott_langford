@@ -5,7 +5,8 @@ permalink: /posts/2026/04/liv-defectors-majors/
 redirect_from:
   - /posts/2026/04/liv-defectors-majors-appendix/
 categories:
-  - sports
+  - detours
+kind: original-analysis
 tags:
   - data analysis
   - sports
