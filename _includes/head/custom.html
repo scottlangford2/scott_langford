@@ -129,11 +129,33 @@
     background: var(--bg) !important;
   }
 
-  /* Author sidebar (academicpages calls this .sidebar) — restyle to v5 sidenav */
+  /* Move the author sidebar to the right side of the page */
+  #main {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    align-items: flex-start !important;
+    gap: 2rem;
+  }
   .sidebar.sticky {
     background: #f5f2ed !important;
     border-radius: 8px !important;
     padding: 1rem !important;
+    float: none !important;
+    flex: 0 0 240px !important;
+    max-width: 240px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .archive,
+  article.page,
+  .page__inner-wrap {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    float: none !important;
+  }
+  @media (max-width: 800px) {
+    #main { flex-direction: column !important; gap: 1rem; }
+    .sidebar.sticky { flex: 0 0 auto !important; max-width: 100% !important; }
   }
   .author__name {
     font-family: 'Spectral', Georgia, serif !important;
