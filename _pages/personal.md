@@ -19,7 +19,7 @@ Public finance, mostly — how state and local governments raise and spend money
 
 Outside of work, I think about golf more than I should. The [Scheffler / Ecclesiastes post](/posts/2026/04/scheffler-ecclesiastes/) is probably the clearest evidence of that, but the [LIV defectors post](/posts/2026/04/liv-defectors-majors/) is the more rigorous one.
 
-I am also a Christian, which shows up occasionally in the blog and is part of why the Ecclesiastes piece exists. The blog's frame — "occasional detours into sports, politics, and religion" — is not a marketing line. It is the actual range of things I will get curious about and want to write up.
+I am also a Christian; the Ecclesiastes essay grew out of that. The blog's editorial scope has since tightened — it now covers four pillars only (public finance, economic development, applied statistics, program evaluation), so the religion, sports, and theology pieces in the archive are vestiges of an earlier posture rather than the current range. Those interests remain; they just no longer sit inside the blog's lane.
 
 ## Other things
 

@@ -21,7 +21,7 @@ I'm available for invited talks, consulting, and media inquiries — best reache
 
 ## Southbound 35
 
-I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. New posts on Mondays at 5 AM Central.
+I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance, economic development, and applied analysis on the Texas corridor. New posts on Mondays at 5 AM Central.
 
 <ul>
 {% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>

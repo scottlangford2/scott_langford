@@ -15,7 +15,7 @@ Writing for non-academic audiences, op-eds, handbook chapters, media coverage, a
 
 ## Blog: Southbound 35
 
-[**Southbound 35**]({{ '/year-archive/' | relative_url }}). Public finance and economic development on the Texas corridor, with occasional detours into sports, politics, and religion. The blog serves three purposes: as an outlet for short analyses too limited in scope for a full academic paper, as a way for the author to learn about subjects he is curious about, and as a venue for research that may be useful to people who study Texas communities and the state and local officials who govern them.
+[**Southbound 35**]({{ '/year-archive/' | relative_url }}). Public finance, economic development, and applied analysis on the Texas corridor. Every post fits one of four pillars: public finance, economic development, econometric and statistical analysis, or program evaluation. The blog serves three purposes: as an outlet for short analyses too limited in scope for a full academic paper, as a way for the author to learn about subjects he is curious about, and as a venue for research that may be useful to people who study Texas communities and the state and local officials who govern them.
 
 <ul>
 {% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %Y" }}</li>
