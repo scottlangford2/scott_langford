@@ -11,7 +11,7 @@ Writing for non-academic audiences, op-eds, handbook chapters, media coverage, a
 
 ## Media coverage
 
-**Wall Street Journal** — *"Let Us Put Our Moneys Together:" Minority-Owned Banks and Resilience to Crises* (working paper with Berger, Feldman, and Roman). Coverage of the paper's findings on the role of minority depository institutions during the Global Financial Crisis and COVID-19.
+[**Wall Street Journal**](https://www.wsj.com/articles/as-black-owned-banks-steadily-fade-away-investors-step-in-to-form-one-6b386c2d) — *"As Black-Owned Banks Steadily Fade Away, Investors Step In to Form One."* Cites *"Let Us Put Our Moneys Together:" Minority-Owned Banks and Resilience to Crises* (working paper with Berger, Feldman, and Roman) on the role of minority depository institutions during the Global Financial Crisis and COVID-19.
 
 ## Blog: Southbound 35
 
