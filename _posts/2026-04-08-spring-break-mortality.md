@@ -3,7 +3,8 @@ title: 'How Dangerous Is Spring Break, Really?'
 date: 2026-04-08
 permalink: /posts/2026/04/spring-break-mortality/
 categories:
-  - other
+  - detours
+kind: original-analysis
 tags:
   - data analysis
   - public health
