@@ -242,6 +242,30 @@
     color: #333;
     font-style: italic;
   }
+
+  /* Print stylesheet — clean CV/papers, no chrome */
+  @media print {
+    body, html { background: #fff !important; color: #000 !important; }
+    .masthead, .sidebar, .page__footer, .greedy-nav,
+    .author__urls-wrapper, .nav__list, .toc, #site-nav,
+    .page__share, .page__meta, .pagination, .author__avatar { display: none !important; }
+    #main { display: block !important; }
+    article.page, .page__inner-wrap { width: 100% !important; max-width: 100% !important; }
+    article.page .page__content { max-width: 100% !important; }
+    a, .page__content a { color: #000 !important; text-decoration: none !important; border-bottom: none !important; }
+    .page__content a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.78em; color: #555; }
+    h1, .page__title { font-size: 22pt !important; }
+    .page__content h2 {
+      font-size: 11pt !important;
+      border-top: 1px solid #999 !important;
+      padding-top: 0.4em !important;
+      margin-top: 1.2em !important;
+    }
+    .page__content h2::before { display: none !important; }
+    .page__content { font-size: 10.5pt; line-height: 1.45; }
+    p, li { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+  }
 </style>
 
 <!-- end custom head snippets -->
