@@ -30,7 +30,7 @@ author_profile: true
   {% for tag in tags %}
     {% assign tag_slug = tag | slugify %}
     {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-    <a href="#{{ tag_slug }}" style="display: inline-block; background: #f0f0f0; padding: 4px 10px; border-radius: 3px; margin: 0 4px 4px 0; text-decoration: none; color: #1a1a1a; font-size: 0.95em;">{{ tag }} <span style="color: #888;">({{ tag_posts.size }})</span></a>
+    <a href="#{{ tag_slug }}" style="display: inline-block; background: #f5f2ed; padding: 4px 10px; border-radius: 3px; margin: 0 4px 4px 0; text-decoration: none; color: #501214; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em;">{{ tag }} <span style="color: #888;">({{ tag_posts.size }})</span></a>
   {% endfor %}
 </div>
 
