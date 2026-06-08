@@ -331,6 +331,50 @@
     }
   }
 
+  /* Mobile / narrow-screen polish (phones, ≤600px) */
+  @media (max-width: 600px) {
+    /* Page title scales down — 2.4rem was too large for phones */
+    .page__title { font-size: 1.7rem !important; line-height: 1.2 !important; }
+
+    /* Justified text reads poorly on narrow columns (huge word-spacing).
+       Switch to left-aligned everywhere on mobile. */
+    body, body p, body li, body div, body span,
+    .page__content, .page__content p, .page__content li,
+    .archive__item-excerpt, article, article p, article li,
+    blockquote, blockquote p, .sidebar, .sidebar p, .sidebar li,
+    .author__urls, .author__urls li,
+    .page__footer, .page__footer p, .page__footer li,
+    .masthead p, .archive__subtitle {
+      text-align: left !important;
+    }
+
+    /* Section heading: tighter on narrow screens */
+    .page__content h2 {
+      font-size: 0.72rem !important;
+      letter-spacing: 0.10em !important;
+      margin: 1.4rem 0 0.6rem !important;
+    }
+
+    /* Tighter outer padding so the content has room to breathe */
+    .page__inner-wrap, article.page .page__content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Body line-height pulls in slightly on phones */
+    body { line-height: 1.55 !important; }
+  }
+
+  /* Tables in post content — horizontal scroll on overflow rather than
+     squashing or clipping (matters on phones for the few posts that
+     have tables, and harmless on desktop) */
+  .page__content table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* Print stylesheet — clean CV/papers, no chrome */
   @media print {
     body, html { background: #fff !important; color: #000 !important; }
