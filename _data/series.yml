@@ -1,0 +1,65 @@
+# Series metadata for Southbound 35.
+#
+# Keys are the `series:` slug used in post front matter; values supply
+# the display title and a one-line description shown in the series-spine
+# widget at the top and bottom of each post in the series.
+
+hays-county:
+  title: "Hays County"
+  description: "Five posts on the fastest-growing large U.S. county of the 2010s: growth, projections, water, schools, governance."
+
+comal-county:
+  title: "Comal County"
+  description: "New Braunfels, Edwards Aquifer constraints, and the central-corridor governance pattern."
+
+caldwell-county:
+  title: "Caldwell County"
+  description: "Lockhart, the I-35 east-side story, and the slow-growth neighbor."
+
+guadalupe-county:
+  title: "Guadalupe County"
+  description: "Seguin, Schertz, and the Toyota supplier ecosystem."
+
+southern-travis:
+  title: "Southern Travis"
+  description: "Dripping Springs, Bee Cave, and the Travis–Hays institutional seam."
+
+eastern-blanco:
+  title: "Eastern Blanco"
+  description: "The Hill-Country boundary with Hays."
+
+williamson-county:
+  title: "Williamson County"
+  description: "Round Rock, Cedar Park, Leander, and the Samsung Taylor inflection."
+
+bexar-northside:
+  title: "Bexar Northside"
+  description: "Stone Oak, the SH 281 corridor, and the SAWS service area."
+
+bastrop-edge:
+  title: "Bastrop Edge"
+  description: "Bastrop, the SH 130 development band, and the eastern-Caldwell pattern."
+
+property-tax-mechanics:
+  title: "Property Tax Mechanics"
+  description: "How a Texas property tax bill is built — appraisal, exemptions, M&O vs I&S, recapture, Truth-in-Taxation."
+
+sales-tax-mechanics:
+  title: "Sales Tax Mechanics"
+  description: "State, local-option, Type A/B EDCs, MTA/ATD slices."
+
+special-districts:
+  title: "Special Districts"
+  description: "MUDs, ESDs, hospital districts, GCDs — the least-understood layer of Texas government."
+
+state-aid-formulas:
+  title: "State Aid Formulas"
+  description: "FSP, county road & bridge, sales-tax holdbacks, federal pass-through."
+
+bond-mechanics:
+  title: "Bond Mechanics"
+  description: "Voter approval, debt service, taxable vs. tax-exempt, what bond counsel opinions actually say."
+
+i35-corridor:
+  title: "I-35 Corridor"
+  description: "The eighty miles between Austin and San Antonio as one economic geography."
