@@ -31,6 +31,6 @@ I was an Eagle Scout. I still think about knots.
 
 Email is best: [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu).
 
-I am on [Bluesky](https://bsky.app/profile/{{ site.author.bluesky }}) more than X these days, like much of the public administration academic world.
+I am also on [X](https://x.com/{{ site.author.twitter }}).
 
 If you read Southbound 35 and want to suggest a topic, an angle, or a correction, send a note. I read everything.
