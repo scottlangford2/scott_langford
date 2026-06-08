@@ -53,7 +53,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "scottlangford2.bsky.social" # Replace this with you Bluesky username
+  bluesky          : # not used
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -146,7 +146,6 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links:
     - "https://x.com/scottlangford22"
-    - "https://bsky.app/profile/scottlangford2.bsky.social"
     - "https://github.com/scottlangford2"
     - "https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en"
 
