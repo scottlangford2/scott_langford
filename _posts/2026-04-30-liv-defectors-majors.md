@@ -6,6 +6,7 @@ redirect_from:
   - /posts/2026/04/liv-defectors-majors-appendix/
 categories:
   - detours
+series: detours
 kind: original-analysis
 tags:
   - data analysis
