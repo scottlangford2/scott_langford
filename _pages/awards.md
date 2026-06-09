@@ -10,7 +10,7 @@ author_profile: true
 ## Grants & Funded Research
 
 <ul>
-<li><strong>Cost-Benefit Analysis for Clayton, NC</strong> — Archlight Analytics, $65,000 (awarded; in progress), 2025</li>
+<li><strong>Cost-Benefit Analysis for Clayton, NC</strong> — ArcLight Analytics, $65,000 (awarded; in progress), 2025</li>
 <li><strong>We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition</strong> — Hammer Fund Travel Award, NARSC Annual Research Conference, $750 (2021); Graduate Student Transportation Grant, NARSC Annual Research Conference, $400 (2021)</li>
 <li><strong>Small Business Activity in Banking Deserts</strong> — Kenan Institute Frontiers of Entrepreneurship Small Grant, $10,000 (2018)</li>
 <li><strong>The Snowball Effect of Federal Research Funding</strong> — Hammer Fund Travel Award, APPAM Annual Research Conference, $500 (2018)</li>
