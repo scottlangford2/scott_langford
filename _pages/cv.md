@@ -35,7 +35,7 @@ Work Experience
 
 Funding
 ======
-* **Cost-Benefit Analysis for Clayton, NC** — Archlight Analytics (awarded; in progress; $65,000), 2025
+* **Cost-Benefit Analysis for Clayton, NC** — ArcLight Analytics (awarded; in progress; $65,000), 2025
 * **We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition** — Hammer Fund Travel Award (NARSC Annual Research Conference, $750); Graduate Student Transportation Grant (NARSC Annual Research Conference, $400), 2021
 * **Small Business Activity in Banking Deserts** — Kenan Institute Frontiers of Entrepreneurship Small Grant ($10,000), 2018
 * **The Snowball Effect of Federal Research Funding** — Hammer Fund Travel Award (APPAM Annual Research Conference, $500), 2018
