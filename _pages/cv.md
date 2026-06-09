@@ -79,6 +79,12 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
+Invited Talks
+======
+
+**Economic Resilience** (2025)
+* Texas State University ICMA Student Chapter — invited talk
+
 Conference Presentations
 ======
 
