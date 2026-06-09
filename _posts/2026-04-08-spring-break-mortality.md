@@ -4,6 +4,7 @@ date: 2026-04-08
 permalink: /posts/2026/04/spring-break-mortality/
 categories:
   - detours
+series: detours
 kind: original-analysis
 tags:
   - data analysis

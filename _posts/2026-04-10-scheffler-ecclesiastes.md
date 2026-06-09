@@ -5,6 +5,7 @@ permalink: /posts/2026/04/scheffler-ecclesiastes/
 related: false
 categories:
   - detours
+series: detours
 kind: commentary
 tags:
   - golf

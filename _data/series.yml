@@ -63,3 +63,7 @@ bond-mechanics:
 i35-corridor:
   title: "I-35 Corridor"
   description: "The eighty miles between Austin and San Antonio as one economic geography."
+
+detours:
+  title: "Detours"
+  description: "Posts from an earlier editorial scope — sports analytics, theology, public-health statistics. The blog has since narrowed to four pillars (public finance, economic development, applied analysis, program evaluation); these legacy pieces remain live."

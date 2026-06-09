@@ -5,6 +5,7 @@ permalink: /posts/2026/05/golf-clutch-pga-tour/
 related: false
 categories:
   - detours
+series: detours
 kind: original-analysis
 tags:
   - golf
