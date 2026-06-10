@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-[Southbound 35](/year-archive/) publishes on Mondays at 5 AM Central, with occasional extra posts throughout the week. Three ways to follow along.
+[Southbound 35](/year-archive/) publishes on Mondays at 5 AM Central, with occasional extra posts throughout the week. Two ways to follow along.
 
 ## 1. Email
 
@@ -84,7 +84,3 @@ Standard RSS feed:
 <p style="font-size: 1.05em;"><a href="{{ '/feed.xml' | relative_url }}"><strong>{{ site.url }}{{ site.baseurl }}/feed.xml</strong></a></p>
 
 Drop that URL into any feed reader — [Feedly](https://feedly.com), [NetNewsWire](https://netnewswire.com), [Inoreader](https://www.inoreader.com), [The Old Reader](https://theoldreader.com), or whatever you prefer.
-
-## 3. Bluesky
-
-I post links to new entries on [Bluesky](https://bsky.app/profile/{{ site.author.bluesky }}).
