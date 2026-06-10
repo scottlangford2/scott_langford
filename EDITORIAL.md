@@ -22,6 +22,14 @@
 | 2026-07-06 (Mon) | economic-development | Williamson vs. Hays: same corridor, different fiscal strategies | Have it; `mf_scraper` |
 | TBD | sports | TBD | — |
 
+## Every post includes (all three when possible)
+
+1. **An epigraph** — a quote from Texas country music, or from an academic piece, set at the top of the post.
+2. **Rigorous econometric analysis, explained for the layman** — real method (identification, the estimates, the caveats), translated into plain language so a general reader follows both the logic and the limits.
+3. **Both expected and novel results** — confirm what the data should show, then surface at least one finding that isn't obvious.
+
+Aim for all three; don't force one in where it doesn't fit.
+
 ## Notes on style
 
 - Same shape as 2026-04-06-hays-county-growth.md and 2026-04-13-hays-county-projections.md: ~1,500–2,000 words, headings (## The X / ## What Y Tells You / etc.), `## Sources` and `## Disclosure` footers.
