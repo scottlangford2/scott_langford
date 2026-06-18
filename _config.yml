@@ -13,8 +13,8 @@ title                    : "W. Scott Langford, PhD"
 title_separator          : "-"
 name                     : &name "W. Scott Langford, PhD"
 description              : &description "Personal website of W. Scott Langford, PhD. Research, teaching, and Southbound 35 — a blog on public finance, economic development, and applied analysis on the Texas corridor (drafted with Claude)."
-url                      : "https://scottlangford2.github.io" # the base hostname & protocol for your site
-baseurl                  : "/scott_langford" # the subpath of your site, e.g. "/blog"
+url                      : "https://scottlangford.com" # the base hostname & protocol for your site
+baseurl                  : "" # served at the domain root via custom domain (no subpath)
 repository               : "scottlangford2/scott_langford"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
