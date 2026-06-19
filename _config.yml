@@ -165,6 +165,8 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - EDITORIAL.md
+  - markdown_generator
   - .asset-cache
   - .bundle
   - .github
