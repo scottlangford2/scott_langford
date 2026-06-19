@@ -2,6 +2,17 @@
 
 <!-- start custom head snippets -->
 
+<!-- Apply saved/OS dark theme before first paint to avoid a flash of light. -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
@@ -528,6 +539,41 @@
     p, li { orphans: 3; widows: 3; }
     h2, h3 { page-break-after: avoid; }
   }
+
+  /* ============================================================
+     Dark mode — toggled via the masthead sun/moon button, which sets
+     data-theme="dark" on <html> (JS already wired in _main.js). Most
+     styling flows through the tokens below; a few hardcoded panel and
+     inline-style colours are remapped explicitly. Light mode unchanged. */
+  html[data-theme="dark"] {
+    --bg:        #1a1613;
+    --ink:       #ece6dc;
+    --muted:     #a89f92;
+    --hairline:  #38322b;
+    --maroon:    #e2a7a2;   /* lightened so links stay readable on dark */
+    --gold:      #D7BD8A;
+  }
+  html[data-theme="dark"] .sidebar.sticky,
+  html[data-theme="dark"] .series-spine-current { background: #221d18 !important; }
+  html[data-theme="dark"] .masthead__menu-item,
+  html[data-theme="dark"] .masthead__menu-item--lg { background: transparent !important; }
+  html[data-theme="dark"] .author__urls a { color: #b7ad9f !important; }
+  html[data-theme="dark"] .author__urls a:hover { color: var(--maroon) !important; }
+  html[data-theme="dark"] .page__content blockquote { color: var(--muted) !important; }
+  html[data-theme="dark"] code,
+  html[data-theme="dark"] pre,
+  html[data-theme="dark"] .highlight { background: #221d18 !important; color: var(--ink) !important; }
+  html[data-theme="dark"] .btn--inverse { color: var(--ink) !important; border-color: var(--hairline) !important; }
+  html[data-theme="dark"] .skip-link { background: #6e1a1c !important; }
+  /* Remap the hardcoded light-theme hex values used in inline styles. */
+  html[data-theme="dark"] [style*="#1a1a1a"] { color: var(--ink) !important; }
+  html[data-theme="dark"] [style*="#333"],
+  html[data-theme="dark"] [style*="#555"],
+  html[data-theme="dark"] [style*="#666"],
+  html[data-theme="dark"] [style*="#444"] { color: var(--muted) !important; }
+  html[data-theme="dark"] [style*="#501214"] { color: var(--maroon) !important; }
+  html[data-theme="dark"] [style*="#ddd"] { border-color: var(--hairline) !important; }
+  html[data-theme="dark"] [style*="f5f2ed"] { background: #221d18 !important; }
 </style>
 
 <!-- end custom head snippets -->
