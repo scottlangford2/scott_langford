@@ -47,6 +47,20 @@
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
+{% comment %} Derive an OG/Twitter image from the page's first content figure
+   (e.g. a blog post's lead chart) so shared links show the chart, not the generic
+   default. Falls through to site.og_image when the page has no figure. {% endcomment %}
+{% assign content_image = '' %}
+{% unless page.header.image %}
+  {% if page.content contains '<img' %}
+    {% assign _after_img = page.content | split: '<img' %}
+    {% assign _src_split = _after_img[1] | split: 'src="' %}
+    {% if _src_split.size > 1 %}
+      {% assign content_image = _src_split[1] | split: '"' | first %}
+    {% endif %}
+  {% endif %}
+{% endunless %}
+
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
   <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
@@ -56,6 +70,9 @@
   {% if page.header.image %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+  {% elsif content_image != '' %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ content_image }}">
   {% else %}
     <meta name="twitter:card" content="summary">
     {% if site.og_image %}
@@ -142,6 +159,8 @@
   <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
 {% elsif page.header.overlay_image %}
   <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% elsif content_image != '' %}
+  <meta property="og:image" content="{{ content_image }}">
 {% elsif site.og_image %}
   <meta property="og:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
 {% endif %}
