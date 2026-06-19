@@ -121,6 +121,14 @@
     -ms-hyphens: auto;
   }
 
+  /* Keep the masthead/nav out of the global justify — otherwise the brand
+     name stretches ("W.   Scott") when it wraps to two lines on narrow widths. */
+  .masthead, .masthead *,
+  .greedy-nav, .greedy-nav * {
+    text-align: left !important;
+    hyphens: manual;
+  }
+
   /* Headings — Spectral for h1, DM Sans for h2/h3 as section labels */
   h1, .page__title {
     font-family: 'Spectral', Georgia, serif !important;
