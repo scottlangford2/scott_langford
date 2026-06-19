@@ -205,6 +205,10 @@
     max-width: 240px !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    /* Stay a flex item; override theme's desktop position:fixed, which
+       pulled the sidebar out of flow and let content slide under it. */
+    position: sticky !important;
+    top: 1rem !important;
   }
   .archive,
   article.page,
@@ -219,7 +223,7 @@
   }
   @media (max-width: 800px) {
     #main { flex-direction: column !important; gap: 1rem; }
-    .sidebar.sticky { flex: 0 0 auto !important; max-width: 100% !important; }
+    .sidebar.sticky { flex: 0 0 auto !important; max-width: 100% !important; position: static !important; }
   }
   .author__name {
     font-family: 'Spectral', Georgia, serif !important;
