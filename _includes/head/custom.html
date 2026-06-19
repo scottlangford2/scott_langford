@@ -72,11 +72,16 @@
 }
 </script>
 
-<!-- MathJax -->
-<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<!-- MathJax — only loaded on pages that opt in with `mathjax: true` in front matter.
+     No content currently uses math, so this keeps ~1MB off every page while
+     preserving the capability. (Dropped the es6 polyfill: MathJax 3 doesn't need it.) -->
+{% if page.mathjax %}
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
 
 <!-- v5 design tokens (Spectral serif body, DM Sans labels, TXST maroon) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
 <style>
