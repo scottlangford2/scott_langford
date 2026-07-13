@@ -9,7 +9,7 @@ redirect_from:
 
 <p style="font-size: 1.1rem; color: #666; margin-top: -0.5rem; margin-bottom: 1.25rem; font-weight: 300;">Assistant Professor of Public Administration · Texas State University</p>
 
-<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">I study state and local public finance, economic development, and the institutional plumbing of fast-growing places — how local governments absorb shocks and finance growth. I write <a href="{{ '/year-archive/' | relative_url }}">Southbound 35</a>, a blog on the Texas I-35 corridor.</p>
+<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">I study state and local public finance, economic development, and the institutional plumbing of fast-growing places — how local governments absorb shocks and finance growth.</p>
 
 ## About
 
@@ -18,16 +18,6 @@ I am an assistant professor in the [Department of Political Science](https://www
 My research uses applied econometrics on administrative data to answer policy-relevant questions in state and local public finance. Substantively, I sit at the intersection of public administration, regional economics, and public health. Recent work has appeared in the *Journal of Business Venturing Insights*, *Economic Development Quarterly*, the *Journal of Regional Science*, and *JAMA Pediatrics*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
 
 I'm available for invited talks, consulting, and media inquiries — best reached by [email](mailto:scottlangford@txstate.edu).
-
-## Southbound 35
-
-I write [**Southbound 35**]({{ '/year-archive/' | relative_url }}) — a blog on public finance, economic development, and applied analysis on the Texas corridor. New posts on Mondays at 5 AM Central.
-
-<ul>
-{% for post in site.posts limit:5 %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
-{% endfor %}</ul>
-
-[All posts →]({{ '/year-archive/' | relative_url }}) &nbsp;·&nbsp; [Subscribe]({{ '/subscribe/' | relative_url }}) &nbsp;·&nbsp; [RSS]({{ '/feed.xml' | relative_url }})
 
 ## Contact
 
