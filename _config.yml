@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "W. Scott Langford, PhD"
 title_separator          : "-"
 name                     : &name "W. Scott Langford, PhD"
-description              : &description "Personal website of W. Scott Langford, PhD. Research, teaching, and Southbound 35 — a blog on public finance, economic development, and applied analysis on the Texas corridor (drafted with Claude)."
+description              : &description "Personal website of W. Scott Langford, PhD. Research, teaching, and applied analysis in state and local public finance and economic development."
 url                      : "https://scottlangford.com" # the base hostname & protocol for your site
 baseurl                  : "" # served at the domain root via custom domain (no subpath)
 repository               : "scottlangford2/scott_langford"
