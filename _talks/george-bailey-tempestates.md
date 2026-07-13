@@ -1,5 +1,5 @@
 ---
-title: "George Bailey Meets the Tempestates: How Local Finance Strengthens Economic Resilience Through Extreme Weather Events"
+title: "Local Finance and Economic Resilience During Extreme Weather Events"
 collection: talks
 type: "Conference Presentations"
 permalink: /talks/george-bailey-tempestates

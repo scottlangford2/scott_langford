@@ -100,7 +100,7 @@ redirect_from:
 * Community Banking Research Conference
 * NARSC Annual Research Conference
 
-**George Bailey Meets the Tempestates: How Local Finance Strengthens Economic Resilience Through Extreme Weather Events** (2023)
+**Local Finance and Economic Resilience During Extreme Weather Events** (2023)
 * APPAM Annual Research Conference
 
 **We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition** (2021)
