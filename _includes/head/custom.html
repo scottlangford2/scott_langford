@@ -191,6 +191,13 @@
     background: var(--bg) !important;
     border-bottom: 2px solid var(--ink) !important;
   }
+  /* Nav items default to the theme's white --global-bg-color; make them
+     transparent so they inherit the masthead's cream --bg (light mode).
+     Dark mode already does this below. */
+  .masthead__menu-item,
+  .masthead__menu-item--lg {
+    background: transparent !important;
+  }
   .masthead__menu-item a,
   .greedy-nav a {
     font-family: 'DM Sans', sans-serif !important;
