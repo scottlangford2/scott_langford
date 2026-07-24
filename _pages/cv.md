@@ -31,7 +31,8 @@ redirect_from:
   * School of Public Affairs
 
 ## Funding
-* **Cost-Benefit Analysis for Clayton, NC** — Lookout Analytics (awarded; in progress; $65,000), 2025
+* **Town of Clayton Economic Mobility Study** — Lookout Analytics (Consultant; Lead Consultant: Jen Yip; total project $37,346), 2026
+* **Cost-Benefit Analysis for Clayton, NC** — Lookout Analytics (Lead Consultant; awarded; in progress; $65,000), 2025
 * **We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition** — Hammer Fund Travel Award (NARSC Annual Research Conference, $750); Graduate Student Transportation Grant (NARSC Annual Research Conference, $400), 2021
 * **Small Business Activity in Banking Deserts** — Kenan Institute Frontiers of Entrepreneurship Small Grant ($10,000), 2018
 * **The Snowball Effect of Federal Research Funding** — Hammer Fund Travel Award (APPAM Annual Research Conference, $500), 2018
@@ -53,8 +54,9 @@ redirect_from:
 {% endfor %}
 
 ## Works in Progress
+* Langford, WS, Feldman, MP. Minority-Owned Bank Failures and Their Local Economic Consequences.
 * Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
-* Petach, L, Langford, WS. Local Finance and Pollution.
+* Petach, L, Langford, WS. Banking Deregulation and Carbon Emissions: Evidence from US States.
 * Langford, WS, Singla, AG. The Effect of Access to Local Finance on Local Government Finance.
 * Langford, WS, Lozano Rojas, F. The Effect of Extreme Weather Events on Local Tax Revenue.
 * Kattikatt, C, Rangarajan, N, Langford, WS. Local Government and Data.
@@ -132,6 +134,9 @@ redirect_from:
   * Principal Investigator: <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Daniel P. Gitterman</a>
 
 ## Leadership Experience, Awards, and Professional Service
+* **Committee Member** — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026
+* **Discussant** — APPAM Annual Research Conference, 2025
+* **Selection Panelist** — APPAM Equity and Inclusion Fellowship, 2025
 * **Special Sworn Status** — US Census Bureau, 2023-Present
 * **Associate Editor** — Academy of Management (AoM) Annual Meeting - TIM Division, 2021
 * **Elected Member** — Frank Porter Graham Honor Society, UNC, 2021
@@ -143,6 +148,7 @@ redirect_from:
 * **Eagle Scout Award** — Boy Scouts of America, 2006
 
 ## Advising and Mentorship
+* **Brianna Mendez** — Applied Research Project Committee, Texas State University, 2026-present
 * **Christina Kattikatt** — Current: MPA Student, Texas State University, 2025-present
 * **Dustin Miller** — Assistant City Manager, Pampa, TX; MPA Student, West Texas A&M University, 2025
 * **Khushi Wadhwani** — Current: Undergraduate Student, Arizona State University, 2024-2025
