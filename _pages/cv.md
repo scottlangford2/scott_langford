@@ -46,6 +46,9 @@ redirect_from:
 * Association for Budgeting and Financial Management (ABFM)
 
 ## Publications
+
+<p style="font-size: 0.85em; color: #555; margin: 0 0 0.75em;"><em>“Citation Impact” is each journal’s two-year mean citedness (average citations per recent article), sourced from <a href="https://openalex.org">OpenAlex</a>.</em></p>
+
 {% for category in site.research_category %}
 <h3>{{ category[1].title }}</h3>
   <ul>{% for post in site.research reversed %}{% if post.category == category[0] %}
@@ -62,7 +65,7 @@ redirect_from:
 * Kattikatt, C, Rangarajan, N, Langford, WS. Local Government and Data.
 
 ## Other Writing
-* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022)
+* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.7]
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Bailey, AN, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed, AS</a>, Langford, WS. Combine Water, Grain, Hops, Yeast and Get - Jobs. *News and Observer (Raleigh, NC)* (2019)
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Langford, WS. Knowledge Spillovers Informed by Network Theory and Social Network Analysis. *Handbook of Regional Science*. (ed) Fischer, M, Capello, R. (2019)
 

@@ -44,7 +44,7 @@
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'research' %}
           {% if post.category == 'manuscripts' %}
-          <p class="page__meta">Published in <i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+          <p class="page__meta">Published in <i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}{% if post.metric %} &middot; Citation Impact: {{ post.metric }}{% endif %}</p>
           {% else %}
           <p class="page__meta"><i>{{ post.venue }}</i></p>
           {% endif %}
