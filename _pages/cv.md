@@ -57,6 +57,7 @@ redirect_from:
 {% endfor %}
 
 ## Works in Progress
+* Chaudhry, H, Hines, R, Langford, WS, Grandage, AJ, Waddell, M. Do Federal Hazard Mitigation Assistance Grants Pay Off? An Empirical Analysis of Cost-Effectiveness.
 * Langford, WS, Feldman, MP. Minority-Owned Bank Failures and Their Local Economic Consequences.
 * Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
 * Petach, L, Langford, WS. Banking Deregulation and Carbon Emissions: Evidence from US States.
