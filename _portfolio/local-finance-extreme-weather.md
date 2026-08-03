@@ -7,5 +7,5 @@ category: replication
 
 Stata code supporting published research on how community banks moderate the local economic impact of extreme weather events.
 
-- **Source:** [github.com/scottlangford2/local_finance_extreme_weather](https://github.com/scottlangford2/local_finance_extreme_weather)
-- **Related paper:** *Local Finance and Economic Resilience During Extreme Weather Events* (working paper)
+- **Replication code:** available on request — [email me](mailto:scottlangford@txstate.edu)
+- **Related paper:** *Local Finance and Economic Resilience During Extreme Weather Events* ([SSRN #4868821](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4868821))
