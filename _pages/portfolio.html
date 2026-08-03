@@ -10,7 +10,15 @@ redirect_from:
 
 {% include base_path %}
 
-<p style="font-size: 0.95em; color: #555; margin-top: -0.5em; margin-bottom: 1.5em;">Replication packages for academic and blog work, plus open-source teaching materials.</p>
+<p style="font-size: 0.95em; color: #555; margin-top: -0.5em; margin-bottom: 1.5em;">Open data reports, replication packages for academic and blog work, and open-source teaching materials.</p>
+
+<h2>Data &amp; reports</h2>
+<hr />
+{% for post in site.portfolio %}
+  {% if post.category == "data" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
 
 <h2>Replication packages</h2>
 <hr />
