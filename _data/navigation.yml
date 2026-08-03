@@ -11,6 +11,9 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "PA Jobs Report"
+    url: /pa-jobs-report/
+
   - title: "Teaching"
     url: /teaching/
 
