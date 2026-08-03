@@ -81,11 +81,7 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
 
-<!-- v5 design tokens (Spectral serif body, DM Sans labels, TXST maroon) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
+<!-- v5 design tokens (Iowan Old Style serif body, Helvetica Neue labels, TXST maroon) -->
 <style>
   :root {
     --bg:         #faf8f5;
@@ -99,7 +95,7 @@
   /* Backgrounds + base typography */
   body, html { background: var(--bg) !important; }
   body {
-    font-family: 'Spectral', Georgia, 'Times New Roman', serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif !important;
     color: var(--ink) !important;
     line-height: 1.65 !important;
   }
@@ -107,7 +103,7 @@
   .page__content p,
   .page__content li,
   .archive__item-excerpt {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     line-height: 1.65 !important;
   }
 
@@ -136,16 +132,16 @@
     hyphens: manual;
   }
 
-  /* Headings — Spectral for h1, DM Sans for h2/h3 as section labels */
+  /* Headings — Iowan Old Style for h1, Helvetica Neue for h2/h3 as section labels */
   h1, .page__title {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-weight: 700 !important;
     letter-spacing: -0.01em !important;
     color: var(--ink) !important;
   }
   .page__title { font-size: 2.4rem !important; }
   .page__content h2 {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -168,7 +164,7 @@
     border-radius: 50%;
   }
   .page__content h3 {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-weight: 600 !important;
     font-size: 1.15rem !important;
     color: var(--ink) !important;
@@ -186,7 +182,7 @@
     border-bottom-color: currentColor;
   }
 
-  /* Top masthead (academicpages nav) — cream background, DM Sans */
+  /* Top masthead (academicpages nav) — cream background, Helvetica Neue */
   .masthead {
     background: var(--bg) !important;
     border-bottom: 2px solid var(--ink) !important;
@@ -200,7 +196,7 @@
   }
   .masthead__menu-item a,
   .greedy-nav a {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     color: var(--ink) !important;
   }
   .masthead__menu-item a:hover,
@@ -248,12 +244,12 @@
     .sidebar.sticky { flex: 0 0 auto !important; max-width: 100% !important; position: static !important; }
   }
   .author__name {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-weight: 700 !important;
   }
   .author__bio,
   .author__urls li {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
   }
   .author__urls a {
@@ -268,7 +264,7 @@
 
   /* Archive items (the post/research/portfolio cards) */
   .archive__item-title {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-weight: 600 !important;
   }
   .archive__item-title a {
@@ -278,7 +274,7 @@
     color: var(--maroon) !important;
   }
   .archive__subtitle {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -296,13 +292,13 @@
   }
   .page__footer-copyright,
   .page__footer-follow a {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
   }
 
-  /* Blog-post metadata rows (date, read-time, etc.) — muted DM Sans */
+  /* Blog-post metadata rows (date, read-time, etc.) — muted Helvetica Neue */
   .page__meta,
   .page__date {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.8rem !important;
     color: var(--muted) !important;
     text-transform: uppercase !important;
@@ -348,7 +344,7 @@
     background: var(--maroon);
     color: #fff !important;
     padding: 8px 14px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-weight: 600;
     z-index: 9999;
     text-decoration: none !important;
@@ -367,7 +363,7 @@
 
   /* Series-spine widget */
   .series-spine-top {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -400,7 +396,7 @@
     text-align: left !important;
   }
   .series-spine-bottom-title {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -409,7 +405,7 @@
     margin: 0 0 0.4rem !important;
   }
   .series-spine-bottom-desc {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-size: 0.95rem !important;
     font-style: italic !important;
     color: var(--muted) !important;
@@ -422,7 +418,7 @@
     margin: 0 !important;
   }
   .series-spine-item {
-    font-family: 'Spectral', Georgia, serif !important;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
     font-size: 1rem !important;
     line-height: 1.5 !important;
     padding: 0.35rem 0 !important;
@@ -435,7 +431,7 @@
     border-bottom: none;
   }
   .series-spine-num {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.78rem !important;
     font-weight: 600 !important;
     color: var(--muted) !important;
@@ -460,7 +456,7 @@
     font-weight: 600 !important;
   }
   .series-spine-here em {
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
     font-size: 0.72rem !important;
     font-style: normal !important;
     font-weight: 600 !important;
