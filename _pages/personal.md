@@ -7,12 +7,10 @@ author_profile: true
 
 {% include base_path %}
 
-A note for blog readers who want to know who's writing. The
-[academic homepage]({{ '/' | relative_url }}) is the
-professional version. This page is the human one.
+The [academic homepage]({{ '/' | relative_url }}) is the
+professional version of me; this page is the human one.
 
-I live in Hays County, Texas — the same county the blog series
-is about.
+I live in Hays County, Texas.
 
 I grew up in eastern North Carolina, went to UNC Wilmington for
 undergrad, and to UNC Chapel Hill for graduate school. I have
@@ -38,8 +36,8 @@ Chapel Hill and UNC Wilmington; the football loyalty is now
 Texas State, which is genuinely good and getting better. I keep a list of books I am
 working through and a longer list of books I would like to be.
 
-If you want to suggest a topic, push back on an angle, or
-flag a correction, the inbox is open:
+If you want to get in touch or flag a correction, the
+inbox is open:
 [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu).
 I am also on
 [X](https://x.com/{{ site.author.twitter }}).
