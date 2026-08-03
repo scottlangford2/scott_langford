@@ -17,6 +17,8 @@ I am an assistant professor in the [Department of Political Science](https://www
 
 My research uses applied econometrics on administrative data to answer policy-relevant questions in state and local public finance. Substantively, I sit at the intersection of public administration and regional economics. Recent work has appeared in the *Journal of Business Venturing Insights*, *Economic Development Quarterly*, the *Journal of Regional Science*, and *JAMA Pediatrics*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
 
+I also maintain the [**Public Administration Job Market**]({{ '/pa-jobs-report/' | relative_url }}) — a live, nightly-updated dashboard of open U.S. PA/PP positions across academia, government, nonprofits, and policy think tanks.
+
 I'm available for invited talks, consulting, and media inquiries — best reached by [email](mailto:scottlangford@txstate.edu).
 
 ## Contact
