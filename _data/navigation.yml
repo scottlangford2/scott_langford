@@ -11,23 +11,23 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Teaching"
+    url: /teaching/
+
   - title: "PA Jobs Report"
     url: /pa-jobs-report/
 
-  - title: "Teaching"
-    url: /teaching/
+  - title: "Tools"
+    url: /tools/
+
+  - title: "Replication"
+    url: /replication/
 
   - title: "Talks"
     url: /talks/
 
-  - title: "Tools & Replication"
-    url: /portfolio/
-
   - title: "CV"
     url: /cv/
-
-  - title: "Search"
-    url: /search/
 
   # - title: "CV"
   #   url: /cv-json/

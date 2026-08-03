@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Replication"
+permalink: /replication/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p style="font-size: 0.95em; color: #555; margin-top: -0.5em; margin-bottom: 1.5em;">Replication packages — data and code for the published and working papers.</p>
+
+{% for post in site.portfolio %}
+  {% if post.category == "replication" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
