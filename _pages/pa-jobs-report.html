@@ -11,7 +11,7 @@ author_profile: true
 .pj-tools { font-size:0.85em; margin:0 0 1.4em; }
 .pj-tools a { margin-right:1rem; white-space:nowrap; }
 .pj-tiles { display:flex; flex-wrap:wrap; gap:0.9rem; margin:0 0 1.4rem; }
-.pj-tile { flex:1 1 150px; border:1px solid #e2e2e2; border-radius:8px; padding:0.9rem 1rem; background:#fafafa; }
+.pj-tile { flex:1 1 150px; box-sizing:border-box; border:1px solid #e2e2e2; border-radius:8px; padding:0.9rem 1rem; background:#fafafa; }
 .pj-num { font-size:2rem; font-weight:700; line-height:1; color:#111; }
 .pj-cap { font-size:0.8em; color:#555; margin-top:0.35rem; }
 .pj-wrap h2 { margin:1.6rem 0 0.6rem; font-size:1.15rem; }
@@ -46,6 +46,14 @@ author_profile: true
 .pj-mtile span { font-weight:400; opacity:0.9; }
 .pj-legend { display:flex; align-items:center; gap:4px; font-size:0.75em; color:#666; margin-bottom:0.4rem; }
 .pj-legend i { width:16px; height:12px; border-radius:2px; display:inline-block; }
+@media (max-width:520px) {
+  .pj-tile { flex:1 1 40%; min-width:0; padding:0.7rem 0.8rem; }
+  .pj-num { font-size:1.6rem; }
+  .pj-cap { font-size:0.72em; }
+  .pj-lab { flex:0 0 110px; }
+  .pj-filters input { flex:1 1 100%; }
+  .pj-mtile { font-size:0.52rem; }
+}
 </style>
 
 <div class="pj-wrap" markdown="0">
