@@ -17,9 +17,6 @@ main:
   - title: "PA Jobs Report"
     url: /pa-jobs-report/
 
-  - title: "Tools"
-    url: /tools/
-
   - title: "Replication"
     url: /replication/
 
