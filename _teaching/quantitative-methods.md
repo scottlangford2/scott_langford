@@ -10,8 +10,8 @@ location: "San Marcos, TX"
 
 Introductory and applied quantitative methods for undergraduate and graduate students in public administration and public policy. Covers research design, descriptive and inferential statistics, regression analysis, and applied data analysis using statistical software.
 
-**Texas State University**, 2025–2026 — Analytical Techniques (PA 3311, BA)<br>
-&nbsp;&nbsp;Spring 2026: [Syllabus](https://www.dropbox.com/scl/fi/o5socj3omhbie5xkyujla/PA_3311_Syllabus.pdf?rlkey=zu33wf01ploitvxc2typl8s0m&dl=0) · [Textbook](https://scottlangford.com/pa3311/)<br>
+**Texas State University**, 2025–2026 — Analytical Techniques (PA 3311, BA) · [Course textbook](https://scottlangford.com/pa3311/)<br>
+&nbsp;&nbsp;Spring 2026: [Syllabus](https://www.dropbox.com/scl/fi/o5socj3omhbie5xkyujla/PA_3311_Syllabus.pdf?rlkey=zu33wf01ploitvxc2typl8s0m&dl=0)<br>
 &nbsp;&nbsp;Fall 2025: [Syllabus](https://www.dropbox.com/scl/fi/tcs8a3lt34uxv81z9rnx6/PA3311_Syllabus_Fall_2025.pdf?rlkey=ey90ntl6jd6k2hmopjfg94t5t&dl=0)
 
 **Arizona State University**, 2024 — Applied Econometrics (PAD 5080, MPA/MPP/PhD)<br>
