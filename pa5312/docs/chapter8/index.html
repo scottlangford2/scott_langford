@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 8: Quasi-Experimental Designs and Difference-in-Differences | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 8: Quasi-Experimental Designs and Difference-in-Differences" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter8/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter8/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 8: Quasi-Experimental Designs and Difference-in-Differences" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 8: Quasi-Experimental Designs and Difference-in-Differences","url":"https://scottlangford2.github.io/pa5312/docs/chapter8/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 8: Quasi-Experimental Designs and Difference-in-Differences</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“The most credible and influential research designs use random assignment.”
+— Joshua Angrist and Jörn-Steffen Pischke, <em>Mostly Harmless Econometrics</em> (2009)</p>
+</blockquote>
+
+<blockquote>
+  <p>“A comparison group is the heart of any impact evaluation.”
+— Paul Gertler and colleagues, <em>Impact Evaluation in Practice</em> (2016)</p>
+</blockquote>
+
+<h2 id="opening-case-did-new-jerseys-minimum-wage-cost-jobs-card--krueger-1994">Opening Case: Did New Jersey’s Minimum Wage Cost Jobs? (Card &amp; Krueger 1994)</h2>
+
+<p>On April 1, 1992, New Jersey raised its minimum wage from $4.25 to $5.05 an hour. Standard economic theory had a clear prediction: raise the price of labor and employers will hire less of it, so fast-food jobs — staffed largely by minimum-wage workers — should fall. David Card and Alan Krueger set out to test this with a research design that has since become the canonical example of difference-in-differences. They surveyed <strong>410 fast-food restaurants</strong> in New Jersey and in neighboring eastern Pennsylvania, both <em>before</em> the increase (February–March 1992) and <em>after</em> it (November–December 1992).</p>
+
+<p>The puzzle the design solves is this. If Card and Krueger had only looked at New Jersey before and after, any change in employment could be due to the minimum wage <em>or</em> to the broader 1992 economy. If they had only compared New Jersey to Pennsylvania after the increase, any gap could reflect pre-existing differences between the two states’ labor markets. Pennsylvania, where the minimum wage did <em>not</em> change, supplies the missing piece: it shows how New Jersey fast-food employment would plausibly have moved <em>absent</em> the policy. By measuring the change over time in New Jersey and subtracting off the change over the same window in Pennsylvania, they difference away both the economy-wide trend and the fixed differences between the two states.</p>
+
+<p>Their finding stunned the profession: New Jersey employment did <strong>not</strong> fall after the minimum-wage increase — if anything, it rose slightly relative to Pennsylvania (Card &amp; Krueger 1994, <em>American Economic Review</em>). Whatever one concludes about minimum-wage policy, the <em>design</em> is the point for us. This is the logic of difference-in-differences, the most widely used quasi-experimental strategy in applied public policy, and the worked example below rebuilds Card and Krueger’s two-by-two table step by step.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>When randomization is impossible, what makes a comparison group credible?</li>
+  <li>How does difference-in-differences remove both time trends and fixed group differences at once?</li>
+  <li>What exactly is the parallel-trends assumption, and how would a violation fool us?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Public programs are almost never assigned by lottery. Legislatures phase policies in by region, agencies target services to needy populations, and cities opt into local-option taxes. In each case, the people or places that get the program differ from those that do not. Quasi-experimental designs are a family of strategies for squeezing a credible causal estimate out of these messy roll-outs by choosing comparison groups and time windows thoughtfully. Done well, they approximate an experiment. Done badly, they repackage selection bias as a finding. This chapter teaches the most useful of these designs and, just as important, the assumption you must defend to use it.</p>
+
+<h2 id="weak-designs-and-their-threats">Weak Designs and Their Threats</h2>
+
+<h3 id="the-single-group-prepost-design">The Single-Group Pre/Post Design</h3>
+
+<p>The simplest quasi-experiment measures one group before and after the program: \(\hat{\tau} = \bar{Y}_{\text{post}} - \bar{Y}_{\text{pre}}\). Its fatal weakness is that anything else that changed over the same window — the economy, a season, a co-occurring policy — is mistaken for the program’s effect. Shadish, Cook, and Campbell (2002) catalog these as threats to internal validity: <strong>history</strong> (other events), <strong>maturation</strong> (natural trends), <strong>testing</strong>, and <strong>regression to the mean</strong>. A pre/post design cannot rule any of them out.</p>
+
+<h3 id="the-nonequivalent-comparison-group-design">The Nonequivalent Comparison-Group Design</h3>
+
+<p>Adding an untreated comparison group helps but does not save us. Comparing treated and comparison groups in the post-period only (\(\bar{Y}^{T}_{\text{post}} - \bar{Y}^{C}_{\text{post}}\)) is contaminated by <strong>selection bias</strong>: the groups may have differed before the program ever started. The two weak designs fail for opposite reasons — pre/post ignores the comparison group, post-only ignores the baseline.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Pre/post controls for fixed differences between groups but not for time trends. Post-only controls for time but not for fixed group differences. Difference-in-differences controls for both.</p>
+</blockquote>
+
+<h2 id="the-difference-in-differences-logic">The Difference-in-Differences Logic</h2>
+
+<p>Difference-in-differences (DiD) combines the two comparisons. Define a treated group (\(T\)) and a comparison group (\(C\)), each observed in a pre-period and a post-period. The estimator is the difference of two differences:</p>
+
+\[\hat{\tau}_{DiD} = \left( \bar{Y}^{T}_{\text{post}} - \bar{Y}^{T}_{\text{pre}} \right) - \left( \bar{Y}^{C}_{\text{post}} - \bar{Y}^{C}_{\text{pre}} \right)\]
+
+<p>The first parenthesis is the change in the treated group; the second is the change in the comparison group over the same window. Subtracting the second from the first removes any change common to both groups — the regional economy, statewide policy, inflation — leaving only the change unique to the treated group. The canonical application is Card and Krueger’s (1994) study of a New Jersey minimum-wage increase, using neighboring Pennsylvania as the comparison.</p>
+
+<h3 id="the-22-did-table">The 2×2 DiD Table</h3>
+
+<p>For a single treated group, a single comparison group, and two periods, DiD is just arithmetic on four cell means. Here are Card and Krueger’s results, using average full-time-equivalent (FTE) employment per restaurant. New Jersey is the treated group (its minimum wage rose); Pennsylvania is the comparison (it did not change):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Pre (Feb–Mar 1992)</th>
+      <th>Post (Nov–Dec 1992)</th>
+      <th>Difference (Post − Pre)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>New Jersey (treated)</strong></td>
+      <td>20.44</td>
+      <td>21.03</td>
+      <td>+0.59</td>
+    </tr>
+    <tr>
+      <td><strong>Pennsylvania (comparison)</strong></td>
+      <td>23.33</td>
+      <td>21.17</td>
+      <td>−2.16</td>
+    </tr>
+    <tr>
+      <td><strong>Difference (NJ − PA)</strong></td>
+      <td>−2.89</td>
+      <td>−0.14</td>
+      <td><strong>+2.76</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The bottom-right cell, <strong>+2.76</strong>, is the DiD estimate: New Jersey gained about 2.76 FTE jobs per restaurant <em>relative to</em> Pennsylvania. Read it two equivalent ways: New Jersey employment rose by 0.59 while Pennsylvania’s fell by 2.16, so the difference attributable to the policy window is \(0.59 - (-2.16) = 2.76\); or the NJ–PA gap moved from −2.89 to −0.14, a change of +2.76. The crucial substantive point is the <em>sign</em>: the minimum-wage increase was associated with employment that did <strong>not</strong> fall — it rose relative to the comparison state — directly contradicting the textbook prediction (Card &amp; Krueger 1994). The −2.89 pre-period gap is exactly the fixed difference (Pennsylvania restaurants were simply larger on average) that a post-only comparison would have wrongly attributed to the policy.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> In the 2×2 table, the four means tell the whole story. The pre-period row difference is the baseline gap you must not blame on the program; DiD is the change in that gap.</p>
+</blockquote>
+
+<h2 id="did-as-a-regression-with-an-interaction-term">DiD as a Regression with an Interaction Term</h2>
+
+<p>The table is intuitive but limited to one treated and one comparison group with no controls. The regression form generalizes it. Define \(\text{Treat}_i = 1\) for units in the treated group, \(\text{Post}_t = 1\) for the post-period, and their product \(\text{Treat}_i \times \text{Post}_t\). Then</p>
+
+\[Y_{it} = \beta_0 + \beta_1 \text{Treat}_i + \beta_2 \text{Post}_t + \beta_3 \left( \text{Treat}_i \times \text{Post}_t \right) + \varepsilon_{it}\]
+
+<p>Each coefficient maps onto a piece of the table. \(\beta_0\) is the comparison group’s pre-period mean (Pennsylvania’s 23.33); \(\beta_1\) is the baseline treated-comparison gap (−2.89); \(\beta_2\) is the common time trend experienced by both groups; and the interaction coefficient \(\beta_3\) <strong>is the DiD estimate</strong> — the extra change in the treated group beyond the common trend. You can confirm that \(\beta_3\) equals the +2.76 from the 2×2 table exactly. The regression form earns its keep by letting you add control variables, use many units and many years, and read off a standard error for \(\beta_3\) directly.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> In a DiD regression, the coefficient on the interaction term \(\text{Treat}\times\text{Post}\) is your effect estimate. The two main effects are bookkeeping; the interaction is the finding.</p>
+</blockquote>
+
+<h2 id="worked-example-the-card--krueger-minimum-wage-did-in-excel">Worked Example: The Card &amp; Krueger Minimum-Wage DiD in Excel</h2>
+
+<p>We reproduce Card and Krueger’s (1994) analysis with the four cell means. The cleanest way to see the structure is to lay out the data in “long” form — one row per restaurant per period — but with only the four published means in hand, we can build the 2×2 directly and confirm the regression mapping.</p>
+
+<p>Set up four columns: <code class="language-plaintext highlighter-rouge">fte</code> (full-time-equivalent employment, the outcome \(Y\)), <code class="language-plaintext highlighter-rouge">treat</code> (1 for a New Jersey restaurant, 0 for Pennsylvania), <code class="language-plaintext highlighter-rouge">post</code> (1 for the November–December wave, 0 for February–March), and an interaction <code class="language-plaintext highlighter-rouge">treat_post</code>. Create the interaction with a formula: if <code class="language-plaintext highlighter-rouge">treat</code> is in column B and <code class="language-plaintext highlighter-rouge">post</code> in column C, then in column D enter <code class="language-plaintext highlighter-rouge">=B2*C2</code> and fill down. This product equals 1 only for New Jersey restaurants in the post-period — exactly the cell the policy “switches on.”</p>
+
+<p>Build the 2×2 table with <code class="language-plaintext highlighter-rouge">AVERAGEIFS</code>. For the treated post-period mean, use <code class="language-plaintext highlighter-rouge">=AVERAGEIFS(fte_range, treat_range, 1, post_range, 1)</code>; change the criteria to fill in all four cells. You should recover the table above: 20.44, 21.03, 23.33, 21.17. Then compute the DiD by hand:</p>
+
+\[\hat{\tau}_{DiD} = (21.03 - 20.44) - (21.17 - 23.33) = 0.59 - (-2.16) = +2.76\]
+
+<p>Then run the regression. Open <strong>Data → Data Analysis → Regression</strong>. Set <em>Input Y Range</em> to <code class="language-plaintext highlighter-rouge">fte</code>. The <em>Input X Range</em> must be the three contiguous columns <code class="language-plaintext highlighter-rouge">treat</code>, <code class="language-plaintext highlighter-rouge">post</code>, <code class="language-plaintext highlighter-rouge">treat_post</code> (rearrange columns so they are adjacent). Check <em>Labels</em> and <em>Confidence Level 95%</em>. With the full microdata the coefficient table maps onto the cell means as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Coefficient</th>
+      <th>Maps to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept (\(\beta_0\))</td>
+      <td>23.33</td>
+      <td>Pennsylvania pre-period mean</td>
+    </tr>
+    <tr>
+      <td>treat (\(\beta_1\))</td>
+      <td>−2.89</td>
+      <td>Baseline NJ − PA gap</td>
+    </tr>
+    <tr>
+      <td>post (\(\beta_2\))</td>
+      <td>−2.16</td>
+      <td>Common time trend (Pennsylvania’s change)</td>
+    </tr>
+    <tr>
+      <td>treat_post (\(\beta_3\))</td>
+      <td><strong>+2.76</strong></td>
+      <td><strong>The DiD estimate</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="language-plaintext highlighter-rouge">treat_post</code> coefficient, +2.76, matches the 2×2 table’s bottom-right cell exactly. The headline finding is its sign: even as New Jersey’s minimum wage rose, fast-food employment did not fall relative to Pennsylvania — it rose. Card and Krueger reported this difference with a standard error so that readers could judge how distinguishable it was from zero; the regression form delivers that standard error on \(\beta_3\) automatically, which is the practical reason to prefer it over the bare 2×2.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> The Card &amp; Krueger design is the template you will carry into every quasi-experimental evaluation: find a comparison unit that plausibly tracks what the treated unit <em>would have done</em>, measure the change in both over the same window, and let the difference-in-differences isolate the policy. The minimum-wage result also carries a methodological warning — a clean DiD can overturn a “obvious” prediction, so the design, not the prior, should decide the question.</p>
+</blockquote>
+
+<h2 id="applying-did-to-our-texas-data-cases-a-and-b">Applying DiD to Our Texas Data (Cases A and B)</h2>
+
+<p>Card and Krueger had two states and two survey waves. Our Texas panels give us the same structure at larger scale, and the recipe is identical once each unit’s <em>adoption year</em> is coded.</p>
+
+<p><strong>Case A — economic-development sales tax (cities): a worked DiD.</strong> In the <strong>Texas City Finance Panel</strong>, the treatment is a city’s adoption of a Type A or Type B economic-development sales tax, dated by the year its economic-development corporation first reported (<code class="language-plaintext highlighter-rouge">edc_first_report_year</code>). The <strong>treated group</strong> is the 13 cities that first adopted between the 2016 and 2020 elections (adoption years 2017–2020) with taxable-sales data in both years; the <strong>comparison group</strong> is the 475 cities that never adopted one. The outcome is <strong>taxable sales per capita</strong> — a measure of real retail activity, <em>not</em> the sales-tax allocation itself, since allocation mechanically rises with the EDC tax and would build the “effect” into the outcome by construction. Take 2016 as the pre-year and 2020 as the post-year:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>2016 (pre)</th>
+      <th>2020 (post)</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Adopters (treated, n = 13)</strong></td>
+      <td>$11,315</td>
+      <td>$13,348</td>
+      <td>+$2,033</td>
+    </tr>
+    <tr>
+      <td><strong>Never-adopters (comparison, n = 475)</strong></td>
+      <td>$18,779</td>
+      <td>$20,473</td>
+      <td>+$1,695</td>
+    </tr>
+    <tr>
+      <td><strong>Difference (treated − comparison)</strong></td>
+      <td>−$7,464</td>
+      <td>−$7,126</td>
+      <td><strong>+$338</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Adopting cities’ taxable sales per capita rose by about $2,033 over the four years; comparison cities’ rose by about $1,695. The <strong>difference-in-differences is +$338 per capita</strong> — the extra change in adopters beyond the statewide retail growth that lifted all cities. To get that estimate <em>and</em> an honest standard error in Excel, compute each city’s <strong>change</strong> in taxable sales per capita (2020 − 2016), then run a two-sample <em>t</em>-test comparing the mean change of the 13 adopters to the mean change of the 475 comparison cities (<code class="language-plaintext highlighter-rouge">Data ▸ Data Analysis ▸ t-Test: Two-Sample Assuming Unequal Variances</code>). The difference in mean changes <em>is</em> the difference-in-differences, <strong>+$338</strong>, now with a standard error of about <strong>$1,600</strong>, giving \(t \approx 0.2\), \(p \approx 0.83\), and a 95% confidence interval of roughly \([-\$2{,}900,\ +\$3{,}600]\). (The pooled <code class="language-plaintext highlighter-rouge">treat + post + treat_post</code> regression returns the same +$338 point estimate, but its default standard error is <em>unreliable</em> here — it treats each city’s two observations as independent when they are strongly correlated. Working on the change scores handles that correctly, and is the honest Excel route to a DiD standard error.)</p>
+
+<p>Read this honestly: the estimate is positive but <em>tiny relative to its uncertainty</em>. The interval spans large gains and large losses, so we <strong>cannot distinguish the effect from zero</strong> — a precise “we don’t know,” not evidence that the tax had no effect. Three cautions travel with the number. First, only 13 cities adopted in this window, so the design is <strong>underpowered</strong>; the wide interval is the direct consequence. Second, adopters were much <strong>smaller retail economies at baseline</strong> (the −$7,464 pre-period gap) — exactly the fixed difference DiD is built to difference out, and here it does. Third, Texas cities adopted in <strong>many different years</strong>, so this clean 2×2 collapses a staggered rollout into two periods (the modern-DiD cautions above apply), and parallel trends (Practice item 3) is untested. The contrast with Card and Krueger is the lesson: there, a clean DiD overturned a confident prediction with a tight estimate; here, on our own Texas data, the same tool returns a <strong>noisy null</strong>. In both, the discipline is identical — report the coefficient <em>and</em> its standard error, and let the uncertainty temper the claim.</p>
+
+<p><strong>Case B — countywide vote centers (counties).</strong> Using the <strong>Texas County Panel</strong>, the treated group is counties that adopted countywide vote centers between two presidential elections; the comparison group is counties that had not yet adopted. The outcome is turnout. With <code class="language-plaintext highlighter-rouge">treat</code> = 1 for adopting counties, <code class="language-plaintext highlighter-rouge">post</code> = 1 for the later election, and their interaction, \(\beta_3\) estimates the change in turnout in adopting counties beyond the statewide change between the two elections. (Recall from Chapter 5 that 2020 turnout was 0.554 in metro counties versus 0.580 in non-metro counties — a reminder that the comparison group must be chosen so that such fixed differences are differenced out, not mistaken for the policy.)</p>
+
+<p>In both cases the central requirement is the same one Card and Krueger relied on Pennsylvania to satisfy: the <strong>parallel-trends assumption</strong>, examined next. And both cases raise a wrinkle the NJ/PA study did not — Texas units adopt in <em>different years</em> (staggered adoption), which the simple 2×2 does not handle and which the next section flags as a limit.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch8_did.svg" alt="Difference-in-differences line chart: New Jersey employment rose slightly while Pennsylvania fell; the New Jersey counterfactual falls further, so the difference-in-differences is +2.76." />
+<figcaption><span class="fig-label">Figure 8.1.</span> Difference-in-differences, Card &amp; Krueger (1994). Employment did not fall in New Jersey relative to Pennsylvania. The dashed counterfactual applies Pennsylvania's change to New Jersey's starting point; the gap between it and New Jersey's actual value is the difference-in-differences, +2.76.</figcaption>
+</figure>
+
+<h2 id="the-parallel-trends-assumption-and-its-limits">The Parallel-Trends Assumption and Its Limits</h2>
+
+<p>DiD does not assume the two groups are identical. It assumes something weaker but crucial: that <em>in the absence of the program</em>, the treated and comparison groups would have followed <strong>parallel trends</strong> — their outcomes would have moved up or down together by the same amount. The baseline gap can be any size; what must hold is that the gap would have stayed constant without the intervention.</p>
+
+<p>This assumption is untestable directly, because we never observe the treated group’s counterfactual path. But we can build confidence in it. The standard check is to examine <strong>pre-treatment trends</strong>: if the two groups moved in parallel in the years <em>before</em> the policy, parallel trends in the post-period is more plausible. Card and Krueger could point to broadly similar fast-food labor markets across the NJ/PA border; with the Texas panels you have many pre-periods to plot. For Case A, chart per-capita revenue for adopting and comparison cities across the years before adoption (e.g., 2013–2018) and look for parallel lines; for Case B, chart turnout for adopting and comparison counties across the presidential elections before adoption. Divergence before treatment is a red flag.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Parallel trends is an assumption about a path you cannot see. Defend it with pre-trend evidence and institutional knowledge; never assert it just because you ran the regression.</p>
+</blockquote>
+
+<p>The assumption fails when something <em>other</em> than the program differentially affected one group at the same time. If a new highway interchange opened in the adopting cities (Case A) in the same year, or a contested local race spiked turnout in the comparison counties (Case B), the trends would have diverged regardless of the policy, and DiD would attribute that divergence to it. Even Card and Krueger faced versions of this critique — was something else happening differently on the two sides of the state line in 1992? Other limits: DiD with a single treated and comparison unit has no real statistical uncertainty; staggered adoption (Texas cities and counties adopting in different years) requires more careful methods than the simple 2×2; and DiD estimates the effect for the treated group, which may not generalize to others.</p>
+
+<h2 id="a-note-on-modern-difference-in-differences">A Note on Modern Difference-in-Differences</h2>
+
+<p>The 2×2 table above — one treated group, one comparison group, one before period, one after — is the honest building block of DiD, and everything you do in this course rests on it. But the Texas cases already hinted at a complication: our cities and counties do not all adopt in the same year. They roll out in <em>different</em> years (economists call this <strong>staggered adoption</strong>), and different adopters may experience <em>different-sized</em> effects that grow or fade over time. When you throw all of that into a single regression with unit and time indicators — the workhorse <strong>two-way fixed-effects (TWFE)</strong> specification that generalizes the interaction model above — something surprising and unwelcome can happen. This is not an Excel technique; it is a caution about how to read and commission studies, and about a real trap in the standard software approach.</p>
+
+<p>The problem, worked out by Goodman-Bacon (2021), is that TWFE with staggered timing quietly builds its estimate out of <em>many</em> little 2×2 comparisons and then averages them. Some of those comparisons are the clean kind we want — a newly treated group against a not-yet-treated group. But others are <strong>“forbidden comparisons”</strong>: they use <em>already-treated</em> units as the comparison group for <em>later</em> adopters. When a unit that is already receiving the program (and whose effect may still be changing) stands in as a “control,” the arithmetic can go badly wrong. de Chaisemartin and D’Haultfœuille (2020) showed that TWFE can place <strong>negative weights</strong> on some of these building-block effects, so that the headline number is a strange weighted average that can even come out the <em>opposite sign</em> from every underlying effect — every group could be helped, and the pooled estimate could read as harm. That is exactly the kind of sign-flip Chapter 3 warned about, now hiding inside a respectable-looking regression.</p>
+
+<p>The response from the field is a family of <strong>modern DiD estimators</strong> designed to avoid forbidden comparisons — building the effect only from clean comparisons of treated units against not-yet-treated ones, allowing effects to differ across groups and over time, and reporting an event-study picture of how effects evolve (Callaway and Sant’Anna, 2021; Sun and Abraham, 2021). Roth, Sant’Anna, Bilinski, and Poe (2023) survey this fast-moving literature. You will not run these in Excel — they live in Stata or R — but as an evaluator you should <strong>know they exist</strong>, ask whether a staggered-rollout study used one, and be wary of an old-style TWFE result that ignores the issue.</p>
+
+<p>The same modern turn sharpens how we treat <strong>parallel trends</strong>. Earlier we checked pre-treatment trends and breathed easier when the lines looked parallel. Roth (2022) shows why that comfort is only partial: a pre-trends test can easily <em>pass</em> — fail to detect a problem — simply because it lacks the statistical power to catch the kind of gradual divergence that would still bias the estimate. So the current standard is to treat parallel trends as an assumption to <strong>probe</strong>, not a box a pre-test checks off: ask how large a hidden violation would have to be to overturn your finding (a <em>sensitivity analysis</em>), and report that alongside the estimate, rather than declaring victory because the pre-trend test came back clean.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> The clean 2×2 is safe. But pooling many staggered adopters in a single TWFE regression can make “forbidden comparisons” against already-treated units, put negative weights on some effects, and even flip the sign. Modern estimators (run in Stata or R, not Excel) avoid this, and parallel trends should be <em>probed</em> with sensitivity analysis, not certified by a pre-trends test.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Forgetting the comparison group.</strong> A before-and-after table with no comparison is a pre/post design wearing a DiD costume; it controls for nothing about the trend.</li>
+  <li><strong>Choosing a comparison group with different pre-trends.</strong> If the groups were already diverging before treatment, the design is broken no matter how clean the regression looks. Always plot pre-trends.</li>
+  <li><strong>Reading the main effects as the answer.</strong> \(\beta_1\) and \(\beta_2\) are not the program effect; only the interaction \(\beta_3\) is.</li>
+  <li><strong>Non-contiguous X columns in the ToolPak.</strong> <code class="language-plaintext highlighter-rouge">treat</code>, <code class="language-plaintext highlighter-rouge">post</code>, and <code class="language-plaintext highlighter-rouge">treat_post</code> must sit in adjacent columns or Excel will read the wrong data.</li>
+  <li><strong>Ignoring uncertainty.</strong> A DiD point estimate without its standard error does not support a confident causal claim; Card and Krueger reported theirs precisely so readers could judge it.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>Build the 2×2 by hand.</strong> Using the four Card &amp; Krueger cell means (NJ: 20.44 → 21.03; PA: 23.33 → 21.17), construct the 2×2 table with <code class="language-plaintext highlighter-rouge">AVERAGEIFS</code> or by direct entry and confirm the DiD estimate of +2.76. Interpret its sign in one sentence.</li>
+  <li><strong>Confirm via regression.</strong> Set up <code class="language-plaintext highlighter-rouge">treat</code>, <code class="language-plaintext highlighter-rouge">post</code>, and <code class="language-plaintext highlighter-rouge">treat_post</code> for the Card &amp; Krueger data and verify that the interaction coefficient \(\beta_3\) equals your hand-computed +2.76 and that \(\beta_0\), \(\beta_1\), \(\beta_2\) recover the cell means.</li>
+  <li><strong>Case A pre-trends check.</strong> Using the city finance panel, choose a set of economic-development-tax adopters and comparison cities, and plot per-capita revenue for both groups across the pre-adoption years (e.g., 2013–2018). In two sentences, state whether the parallel-trends assumption looks defensible.</li>
+  <li><strong>A threat to validity.</strong> Name one plausible event other than the program that could have differentially affected the adopting units (Case A <em>or</em> Case B) around their adoption year, and explain how it would bias \(\hat{\tau}_{DiD}\).</li>
+  <li><strong>Case B application.</strong> Using the county panel, define a “treated” set of counties (those adopting countywide vote centers between two elections you can identify) and a pre/post pair of presidential elections, and estimate a DiD effect on turnout. State your comparison group and why it is credible, given that 2020 turnout already differed by metro status (0.554 vs. 0.580).</li>
+</ol>
+
+<h2 id="transition-to-chapter-9">Transition to Chapter 9</h2>
+
+<p>Difference-in-differences leans on a comparison group to stand in for the counterfactual. But sometimes the cleanest leverage comes not from another group but from a sharp moment in time, or from a sharp threshold in a rule. Chapter 9 develops two such designs. Interrupted time series asks whether an outcome’s level and slope changed at the exact moment an intervention took effect, using the program’s own history as the comparison. Regression discontinuity exploits an arbitrary cutoff — an eligibility score, a population threshold, a vote share — to compare units that landed just above and just below the line. Both can be implemented in Excel, and both, like DiD, live or die by an assumption you must state out loud.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

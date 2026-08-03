@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 11: Cost-Benefit and Cost-Effectiveness Analysis | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 11: Cost-Benefit and Cost-Effectiveness Analysis" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter11/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter11/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 11: Cost-Benefit and Cost-Effectiveness Analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 11: Cost-Benefit and Cost-Effectiveness Analysis","url":"https://scottlangford2.github.io/pa5312/docs/chapter11/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 11: Cost-Benefit and Cost-Effectiveness Analysis</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“Cost-benefit analysis is a method of assessing the desirability of projects when it is important to take a long view and a wide view.”
+— Anthony Boardman, David Greenberg, Aidan Vining, and David Weimer, <em>Cost-Benefit Analysis: Concepts and Practice</em></p>
+</blockquote>
+
+<h2 id="opening-case-was-job-training-worth-the-cost">Opening Case: Was Job Training Worth the Cost?</h2>
+
+<p>In Chapter 10 you met the <strong>National Supported Work (NSW)</strong> demonstration — a randomized job-training program for disadvantaged workers whose experimental evaluation found that participants earned about <strong>$1,794 more</strong> in 1978 than their randomized controls (treated mean $6,349 vs. control mean $4,555). Randomization settled the causal question: the program <em>worked</em>, raising earnings.</p>
+
+<p>But a workforce agency cannot stop there. Subsidized work placements, supervision, stipends, and administration all cost real money, and that money could instead fund childcare subsidies, transit passes, or wage subsidies elsewhere. The agency’s board wants to know whether the dollars spent on NSW bought <em>more in earnings and reduced dependence than they cost</em> — and whether the answer holds once you account for the fact that costs are paid up front while the earnings gains accrue over several years.</p>
+
+<p>You are asked to prepare a cost-benefit analysis. Immediately you face two challenges. First, some benefits are easy to monetize (the measured earnings gain, reduced welfare payments) while others are not (a participant’s restored sense of agency, effects on their children). Second, the costs land now but the earnings benefits unfold over years — and a dollar several years from now is not worth a dollar today.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>Which costs and benefits belong in the analysis, and how do we attach dollar values to them honestly?</li>
+  <li>Why must we <em>discount</em> future dollars, and how do Net Present Value and the benefit-cost ratio summarize a program’s worth?</li>
+  <li>When benefits resist monetization — as in MTO’s neighborhood effects — how does cost-effectiveness analysis still let us compare programs?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Public budgets are zero-sum in the short run: a dollar spent on job training is a dollar not spent on something else. Cost-benefit analysis (CBA) is the discipline of making that trade-off explicit and defensible. It forces an evaluator to inventory <em>all</em> consequences of a program, value them in common units, and confront the awkward fact that timing matters. Done well, CBA is among the most persuasive products an evaluator can hand a board or council. Done carelessly — with cherry-picked benefits or a self-serving discount rate — it is among the easiest to manipulate. This chapter teaches both the mechanics and the honesty that must accompany them.</p>
+
+<h2 id="identifying-and-valuing-costs-and-benefits">Identifying and Valuing Costs and Benefits</h2>
+
+<p>The first task is an inventory. List every consequence of the program for every party with <strong>standing</strong> (whose welfare counts — usually the city’s residents, sometimes a broader public).</p>
+
+<p><strong>Costs</strong> include the obvious <em>direct</em> outlays (wages for subsidized placements, supervisor salaries, training materials, administration) and the easily forgotten ones: the <em>opportunity cost</em> of resources already owned, and participant time spent in the program rather than in other work. A common error is to count only what shows up on an invoice.</p>
+
+<p><strong>Benefits</strong> are the program’s valued effects. Some are <em>market</em> benefits with observable prices — the measured earnings gain participants take home is the central NSW benefit. Others are <em>non-market</em> benefits requiring valuation techniques: willingness-to-pay surveys, or transferring values estimated elsewhere (<em>benefit transfer</em>).</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Count opportunity costs, not just cash outlays — and count a benefit once. Double-counting (e.g., adding both higher earnings <em>and</em> the higher consumption those earnings finance, when one is simply the other) inflates the case.</p>
+</blockquote>
+
+<p>Avoid counting <em>transfers</em> — pure redistributions like a welfare check that takes a dollar from taxpayers and hands it to a participant — as net social benefits. From society’s whole-community perspective, a transfer nets to zero; only real changes in resources (like the increase in output a newly employed worker produces) count. A reduction in welfare payments is a benefit to <em>taxpayers</em> but a loss to the <em>recipient</em>; whether you net it out depends on whose standing you adopt, and you should state that choice explicitly.</p>
+
+<h2 id="the-time-value-of-money-discounting-and-npv">The Time Value of Money: Discounting and NPV</h2>
+
+<p>A benefit received in year 10 is worth less than the same benefit today, because today’s dollar could be invested and grow. To compare costs and benefits arriving in different years, we <em>discount</em> each future amount back to its present value using a discount rate \(r\). The present value of an amount \(B_t\) received in year \(t\) is:</p>
+
+\[PV = \frac{B_t}{(1+r)^t}\]
+
+<p>The <strong>Net Present Value</strong> of a program with net benefits \(NB_t = B_t - C_t\) in each year \(t\) from \(0\) to \(T\) is:</p>
+
+\[NPV = \sum_{t=0}^{T} \frac{B_t - C_t}{(1+r)^t}\]
+
+<blockquote>
+  <p><strong>Briefing:</strong> The decision rule is simple — undertake the program if \(NPV &gt; 0\), and when ranking competing programs under a fixed budget, prefer higher NPV.</p>
+</blockquote>
+
+<p>A related summary is the <strong>benefit-cost ratio (BCR)</strong>, the present value of benefits divided by the present value of costs:</p>
+
+\[BCR = \frac{\sum_{t=0}^{T} B_t / (1+r)^t}{\sum_{t=0}^{T} C_t / (1+r)^t}\]
+
+<p>A program is worthwhile when \(BCR &gt; 1\). NPV tells you the <em>magnitude</em> of net value; BCR tells you the value <em>per dollar spent</em>. They can disagree when ranking: a large program may have a higher NPV but a lower BCR than a small, efficient one. For a fixed budget, BCR helps you squeeze the most value per dollar; for an absolute go/no-go decision, NPV is the cleaner guide.</p>
+
+<p>The discount rate \(r\) is the most contested input. A higher rate punishes distant benefits more harshly — bad news for programs like job training or MTO whose earnings payoffs accrue years into the future. There is no single “correct” rate, which is precisely why we test several (below).</p>
+
+<h2 id="cost-effectiveness-analysis-when-benefits-resist-dollars">Cost-Effectiveness Analysis When Benefits Resist Dollars</h2>
+
+<p>Sometimes the central benefit cannot be credibly monetized — and forcing a dollar figure onto “a child raised in a safer neighborhood” or “a life saved” can do more to discredit an analysis than to advance it. <strong>Cost-effectiveness analysis (CEA)</strong> sidesteps monetization. It expresses cost per unit of a <em>natural</em> outcome:</p>
+
+\[CER = \frac{\text{Present value of costs}}{\text{Units of effect}}\]
+
+<p>MTO is a natural CEA candidate. Its most striking results — Chetty, Hendren, and Katz (2016) found that children who moved young earned about 31% more as adults, attended college at higher rates, and lived in better neighborhoods themselves — are partly monetizable (the earnings gain) and partly not (the broader gains in opportunity and well-being). Rather than force a single dollar figure onto every dimension, an analyst might report a cost-effectiveness ratio such as “program cost per additional child who attends college,” or “cost per dollar of additional adult earnings generated.” CEA cannot tell you whether a program is worth doing in the abstract, but it is powerful for <em>comparing</em> programs that share an outcome: if a competing mobility or schooling intervention achieves the same gain at lower cost per child, CEA makes that visible even though the full benefit was never priced in dollars.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Use CEA when the key benefit is real but cannot be honestly monetized — MTO’s neighborhood effects are a prime example; it ranks programs sharing a common outcome, but it cannot declare a single program “worth it” on its own.</p>
+</blockquote>
+
+<h2 id="sensitivity-analysis">Sensitivity Analysis</h2>
+
+<p>Every CBA rests on assumptions: the discount rate, the size of the effect, how long benefits persist, the dollar value of each benefit. Sensitivity analysis asks how the conclusion changes when those assumptions change. The simplest form varies one input at a time — recomputing NPV across a range of discount rates. A <em>break-even</em> analysis finds the assumption value at which NPV hits zero (e.g., “the program pays off as long as the discount rate stays below 9%”). Honest sensitivity analysis is what separates a persuasive CBA from a sales pitch.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A finding that survives a wide range of reasonable assumptions is credible; one that flips when the discount rate moves a point or two should be reported as fragile.</p>
+</blockquote>
+
+<h2 id="perry-preschool-the-fields-most-famous-cost-benefit-result-case-e">Perry Preschool: The Field’s Most Famous Cost-Benefit Result (Case E)</h2>
+
+<p>No cost-benefit result has moved public policy more than Perry Preschool’s, and it illustrates every idea in this chapter at once. The nonprofit spent about <strong>$15,166 per child</strong> (constant 2000 dollars, 3% discount rate) on one or two years of preschool. Followed to age 40, the program group did better on outcome after outcome; when the analysts valued those differences in dollars and discounted them back, the estimated return to society was about <strong>$244,812 per child — roughly $16 for every $1 invested</strong> (Schweinhart et al. 2005). To the public budget alone (taxpayers, setting aside the participant’s private gains) the return was about <strong>$12.90 per $1</strong>.</p>
+
+<p>Three features make Perry the ideal teaching case for honest CBA:</p>
+
+<ul>
+  <li><strong>Most of the benefit is non-market.</strong> About <strong>88%</strong> of the public return — roughly <strong>$171,473 per child</strong> — came not from higher taxes on higher earnings but from <strong>reduced crime</strong>: fewer arrests, trials, incarcerations, and victim costs. This is the valuation problem of the chapter made concrete. A CBA that counted only earnings would have missed seven-eighths of the program’s value, and pricing the crime savings requires defensible assumptions that a skeptic can inspect — exactly the kind of number to expose to sensitivity analysis.</li>
+  <li><strong>The long horizon makes discounting decisive.</strong> Perry’s benefits accrue over <em>forty years</em>; its costs are paid in the first two. A higher discount rate punishes those distant benefits hard, so the choice of \(r\) is not a technicality — it moves the headline. This is why the result is always reported <em>with</em> its rate (3%), not as a bare ratio.</li>
+  <li><strong>It survives a tougher reanalysis.</strong> Heckman and colleagues (2010) re-estimated the return with methods that correct for the study’s small-sample and randomization quirks and attach <strong>standard errors</strong> — and still found a <strong>7–10% annual social rate of return</strong>, roughly <strong>$7–$12 per $1</strong>. The point estimate fell, but the conclusion — benefits comfortably exceed costs — held. A finding that survives a hostile reanalysis is exactly the “robust to reasonable assumptions” result the sensitivity-analysis section prized.</li>
+</ul>
+
+<p>The lesson for a public manager is not that every preschool returns $16 on the dollar — Perry was a small, intensive, well-run program, and later at-scale programs show smaller effects. It is that a rigorous CBA, built on a credible impact estimate and honest about its discount rate and its non-market valuations, can make the case for a program more persuasively than any outcome table alone.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Perry shows CBA at its most powerful and most demanding: the headline ($16 per $1) rests on valuing non-market benefits (mostly avoided crime), on a stated discount rate over a 40-year horizon, and on an effect that survived a skeptical reanalysis. Report all three, or the ratio is a sales pitch.</p>
+</blockquote>
+
+<h3 id="worked-example-was-nsw-worth-it-a-cost-benefit-model-in-excel">Worked Example: Was NSW Worth It? A Cost-Benefit Model in Excel</h3>
+
+<p>We model one NSW participant over six years. We anchor the analysis on the <strong>real, experimentally estimated benefit</strong>: participants earned about <strong>$1,794 more per year</strong> than randomized controls (the +$1,794 effect from Chapter 10). We treat that earnings gain as a benefit stream that persists for the first several years after the program.</p>
+
+<p>The program’s <em>cost</em> is where we must be careful. We will <strong>not</strong> invent a precise NSW cost figure. Instead, for the arithmetic we adopt an explicitly labeled <strong>illustrative assumption</strong>: <em>suppose the program cost $8,000 per participant, paid entirely up front in year 0.</em> This is a teaching placeholder, not a reported NSW estimate; in a real report you would replace it with documented program-cost data and cite the source. Everything in the benefit column, by contrast, is the genuine experimental finding.</p>
+
+<p>All figures below are in dollars. We lay out one column per year in Excel.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year \(t\)</th>
+      <th>Costs \(C_t\)</th>
+      <th>Benefits \(B_t\)</th>
+      <th>Net \(NB_t\)</th>
+      <th>PV of net at 5%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>8,000</td>
+      <td>0</td>
+      <td>\(-8{,}000\)</td>
+      <td>−8,000.00</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,708.57</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,627.21</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,549.72</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,475.93</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,405.65</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0</td>
+      <td>1,794</td>
+      <td>1,794</td>
+      <td>1,338.72</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><strong>+1,105.79</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last column discounts each year’s net benefit by \((1+r)^t\) at \(r = 5\%\) — e.g., year 3 is \(1{,}794 / (1.05)^3 = 1{,}549.72\). Its <strong>sum is +$1,106</strong>, which <em>is</em> the NPV. This is the number you can confirm by hand, not just take on faith from Excel’s <code class="language-plaintext highlighter-rouge">NPV</code> function; the two agree exactly.</p>
+
+<p><strong>Step 1 — Lay out the cash flows.</strong> Put years in row 1, costs in row 2, benefits in row 3, and net benefits in row 4 with <code class="language-plaintext highlighter-rouge">=B3-B2</code> dragged across. To reproduce the present-value column above, add a row with <code class="language-plaintext highlighter-rouge">=B4/(1+$B$8)^B1</code> dragged across, and sum it — it returns the same +$1,106.</p>
+
+<p><strong>Step 2 — Compute NPV.</strong> Excel’s <code class="language-plaintext highlighter-rouge">NPV</code> function discounts a stream <em>beginning one period in the future</em>, so it must not include the year-0 value inside the function — add year 0 separately. With the rate in cell <code class="language-plaintext highlighter-rouge">B8</code> (say 5%), net benefits for years 1–6 in <code class="language-plaintext highlighter-rouge">C4:H4</code>, and year 0 in <code class="language-plaintext highlighter-rouge">B4</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">=B4 + NPV(B8, C4:H4)</code></p>
+
+<p>At 5% this returns about <strong>+$1,106</strong> — positive, so on these (real benefit, illustrative cost) figures the program clears the bar.</p>
+
+<p><strong>Step 3 — Compute the BCR.</strong> Discount benefits and costs separately. Present value of benefits: <code class="language-plaintext highlighter-rouge">=B3 + NPV(B8, C3:H3)</code>; present value of costs: <code class="language-plaintext highlighter-rouge">=B2 + NPV(B8, C2:H2)</code>; then <code class="language-plaintext highlighter-rouge">BCR = PV_benefits / PV_costs</code>. At 5% the BCR is about <strong>1.14</strong> — roughly $1.14 of discounted earnings benefit per $1.00 of cost.</p>
+
+<p><strong>Step 4 — Sensitivity table.</strong> Build a one-variable <strong>Data Table</strong> (Data ▸ What-If Analysis ▸ Data Table) that recomputes NPV as the discount rate runs from 2% to 12%. List the rates down a column, point the table at your NPV formula, and Excel fills in the NPV at each rate in one step.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Discount rate \(r\)</th>
+      <th>NPV ($)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2%</td>
+      <td>2,049</td>
+    </tr>
+    <tr>
+      <td>5%</td>
+      <td>1,106</td>
+    </tr>
+    <tr>
+      <td>8%</td>
+      <td>293</td>
+    </tr>
+    <tr>
+      <td>12%</td>
+      <td>\(-624\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At low and moderate discount rates the program is a net positive; at high rates the later earnings benefits are discounted too heavily to cover the up-front cost. The break-even rate lies near <strong>9%</strong>.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch11_npv_curve.svg" alt="Line chart of net present value against the discount rate: about +2,049 dollars at 2 percent, falling through +1,106 at 5 percent and +293 at 8 percent to about minus 624 dollars at 12 percent, crossing zero near a 9 percent break-even rate." />
+<figcaption><span class="fig-label">Figure 11.1.</span> Net present value of the NSW cost-benefit model as the discount rate varies. The program stays a net positive across the usual public discount rates and turns negative only near the break-even rate of about 9%. Plotting the whole curve — rather than reporting a single rate — is the one-variable sensitivity check that separates a credible CBA from a sales pitch.</figcaption>
+</figure>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> You can tell the workforce board that, under these figures, NSW is a <em>net positive investment across the usual range of public discount rates</em>, with a benefit-cost ratio around 1.14 at 5% and a break-even near 9%. Two honesty caveats belong in the same breath. First, the <strong>benefit is the real experimental estimate</strong> (+$1,794/year), but the <strong>$8,000 cost is an illustrative placeholder</strong> — your bottom line moves with the true program cost, which is why you report the break-even rate and run the sensitivity table. Second, the published NSW evaluations found that benefits exceeded costs for some target groups — notably long-term welfare recipients — while the case was weaker for others; a credible report would present results <em>by subgroup</em> rather than a single all-in verdict (LaLonde 1986; Dehejia and Wahba 1999). And where a benefit cannot be honestly priced at all — as with MTO’s neighborhood effects — you would switch to the cost-effectiveness framing and let the board compare dollars-per-outcome across competing programs directly.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Ignoring the time value of money.</strong> Summing undiscounted costs and benefits across years overstates programs whose payoffs are far off — exactly the case when an earnings benefit like NSW’s accrues year after year.</li>
+  <li><strong>Counting transfers as benefits.</strong> A welfare payment moving money from taxpayers to a participant is not a net social gain; be explicit about whose standing you adopt.</li>
+  <li><strong>Double-counting.</strong> Adding both an intermediate outcome and the final outcome it produces inflates benefits.</li>
+  <li><strong>Cherry-picking the discount rate.</strong> Choosing the rate that makes your program look best, without disclosing the sensitivity, is advocacy, not analysis.</li>
+  <li><strong>Passing off an assumed cost as a measured one.</strong> If you must plug in a cost figure you have not documented, label it as an illustrative assumption and test it — never let a placeholder masquerade as a finding.</li>
+  <li><strong>Omitting opportunity costs.</strong> “Free” donated space or participants’ foregone time still has a value that belongs in the cost column.</li>
+  <li><strong>Forcing monetization where it isn’t credible.</strong> A made-up dollar value for an intangible (MTO’s neighborhood effects, say) can discredit an otherwise sound analysis; CEA is often the more honest tool.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>Build the NPV model.</strong> Recreate the NSW table in Excel with the real $1,794 annual benefit and the $8,000 illustrative cost, and compute NPV at 5% using <code class="language-plaintext highlighter-rouge">=B4 + NPV(B8, C4:H4)</code>. Confirm you get about +$1,106, then change the cost assumption to $10,000 and report how the NPV and your conclusion change.</li>
+  <li><strong>Benefit-cost ratio.</strong> Using the same spreadsheet, compute the BCR at 5% by discounting benefits and costs separately. Confirm it is about 1.14, then interpret in one sentence what a BCR below 1 would mean for the board’s decision.</li>
+  <li><strong>Sensitivity Data Table.</strong> Build a one-variable Data Table varying the discount rate from 1% to 15%. Identify the break-even rate (near 9% on these figures) and write two sentences on what that implies about how robust the “worth it” conclusion is.</li>
+  <li><strong>Cost-effectiveness vs. cost-benefit.</strong> Explain in a short paragraph why MTO’s main benefits (a child’s improved life trajectory, safer surroundings) are better handled with cost-effectiveness analysis than with a single monetized cost-benefit figure, and propose one natural-unit ratio you could report for MTO.</li>
+  <li><strong>City finance application.</strong> Using the Texas city finance panel, propose a small local program (e.g., a downtown facade-improvement grant) whose benefits show up as higher future sales-tax revenue. Sketch a five-year cost-benefit table, clearly label any cost figure you assume rather than measure, name the discount rate you would use, and explain one benefit you would <em>not</em> attempt to monetize.</li>
+  <li><strong>Interrogate the $16 (Case E).</strong> Perry Preschool reports a societal benefit-cost ratio of about $16 per $1, of which roughly 88% is reduced-crime value. (a) In one paragraph, explain why the choice of discount rate matters so much for a program whose benefits span 40 years but whose costs fall in the first two. (b) The independent Heckman et al. (2010) reanalysis lands at roughly $7–$12 per $1. Explain why the <em>lower</em> estimate arguably makes the case <em>more</em> persuasive to a skeptical council, not less. (c) Name one benefit in the crime-savings figure that you would flag for sensitivity analysis, and say why.</li>
+</ol>
+
+<h2 id="transition-to-chapter-12">Transition to Chapter 12</h2>
+
+<p>You now have a verdict on NSW: a program that works, with a net value that depends visibly on the cost you assume and the discount rate you choose. The final task is the one that determines whether any of this analysis matters — communicating it. A correct NPV buried in a confusing memo persuades no one, and a confident claim that hides its own uncertainty — or quietly passes off an illustrative cost as a measured one — is a breach of professional ethics. Chapter 12 turns to the evaluation report: how to structure findings for busy decision-makers, how to report uncertainty and threats to validity honestly, how to visualize results for non-technical audiences, and how to use new tools — including AI — responsibly without ever surrendering your own judgment.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

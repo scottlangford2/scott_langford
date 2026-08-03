@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 1: Introduction to Program Evaluation | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 1: Introduction to Program Evaluation" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter1/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter1/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 1: Introduction to Program Evaluation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 1: Introduction to Program Evaluation","url":"https://scottlangford2.github.io/pa5312/docs/chapter1/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 1: Introduction to Program Evaluation</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“Not everything that can be counted counts, and not everything that counts can be counted.”
+— William Bruce Cameron, <em>Informal Sociology</em> (1963)</p>
+</blockquote>
+
+<blockquote>
+  <p>“Evaluation is the systematic application of social research procedures for assessing the conceptualization, design, implementation, and utility of social intervention programs.”
+— Peter H. Rossi, Mark W. Lipsey, and Gary T. Henry, <em>Evaluation: A Systematic Approach</em> (paraphrasing their working definition)</p>
+</blockquote>
+
+<h2 id="opening-case-did-the-national-supported-work-demonstration-raise-earnings">Opening Case: Did the National Supported Work Demonstration Raise Earnings?</h2>
+
+<p>In the mid-1970s, the Manpower Demonstration Research Corporation ran the <strong>National Supported Work (NSW) Demonstration</strong> — a job-training program that gave disadvantaged workers (long-term welfare recipients, ex-offenders, former drug users, school dropouts) up to a year of subsidized, gradually more demanding work experience, on the theory that it would build the skills and habits that lead to real, unsubsidized employment. The intended outcome was concrete and dollar-denominated: higher earnings after the program ended.</p>
+
+<p>What made NSW unusual is that it was run as a <strong>randomized experiment</strong>. Eligible applicants were assigned by chance either to the program (treatment) or to a control group that did not get the subsidized jobs. Among the treated men, 1978 earnings averaged <strong>$6,349</strong> (n = 185); among the controls, <strong>$4,555</strong> (n = 260). The difference — <strong>+$1,794</strong> — is a credible estimate of what the program actually caused, because randomization made the two groups comparable on everything except the program itself.</p>
+
+<p>Here is the part that should unsettle every manager. Suppose NSW had <em>not</em> been run as an experiment. Suppose, as is far more common, an analyst had simply compared the treated workers to a large group of similar-looking people drawn from a national survey (the Current Population Survey, n ≈ 16,000) who did not enter the program. That naive observational comparison yields <strong>−$8,498</strong> — the program appears to <em>lower</em> earnings by more than eight thousand dollars. The sign flips. A real, effective program looks harmful, purely because the comparison group was the wrong one. Robert LaLonde (1986) used exactly this contrast to put a generation of nonexperimental evaluations on trial, and Dehejia and Wahba (1999) made the NSW data the most-studied teaching case in all of program evaluation.</p>
+
+<p>The gap between <strong>+$1,794</strong> and <strong>−$8,498</strong> is not a rounding error or a modeling quibble. It is the difference between an honest counterfactual and a misleading one — and it is the situation public managers face constantly: a program exists, money is at stake, decisions loom, and the available evidence describes activity, or the wrong comparison, rather than effect.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch1_nsw_signflip.svg" alt="Bar chart of the NSW estimated effect on 1978 earnings: a small positive bar for the experimental estimate against randomized controls, and a much larger negative bar for the naive comparison against a survey sample." />
+<figcaption><span class="fig-label">Figure 1.1.</span> The same program, two answers. Measured against the randomized control group, NSW's effect on earnings is a credible positive; measured against a naive survey comparison, the sign flips to a far larger negative. The difference is entirely the comparison group — selection bias, not arithmetic.</figcaption>
+</figure>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>What is the difference between <em>what a program did</em> and <em>what difference the program made</em>?</li>
+  <li>How can the same program look beneficial under one comparison and harmful under another?</li>
+  <li>How is evaluation different from the monitoring reports a manager already produces?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Public and nonprofit managers are accountable for results, not just effort. Legislatures, councils, boards, and funders increasingly ask programs to show evidence of effectiveness, and “we served a lot of people” is no longer a sufficient answer. Program evaluation is the craft of producing credible answers to questions about whether a program is needed, whether it is being run as intended, whether it produces the outcomes it promises, and whether those outcomes are worth the cost. This chapter maps the territory so that every later chapter — measurement, regression, difference-in-differences, cost-benefit analysis — has a place to attach.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Evaluation converts a program’s <em>activity</em> into defensible claims about its <em>effect and value</em>, which is exactly what budget and policy decisions require.</p>
+</blockquote>
+
+<h2 id="five-running-cases">Five Running Cases</h2>
+
+<p>This book returns again and again to five real programs and their real data. They span the sectors a public manager actually works in, and each carries a different evaluation lesson.</p>
+
+<ul>
+  <li><strong>Case A — Texas Economic Development Sales Tax (city/local).</strong> Texas cities may levy a Type A or Type B local sales tax dedicated to economic development. We use a real Texas city-finance panel of sales-tax allocations. In 2024, per-capita allocations across cities averaged <strong>$395</strong> with a median of <strong>$276</strong> and a standard deviation of <strong>$596</strong> — a heavily right-skewed distribution. <em>Quasi-experimental, cost, and outcome questions.</em></li>
+  <li><strong>Case B — Texas Countywide Vote Centers (county).</strong> Some Texas counties let any registered voter cast a ballot at any vote center, rather than a single assigned precinct. We use a real Texas county political panel. In the 2020 election, turnout averaged <strong>0.554</strong> in metro counties versus <strong>0.580</strong> in non-metro counties (Welch <em>t</em> = −1.67, <em>p</em> ≈ 0.10). <em>Quasi-experimental and outcome questions.</em></li>
+  <li><strong>Case C — National Supported Work Demonstration (state/workforce).</strong> The job-training RCT of our opening case, using the public Dehejia–Wahba data. <em>The benchmark for impact evaluation and the cautionary tale of selection bias.</em></li>
+  <li><strong>Case D — Moving to Opportunity (housing/HUD).</strong> A federal experiment that used a <strong>lottery</strong> to offer some public-housing families a voucher to move to a lower-poverty neighborhood. Chetty, Hendren, and Katz (2016) found that children who moved young (before age 13) later earned about <strong>$3,477 (31%) more</strong> per year in their mid-twenties than a control mean of <strong>$11,270</strong>, and attended college at higher rates; take-up of the voucher was only partial. <em>A randomized design with the gap between offer and uptake at its center.</em></li>
+  <li><strong>Case E — Perry Preschool (small nonprofit).</strong> A preschool for <strong>123 low-income children</strong> run by a nonprofit, the HighScope Educational Research Foundation, which <strong>randomly assigned</strong> children to the program (n = 58) or a no-program comparison group (n = 65) and followed them for decades. High-school graduation was <strong>65% vs. 45%</strong> for the two groups (Schweinhart et al. 2005), and the program’s famous cost-benefit result — roughly <strong>$16 returned per $1 invested</strong> — helped launch the case for early-childhood investment. <em>A small-N program showing that rigor does not require a big budget or a big sample.</em></li>
+</ul>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Cases C (NSW), D (MTO), and E (Perry) are randomized; Cases A and B are observational panels where we must <em>construct</em> a credible comparison. Case E adds a further lesson: even 123 people, well randomized, can settle a question — small samples widen the uncertainty, they do not forbid a credible answer. The contrast among these designs runs through the whole course.</p>
+</blockquote>
+
+<h2 id="what-program-evaluation-is">What Program Evaluation Is</h2>
+
+<p>Evaluation is the systematic, evidence-based assessment of a program’s design, operation, results, and worth. Three words in that sentence carry weight. <em>Systematic</em> means we use explicit methods that others could inspect and reproduce, not impressions. <em>Evidence-based</em> means conclusions follow from data rather than from the enthusiasm of the program’s champions. <em>Worth</em> means we are ultimately making a value judgment — useful, effective, cost-justified — and not merely describing.</p>
+
+<p>A useful contrast is between an <em>output</em> and an <em>outcome</em>. An output is something the program produces and controls directly: in NSW, the months of subsidized work-hours delivered. An outcome is a change in the world the program is trying to cause: participants employed, earning more (the $6,349 vs. $4,555), off public assistance. A program report that counted only the subsidized hours worked would describe outputs and gesture vaguely at outcomes. Evaluation insists on the distinction.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Outputs are what the program <em>does</em>; outcomes are the <em>change</em> it is trying to produce. Confusing the two is the most common error in public reporting.</p>
+</blockquote>
+
+<h2 id="why-public-managers-need-it-evidence-based-policy-and-management">Why Public Managers Need It: Evidence-Based Policy and Management</h2>
+
+<p>The movement often called <em>evidence-based policy</em> holds that decisions about creating, scaling, reforming, or ending programs should rest on the best available evidence about what works. For a manager, the parallel idea is <em>evidence-based management</em>: using systematic evidence — including evaluation findings — to run the program, not only to defend it after the fact.</p>
+
+<p>This is not a demand for certainty. Evidence is always partial and contestable. But there is a large difference between a city council deciding on a hunch and a council deciding from a study that honestly states what it found and what it could not establish. Evaluation does not remove judgment from public decisions; it disciplines that judgment with data.</p>
+
+<h2 id="the-major-types-of-evaluation">The Major Types of Evaluation</h2>
+
+<p>A program can be evaluated at different stages and from different angles. Rossi, Lipsey, and Henry (2019) organize these into a recognizable hierarchy of questions. The order is roughly the order in which the questions logically arise over a program’s life.</p>
+
+<h3 id="needs-assessment">Needs Assessment</h3>
+
+<p>A <em>needs assessment</em> asks: is there a problem of sufficient size and nature to justify a program, and whom does it affect? Before NSW (Case C), a needs assessment would have asked how many long-term welfare recipients and ex-offenders faced barriers to work, and whether subsidized work experience plausibly addressed those barriers. Before launching countywide vote centers (Case B), a county would ask whether assigned-precinct voting was actually depressing turnout, and for whom. Skipping this step risks building a well-run program that solves a problem nobody had.</p>
+
+<h3 id="process-implementation-evaluation">Process (Implementation) Evaluation</h3>
+
+<p>A <em>process evaluation</em> asks: is the program operating as designed and reaching the intended people? It examines enrollment, dosage, fidelity, and reach. Moving to Opportunity (Case D) is the textbook illustration of why this matters: families <em>won</em> a voucher in the lottery, but only some of them actually used it to move. That gap between being <em>offered</em> the program and <em>taking it up</em> is precisely what a process evaluation surfaces, and it forces the distinction (developed in Chapter 3) between the effect of <em>offering</em> the program and the effect of <em>receiving</em> it. Process evaluation is also the diagnostic that explains a disappointing outcome study: a program can fail because the <em>theory</em> was wrong or because the <em>implementation</em> was wrong, and only a process evaluation can tell them apart.</p>
+
+<h3 id="outcome-evaluation">Outcome Evaluation</h3>
+
+<p>An <em>outcome evaluation</em> measures whether the intended outcomes occurred among participants — employment rates, earnings, turnout, taxable sales — after the program. Crucially, outcome evaluation describes <em>what happened</em> to participants but does not by itself establish that the program <em>caused</em> it. The NSW treated group earned $6,349 in 1978; that is a fact about <em>what happened</em> to participants. By itself it does not tell us whether the program produced it — for that we need the control group’s $4,555 as the counterfactual. Reporting the $6,349 alone is an outcome; comparing it to a credible counterfactual is impact.</p>
+
+<h3 id="impact-evaluation">Impact Evaluation</h3>
+
+<p>An <em>impact evaluation</em> asks the causal question directly: how much of the observed outcome was <em>caused by</em> the program, over and above what would have happened anyway? This requires a comparison to a credible counterfactual — what participants’ outcomes would have been without the program. NSW gives the cleanest possible answer: the randomized control group earned $4,555, so the program’s impact on the treated is $6,349 − $4,555 = <strong>+$1,794</strong>. Moving to Opportunity (Case D) is the same logic in housing: children who moved young earned about $3,477 (31%) more in their mid-twenties than the control mean of $11,270. Chapter 3 develops this idea formally; for now, note that it is the question the LaLonde critique made unavoidable.</p>
+
+<h3 id="cost-evaluation">Cost Evaluation</h3>
+
+<p>Finally, <em>cost evaluation</em> relates effects to dollars. <em>Cost-effectiveness analysis</em> expresses results as cost per unit of outcome (cost per additional dollar of participant earnings in NSW; cost per additional vote cast under vote centers). <em>Cost-benefit analysis</em> converts both costs and benefits to dollars and compares them, often as a benefit-cost ratio or net present value — natural for Case A, where a city’s economic-development sales tax (2024 mean allocation $395 per capita) must be weighed against the jobs and revenue it generates. Chapter 11 treats these in depth.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> The five questions — <em>Is it needed? Is it run right? Did outcomes occur? Did the program cause them? Was it worth the cost?</em> — are distinct, and an answer to one is not an answer to another.</p>
+</blockquote>
+
+<h2 id="formative-versus-summative">Formative versus Summative</h2>
+
+<p>A cross-cutting distinction concerns <em>purpose</em>. <em>Formative</em> evaluation is conducted to improve a program while it is running; its audience is the program’s managers and staff, and its spirit is “how do we make this better?” Needs and process evaluations are typically formative. <em>Summative</em> evaluation is conducted to judge a program’s overall value for an external decision — continue, expand, cut, end. Impact and cost evaluations are typically summative. The same data can sometimes serve both, but the framing differs: the formative question is <em>how</em>, the summative question is <em>whether</em>.</p>
+
+<h2 id="the-evaluators-role-and-stakeholders">The Evaluator’s Role and Stakeholders</h2>
+
+<p>Evaluation is never purely technical, because every program has <em>stakeholders</em> — people with a stake in the findings. For NSW these included the federal sponsors, the local sites that ran the work crews, the participants, and the taxpayers funding the wage subsidies; for a Texas economic-development sales tax (Case A) they include the city council, the development corporation, the recruited businesses, and the residents whose sales-tax dollars are at stake. Each may want different questions answered and may have a stake in a particular answer. A central professional obligation of the evaluator is to remain credible across these interests: to specify questions and methods <em>in advance</em>, to report what the data show even when it disappoints the program’s champions, and to state limitations plainly. The evaluator serves the decision, not the program.</p>
+
+<h2 id="scoping-an-evaluation-the-charter">Scoping an Evaluation: The Charter</h2>
+
+<p>Before choosing a method or touching data, a good evaluation is <em>scoped</em> — negotiated with the people who will use it, so the findings can actually inform a decision. The most common way a rigorous evaluation fails is not a bad estimate; it is a good estimate that arrives too late, answers a question no one was asking, or lands on a decision-maker who was never consulted and feels no ownership of it. A short <strong>evaluation charter</strong>, agreed at the outset, guards against this. It answers four questions, in writing, before any analysis begins:</p>
+
+<ul>
+  <li><strong>Who is the primary intended user?</strong> Not “stakeholders” in the abstract, but the specific person or body who will act on the findings — the city council voting on the EDC-tax renewal (Case A), the HUD official deciding whether to expand vouchers (Case D). Naming a real user is what turns an evaluation from a report into a decision aid.</li>
+  <li><strong>What decision is pending, and when?</strong> An evaluation is useful only if its findings arrive <em>before</em> the decision is made. A cost-benefit analysis of the sales tax that lands the week after the council’s budget vote is worthless, however rigorous. Work backward from the decision date to a feasible timeline.</li>
+  <li><strong>What questions must be answered to inform that decision?</strong> Tie each evaluation question — needs, process, outcome, impact, or cost, from the menu above — to what the user actually needs to know. A question whose answer would change no one’s decision does not belong in the plan.</li>
+  <li><strong>What will be reported, and how — agreed in advance?</strong> Specify the outcomes, the analyses, and the form of the final product <em>before</em> results exist. Settling the reporting rules up front protects the user (who knows what to expect) and the evaluator (who is then insulated from pressure to reshape the findings after they arrive — the same logic as the pre-analysis plans in Chapter 3).</li>
+</ul>
+
+<p>A charter is one page, not a contract, and it will evolve as you learn more. But writing it forces the conversation that most determines whether an evaluation is used: <em>who needs what answer, by when, and what will we tell them?</em> Sketching this charter for each of the five running cases is the first act of a real evaluation — and it is where the intended user stops being an audience you report <em>to</em> and becomes a partner you design <em>with</em>.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Scope the evaluation <em>with</em> its intended user before you design it. “Who will act on this, and when?” shapes the study more than any statistical choice — and answering it late is a leading reason good evaluations go unused.</p>
+</blockquote>
+
+<h2 id="how-to-read-the-math-in-this-book">How to Read the Math in This Book</h2>
+
+<p>This book uses a small amount of mathematical notation, and <strong>every formula is paired with a plain-English reading</strong>. The notation is never the point — it is shorthand for an idea you can say in words. Bookmark this page: whenever a symbol trips you up, translate it here first, then reread the sentence. The idea is always simpler than the symbols.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Read it as…</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(\bar{x}\)</td>
+      <td>“x-bar” — the <strong>average (mean)</strong> of \(x\)</td>
+      <td>\(\bar{x} = \$395\): the average is $395</td>
+    </tr>
+    <tr>
+      <td>\(\sum\)</td>
+      <td>“<strong>add up all</strong> of these”</td>
+      <td>\(\sum x_i\) — add up every \(x\) value</td>
+    </tr>
+    <tr>
+      <td>\(n\)</td>
+      <td>the <strong>number of observations</strong> (rows in your data)</td>
+      <td>\(n = 254\) counties</td>
+    </tr>
+    <tr>
+      <td>\(x_i\), \(Y_i\)</td>
+      <td>the value <strong>for one unit \(i\)</strong> (a person, city, or county)</td>
+      <td>\(Y_i\) — the outcome for worker \(i\)</td>
+    </tr>
+    <tr>
+      <td>\(E[\,\cdot\,]\)</td>
+      <td>“the <strong>average / expected value</strong> of” whatever is in the brackets</td>
+      <td>\(E[Y]\) — the average of \(Y\)</td>
+    </tr>
+    <tr>
+      <td>\(\mid\)  (vertical bar)</td>
+      <td>“<strong>given</strong> / <strong>among</strong>”</td>
+      <td>\(E[Y \mid D=1]\) — the average of \(Y\) <em>among the treated</em></td>
+    </tr>
+    <tr>
+      <td>\(\hat{\phantom{x}}\)  (a “hat”)</td>
+      <td>“our <strong>estimate</strong> of”</td>
+      <td>\(\hat{\tau}\) — our estimate of the effect \(\tau\)</td>
+    </tr>
+    <tr>
+      <td>Greek letters (\(\beta, \tau, \mu, \sigma\))</td>
+      <td>just <strong>names</strong> for quantities: \(\beta\)/\(\tau\) label effects or slopes; \(\mu\) (“mu”) is a true mean; \(\sigma\) (“sigma”) a true standard deviation</td>
+      <td>\(\tau\) — the program’s effect</td>
+    </tr>
+    <tr>
+      <td>\(\sqrt{\phantom{x}}\)</td>
+      <td><strong>square root</strong> (Excel: <code class="language-plaintext highlighter-rouge">SQRT</code>)</td>
+      <td>\(\sqrt{n}\) is <code class="language-plaintext highlighter-rouge">=SQRT(n)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>The one habit that makes the math painless:</strong> read the plain-English line under a formula <em>first</em>, then look back at the symbols. Notation just makes an idea precise enough to compute in Excel; it is not a second language you must master to follow the argument.</p>
+</blockquote>
+
+<h2 id="how-evaluation-differs-from-monitoring-and-from-research">How Evaluation Differs from Monitoring and from Research</h2>
+
+<p>Managers already produce <em>performance monitoring</em>: routine, ongoing tracking of indicators (enrollments this month, dollars spent). Monitoring is continuous, descriptive, and internally focused; it tells you whether the dashboard is green. Evaluation is episodic, explanatory, and judgment-oriented; it asks <em>why</em> the dashboard looks the way it does and <em>whether</em> the program deserves to continue. Monitoring tells you NSW enrolled 185 workers into its treatment crews; evaluation tells you whether the program raised their earnings by $1,794.</p>
+
+<p>Evaluation also differs from <em>basic research</em>. Research seeks generalizable knowledge and is driven by theory and the investigator’s curiosity. Evaluation is driven by a specific program and a specific decision; its first loyalty is <em>use</em>. The methods overlap heavily — and we will borrow research’s tools throughout — but the purpose differs. (The line can blur: the NSW data became one of the most influential research datasets in economics precisely <em>because</em> a program evaluation was designed rigorously enough to outlive its original decision.)</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Monitoring asks “are we on track?”; research asks “what is generally true?”; evaluation asks “is <em>this</em> program worth it, and why?”</p>
+</blockquote>
+
+<h3 id="worked-example-outcome-versus-impact-in-the-nsw-data-excel">Worked Example: Outcome versus Impact in the NSW Data (Excel)</h3>
+
+<p>The NSW experiment gives us the two numbers that an outcome study and an impact study would each report, and lets us see exactly how they differ. Lay out the group means in a small block (the figures are the published Dehejia–Wahba experimental results).</p>
+
+<p>Enter the data in columns A–C. In Excel:</p>
+
+<ul>
+  <li>In <strong>D2</strong>, the program’s <strong>impact</strong> as the treated mean minus the <em>experimental</em> control mean: <code class="language-plaintext highlighter-rouge">=B2-C2</code>.</li>
+  <li>In <strong>D3</strong>, the <strong>naive observational</strong> comparison, treated minus the CPS comparison mean: <code class="language-plaintext highlighter-rouge">=B3-C3</code>.</li>
+  <li>Format <strong>B2:D3</strong> as currency via <strong>Home → Number → Accounting Format</strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comparison</th>
+      <th style="text-align: right">Treated mean (B)</th>
+      <th style="text-align: right">Comparison mean (C)</th>
+      <th style="text-align: right">Estimated effect (D)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Experimental (control group)</td>
+      <td style="text-align: right">$6,349</td>
+      <td style="text-align: right">$4,555</td>
+      <td style="text-align: right"><strong>+$1,794</strong></td>
+    </tr>
+    <tr>
+      <td>Naive (CPS comparison, n ≈ 16,000)</td>
+      <td style="text-align: right">$6,349</td>
+      <td style="text-align: right">$14,847</td>
+      <td style="text-align: right"><strong>−$8,498</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Both rows describe the <em>same</em> treated workers earning the <em>same</em> $6,349 in 1978. The only thing that changes is the comparison group — the stand-in for what the workers would have earned <em>without</em> the program. With the randomized control group, the program raised earnings by $1,794. With an arbitrary survey comparison, it appears to <em>cut</em> earnings by $8,498. The treated workers’ $6,349 is an <em>outcome</em>; the effect requires a credible counterfactual, and the choice of counterfactual is everything. (The −$8,498 is the celebrated sign-flip from LaLonde (1986); Chapter 3 dissects it as selection bias.)</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> Monitoring NSW would have reported an <em>output</em> (subsidized work delivered) and an <em>outcome</em> (treated workers earned $6,349). The hard question is <em>impact</em> — and the answer depends entirely on the counterfactual. Because NSW randomized, we trust the +$1,794. Without randomization, the very same data would have told us the program was harmful. That is why this book treats the comparison group, not the outcome, as the central object of evaluation.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Reporting outputs as if they were outcomes.</strong> “Subsidized work-hours delivered” is an output; it tells you nothing about earnings caused by the program.</li>
+  <li><strong>Ignoring the counterfactual.</strong> The NSW sign-flip is the lesson: the same $6,349 looks like a +$1,794 gain or an $8,498 loss depending on the comparison group. Without a credible counterfactual, an outcome is not an impact.</li>
+  <li><strong>Choosing the type of evaluation to flatter the program.</strong> A struggling program’s champions often prefer a process evaluation (“we worked hard”); skeptics demand impact. The decision at hand should dictate the type, not the politics.</li>
+  <li><strong>Treating monitoring dashboards as evaluation.</strong> Green indicators show activity, not effect.</li>
+  <li><strong>Letting stakeholders set the conclusion in advance.</strong> Specify questions and methods before seeing results.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>Classify the questions.</strong> For NSW (Case C), write four distinct evaluation questions — one each of needs, process, outcome, and impact — and explain what evidence would answer each. Do the same for the Texas economic-development sales tax (Case A), including a cost question.</li>
+  <li><strong>Outcome vs. impact (Excel).</strong> Recreate the worked-example block with the NSW means. Add a row computing the experimental effect as a <em>percentage</em> of the control mean (<code class="language-plaintext highlighter-rouge">=D2/C2</code>). Explain in two sentences why the experimental $1,794 and the naive −$8,498 can both be “correct” arithmetic yet only one is a credible impact estimate.</li>
+  <li><strong>Formative or summative?</strong> A development corporation wants to know which of two business-recruitment pitches fills more applications (Case A); HUD wants to know whether to expand housing vouchers nationally based on the MTO results (Case D). Classify each request and identify its audience.</li>
+  <li><strong>County panel (Excel).</strong> Open the Texas County Panel (Case B). Pick a single county and chart its turnout across the 2000–2024 presidential years using <strong>Insert → Line Chart</strong>. In a short paragraph, explain why this trend illustrates the counterfactual problem: if the county adopted vote centers in 2016, why can’t this chart alone show their impact on turnout?</li>
+  <li><strong>Distinguish the disciplines.</strong> In one paragraph each, describe how performance monitoring, basic research, and program evaluation would each approach the City Finance Panel’s sales-tax allocations (Case A; 2024 mean $395, median $276) differently.</li>
+  <li><strong>Draft an evaluation charter.</strong> For one of the five running cases, write a one-page charter answering the four scoping questions: name the <em>primary intended user</em> (a specific person or body), the <em>pending decision and its deadline</em>, the <em>two or three questions</em> whose answers would inform that decision, and <em>what you would report, and how</em>, agreed in advance. Then, in two sentences, explain how naming a real user — rather than “stakeholders” — changed what you would choose to measure.</li>
+</ol>
+
+<h2 id="transition-to-chapter-2">Transition to Chapter 2</h2>
+
+<p>The NSW sign-flip showed that the comparison group is everything. But before we can argue about counterfactuals, we need to be explicit about <em>how</em> each program is supposed to work: how subsidized work is supposed to turn into earnings (Case C), how a lower-poverty neighborhood is supposed to change a child’s life chances (Case D), how a dedicated sales tax is supposed to produce jobs and revenue (Case A), how vote centers are supposed to raise turnout (Case B). That chain of reasoning — inputs to activities to outputs to outcomes to impacts, resting on stated assumptions — is called a program’s <em>theory of change</em>, and its visual form is a <em>logic model</em>. Chapter 2 shows how to build one for each of our cases, how to read the evaluation questions and indicators directly off of it, and how to spot the broken links that doom programs before the first dollar is spent.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

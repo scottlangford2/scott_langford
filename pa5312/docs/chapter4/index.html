@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 4: Measurement and Data Collection | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 4: Measurement and Data Collection" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter4/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter4/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 4: Measurement and Data Collection" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 4: Measurement and Data Collection","url":"https://scottlangford2.github.io/pa5312/docs/chapter4/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 4: Measurement and Data Collection</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“Not everything that can be counted counts, and not everything that counts can be counted.”
+— William Bruce Cameron, <em>Informal Sociology</em> (1963)</p>
+</blockquote>
+
+<blockquote>
+  <p>“The measure of a thing is never the thing itself.”
+— paraphrase commonly used in measurement theory; treat it as a maxim, not a citation</p>
+</blockquote>
+
+<h2 id="opening-case-measuring-workforce-success-in-the-national-supported-work-demonstration">Opening Case: Measuring “Workforce Success” in the National Supported Work Demonstration</h2>
+
+<p>In the mid-1970s, the National Supported Work (NSW) Demonstration randomly assigned hard-to-employ applicants — long-term welfare recipients, ex-offenders, former drug users, school dropouts — to a subsidized work-experience program or to a control group that received nothing. Because assignment was random, the evaluation had the cleanest possible design. But a clean design still has to decide <em>what to count</em>. What, precisely, is “workforce success,” and where do the numbers come from?</p>
+
+<p>The NSW evaluators settled on <strong>earnings</strong> as the headline outcome, measured in 1978 (after the program), with <strong>employment status</strong> as a secondary indicator. Those choices look obvious until you ask how earnings are actually recorded. Self-reported earnings on a follow-up survey are subject to recall error and attrition; earnings drawn from administrative Unemployment Insurance (UI) wage records are more consistent but miss off-the-books work, cash jobs, and out-of-state employment that never reaches a state’s UI file. The same person can have two different “earnings” depending on which source you trust.</p>
+
+<p>The payoff of getting measurement right is enormous here, because NSW became the most famous test case in evaluation. Comparing the randomized treatment and control groups, treated workers earned <strong>$6,349</strong> in 1978 versus <strong>$4,555</strong> for controls — an experimental effect of <strong>+$1,794</strong> (LaLonde 1986; Dehejia &amp; Wahba 1999). Yet when LaLonde discarded the randomized controls and instead compared the trainees to a non-experimental comparison group drawn from national survey data, the same program appeared to <em>lower</em> earnings by roughly <strong>$8,498</strong>. Same outcome concept, same trainees, opposite conclusion — because the <em>comparison</em> and the <em>measurement</em> changed. Before any evaluation can say whether a program works, it has to settle a more basic question: what, precisely, are we measuring, and how much can we trust the numbers we have?</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>How do we move from an abstract concept (“workforce success”) to a specific, defensible indicator we can put in a spreadsheet column?</li>
+  <li>What makes a measure valid and reliable, and how would we know if ours is neither?</li>
+  <li>When evaluation rides on administrative data we did not collect — like UI wage records — what can go wrong, and how do we check for it before we trust it?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Every method in the rest of this course — group comparisons, regression, difference-in-differences — assumes you have already done the unglamorous work of this chapter well. A flawless statistical analysis of a badly measured outcome produces a precise, confident, wrong answer. In public administration this is not a hypothetical risk: most evaluations run on data that some agency generated for compliance, billing, or case management, then handed to you for a purpose it was never designed to serve. Learning to interrogate a measure before you analyze it is the difference between an evaluator and a calculator.</p>
+
+<p>This book returns throughout to five real evaluation settings, and each one forces a measurement choice:</p>
+
+<ul>
+  <li><strong>Case A — Texas economic-development sales tax.</strong> Cities adopt a Type A or Type B local sales tax to fund economic development. The administrative outcomes come from the Comptroller’s records: <strong>per-capita sales-tax allocation</strong>, <strong>taxable sales</strong>, and the count of <strong>business outlets</strong> in a city.</li>
+  <li><strong>Case B — Texas countywide vote centers.</strong> Counties adopt vote centers (vote-anywhere polling places) in place of precinct voting. The outcome is <strong>turnout</strong>, operationalized as votes cast divided by voting-age population, from county canvass records.</li>
+  <li><strong>Case C — National Supported Work (NSW).</strong> The job-training RCT of the opening case. Outcomes are <strong>1978 earnings</strong> and <strong>employment</strong>, drawn from surveys and UI wage records (LaLonde 1986; Dehejia &amp; Wahba 1999).</li>
+  <li><strong>Case D — Moving to Opportunity (MTO).</strong> HUD randomly assigned families in five cities to housing vouchers that required a move to a low-poverty neighborhood. Outcomes include <strong>neighborhood poverty rate</strong> (the proximate, administratively measured outcome) and children’s later <strong>adult earnings</strong> from tax records (Chetty, Hendren &amp; Katz 2016).</li>
+  <li><strong>Case E — Perry Preschool.</strong> A nonprofit randomly assigned 123 children to preschool or not. Its outcomes are mostly <strong>binary</strong> — did the person graduate high school, earn above a threshold, get arrested — a reminder that not every measure is a dollar amount, and that a yes/no indicator (a <em>proportion</em>) is its own measurement decision with its own descriptive statistics (Chapter 5).</li>
+</ul>
+
+<h2 id="from-concepts-to-indicators-operationalization">From Concepts to Indicators: Operationalization</h2>
+
+<p>Evaluation questions arrive as concepts — <em>success</em>, <em>need</em>, <em>efficiency</em>, <em>fiscal stress</em>. None of these can be entered into a cell. <strong>Operationalization</strong> is the process of specifying the concrete, observable indicator that will stand in for the concept in your analysis. It is a series of choices, and each choice should be defended in writing.</p>
+
+<p>Consider “voter engagement” in the Texas county vote-center evaluation (Case B). We cannot measure engagement directly, so we operationalize it as <strong>turnout</strong>, defined as ballots cast divided by some population base. But which base? Voting-age population, registered voters, or citizen voting-age population each yields a different denominator and a different number. The Case B panel uses votes divided by voting-age population — across all 254 counties in 2020 that yields a mean turnout of about 0.57 — but a program that appears to boost turnout under one denominator can appear to do nothing under another. The concept did not change; the operational definition did.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Operationalization is not a technicality you settle once. The choice of denominator, time window, and inclusion rule can move your headline number more than the program ever did.</p>
+</blockquote>
+
+<p>A useful discipline is to write, for every outcome in your evaluation, a one-sentence operational definition that another analyst could follow to reproduce your column exactly. “Workforce success” in the NSW opening case fails this test until it is pinned down; “total individual earnings in calendar year 1978, in nominal dollars, from the follow-up records” passes it — and is exactly the definition behind the $6,349-versus-$4,555 contrast.</p>
+
+<h2 id="validity-and-reliability-of-measures">Validity and Reliability of Measures</h2>
+
+<p>Two properties separate a usable indicator from a misleading one.</p>
+
+<p><strong>Construct validity</strong> asks whether the indicator actually captures the concept it claims to. In NSW (Case C), 1978 earnings have strong construct validity for “workforce success” because earnings are exactly what a job program is meant to raise; a measure like “hours of class attended” would have weaker validity, since attendance is not the goal. In MTO (Case D), the <em>neighborhood poverty rate</em> a family lands in has good validity for “did the voucher change their environment,” but it is only a proxy for the deeper concept — whether the move improved children’s life chances — which is why Chetty, Hendren and Katz (2016) ultimately measured children’s adult earnings. <strong>Reliability</strong> asks whether the indicator is consistent — whether the same case measured twice, or from two sources, yields the same value. NSW earnings have a reliability question precisely here: survey self-reports and UI wage records can disagree for the same worker.</p>
+
+<p>The two are distinct. A bathroom scale that always reads three pounds high is perfectly reliable and invalid. A measure can be reliable without being valid, but it cannot be valid without being reliable — noise in the indicator caps how well it can track the concept (Shadish, Cook &amp; Campbell 2002).</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Reliability is necessary but not sufficient for validity. Always check both. A consistent measure of the wrong thing is still the wrong thing.</p>
+</blockquote>
+
+<p>A practical way to think about reliability is the idea that any observed score decomposes into a true value plus error:</p>
+
+\[X_{\text{observed}} = T_{\text{true}} + E_{\text{error}}\]
+
+<p>Reliability is the share of the variation in observed scores that reflects real differences rather than error:</p>
+
+\[\rho_{XX} = \frac{\sigma^2_T}{\sigma^2_T + \sigma^2_E}\]
+
+<p>When \(\sigma^2_E\) is large — inconsistent reporting, sloppy data entry, definitional drift — reliability falls toward zero and the indicator becomes mostly noise.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch4_validity_reliability.svg" alt="Four target diagrams: low and high reliability crossed with low and high validity, shown as scattered or tight clusters that do or do not centre on the bullseye." />
+<figcaption><span class="fig-label">Figure 4.1.</span> Reliability versus validity. Reliability is a tight cluster (consistency); validity is centring on the true target. A measure can be highly reliable yet invalid — precisely and consistently wrong (top right) — which is why the two properties must be checked separately.</figcaption>
+</figure>
+
+<h2 id="levels-of-measurement">Levels of Measurement</h2>
+
+<p>The arithmetic you are allowed to do depends on the variable’s level of measurement. Confusing these levels is one of the most common errors in student evaluations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Meaning</th>
+      <th>Texas panel example</th>
+      <th>Legitimate operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nominal</td>
+      <td>Categories, no order</td>
+      <td>Metro status; county name</td>
+      <td>Counts, modes, proportions</td>
+    </tr>
+    <tr>
+      <td>Ordinal</td>
+      <td>Ordered categories, unequal gaps</td>
+      <td>Bond rating; survey “satisfaction” 1–5</td>
+      <td>Median, percentiles</td>
+    </tr>
+    <tr>
+      <td>Interval</td>
+      <td>Equal gaps, no true zero</td>
+      <td>Year (2000, 2004, …)</td>
+      <td>Differences, means</td>
+    </tr>
+    <tr>
+      <td>Ratio</td>
+      <td>Equal gaps, true zero</td>
+      <td>Sales-tax revenue; population; turnout %</td>
+      <td>All arithmetic, ratios</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Briefing:</strong> You can compute a mean of turnout (ratio) but not a meaningful mean of bond ratings (ordinal). Averaging “Aa1” and “Baa2” is a category error, even though Excel will happily return a number if you code them 1–10.</p>
+</blockquote>
+
+<p>Most outcomes in our county and city panels are ratio-level, which is convenient — but several useful predictors (metro status, program category) are nominal, and you will need to handle them as groups or indicator variables rather than as quantities.</p>
+
+<h2 id="choosing-outcome-measures-for-an-evaluation">Choosing Outcome Measures for an Evaluation</h2>
+
+<p>A good outcome measure for an evaluation is <strong>valid, reliable, sensitive to the program, available over the relevant period, and consistently defined across the units you compare</strong>. The last two criteria are where administrative data most often fail.</p>
+
+<p>Sensitivity matters because a program can only move an outcome that is close enough downstream to be affected within your study window. NSW (Case C) measured earnings in 1978, a year chosen to be late enough for the work experience to show up in the labor market; measured too early, the program would look like a failure simply because its effects had not yet arrived. The same logic shapes MTO (Case D): the <em>neighborhood poverty rate</em> a family moved into changes immediately, but the effect on children’s adult earnings took two decades to observe and was visible mainly for children who moved young (Chetty, Hendren &amp; Katz 2016). Picking an outcome the program cannot move within your window guarantees a null result that says nothing about the program.</p>
+
+<h2 id="administrative-data-strengths-and-pitfalls">Administrative Data: Strengths and Pitfalls</h2>
+
+<p>Administrative data — records generated by the routine operation of a program or agency — are the workhorse of public-sector evaluation. The Comptroller’s sales-tax allocations behind our city finance panel, the county vote canvasses behind the county panel, FEMA grant files, Medicaid claims: all are administrative. Their strengths are real. They cover entire populations rather than samples, they are inexpensive because the collection is already paid for, and they often span many years.</p>
+
+<p>But they were collected to <em>run</em> the program, not to evaluate it, and that origin creates four recurring hazards.</p>
+
+<p><strong>Coverage.</strong> Who is <em>in</em> the data? NSW earnings drawn from a single state’s UI file miss workers who moved out of state or worked off the books, so the file undercounts exactly the harder-to-track workers an evaluation cares about. In Case A, the sales-tax allocation file covers the roughly 1,141 Texas cities that levy a local sales tax and report to the Comptroller, which is not the same as “all Texas municipalities.” Units missing from the file are invisible to your analysis and can bias it badly if their absence is related to the outcome.</p>
+
+<p><strong>Definitional changes.</strong> Administrative definitions change with statute, software, and staff. A poverty threshold is revised; a “case closure” reason gets a new code; the Census revises an industry or geographic classification. A jump in a time series may be a policy effect — or a redefinition. Always check whether a break in the data lines up with a known administrative change before you interpret it as a program effect.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Before treating any change over time as a finding, ask whether the <em>measurement</em> changed. Many “effects” in administrative time series are artifacts of redefinition.</p>
+</blockquote>
+
+<p><strong>Missingness.</strong> Records are blank for reasons that are rarely random. In a UI-based earnings file like NSW’s, earnings are “missing” (recorded as zero) not only for the truly unemployed but also for anyone who left the state or took unreported work — so dropping or zeroing those rows would systematically misstate the program’s effect. Missingness that depends on the outcome is the dangerous kind.</p>
+
+<p><strong>Error.</strong> Free-text fields, fat-fingered entries, duplicate records, and impossible values (a city with negative sales-tax revenue, a turnout rate above 100 percent) are endemic. These are not rare edge cases; in a panel of roughly 1,141 Texas cities tracked over many years you should <em>expect</em> them and screen for them.</p>
+
+<h2 id="collecting-primary-data">Collecting Primary Data</h2>
+
+<p>Administrative records answer many evaluation questions, but not all of them. When the concept you must measure was never recorded by any agency — participant satisfaction, why eligible people did not enroll, how staff actually delivered a service, what employers thought of a training program’s graduates — you have to go out and generate the data yourself. Data you collect firsthand, for your own evaluation, are <strong>primary data</strong>; records generated by someone else for some other purpose (the Comptroller’s allocations, county canvasses, UI wage files) are <strong>secondary data</strong>. The three workhorse methods of primary collection in public-sector evaluation are surveys, structured interviews, and focus groups. Each answers a different kind of question, and each is easy to do badly.</p>
+
+<h3 id="when-primary-collection-is-worth-it">When Primary Collection Is Worth It</h3>
+
+<p>Primary collection is expensive: it costs staff time, respondent time, and often money, and it introduces errors of its own. Before designing an instrument, weigh it honestly against the secondary data you already have.</p>
+
+<p>Reach for primary collection when (1) no administrative record captures your concept — NSW’s UI wage files (Case C) record earnings but not whether a trainee found the work-experience placement useful or why some dropped out; (2) the administrative measure has known validity or coverage gaps you cannot repair — UI files miss off-the-books and out-of-state work, so a follow-up survey of participants can recover earnings the file never saw; or (3) you need to understand a <em>process</em> rather than count an outcome — how vote centers (Case B) were actually publicized, or whether the EDC (Case A) is genuinely recruiting firms rather than simply disbursing incentives.</p>
+
+<p>Stay with secondary data when an administrative source already measures the concept validly, covers the full population, and spans the period you need. It is almost always cheaper, larger, and free of the response and nonresponse errors that plague new collection. The disciplined default is: exhaust the administrative data first, then collect primary data to fill the specific gaps that remain.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Primary data collection is a targeted supplement, not a reflex. Collect it to fill a concept, coverage, or process gap that administrative data provably cannot — and never to re-measure something an existing record already captures well.</p>
+</blockquote>
+
+<h3 id="designing-surveys">Designing Surveys</h3>
+
+<p>A survey trades depth for breadth: it puts the same standardized questions to many respondents so the answers can be counted and compared. Its usefulness rests on four design choices.</p>
+
+<p><strong>Question wording.</strong> Each item should ask exactly one thing in plain language. Avoid <em>double-barreled</em> items (“Were the vote centers convenient and well-staffed?” — a respondent who found them convenient but understaffed cannot answer), <em>leading</em> items that telegraph the desired answer, and jargon a respondent may not share. Ambiguous wording is a validity problem: the concept you think you measured is not the one the respondent answered.</p>
+
+<p><strong>Response format.</strong> Closed-ended items (yes/no, a rating scale, a fixed menu) are fast to complete and easy to tabulate; open-ended items yield richer answers but must be coded before analysis. A common tool is the ordered rating scale — e.g., a five-point satisfaction scale from “very dissatisfied” to “very satisfied.” Recall from the levels-of-measurement table that such a scale is <em>ordinal</em>: report its median or the percent in each category, not a raw mean of the underlying codes.</p>
+
+<p><strong>Sampling.</strong> A survey describes the population it is drawn from only if the sample represents that population. A probability sample — where every member of the frame has a known, nonzero chance of selection — supports generalization; a convenience sample (whoever happens to reply) does not. Define the sampling frame explicitly, because anyone outside it is invisible to the survey exactly as they would be missing from an administrative file.</p>
+
+<p><strong>Mode and nonresponse.</strong> Mail, phone, in-person, and web modes differ in cost, speed, and who responds. Whatever the mode, the threat that governs a survey’s credibility is <strong>nonresponse</strong>: if the people who answer differ systematically from those who do not, the results are biased no matter how large the sample. A 12-percent response rate to a participant satisfaction survey tells you about the 12 percent who cared enough to answer, not the program. Report the response rate, and where possible compare respondents to the full frame on any characteristic you can observe.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A survey is only as good as its worst design choice. One double-barreled item, one convenience sample, or one low response rate can invalidate an otherwise polished instrument.</p>
+</blockquote>
+
+<h3 id="structured-interviews">Structured Interviews</h3>
+
+<p>When you need depth rather than breadth — the reasoning behind a decision, the sequence of a process, an account of what actually happened on the ground — a structured interview is the better tool. “Structured” means every respondent is asked the same core questions in the same order, so answers can be compared across interviews, while follow-up probes let the interviewer pursue the unexpected. In an implementation study of NSW (Case C), interviewing site supervisors with a common protocol would reveal how placements were actually made and where delivery departed from the design — information no wage record contains. Interviews are labor-intensive and reach few people, so they complement a survey (which establishes <em>how common</em> something is) by explaining <em>why</em> and <em>how</em> it occurs.</p>
+
+<h3 id="focus-groups">Focus Groups</h3>
+
+<p>A focus group convenes a small number of participants — typically six to ten — for a moderated discussion. Its distinctive value is the <em>interaction</em>: participants react to one another, surfacing shared understandings, disagreements, and language the evaluator would not have thought to ask about. Focus groups are well suited to formative work — refining a survey instrument before fielding it, or exploring why take-up of a program is low — but they are ill suited to producing population estimates. A handful of self-selected participants is not a representative sample, and a vocal member can steer the room; treat what emerges as hypotheses to test, not as prevalence. For Case D (MTO), a focus group of families who received but did not use a voucher could illuminate the barriers behind partial take-up that the administrative record only registers as a blank.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Match the method to the question. Surveys count and generalize; interviews explain in depth; focus groups surface shared meaning and generate hypotheses. None substitutes for another, and none by itself both generalizes and explains.</p>
+</blockquote>
+
+<h2 id="data-quality-and-cleaning">Data Quality and Cleaning</h2>
+
+<p>Cleaning is not a chore that precedes the “real” analysis; it is part of the analysis, and it should be documented so a skeptic can retrace it. A disciplined first pass screens every variable for range, missingness, duplicates, and definitional consistency before a single statistic is computed.</p>
+
+<h3 id="worked-example-screening-the-texas-sales-tax-allocation-file-in-excel">Worked Example: Screening the Texas Sales-Tax Allocation File in Excel</h3>
+
+<p>Suppose you have the Case A file open, with one row per city for 2024 and columns including <code class="language-plaintext highlighter-rouge">city</code>, <code class="language-plaintext highlighter-rouge">population</code>, and <code class="language-plaintext highlighter-rouge">alloc_per_capita</code> (the city’s 2024 economic-development sales-tax allocation per resident). Across the roughly 1,141 reporting cities this variable has a mean of about $395 and a median of about $276 — figures we will describe properly in Chapter 5. First, screen <code class="language-plaintext highlighter-rouge">alloc_per_capita</code> for quality.</p>
+
+<p><strong>1. Range and impossible values.</strong> Find the extremes with <code class="language-plaintext highlighter-rouge">=MIN(D2:D1142)</code> and <code class="language-plaintext highlighter-rouge">=MAX(D2:D1142)</code>. A negative minimum is impossible for an allocation and flags an error. Count suspicious zeros with <code class="language-plaintext highlighter-rouge">=COUNTIF(D2:D1142,0)</code> — a true zero (a city with no economic-development tax) is plausible, but a zero for a city that reported a positive allocation last year is likely miscoded missing data.</p>
+
+<p><strong>2. Missingness.</strong> Count blanks with <code class="language-plaintext highlighter-rouge">=COUNTBLANK(D2:D1142)</code>, then compute the missing rate as that count divided by <code class="language-plaintext highlighter-rouge">=COUNTA(A2:A1142)</code>. A city present in the population column but blank on allocation has not been screened out by the Comptroller’s coverage rule — investigate before dropping it.</p>
+
+<p><strong>3. Duplicates.</strong> Build a key on <code class="language-plaintext highlighter-rouge">city</code> with <code class="language-plaintext highlighter-rouge">=COUNTIF($A$2:$A$1142,A2)</code>. Any value above 1 means a city appears twice — often an annexation or a name-spelling variant — a duplicate to investigate, not silently sum.</p>
+
+<p><strong>4. A cleaning log.</strong> Record every decision in a separate sheet so the cleaning is reproducible.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Check</th>
+      <th>Excel function</th>
+      <th>Finding</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Minimum value</td>
+      <td><code class="language-plaintext highlighter-rouge">MIN</code></td>
+      <td>$0 (several small cities)</td>
+      <td>Verify which are true no-tax cities</td>
+    </tr>
+    <tr>
+      <td>Maximum value</td>
+      <td><code class="language-plaintext highlighter-rouge">MAX</code></td>
+      <td>Far above the $395 mean</td>
+      <td>Confirm as a real outlier, not a typo</td>
+    </tr>
+    <tr>
+      <td>Missing rate</td>
+      <td><code class="language-plaintext highlighter-rouge">COUNTBLANK</code>/<code class="language-plaintext highlighter-rouge">COUNTA</code></td>
+      <td>A handful of blank allocations</td>
+      <td>Trace to source before dropping</td>
+    </tr>
+    <tr>
+      <td>Duplicate keys</td>
+      <td><code class="language-plaintext highlighter-rouge">COUNTIF</code> on city</td>
+      <td>A few duplicate city names</td>
+      <td>Investigate annexations / spellings</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5. Text keys and the join problem.</strong> The failure that quietly ruins more evaluations than any outlier is a <em>key that does not match across files</em>. Almost every case in this book is built by joining tables — the sales-tax file to a population file by <code class="language-plaintext highlighter-rouge">city</code>, county turnout to county covariates by FIPS code, NSW outcomes to a comparison sample by person ID. A join succeeds only when the key is <em>byte-for-byte identical</em> on both sides, and administrative text keys rarely are: <code class="language-plaintext highlighter-rouge">"Austin"</code>, <code class="language-plaintext highlighter-rouge">"City of Austin"</code>, <code class="language-plaintext highlighter-rouge">"austin"</code>, and <code class="language-plaintext highlighter-rouge">"Austin "</code> (a trailing space) are four different strings to a computer, and a <code class="language-plaintext highlighter-rouge">VLOOKUP</code> or <code class="language-plaintext highlighter-rouge">XLOOKUP</code> on them returns <code class="language-plaintext highlighter-rouge">#N/A</code> — dropping that city from the merged file silently, with no error. Before joining, normalize the key on both sides with <code class="language-plaintext highlighter-rouge">=TRIM(UPPER(A2))</code> (strips stray spaces, forces one case), then confirm the two cleaned key lists agree: <code class="language-plaintext highlighter-rouge">=COUNTIF(File2!$A:$A, cleaned_key)</code> returns 0 for any city present in one file but not the other. A batch of unexpected zeros is not missing data — it is a broken join, and the cities it drops are gone from every statistic downstream. Investigate the mismatches (spelling, punctuation, annexations, an ID stored as text in one file and a number in the other) <em>before</em> you merge, never after.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> NSW shows why measurement comes before analysis. The randomized design is as clean as evaluation gets, yet the program’s apparent effect swung from <strong>+$1,794</strong> (experimental) to <strong>−$8,498</strong> (non-experimental comparison) depending on which comparison group and which earnings source were used (LaLonde 1986; Dehejia &amp; Wahba 1999). No statistical sophistication rescues a study that has not pinned down its outcome definition, its data source, and its comparison. Your deliverable is never a single headline number stripped of its definition — it is a defensible operational definition, the outcome computed under that definition with missingness and source disclosed, and an honest statement of which comparison the number rests on.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Analyzing before defining.</strong> Computing statistics on a column you cannot define in one sentence. Write the operational definition first.</li>
+  <li><strong>Treating a reliable measure as valid.</strong> Consistency is not correctness; a measure can be precisely wrong.</li>
+  <li><strong>Doing arithmetic the measurement level forbids.</strong> Averaging ordinal codes (bond ratings, Likert items treated as raw categories) as if they were ratio quantities.</li>
+  <li><strong>Trusting administrative totals at face value.</strong> Headline rates often hide denominator manipulation, coverage gaps, and definitional drift.</li>
+  <li><strong>Dropping missing rows reflexively.</strong> Listwise deletion is fine only when data are missing at random — which administrative missingness usually is not.</li>
+  <li><strong>Interpreting a redefinition as a finding.</strong> A break in a time series may be a coding change, not a program effect.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li>
+    <p><strong>Operationalize a concept.</strong> For the Case B county panel, write three competing operational definitions of “voter engagement” (e.g., votes over voting-age population, over registered voters, over citizen voting-age population). Compute each in Excel for two counties in 2020 and explain in a paragraph how the choice of denominator could change an evaluation’s conclusion.</p>
+  </li>
+  <li>
+    <p><strong>Validity and reliability.</strong> In NSW (Case C), 1978 earnings can be drawn from a follow-up survey or from administrative UI wage records. List two threats to the construct validity of “workforce success” measured as earnings, and one reason the two sources might disagree (a reliability threat), and propose one check for each.</p>
+  </li>
+  <li>
+    <p><strong>Levels of measurement.</strong> Classify five variables from the Case A sales-tax file (e.g., <code class="language-plaintext highlighter-rouge">alloc_per_capita</code>, <code class="language-plaintext highlighter-rouge">taxable_sales</code>, business-outlet count, Type A/Type B status, city name) by level of measurement. For each, state one statistic that is legitimate and one that is not.</p>
+  </li>
+  <li>
+    <p><strong>Screen a variable.</strong> Using the Case A file, screen <code class="language-plaintext highlighter-rouge">taxable_sales</code> for range, missingness, and duplicates using <code class="language-plaintext highlighter-rouge">MIN</code>, <code class="language-plaintext highlighter-rouge">MAX</code>, <code class="language-plaintext highlighter-rouge">COUNTBLANK</code>, <code class="language-plaintext highlighter-rouge">COUNTA</code>, and <code class="language-plaintext highlighter-rouge">COUNTIF</code>. Produce a four-row cleaning log like the worked example.</p>
+  </li>
+  <li>
+    <p><strong>Spot the redefinition.</strong> In Case D (MTO), suppose the recorded “neighborhood poverty rate” shifts sharply for many families at once between two waves. Describe how you would determine whether this reflects real neighborhood change or a measurement change (e.g., the Census changing how poverty is tabulated), and what evidence would distinguish the two.</p>
+  </li>
+  <li>
+    <p><strong>Primary vs. secondary.</strong> For one running case, name a concept the administrative data cannot measure, and choose among a survey, structured interviews, and a focus group to fill the gap. Justify the choice in a paragraph, then draft three survey items (or three interview questions) for it, checking each for double-barreled, leading, and jargon problems.</p>
+  </li>
+  <li>
+    <p><strong>Fix a broken join.</strong> Suppose you must merge the Case A sales-tax file to a separate population file, both keyed on <code class="language-plaintext highlighter-rouge">city</code>, but a <code class="language-plaintext highlighter-rouge">VLOOKUP</code> returns <code class="language-plaintext highlighter-rouge">#N/A</code> for two dozen cities. Using <code class="language-plaintext highlighter-rouge">TRIM</code>, <code class="language-plaintext highlighter-rouge">UPPER</code>, and <code class="language-plaintext highlighter-rouge">COUNTIF</code>, build a normalized key on each file and produce a short list of the cities that fail to match. For three of them, propose the most likely cause (trailing space, case, spelling variant, “City of” prefix, annexation) and the fix. Explain in two sentences why dropping the un-matched rows without investigating would bias the evaluation, not merely shrink the sample.</p>
+  </li>
+  <li>
+    <p><strong>Download and screen a real archived file.</strong> Perry Preschool’s participant records are restricted, so its companion small-N program — the <strong>Carolina Abecedarian Project</strong> — is our “real microdata you can get yourself.” Create a free ICPSR account, download Study 4091 (a delimited or Stata file that opens in Excel), and open it. Write a one-paragraph <em>data-quality memo</em>: how many rows and variables; which variables have high missingness (use <code class="language-plaintext highlighter-rouge">COUNTBLANK</code>); whether any withheld or coded-missing values would trip up a naive average; and one measurement choice (e.g., which follow-up wave’s outcome to use) you would have to defend. This is the unglamorous first hour of nearly every real evaluation.</p>
+  </li>
+</ol>
+
+<h2 id="transition-to-chapter-5">Transition to Chapter 5</h2>
+
+<p>You now have indicators you can defend and data — whether administrative or freshly collected — that you have screened. The next question is what those numbers actually look like. Before any comparison or model, a competent evaluator describes the data — its center, its spread, its outliers, and whether the groups being compared even started in the same place — and then tests whether the groups actually differ. Chapter 5 turns to describing and comparing data, taking the Case A sales-tax allocation as its worked example — a distribution whose $395 mean and $276 median already hint at a strong right skew — and building the tables, charts, and group comparisons in Excel that make an evaluation legible to the people who must act on it.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

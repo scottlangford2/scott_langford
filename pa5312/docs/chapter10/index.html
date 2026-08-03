@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 10: Randomized Controlled Trials | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 10: Randomized Controlled Trials" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter10/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter10/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 10: Randomized Controlled Trials" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 10: Randomized Controlled Trials","url":"https://scottlangford2.github.io/pa5312/docs/chapter10/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 10: Randomized Controlled Trials</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“Randomized experiments are the gold standard for estimating causal effects.”
+— Donald B. Rubin</p>
+</blockquote>
+
+<blockquote>
+  <p>“Random assignment is a procedure for creating treatment and control groups that are, on average, identical in every way except the treatment itself.”
+— Alan S. Gerber and Donald P. Green, <em>Field Experiments</em> (2012)</p>
+</blockquote>
+
+<h2 id="opening-case-moving-to-opportunity">Opening Case: Moving to Opportunity</h2>
+
+<p>In the 1990s, the U.S. Department of Housing and Urban Development launched one of the most ambitious social experiments in American history. The <strong>Moving to Opportunity (MTO)</strong> demonstration enrolled roughly 4,600 low-income families living in high-poverty public-housing projects in five cities — Baltimore, Boston, Chicago, Los Angeles, and New York. The policy question was old and contested: does growing up in a poor neighborhood itself hold children back, or are the families who live there simply different in ways that would limit their children regardless of address? Decades of observational studies had compared children from poor and non-poor neighborhoods and found large gaps — but skeptics rightly objected that families do not land in neighborhoods at random. The motivated, the employed, the better-connected sort themselves into better places. Any neighborhood “effect” might be nothing more than the selection of who lives where.</p>
+
+<p>MTO broke that deadlock by design. Among families who volunteered, HUD used a <strong>lottery</strong> to assign each to one of three arms: an <em>experimental</em> group offered a housing voucher that could be used only in a low-poverty neighborhood (plus counseling to help them move), a <em>Section 8</em> group offered an unrestricted voucher, and a <em>control</em> group offered no new voucher. Because the arm a family landed in was decided by chance, the groups were, on average, alike in motivation, employment history, family structure, and every other trait — measured or not — except the offer they received. For the first time, a difference in their children’s later outcomes could be read as the <em>effect of the offer to move</em>, not the effect of the kind of family that moves.</p>
+
+<p>You will spend this chapter learning why that single design choice — assignment by chance — does what no amount of statistical control can. You will also learn why MTO is the perfect teaching case for what randomization <em>cannot</em> fix on its own: many families offered the experimental voucher never actually moved, so the experiment must carefully separate the effect of being <em>offered</em> the voucher from the effect of <em>using</em> it.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>Why does random assignment, and almost nothing else, let us interpret a group difference as a causal effect?</li>
+  <li>When many of those offered a program never take it up, what exactly are we estimating — and what should we report?</li>
+  <li>What real-world complications — refusal of treatment, dropout, contamination across groups — threaten an experiment even after we randomize?</li>
+  <li>Is it ethical, and is it feasible, to assign a public benefit by chance?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Every design we have studied so far tries to <em>approximate</em> the comparison a randomized experiment makes directly. Difference-in-differences, matching, and regression with controls all ask, in effect, “what would the treated group have looked like without the program?” and then construct a plausible answer from observational data. A randomized controlled trial (RCT) does not have to construct that answer; it manufactures the counterfactual by design. Understanding the RCT is therefore the conceptual anchor for the entire course. Once you see <em>why</em> randomization works, you can judge how well any weaker design substitutes for it.</p>
+
+<h2 id="random-assignment-and-the-logic-of-causal-identification">Random Assignment and the Logic of Causal Identification</h2>
+
+<p>Recall the potential-outcomes framework. For each person \(i\) there are two potential outcomes: \(Y_i(1)\), the outcome if treated, and \(Y_i(0)\), the outcome if not. The individual causal effect is \(Y_i(1) - Y_i(0)\). We can never observe both — this is the <em>fundamental problem of causal inference</em>. We see a person either in the program or out of it, never both.</p>
+
+<p>What we can hope to recover is the <strong>average treatment effect</strong> (ATE):</p>
+
+\[\text{ATE} = E[Y_i(1)] - E[Y_i(0)]\]
+
+<p>The trouble in observational data is that the people we observe as treated are not a fair stand-in for everyone’s \(Y_i(1)\), and the untreated are not a fair stand-in for everyone’s \(Y_i(0)\). Random assignment fixes exactly this. When treatment \(D_i\) is assigned by a coin flip, it is statistically independent of the potential outcomes:</p>
+
+\[E[Y_i(0) \mid D_i = 1] = E[Y_i(0) \mid D_i = 0]\]
+
+<p>In words: the control group’s untreated outcome is, in expectation, what the treated group’s outcome <em>would have been</em> without treatment. The control group is a valid counterfactual. The simple difference in group means is then an unbiased estimate of the ATE:</p>
+
+\[\widehat{\text{ATE}} = \bar{Y}_{\text{treatment}} - \bar{Y}_{\text{control}}\]
+
+<blockquote>
+  <p><strong>Briefing:</strong> Randomization does not make the two groups identical in any single sample — it makes them identical <em>in expectation</em>, balancing both the characteristics you measured and the ones you never thought to measure.</p>
+</blockquote>
+
+<p>That last clause is the magic. Matching and regression can only balance variables you have data on. Randomization balances <em>everything</em>, including unobserved motivation, family support, and a parent’s drive to find a safer block — the very things that make families who already live in low-poverty neighborhoods a misleading comparison group. In MTO, the lottery is what lets us treat the control families’ later outcomes as a credible picture of how the experimental families’ children <em>would have</em> fared had they not been offered the chance to move.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch10_rct_flow.svg" alt="Flow diagram of a randomized trial: an eligible population is randomized into a treatment group and a control group, and their outcomes are compared to give the causal effect." />
+<figcaption><span class="fig-label">Figure 10.1.</span> The logic of a randomized trial. Chance assignment makes the treatment and control groups comparable in expectation — on everything, measured and unmeasured — so the difference in their outcomes is the program's causal effect.</figcaption>
+</figure>
+
+<h3 id="designing-an-rct">Designing an RCT</h3>
+
+<p>A credible experiment has a few non-negotiable parts:</p>
+
+<ul>
+  <li><strong>A defined population and eligibility rule.</strong> In MTO, “families with children living in public housing in selected high-poverty census tracts who volunteered for the demonstration.”</li>
+  <li><strong>A treatment and a control condition.</strong> Treatment: offer a housing voucher (in MTO’s experimental arm, one usable only in a low-poverty area, plus mobility counseling). Control: no new voucher — the family’s existing situation.</li>
+  <li><strong>A randomization mechanism</strong> that is genuinely unpredictable and documented — a random-number generator, a sealed-envelope lottery, or a published seed. MTO used a lottery among eligible volunteers.</li>
+  <li><strong>Pre-specified outcomes</strong> measured the same way for both groups (in MTO, later adult earnings, college attendance, and health, drawn from administrative tax and enrollment records).</li>
+</ul>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Decide and write down your outcomes and analysis <em>before</em> you see the data. Choosing the outcome that happens to look best after the fact is a recipe for false findings.</p>
+</blockquote>
+
+<p><strong>Blinding.</strong> In medical trials, neither patient nor doctor knows who got the real drug, which prevents expectations from coloring outcomes. In public programs, blinding the <em>participant</em> to whether they received a voucher is usually impossible — a family knows whether it moved. But you can often blind the <em>people who measure outcomes</em> — the analyst who matches later tax records should not be steered by which arm a family belonged to. That guards against measurement bias even when full blinding is infeasible.</p>
+
+<h2 id="when-reality-intrudes-attrition-noncompliance-and-spillovers">When Reality Intrudes: Attrition, Noncompliance, and Spillovers</h2>
+
+<p>Randomization at the moment of assignment is clean. What happens afterward rarely is.</p>
+
+<h3 id="attrition">Attrition</h3>
+
+<p>Attrition is the loss of subjects from measurement — families who move and cannot be tracked, records that go missing. The danger is not the lost sample size; it is <em>differential</em> attrition. If the families who disappear from one arm differ systematically from those who disappear from the other, the surviving samples are no longer comparable and the estimate is biased. MTO’s long-run follow-ups largely sidestepped this trap by measuring outcomes through administrative tax and college-enrollment records rather than re-interviewing families, so very few subjects were truly lost. Even so, the rule stands: always report attrition rates by arm and check whether the dropouts differ on baseline characteristics.</p>
+
+<h3 id="noncompliance-and-itt-vs-treatment-on-the-treated">Noncompliance and ITT vs. Treatment-on-the-Treated</h3>
+
+<p>MTO is the textbook illustration of noncompliance. Being <em>offered</em> the experimental voucher did not mean a family <em>used</em> it: take-up was only partial — a large share of families offered the low-poverty voucher never managed to move, whether because they could not find a qualifying unit, faced landlord resistance, or chose to stay near family and familiar schools. Assignment and actual treatment came apart.</p>
+
+<p>You have two honest things to estimate. The <strong>intention-to-treat (ITT)</strong> effect compares everyone <em>as randomized</em>, regardless of whether they moved. It answers the policy question a HUD administrator cares about: “If we offer this voucher, what happens?” The <strong>treatment-on-the-treated (ToT)</strong> effect tries to recover the effect on those who actually complied — the families who used the voucher to move. Intuitively, if only a fraction of the offered families moved and the program can only work by changing where a child grows up, the ToT is the ITT scaled up by dividing by the take-up rate — the same total effect concentrated among the families who actually relocated. Two assumptions make this “divide by take-up” shortcut exact: <strong>one-sided noncompliance</strong> (no control family could obtain the experimental voucher, so no one in the control arm is treated) and the <strong>exclusion restriction</strong> (being <em>offered</em> the voucher affects earnings only <em>through</em> the move, not in any other way). Both hold well in MTO. Strictly, then, what you recover is the effect on <strong>compliers</strong> — the families who moved <em>because</em> they were offered the voucher — the <em>local average treatment effect</em> (<strong>LATE</strong>); here it coincides with the effect on the treated, and it generalizes to families who would have moved anyway only under a further assumption. Because the move was the active ingredient and only some families moved, the effect <em>per complying family</em> is considerably larger than the effect <em>per family offered the voucher</em>.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> ITT preserves the randomization and is almost always the right headline number for a public decision-maker, because real programs can only <em>offer</em>, not <em>force</em>, participation. The ToT answers a different question — “how much does the program help those who actually use it?” — and in MTO the two differ sharply because take-up was partial.</p>
+</blockquote>
+
+<h3 id="spillovers-and-contamination">Spillovers and Contamination</h3>
+
+<p>The independence that makes randomization work assumes one person’s treatment does not affect another’s outcome. That can fail. In MTO, the <em>Section 8</em> arm received unrestricted vouchers, so some control-comparison contrasts had to be read carefully to avoid mixing arms. More generally, if a program changes a shared environment — a school, a labor market, an apartment complex — members of the control group can be indirectly affected, contaminating the comparison and understating (or overstating) the estimated effect. When spillovers are likely, evaluators sometimes randomize at the group level (e.g., by site or by building) rather than the individual level.</p>
+
+<h2 id="ethics-and-feasibility">Ethics and Feasibility</h2>
+
+<p>Is a lottery for a public benefit fair? Often it is <em>more</em> fair than the alternatives, especially when slots are genuinely scarce — a lottery treats every eligible person equally, with no favoritism. MTO’s vouchers were a scarce, sought-after benefit; allocating them by chance among willing volunteers was arguably the fairest mechanism available, and it produced knowledge that has shaped housing policy for a generation. Ethical experiments rest on a few pillars: there should be genuine uncertainty about whether the program helps (<em>equipoise</em>); participants should give informed consent where practical; and the control group should not be denied anything they were already entitled to — MTO’s control families kept their existing housing assistance. A common humane design is the <strong>waitlist</strong> or <strong>phase-in</strong>: the control group receives the program later, so the trial only randomizes the <em>order</em> of a benefit everyone eventually gets. Some programs simply cannot be randomized — you cannot randomize which cities get hit by a hurricane — and for those we fall back on the quasi-experimental designs from earlier chapters.</p>
+
+<h3 id="what-mto-found-and-why-it-could-be-believed">What MTO Found, and Why It Could Be Believed</h3>
+
+<p>When Chetty, Hendren, and Katz (2016) linked the MTO families to federal tax records years later, they found that children who moved to a low-poverty neighborhood <em>while young</em> — before about age 13 — went on to earn substantially more as adults. In their mid-twenties these children earned roughly <strong>$3,477 more per year (about 31% more)</strong> than the control-group children, whose average annual earnings were about <strong>$11,270</strong>; they were also more likely to attend college and lived in better neighborhoods themselves. Because the move was assigned by lottery, this earnings gap could be attributed to the <em>offer to move into a lower-poverty area</em> rather than to the kind of family that chooses such a neighborhood. (An earlier wave of results — Kling, Liebman, and Katz, 2007 — had found clear gains in adult mental health but limited short-run economic self-sufficiency effects; the long-run earnings payoff for young movers became visible only once the children grew up. This is itself a lesson: when a program’s benefits accrue to children over decades, a short follow-up can mistakenly conclude “no effect.”)</p>
+
+<h3 id="why-randomization-removes-selection-bias-nsw-vs-the-naive-comparison">Why Randomization Removes Selection Bias: NSW vs. the Naive Comparison</h3>
+
+<p>The clearest demonstration that randomization is doing the heavy lifting comes from the <strong>National Supported Work (NSW)</strong> demonstration, a job-training experiment that randomly assigned disadvantaged applicants to a subsidized work program or to a control group. Because assignment was random, the honest experimental estimate of the program’s effect on 1978 earnings is simply the difference in arm means: treated participants earned <strong>$6,349</strong> on average (n = 185) versus <strong>$4,555</strong> for controls (n = 260) — an effect of about <strong>+$1,794</strong>.</p>
+
+<p>Now suppose you had thrown away the experiment and instead done what observational analysts are forced to do: compare the trained participants to a “comparison group” of non-participants drawn from a national survey. LaLonde (1986) did exactly this and found a <em>negative</em> estimated effect of roughly <strong>−$8,498</strong> — the program appeared to <em>destroy</em> earnings. The reason is selection: people who enroll in job training for the disadvantaged start out far poorer than the general population, so a naive comparison loads the dice against the program. Dehejia and Wahba (1999) later showed that careful matching on observed characteristics could partly recover the experimental answer — but only partly, and only because they had the experiment to check against. The lesson is stark: the same program looks like a <strong>+$1,794</strong> success under randomization and an <strong>−$8,498</strong> disaster under a naive comparison. Randomization is what turns a group difference into a causal effect.</p>
+
+<h3 id="a-small-high-compliance-rct-perry-preschool-case-e">A Small, High-Compliance RCT: Perry Preschool (Case E)</h3>
+
+<p>MTO and NSW are large experiments. Perry Preschool (Case E) shows that the <em>same logic</em> governs a tiny one. A nonprofit randomly assigned just <strong>123 children</strong> — 58 to preschool, 65 to none — and followed them for decades. Two features make it a clean teaching contrast with MTO. First, <strong>compliance was high</strong>: nearly all children assigned to the program actually attended, so the offer-versus-received gap that forces MTO’s ITT/ToT distinction barely arises — here the intention-to-treat effect <em>is</em>, for practical purposes, the effect of the program. Second, the outcomes are <strong>binary</strong>, so the arm comparison is a <strong>two-proportion test</strong> (Chapter 5) rather than a difference in means: 65% of the program group versus 45% of the comparison group graduated from a regular high school, a 20-percentage-point gap that — despite the tiny sample — reaches significance (\(z \approx 2.3\), \(p \approx 0.02\)), and 36% versus 55% were arrested five or more times.</p>
+
+<p>The small sample is exactly the point. With 123 children the estimates carry <strong>wide confidence intervals</strong>, and a genuinely small effect would have been undetectable — a real risk that a well-run program can look null purely for want of subjects (the <em>statistical power</em> problem). But Perry’s effects were large enough to clear that bar. The honest report of a small RCT states the effect <em>and</em> its imprecision, and leans on <strong>replication</strong> — the later Abecedarian and Head Start–era studies — rather than on one small sample, for external validity. Small-N does not mean unrigorous; it means the design must be clean and the uncertainty stated plainly.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A randomized experiment with only ~120 subjects is still an experiment: randomization removes selection bias regardless of sample size. What a small sample costs is <em>precision</em> — wide intervals and low power — so a small RCT can credibly detect only large effects, and its generalization rests on replication.</p>
+</blockquote>
+
+<h3 id="worked-example-analyzing-a-randomized-experiment-in-excel">Worked Example: Analyzing a Randomized Experiment in Excel</h3>
+
+<p>We will analyze the NSW experiment exactly as you would any RCT: as a difference in means, which is identical to a regression of the outcome on a treatment indicator. Lay out one row per participant with columns <code class="language-plaintext highlighter-rouge">treat</code> (1 = job-training arm, 0 = control) and <code class="language-plaintext highlighter-rouge">earn78</code> (1978 earnings in dollars). The treated arm has 185 people, the control arm 260.</p>
+
+<p><strong>Step 1 — Check balance.</strong> Before trusting the randomization, confirm the arms look similar on baseline traits. Use <code class="language-plaintext highlighter-rouge">AVERAGEIF</code> to compare, say, pre-program (1975) earnings by arm: <code class="language-plaintext highlighter-rouge">=AVERAGEIF(treat_range, 1, earn75_range)</code> versus <code class="language-plaintext highlighter-rouge">=AVERAGEIF(treat_range, 0, earn75_range)</code>. In NSW the arms were close on baseline earnings — the sign of a sound lottery.</p>
+
+<p><strong>Step 2 — Estimate the effect.</strong> Compute each arm’s average 1978 earnings with <code class="language-plaintext highlighter-rouge">AVERAGEIF</code> on the <code class="language-plaintext highlighter-rouge">earn78</code> column: <code class="language-plaintext highlighter-rouge">=AVERAGEIF(treat_range, 1, earn78_range)</code> gives the treated mean, <code class="language-plaintext highlighter-rouge">=AVERAGEIF(treat_range, 0, earn78_range)</code> the control mean. The difference is the estimated treatment effect.</p>
+
+<p><strong>Step 3 — Test it.</strong> Run the ToolPak’s <strong>t-Test: Two-Sample Assuming Unequal Variances</strong> (Data ▸ Data Analysis), with the treatment arm’s <code class="language-plaintext highlighter-rouge">earn78</code> values as Variable 1 and the control arm’s as Variable 2. Equivalently — and this scales to adding controls later — run <strong>Regression</strong> with <code class="language-plaintext highlighter-rouge">earn78</code> as Y and <code class="language-plaintext highlighter-rouge">treat</code> as the single X. The coefficient on <code class="language-plaintext highlighter-rouge">treat</code> <em>is</em> the difference in means, and its p-value tests the same hypothesis.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Control mean earnings \(\bar{Y}_{C}\) (n = 260)</td>
+      <td>$4,555</td>
+    </tr>
+    <tr>
+      <td>Treatment mean earnings \(\bar{Y}_{T}\) (n = 185)</td>
+      <td>$6,349</td>
+    </tr>
+    <tr>
+      <td>Estimated treatment effect</td>
+      <td>\(+\$1,794\)</td>
+    </tr>
+    <tr>
+      <td>Regression coef. on <code class="language-plaintext highlighter-rouge">treat</code></td>
+      <td>\(+\$1,794\)</td>
+    </tr>
+    <tr>
+      <td>Naive (non-experimental) comparison, for contrast</td>
+      <td>\(-\$8,498\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The positive coefficient says assignment to the job-training program raised 1978 earnings by about $1,794. The final row is the cautionary contrast: had you compared trainees to an ordinary survey sample instead of to randomized controls, you would have estimated a $8,498 <em>loss</em> — a sign-flipping artifact of selection, not a real effect.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> MTO and NSW make the same point from two directions. Because both used a lottery, the difference in arm means is a credible causal effect — MTO’s young movers earned about 31% more as adults, and NSW’s trainees earned about $1,794 more. And because NSW also has a naive non-experimental benchmark, it shows what you avoid by randomizing: an estimate that comes out −$8,498 and gets the very sign of the effect wrong. When you report MTO, you would lead with the <strong>ITT</strong> — the effect of being <em>offered</em> the voucher — because HUD can only offer, not compel, a move; you would then note that the effect <em>among families who actually moved</em> (the <strong>ToT</strong>) is larger, since take-up was only partial; and you would document how outcomes were tracked so readers can judge attrition.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Reporting the ToT as if it were the program’s overall effect.</strong> A policymaker authorizes an <em>offer</em>, not guaranteed participation; lead with the ITT. In MTO, the per-mover effect is real but answers a narrower question than “what does the voucher offer accomplish?”</li>
+  <li><strong>Ignoring differential attrition.</strong> A clean randomization can still produce a biased estimate if the groups are measured unequally afterward.</li>
+  <li><strong>Analyzing only compliers as a self-contained group.</strong> Comparing the MTO families who <em>moved</em> to the control families who <em>didn’t</em> throws away the randomization and reintroduces selection bias — the original sin you used the experiment to avoid. (This is exactly the trap NSW’s −$8,498 naive estimate illustrates.)</li>
+  <li><strong>Treating a statistically significant difference as a large or important one.</strong> Significance and magnitude are different questions; always report the effect size.</li>
+  <li><strong>Forgetting that small samples can be imbalanced by chance.</strong> Always check baseline balance even after a valid lottery.</li>
+  <li><strong>Concluding “no effect” from a follow-up that ends too soon.</strong> MTO’s earnings payoff for young movers was invisible in the short run and emerged only once the children reached adulthood.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>Balance check.</strong> Using the Texas county panel, pretend you will randomize 254 counties into a “treatment” and “control” arm with Excel’s <code class="language-plaintext highlighter-rouge">RAND()</code> function and a 0.5 cutoff. After assigning, use <code class="language-plaintext highlighter-rouge">AVERAGEIF</code> to compare median household income across your two random arms. Are they close? Repeat the randomization three times and comment on how much the balance varies sample to sample.</li>
+  <li><strong>ITT vs. ToT reasoning.</strong> Suppose only half of the MTO families offered the experimental voucher actually used it to move, and the ITT effect on adult earnings is $1,000 per offered family. Give an intuitive (back-of-envelope) estimate of the ToT effect — the effect per family that moved — and explain in two sentences which number you would put in a HUD executive summary and why.</li>
+  <li><strong>Selection bias by hand.</strong> Using the NSW numbers in the worked example, state in your own words why the experimental estimate (+$1,794) and the naive comparison (−$8,498) differ so dramatically, and what feature of the people who enroll in job training drives the naive estimate negative.</li>
+  <li><strong>Attrition diagnosis.</strong> You learn that 15% of the treatment arm and 30% of the control arm could not be located at follow-up. Explain how this pattern could bias the estimated effect, and state the direction of the likely bias.</li>
+  <li><strong>Excel regression.</strong> Build a small mock dataset with <code class="language-plaintext highlighter-rouge">treat</code> (1/0) and a continuous outcome (e.g., 1978 earnings) whose arm means reproduce the NSW result (treated ≈ $6,349, control ≈ $4,555). Run the ToolPak Regression of the outcome on <code class="language-plaintext highlighter-rouge">treat</code>, confirm the coefficient is about $1,794, and write one sentence interpreting it and its p-value for a non-technical reader.</li>
+  <li><strong>Small-N RCT (Case E).</strong> Perry Preschool randomized 58 children to preschool and 65 to none, with high-school graduation of 65% versus 45%. Compute the two-proportion z-test (Chapter 5) and confirm the gap is significant despite n = 123. Then explain in two or three sentences (a) why the near-full attendance makes the ITT and treatment-on-the-treated effects nearly identical here, unlike MTO, and (b) why you would still cite replication studies rather than Perry alone when arguing the result generalizes.</li>
+</ol>
+
+<h2 id="transition-to-chapter-11">Transition to Chapter 11</h2>
+
+<p>MTO and NSW answered <em>whether</em> the programs work: a move to a lower-poverty neighborhood raised children’s adult earnings, and job training raised participants’ earnings by about $1,794 a year. The next question is harder: <em>is it worth it?</em> A voucher, mobility counseling, and a year of subsidized work all cost money — and the earnings benefits arrive over years while the costs are paid up front. Chapter 11 turns to cost-benefit and cost-effectiveness analysis, where we learn to put costs and benefits on a common footing, account for the time value of money, and decide whether a program that <em>works</em> is a program worth <em>funding</em>.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

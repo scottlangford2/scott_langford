@@ -28,4 +28,4 @@ Writing for non-academic audiences, op-eds, handbook chapters, media coverage, a
 
 ## Open-Source Teaching Materials
 
-[**PA 3311 Textbook: Analytical Techniques for Public Administration**](https://scottlangford2.github.io/pa3311-textbook/) — Open-access online textbook for undergraduate public administration research methods.
+[**PA 3311 Textbook: Analytical Techniques for Public Administration**](https://scottlangford.com/pa3311/) — Open-access online textbook for undergraduate public administration research methods.

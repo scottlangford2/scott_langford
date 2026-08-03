@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 6: Process and Implementation Evaluation | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 6: Process and Implementation Evaluation" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter6/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter6/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 6: Process and Implementation Evaluation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 6: Process and Implementation Evaluation","url":"https://scottlangford2.github.io/pa5312/docs/chapter6/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 6: Process and Implementation Evaluation</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“The best-laid schemes o’ mice an’ men gang aft agley.”
+— Robert Burns, “To a Mouse” (1785)</p>
+</blockquote>
+
+<blockquote>
+  <p>“A null result cannot be interpreted until you know whether the program was ever delivered.”
+— a standard caution in implementation evaluation; treat it as a maxim, not a citation</p>
+</blockquote>
+
+<h2 id="opening-case-a-null-turnout-finding-you-cannot-interpret-case-b">Opening Case: A Null Turnout Finding You Cannot Interpret (Case B)</h2>
+
+<p>In Chapter 5 your team put the 2020 metro/non-metro turnout comparison through a Welch t-test and came back with a small, non-significant, slightly-negative gap — metro counties at <strong>0.554</strong>, non-metro at <strong>0.580</strong>. Now imagine the harder version of that exercise. A county adopted countywide vote centers, and its post-adoption turnout is statistically indistinguishable from what it was before. The county commissioners want to know one thing: did vote centers not work?</p>
+
+<p>You cannot answer that question yet, and it is important to see exactly why. A flat turnout number is consistent with two completely different stories. In the first, vote centers were opened on schedule, staffed, and publicized, and voters simply did not respond — the program was delivered and the <em>idea</em> did not move turnout. In the second, half the planned vote-center locations never opened, the ones that did were understaffed, and no one told voters they could now cast a ballot anywhere in the county — the <em>idea</em> was never really tested because the program was never really delivered. The outcome data look identical in both cases. The commissioners’ question — did vote centers work? — is unanswerable until you can say whether vote centers actually happened.</p>
+
+<p>This is the domain of process and implementation evaluation. Before, and often instead of, asking whether a program changed outcomes, it asks a prior and more basic question: was the program carried out as designed? Who did it reach, and at what intensity? Did the activities and outputs the logic model promised actually occur? An impact evaluation that skips this step is building a headline on a foundation it never inspected.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>What does it mean to say a program was “implemented,” and how would you gather evidence that it was?</li>
+  <li>How do fidelity, dosage, reach, and coverage each measure a different way delivery can succeed or fail?</li>
+  <li>Why is a null impact finding uninterpretable until you know whether the program was actually delivered — and how do you tell theory failure from implementation failure?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Every earlier chapter has pushed toward the impact question: did the program cause a change? This chapter insists on a question that comes first. Programs are not self-executing. A logic model can be sound, a design can be airtight, and the program can still fail simply because the activities on the left of the model never happened as planned — or happened to the wrong people, too weakly, too late. If you report a null impact without knowing whether the program was delivered, you have told the decision-maker nothing they can act on: they cannot tell whether to abandon the idea or fix the delivery. Process and implementation evaluation is what makes an impact finding interpretable, and on its own it is often the most useful thing an evaluator can hand a program manager who needs to improve a program while it is still running.</p>
+
+<h2 id="what-process-and-implementation-evaluation-is">What Process and Implementation Evaluation Is</h2>
+
+<p><strong>Process evaluation</strong> (also called implementation evaluation) examines how a program operates: what it actually does, for whom, how much, and how well, measured against what the program said it would do. It lives on the left and middle of the logic model — inputs, activities, and outputs — the boxes the program largely controls. It is distinct from <strong>impact evaluation</strong>, which lives on the right — outcomes and impacts — and asks whether the program <em>caused</em> a change. The two are complements, not rivals: process evaluation tells you whether the machine was switched on; impact evaluation tells you whether switching it on changed anything downstream.</p>
+
+<p>You do a process evaluation in three situations. Early in a program’s life, you do it <em>formatively</em>, to catch delivery problems while they can still be fixed. Alongside an impact evaluation, you do it to make the impact finding interpretable — to know, when outcomes do or do not move, whether the program was actually in the field. And on its own, for a program no one intends to subject to a rigorous impact study, a process evaluation can still answer the manager’s real questions: are we reaching the people we meant to, at the intended intensity, with reasonable fidelity to the design?</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Process evaluation asks whether the program was delivered as designed; impact evaluation asks whether the program worked. You usually cannot trust the answer to the second without the first.</p>
+</blockquote>
+
+<h2 id="formative-vs-summative-evaluation">Formative vs. Summative Evaluation</h2>
+
+<p>A useful cross-cutting distinction concerns <em>when</em> and <em>why</em> you evaluate. <strong>Formative evaluation</strong> is conducted while a program is developing or running, to improve it: its audience is program staff, and its findings feed back into delivery. <strong>Summative evaluation</strong> is conducted to judge a program’s overall merit or worth — typically for a funder or legislature deciding whether to continue, expand, or end it. Process evaluation is often formative (fixing delivery in real time) but can be summative (documenting, for the record, that a program was or was not implemented as promised). Impact evaluation is usually summative. The same data can serve both masters: a mid-course reading that the EDC (Case A) is disbursing incentives but not recruiting firms is <em>formative</em> if it prompts a course correction, and <em>summative</em> if it appears in the final report as evidence of what the program actually did.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Formative asks “how do we make this better?”; summative asks “did this earn its keep?” Match the evaluation’s timing, audience, and tone to which question the decision-maker is really asking.</p>
+</blockquote>
+
+<h2 id="reading-the-logic-model-as-a-delivery-checklist">Reading the Logic Model as a Delivery Checklist</h2>
+
+<p>Chapter 2 built the logic model as a causal map. Process evaluation puts that same map to a second use: as a checklist for whether each promised activity and output actually occurred. Walk the model left to right and, for every box, ask <em>did this happen, as specified, and how would I know?</em></p>
+
+<ul>
+  <li><strong>Inputs.</strong> Were the resources the program assumed actually available? For MTO (Case D), were there enough participating landlords and mobility counselors to serve the families who won the lottery?</li>
+  <li><strong>Activities.</strong> Were the activities carried out? For Case B, were vote centers actually opened at the planned locations, on the planned schedule, and publicized to voters?</li>
+  <li><strong>Outputs.</strong> Did the countable products of those activities materialize at the promised level? For NSW (Case C), were the intended months of subsidized work actually delivered to each enrollee?</li>
+</ul>
+
+<p>A box that the impact evaluation treats as settled — “the program ran” — is exactly the box process evaluation refuses to take on faith. Each becomes an indicator to instrument, not an assumption to grant.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Re-read your logic model as a to-do list, not a theory. For every activity and output box, name the evidence that would show it actually occurred — and go collect it.</p>
+</blockquote>
+
+<h2 id="implementation-fidelity">Implementation Fidelity</h2>
+
+<p><strong>Fidelity</strong> is the degree to which a program was delivered as its design specified. A program with high fidelity looks, in the field, like the one on paper; a low-fidelity program has drifted — steps skipped, protocols improvised, a curriculum shortened, eligibility rules bent. Fidelity matters because a low-fidelity delivery quietly changes what is being evaluated: you may set out to test a designed program and end up testing a diluted, local variant of it. For NSW (Case C), fidelity would ask whether the <em>supported work</em> model — graduated stress, peer support, close supervision — was actually delivered at each site, or whether some sites reverted to ordinary unsupervised placements. Two sites reporting the same number of enrollees can be running two different programs.</p>
+
+<p>Measuring fidelity usually means comparing an <em>intended</em> protocol against an <em>observed</em> one, using the primary-data tools of Chapter 4: structured observation, staff interviews with a common protocol, and monitoring records. The output is often a simple statement of what share of the design’s core components were delivered as specified.</p>
+
+<h2 id="dosage-and-intensity">Dosage and Intensity</h2>
+
+<p>Fidelity asks whether the right things were done; <strong>dosage</strong> (or intensity) asks <em>how much</em> of the program each participant actually received. A job-training program delivered for two weeks is not a weaker version of the same program delivered for six months — it may be a different program entirely. For NSW (Case C), the design specified a period of subsidized work experience; the dosage question is whether enrollees actually received the intended months of work, or whether many left early, were placed late, or accumulated only a fraction of the planned hours. If the average enrollee received far less than the intended dose, then a modest earnings effect — recall the experimental contrast of <strong>$6,349</strong> for treated workers versus <strong>$4,555</strong> for controls, a <strong>+$1,794</strong> difference — may understate what a fully delivered program would have produced.</p>
+
+<p>Dosage turns “treatment” from a yes/no switch into a quantity, and that quantity is frequently the missing variable that explains a disappointing outcome. A program can have high fidelity where it is delivered and still fail on dosage because too few sessions reached each person.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Do not treat “received the program” as a binary. Measure the dose — hours, months, sessions, dollars — because a program delivered at a fraction of its intended intensity is a different program from the one on paper.</p>
+</blockquote>
+
+<h2 id="reach-and-coverage">Reach and Coverage</h2>
+
+<p>Two more delivery questions concern <em>who</em> got the program. <strong>Reach</strong> is the number and profile of people or units the program actually served. <strong>Coverage</strong> is reach expressed against the eligible population — the share of those who were supposed to be served who actually were:</p>
+
+\[\text{Coverage rate} = \frac{\text{number served}}{\text{number eligible}}\]
+
+<p>A program can be delivered with perfect fidelity and full dosage to the people it reaches and still fail on coverage because it reaches only a small slice of its target population. MTO (Case D) is the standing example: winning the voucher lottery was not the same as moving, and take-up was only <strong>partial</strong> — many families offered a voucher never used it. From an impact standpoint the lottery is still clean, but from a coverage standpoint the program placed far fewer families in low-poverty neighborhoods than it offered to, and any account of MTO’s effects that ignores partial take-up misreads what was actually delivered. Coverage also has a direction: a program that reaches an easy-to-serve subset while missing the harder-to-reach eligible units may post good-looking service numbers while leaving its actual mandate unmet.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> Distinguish reach (whom you served) from coverage (what share of the eligible you served). A high count of participants can still be low coverage — and partial coverage, as in MTO’s partial take-up, changes what an impact number even means.</p>
+</blockquote>
+
+<h2 id="service-delivery-and-monitoring-indicators">Service-Delivery and Monitoring Indicators</h2>
+
+<p>Process evaluation runs on <strong>monitoring indicators</strong>: routine, repeated measures of delivery that track a program against its plan over time. These are the process-side counterpart to the outcome indicators of Chapter 4, and they usually come from the program’s own administrative records — enrollment logs, service counts, attendance sheets, expenditure reports — read with the same skepticism Chapter 4 urged for any administrative source. Good monitoring indicators are tied directly to logic-model boxes: for Case A, incentive dollars allocated <em>and</em> firms contacted or recruited (not just dollars out the door); for Case B, vote centers opened, hours staffed, and publicity actions taken; for Case C, placements made and months of work delivered; for Case D, vouchers issued, counseling sessions held, and leases signed in low-poverty tracts; for Case E, days of preschool attended per child and weekly home visits completed — the dosage measures a small nonprofit reports to its funder every quarter.</p>
+
+<p>The discipline is to define, for each indicator, a <em>planned</em> value and an <em>actual</em> value, and to watch the gap. A monitoring system that records only actuals — “9 vote centers opened” — cannot tell anyone whether that is success or failure; the same number is a triumph against a plan of 8 and a shortfall against a plan of 18.</p>
+
+<h3 id="worked-example-a-delivery-monitoring-table-and-coverage-rate-in-excel">Worked Example: A Delivery-Monitoring Table and Coverage Rate in Excel</h3>
+
+<p>Process evaluation is more conceptual than computational, but a light monitoring table makes the logic concrete, and it is built with the same Excel you already know. Suppose — purely to illustrate the mechanics — that a county’s vote-center rollout plan (Case B) specified a set of planned activities and outputs, and you have recorded what actually happened. Lay the plan and the actuals side by side and let a formula compute the delivery ratio.</p>
+
+<p>Put the logic-model items in column A, the planned values in column B, the actuals in column C, and in column D compute <code class="language-plaintext highlighter-rouge">=C2/B2</code>, formatted as a percentage, then copy it down.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity / Output</th>
+      <th>Planned</th>
+      <th>Actual</th>
+      <th>Delivery ratio (<code class="language-plaintext highlighter-rouge">=C/B</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Vote-center locations opened</td>
+      <td>12</td>
+      <td>9</td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td>Staffed operating days</td>
+      <td>40</td>
+      <td>40</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>Publicity actions (mailers, notices)</td>
+      <td>8</td>
+      <td>3</td>
+      <td>38%</td>
+    </tr>
+    <tr>
+      <td>Poll-worker training sessions held</td>
+      <td>6</td>
+      <td>6</td>
+      <td>100%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>(The planned and actual values above are illustrative placeholders, not recorded Case B figures — a template for the table, not a finding.)</em> Read down the ratio column and the story writes itself: staffing and training were delivered in full, but a quarter of the planned locations never opened and publicity was delivered at well under half the plan. A flat turnout result now has a candidate explanation — voters may never have learned that vote-anywhere polling existed — that no outcome number alone could have surfaced.</p>
+
+<p>The same arithmetic yields a <strong>coverage rate</strong>. If a training program (Case C) was meant to serve an eligible pool and enrolled some fraction of it, <code class="language-plaintext highlighter-rouge">=served/eligible</code> returns coverage; if it enrolled 180 of 600 eligible workers, coverage is <code class="language-plaintext highlighter-rouge">=180/600</code>, or 30 percent — again illustrative values, shown only to demonstrate the calculation. Low coverage is not a rounding detail; it caps how much population-level change the program could possibly produce, no matter how well it works for those it reaches.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A monitoring table needs both a planned and an actual column. The delivery ratio and the coverage rate are one division each — trivial arithmetic that turns “we did some things” into an auditable account of what was delivered against what was promised.</p>
+</blockquote>
+
+<h2 id="theory-failure-vs-implementation-failure">Theory Failure vs. Implementation Failure</h2>
+
+<p>Here is the payoff, and the single most important idea in the chapter. When a program does not produce the outcomes it hoped for, there are two fundamentally different explanations, and telling them apart is impossible without process data (Rossi, Lipsey &amp; Henry 2019).</p>
+
+<p><strong>Theory failure</strong> means the program was delivered as designed — good fidelity, adequate dosage, reasonable coverage — and <em>still</em> did not move the outcome. The activities happened; the assumed causal chain simply does not hold in the world. Here the logic model itself is wrong, and the right response is to rethink or abandon the program’s theory of change.</p>
+
+<p><strong>Implementation failure</strong> means the program’s theory might be perfectly sound, but the outcome did not move because the program was never really delivered — locations never opened, doses fell short, the eligible went unserved. Here the idea was never actually tested, and abandoning it would be a mistake; the fix is in delivery, not design.</p>
+
+<p>A null impact finding is <em>identical</em> on the outcome side under both explanations, which is why you cannot interpret one without process evidence. Run the five cases through this lens:</p>
+
+<ul>
+  <li><strong>Case B (vote centers).</strong> A flat turnout result is theory failure if vote centers were opened and publicized and voters still did not respond; it is implementation failure if, as the monitoring table above illustrates, locations went unopened and publicity was never delivered.</li>
+  <li><strong>Case C (NSW).</strong> A weak earnings effect is theory failure if the full supported-work dose was delivered and earnings still did not rise; it is implementation failure if enrollees received only a fraction of the intended months of subsidized work.</li>
+  <li><strong>Case D (MTO).</strong> A muted neighborhood effect is theory failure if families actually moved to low-poverty tracts and their circumstances still did not change; it is implementation failure to the extent that partial take-up meant many families never moved at all.</li>
+  <li><strong>Case A (EDC sales tax).</strong> A disappointing jobs result is theory failure if incentives were genuinely deployed to recruit firms and firms still did not come; it is implementation failure if the tax revenue was disbursed without any real recruitment activity behind it.</li>
+  <li><strong>Case E (Perry Preschool).</strong> A weak graduation effect would be theory failure if children attended the full daily preschool and weekly home-visit dose and still did not do better; it would be implementation failure if attendance was spotty or home visits went undelivered. For a small grant-funded nonprofit this is not academic: the funder’s report must document dosage and fidelity precisely so that a disappointing outcome can be read correctly — and so a <em>good</em> outcome can be defended as the program’s own.</li>
+</ul>
+
+<p>In every row, the outcome number cannot distinguish the two diagnoses. Only evidence about fidelity, dosage, reach, and coverage can.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A null impact has two faces — the theory was wrong, or the program was never delivered. They demand opposite responses (drop the idea vs. fix delivery), and outcome data alone cannot tell them apart. Never interpret a null without process evidence.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> The commissioners’ question — “did vote centers not work?” — was unanswerable at the start of the chapter and is answerable now, but only with process evidence in hand. If the monitoring record shows vote centers opened on schedule, staffed, and publicized, then a flat turnout result points toward theory failure: for this county, vote-anywhere polling did not move turnout, consistent with the small, non-significant metro/non-metro gap Chapter 5 already found. If instead the record shows unopened locations and near-absent publicity, the honest report is that the program was never really delivered, the idea remains untested, and the recommendation is to fix the rollout before judging the concept. Same turnout number, opposite recommendations — and process evaluation is the only thing that decides between them.</p>
+</blockquote>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch6_theory_vs_implementation.svg" alt="Decision diagram: an outcome that did not move branches on whether the program was delivered as designed into theory failure or implementation failure." />
+<figcaption><span class="fig-label">Figure 6.1.</span> A null outcome has two very different explanations. Process evidence — was the program actually delivered, at the intended dose and reach? — is the only thing that decides between a wrong theory (rethink the program) and a broken rollout (fix the delivery).</figcaption>
+</figure>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Interpreting a null impact without process data.</strong> The cardinal error of the chapter: reading “no effect” as “the idea failed” when the program may never have been delivered.</li>
+  <li><strong>Counting outputs without a plan to compare against.</strong> “9 vote centers opened” is meaningless until set beside the number planned; report actuals against targets, not alone.</li>
+  <li><strong>Treating treatment as a switch.</strong> Recording who “received the program” as yes/no while ignoring dosage, which is often the variable that explains a weak effect.</li>
+  <li><strong>Confusing reach with coverage.</strong> A large participant count can still be a small share of the eligible population; a program can look busy and cover almost no one.</li>
+  <li><strong>Assuming fidelity.</strong> Presuming a program in the field matches the program on paper; drift is the rule, not the exception, and must be measured.</li>
+  <li><strong>Reporting process instead of impact — or impact instead of process.</strong> They answer different questions. A delivery audit is not evidence of effect, and an effect estimate is not evidence of delivery. Decision-makers usually need both.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li>
+    <p><strong>Logic model as checklist.</strong> Take a logic model you built in Chapter 2 for any running case and convert it into a delivery checklist: for each activity and output box, write the monitoring indicator and the data source that would show it actually happened.</p>
+  </li>
+  <li>
+    <p><strong>Fidelity vs. dosage.</strong> For NSW (Case C), write one-sentence definitions of a fidelity question and a dosage question, and explain how a program could score high on one and low on the other.</p>
+  </li>
+  <li>
+    <p><strong>Monitoring table (Excel).</strong> Build a four-row planned-vs-actual monitoring table for one case, with a <code class="language-plaintext highlighter-rouge">=Actual/Planned</code> delivery-ratio column formatted as a percentage. Write two sentences interpreting the pattern of ratios, using clearly labeled illustrative values.</p>
+  </li>
+  <li>
+    <p><strong>Coverage rate (Excel).</strong> For any case with an eligible population and a served count, compute a coverage rate with <code class="language-plaintext highlighter-rouge">=served/eligible</code>. Explain how partial coverage caps the program’s possible population-level effect, using MTO’s partial take-up (Case D) as the reference example.</p>
+  </li>
+  <li>
+    <p><strong>Theory vs. implementation failure.</strong> Choose a running case, imagine it produced a null impact finding, and describe the specific process evidence you would gather to decide whether the null reflects theory failure or implementation failure. State what recommendation each diagnosis would imply.</p>
+  </li>
+  <li>
+    <p><strong>Grant report on a shoestring (Case E).</strong> You direct a small nonprofit running a Perry-style preschool on a foundation grant, with no evaluation staff. Design a one-page quarterly process report the funder would accept: choose three monitoring indicators (e.g., average days attended, home visits completed, share of enrolled children still active), give each a planned and an actual value in an Excel table with a delivery-ratio column, and write the two-sentence narrative you would send. Explain why reporting delivery honestly — even when a ratio is below plan — protects the program more than a polished outcomes-only summary.</p>
+  </li>
+</ol>
+
+<h2 id="transition-to-chapter-7">Transition to Chapter 7</h2>
+
+<p>Process evaluation establishes whether the program was delivered; the rest of the course returns to whether it worked, now on firmer ground. But the comparisons of Chapter 5 have a limit we have not yet solved: when treatment and comparison groups differ on income, education, and population all at once, a simple mean comparison confounds the program with everything else that distinguishes the groups — and knowing the program was faithfully delivered does not undo that confounding. Chapter 7 introduces regression, which lets us compare groups <em>while holding other characteristics constant</em>, isolating one factor’s contribution from the tangle of others and setting up the quasi-experimental designs that follow.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

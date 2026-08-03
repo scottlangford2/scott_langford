@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 3 | Analytical Techniques for Public Administration</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 3" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 3311 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 3311 textbook — Texas State University" />
+<meta property="og:site_name" content="Analytical Techniques for Public Administration" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 3311 textbook — Texas State University","headline":"Chapter 3","url":"/pa3311/docs/chapter3/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa3311/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/pa3311/feed.xml" title="Analytical Techniques for Public Administration" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa3311/">Analytical Techniques for Public Administration</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa3311/docs/chapter1/">Chapter 1</a><a class="page-link" href="/pa3311/docs/chapter2/">Chapter 2</a><a class="page-link" href="/pa3311/docs/chapter3/">Chapter 3</a><a class="page-link" href="/pa3311/docs/chapter4/">Chapter 4</a><a class="page-link" href="/pa3311/docs/chapter5/">Chapter 5</a><a class="page-link" href="/pa3311/docs/chapter6/">Chapter 6</a><a class="page-link" href="/pa3311/docs/chapter7/">Chapter 7</a><a class="page-link" href="/pa3311/docs/chapter8/">Chapter 8</a><a class="page-link" href="/pa3311/docs/chapter9/">Chapter 9</a><a class="page-link" href="/pa3311/docs/datasets/">Datasets</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 3</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="describing-data">Describing Data</h1>
+
+<blockquote>
+  <p><strong>Course dataset &amp; lab.</strong> Work this chapter’s techniques on our spine dataset — <a href="../datasets">Texas City Sales Panel</a>. Describe the 2024 distribution of <code class="language-plaintext highlighter-rouge">sales_tax_alloc_per_capita</code> (filter <code class="language-plaintext highlighter-rouge">year</code>): histogram, mean vs. median, outliers.</p>
+</blockquote>
+
+<h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+
+  <p><em>“The first step toward wisdom is calling things by their right names.”</em></p>
+</blockquote>
+
+<p>Confucius</p>
+
+<blockquote>
+
+  <p><em>“If you torture the data long enough, it will confess to anything.”</em></p>
+</blockquote>
+
+<p>Ronald Coase</p>
+
+<p>These observations capture the spirit of descriptive statistics. Good descriptive work depends on
+clear definitions, careful measurement, and a disciplined respect for what data can and cannot
+show. As Einstein noted, the formulation of a problem is often more critical than its solution
+(Einstein). Describing data is the act of defining problems correctly.</p>
+
+<h2 id="opening-case-houstons-911-call-center-and-the-number-that-hid-a-crisis">Opening Case: Houston’s 911 Call Center and the Number That Hid a Crisis</h2>
+
+<p>In 2022, the Houston Chronicle reported that the city’s Houston Emergency Center (HEC) was hemorrhaging staff. Dispatchers were leaving faster than the city could replace them, and the consequences showed up in a statistic that should have alarmed every city official: the 911 call abandonment rate—the share of callers who hung up before reaching a dispatcher—had climbed to roughly 12 percent systemwide (Houston Chronicle). City leaders acknowledged the problem and pointed to hiring initiatives, but the single figure obscured a more troubling pattern.</p>
+
+<p>Beneath the system-wide average, the data revealed enormous variation by time of day and day of week. Daytime weekday shifts, when staffing was closest to full strength, posted abandonment rates near 5 percent. Overnight and weekend shifts—when the fewest dispatchers were on duty and call volumes spiked with bar closings, domestic disturbances, and medical emergencies—saw abandonment rates approach 25 percent. A single mean of 12 percent described a system with two very different realities: one that functioned adequately and one in severe distress.</p>
+
+<p>This case illustrates a foundational principle of descriptive statistics: a summary number is only as useful as the distributional structure it represents. The tools introduced in this chapter—measures of central tendency, variation, percentiles, and graphical display—exist precisely to prevent the kind of false reassurance that a single average can create.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>If Houston reports an average 911 call abandonment rate of 12%</li>
+  <li>What graphical tools would reveal whether the abandonment problem is concentrated at specific times or spread evenly across the week?</li>
+  <li>How might the distribution of hold times differ from the distribution of abandonment rates, and why does the distinction matter for staffing decisions?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Descriptive statistics are the backbone of analytical practice in public administration. Before a
+city manager can evaluate responsiveness, before a budget officer can assess fiscal risk, and
+before a policy analyst can examine equity, they must understand the patterns in the underlying
+data. This requirement is especially important in administrative datasets, which are generated
+through complex institutional processes rather than designed studies.</p>
+
+<p>As Einav and Levin note, modern administrative data emerge from operational systems, workflows,
+and reporting technologies—not from controlled experiments (Einav &amp; Levin 2014). This makes
+careful description essential: analysts must identify how observations cluster, vary, or deviate
+before drawing conclusions.</p>
+
+<p>Similarly, neighborhood-level differences in public services—documented extensively in urban
+research (Sampson 2012; Chetty et al. 2016)—are visible only when descriptive statistics are
+used to compare groups, distributions, and extremes.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Clear description prevents analytical overreach and ensures that later techniques
+build on a solid empirical foundation.</p>
+</blockquote>
+
+<h2 id="what-it-means-to-describe-data">What It Means To Describe Data</h2>
+
+<p>To describe data is to turn thousands of observations into a coherent picture. For example, the
+City of Austin’s 311 dataset contains timestamps, categories, and departmental assignments
+(City of Austin open data). On their own, these records say little. But with descriptive tools—means,
+medians, percentiles, and graphs—they begin to reveal:</p>
+
+<ul>
+  <li>typical experiences,</li>
+  <li>sources of delay,</li>
+  <li>seasonal trends,</li>
+  <li>and inequities across neighborhoods.</li>
+</ul>
+
+<p>These descriptive structures form the empirical baseline for understanding how services operate.
+Without them, interpretation becomes guesswork.</p>
+
+<p>Moreover, because administrative data reflect institutional rules and behaviors (Einav &amp; Levin 2014),
+analysts must describe not only the values themselves but also the patterns those values betray:
+clustering, skewness, outliers, or stability over time.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Description converts administrative records into interpretable evidence.</p>
+</blockquote>
+
+<h2 id="the-structure-of-distributions">The Structure of Distributions</h2>
+
+<p>A distribution summarizes how often particular values occur. Public-sector data rarely resemble
+the idealized bell curve. Instead, their shapes reflect the operational systems that produced
+them—an insight emphasized in studies of neighborhood variation and institutional systems
+(Sampson 2012).</p>
+
+<h3 id="skewed-distributions-in-public-data">Skewed Distributions in Public Data</h3>
+
+<p>311 request completion times, EMS response delays, and capital project durations often exhibit
+long right tails: many events occur quickly, but a handful take much longer due to coordination
+issues, data-entry delays, or resource constraints (City of Austin open data).</p>
+
+<p>Such skewness is typical in administrative data because organizations triage work: easy tasks are
+completed rapidly, while difficult tasks accumulate.</p>
+
+<h3 id="multimodality">Multimodality</h3>
+
+<p>Multimodal distributions—which exhibit multiple peaks—often reflect subpopulations or distinct
+institutional processes. Research on neighborhood effects emphasizes that urban patterns often
+reflect overlapping social structures (Sampson 2012). Similarly, service request data may
+contain morning and evening peaks, or weekday and weekend regimes.</p>
+
+<p>Recognizing this structure is essential for understanding the populations being served—not a single
+“average citizen,” but groups with different needs and behaviors.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> A histogram of Houston 911 call abandonment rates by shift would likely show exactly this kind of multimodal structure: a cluster of low rates during well-staffed daytime shifts and a second cluster of high rates during overnight and weekend shifts. The system-wide mean of 12%</p>
+</blockquote>
+
+<h2 id="measures-of-central-tendency">Measures of Central Tendency</h2>
+
+<h3 id="mean">Mean</h3>
+
+<p>The mean:</p>
+
+\[\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i\]
+
+<p>is intuitive but sensitive to outliers—a recurring challenge in administrative datasets. For
+example, a single delayed request due to interdepartmental coordination may inflate the mean
+dramatically (City of Austin open data).</p>
+
+<h3 id="median">Median</h3>
+
+<p>The median, by contrast, is robust to outliers and captures the typical experience more reliably.
+This distinction is crucial in assessing neighborhood effects, where extreme values may distort
+aggregated metrics (Sampson 2012).</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> In the Houston 911 case, the mean abandonment rate of 12%</p>
+</blockquote>
+
+<h3 id="mode">Mode</h3>
+
+<p>The mode is most useful for understanding categorical patterns, such as identifying which request
+types dominate the workload—information vital for resource allocation. In a 311 dataset, the modal category might be code compliance or street maintenance, indicating where the largest share of staff time and resources is directed. For continuous variables, the mode is less informative than the mean or median, but for categorical data it provides a quick answer to the question “What is the most common type?”—a question that city managers ask frequently when setting priorities or justifying budget requests.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> In administrative data, the median usually answers the managerial question; the
+mean answers the accounting question.</p>
+</blockquote>
+
+<h3 id="worked-example-ems-response-times-in-two-counties">Worked Example: EMS Response Times in Two Counties</h3>
+
+<p>Consider response times (in minutes) for 10 recent EMS calls in two Texas counties:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Call</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>County A</td>
+      <td>7</td>
+      <td>8</td>
+      <td>8</td>
+      <td>9</td>
+      <td>9</td>
+      <td>10</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>County B</td>
+      <td>6</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>18</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Step 1: Compute the mean.</strong></p>
+
+\[\bar{x}_A=\frac{7+8+8+9+9+10+10+11+12+36}{10}=\frac{120}{10}=12.0\text{ minutes}\]
+
+\[\bar{x}_B=\frac{6+9+10+11+12+12+13+14+15+18}{10}=\frac{120}{10}=12.0\text{ minutes}\]
+
+<p>Both counties have the same mean: 12.0 minutes.</p>
+
+<p><strong>Step 2: Compute the median.</strong>
+With 10 observations, the median is the average of the 5th and 6th values (when sorted):</p>
+
+\[\text{Median}_A=\frac{9+10}{2}=9.5\text{ minutes}\qquad\text{Median}_B=\frac{12+12}{2}=12.0\text{ minutes}\]
+
+<p>County A’s median is 2.5 minutes lower than its mean—the mean is pulled upward by the single 36-minute outlier (likely a rural call with extended travel distance). County B’s mean and median are identical, indicating a symmetric distribution.</p>
+
+<p><strong>Step 3: Visualize.</strong>
+A histogram reveals the structure the mean conceals:</p>
+
+<p><em>Figure: Histograms of EMS response times for County A and County B, showing County A’s single 36-minute outlier against County B’s more symmetric spread.</em></p>
+
+<p><strong>Interpretation.</strong> A city manager reviewing only the mean would conclude that these two counties perform identically. The median and histogram tell a different story: County A’s typical response is faster (9.5 minutes), but it has a severe outlier problem. County B is consistently slower but more predictable. These are different operational challenges requiring different policy responses.</p>
+
+<h2 id="measures-of-variation">Measures of Variation</h2>
+
+<p>Variation describes how spread out the data are and is essential for diagnosing systemic stress,
+inequity, or instability. Areas with high variation in service delays, for example, often mirror
+patterns identified in neighborhood-based studies (Sampson 2012).</p>
+
+<h3 id="variance-and-standard-deviation-sd">Variance and Standard Deviation (SD)</h3>
+
+<p>Variance:</p>
+
+\[s^2=\frac{1}{n-1}\sum(x_i-\bar{x})^2\]
+
+<p>and standard deviation:</p>
+
+\[s=\sqrt{s^2}\]
+
+<p>highlight average deviation from the mean, though they are most interpretable when the mean itself
+is meaningful—an assumption that frequently fails in skewed data.</p>
+
+<h3 id="interquartile-range-iqr">Interquartile Range (IQR)</h3>
+
+<p>The IQR:</p>
+
+\[\text{IQR}=Q_3-Q_1\]
+
+<p>captures the middle 50%
+or long tails, such as 311 service times (City of Austin open data).</p>
+
+<h3 id="range">Range</h3>
+
+<p>Though simple, the range often signals data quality issues or neighborhood-level disparities
+(Sampson 2012) — especially when extreme values cluster in specific geographic areas.</p>
+
+<h3 id="worked-example-variation-in-county-a-vs-county-b">Worked Example: Variation in County A vs. County B</h3>
+
+<p>Using the same EMS data from the central tendency example:</p>
+
+<p><strong>Standard Deviation.</strong>
+For County A ($\bar{x}=12.0$):</p>
+
+\[s_A^2=\frac{(7-12)^2+(8-12)^2+\cdots+(36-12)^2}{9}=\frac{690}{9}=76.7\quad\Rightarrow\quad s_A=8.8\text{ min}\]
+
+<p>For County B ($\bar{x}=12.0$):</p>
+
+\[s_B^2=\frac{(6-12)^2+(9-12)^2+\cdots+(18-12)^2}{9}=\frac{102}{9}=11.3\quad\Rightarrow\quad s_B=3.4\text{ min}\]
+
+<p>County A’s standard deviation is nearly three times larger—driven almost entirely by the 36-minute outlier.</p>
+
+<p><strong>IQR.</strong>
+For County A: $Q_1 = 8, \; Q_3 = 11$, so $\text{IQR}_A = 3$ minutes.</p>
+
+<p>For County B: $Q_1 = 10, \; Q_3 = 14$, so $\text{IQR}_B = 4$ minutes.</p>
+
+<p>The IQR tells a different story than the standard deviation. County B has a wider middle range (4 vs. 3 minutes), but County A has far more extreme variation. The IQR is robust to outliers; the standard deviation is not. In Excel, use <code class="language-plaintext highlighter-rouge">=STDEV.S()</code> for standard deviation and <code class="language-plaintext highlighter-rouge">=QUARTILE.INC()</code> for quartiles.</p>
+
+<p><em>Figure: Boxplots comparing the spread of County A and County B response times, highlighting County A’s outlier and County B’s wider interquartile range.</em></p>
+
+<h2 id="percentiles-and-outliers">Percentiles and Outliers</h2>
+
+<p>Percentiles translate data into operational standards. For example, a department might aim to
+resolve 90%</p>
+
+<p>This logic echoes how neighborhood experts interpret distribution tails when assessing mobility
+outcomes (Chetty et al. 2016).</p>
+
+<h3 id="outliers">Outliers</h3>
+
+<p>Outliers may signal rare but critical administrative failures. In service datasets, these values
+often reflect the structural features of administrative systems emphasized in the literature on
+urban inequality (Sampson 2012).</p>
+
+<p>Rather than removing outliers reflexively, analysts should interpret them in context:</p>
+
+<ul>
+  <li>Are they due to missing data?</li>
+  <li>Do they reflect unusual events?</li>
+  <li>Are they concentrated in particular neighborhoods?</li>
+</ul>
+
+<p>This last question directly connects descriptive statistics to broader structural inequities, as
+highlighted by neighborhood studies.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Outliers often reveal the institutional story behind the data.</p>
+</blockquote>
+
+<h2 id="graphical-description">Graphical Description</h2>
+
+<p>Visualization serves as a descriptive complement to numerical summaries. Because administrative data often come from disparate sources and processes (Einav &amp; Levin 2014), graphics reveal structure that numbers alone may obscure. As Tufte argues, the best statistical graphics communicate complex quantitative information with clarity, precision, and efficiency (Tufte 2001). In public administration, where analysts present findings to city managers, council members, and budget officers who may not read regression output, the ability to construct and interpret graphs is not optional—it is a core professional skill.</p>
+
+<h3 id="histograms">Histograms</h3>
+
+<p>A histogram divides a continuous variable into equal-width bins and displays the count or proportion of observations in each bin as a bar. The shape of the histogram reveals the distribution’s central tendency, spread, and skewness at a glance. In administrative data, histograms are particularly valuable because operational processes frequently produce right-skewed distributions: most service requests are completed quickly, but a long right tail captures the requests that stall due to coordination failures, resource shortages, or data-entry backlogs. An analyst examining EMS response times, for example, would use a histogram to determine whether the distribution is approximately symmetric (suggesting consistent performance) or heavily skewed (suggesting a subset of calls with serious delays). When building histograms in Excel, use the Data Analysis ToolPak or the <code class="language-plaintext highlighter-rouge">FREQUENCY()</code> function, and choose bin widths that balance detail against readability—too few bins obscure patterns; too many create noise.</p>
+
+<p><em>Figure: Example histogram of a right-skewed administrative variable, with most observations clustered at low values and a long right tail.</em></p>
+
+<h3 id="boxplots">Boxplots</h3>
+
+<p>A boxplot (or box-and-whisker plot) displays the five-number summary—minimum, first quartile ($Q_1$), median, third quartile ($Q_3$), and maximum—in a compact visual format. The box spans the IQR, the line inside the box marks the median, and whiskers extend to the most extreme observations within 1.5 times the IQR. Points beyond the whiskers are plotted individually as potential outliers. Boxplots are especially powerful for comparing groups side by side: placing urban, suburban, and rural EMS response times in adjacent boxplots immediately reveals whether the distributions overlap or separate, whether one group has greater variability, and whether outliers concentrate in a particular category. Research on neighborhood inequality has shown that such group comparisons often reveal systemic disparities invisible in aggregate statistics (Sampson 2012). In Excel, boxplots are available under Insert &gt; Chart &gt; Box and Whisker (Excel 2016 or later).</p>
+
+<p><em>Figure: Side-by-side boxplots of urban, suburban, and rural EMS response times, illustrating differences in median, spread, and outliers across groups.</em></p>
+
+<h3 id="line-charts">Line Charts</h3>
+
+<p>Line charts connect observations over time, making them ideal for identifying trends, seasonal cycles, and structural breaks in administrative data. A line chart of monthly 311 request volumes, for instance, might reveal a summer peak driven by infrastructure complaints (potholes after winter, air conditioning failures) and a winter trough when residents spend less time outdoors. Overlaying multiple lines—one for each department or neighborhood—can expose divergent trends that an aggregate line would mask. Line charts also make reporting anomalies visible: a sudden spike or drop often reflects a change in data collection rather than a change in the underlying process, a distinction emphasized in the literature on administrative data quality (Einav &amp; Levin 2014; GAO). When constructing line charts, label axes clearly, avoid cluttering with more than 4–5 lines, and consider whether a change in scale or baseline distorts the visual impression.</p>
+
+<p><em>Figure: Line chart of monthly 311 request volumes over a year, showing a summer peak and winter trough.</em></p>
+
+<h3 id="bar-charts">Bar Charts</h3>
+
+<p>Bar charts display counts or proportions for categorical variables, making them the natural choice for comparing workload across departments, request types, or geographic units. Unlike histograms (which bin continuous data), bar charts represent discrete categories with gaps between bars to emphasize that each category is distinct. A bar chart of 311 requests by category—code compliance, street maintenance, water utilities, parks—immediately shows which services generate the most demand and where staffing or budget discussions should focus. Horizontal bar charts are preferable when category labels are long, and sorted bar charts (from highest to lowest) draw the reader’s eye to the most important categories first.</p>
+
+<p>The Economist style favors clean, uncluttered bar charts with a single accent color and no 3D effects or heavy gridlines (Tufte 2001).</p>
+
+<p><em>Figure: Sorted bar chart of 311 requests by category, showing which services generate the most demand.</em></p>
+
+<p>As Tufte emphasizes, a well-constructed graph is not decoration—it is an argument (Tufte 2001). Every element should serve the analytical purpose: axes should be labeled, scales should be honest, and chart junk (unnecessary gridlines, 3D effects, decorative fills) should be removed. In public administration, where graphs appear in council presentations, budget documents, and audit reports, the analyst’s credibility depends on visual honesty as much as numerical accuracy.</p>
+
+<h2 id="describing-groups-and-subgroups">Describing Groups and Subgroups</h2>
+
+<p>Administrative datasets allow analysts to examine variation across space and subgroup—that is,
+across neighborhood boundaries, demographic characteristics, or organizational units. Research on
+neighborhood effects provides a strong conceptual foundation for understanding such variation
+(Sampson 2012; Chetty et al. 2016). In practice, the most important descriptive findings in public administration often emerge not from system-wide summaries but from subgroup comparisons that reveal where the system is working well and where it is failing.</p>
+
+<h3 id="operational-relevance">Operational Relevance</h3>
+
+<p>Describing subgroups helps answer a wide range of managerial questions. Are certain neighborhoods consistently facing longer delays in 311 service completion? Are service backlogs clustered in particular request categories, such as infrastructure or code compliance, rather than spread evenly across all types? Are reporting patterns shaped by demographic or institutional factors—for instance, do neighborhoods with younger, more digitally connected populations file more online requests, while older populations rely on phone calls that may be logged differently?</p>
+
+<p>Consider an EMS dataset that reports average response times by county. A statewide summary might show a mean of 10 minutes, but disaggregating by urban and rural subgroups could reveal that urban counties average 7 minutes while rural counties average 16 minutes. Further disaggregation by time of day might show that rural overnight responses exceed 25 minutes—a finding invisible in any aggregate statistic. Similarly, a 311 dataset disaggregated by council district might reveal that two districts with similar total request volumes have very different completion time distributions: one resolves requests steadily, while the other shows a bimodal pattern with a cluster of quick resolutions and a second cluster of requests that languish for weeks.</p>
+
+<p>Subgroup description often reveals structural inequality—a theme central to both administrative
+datasets (Einav &amp; Levin 2014) and neighborhood research (Sampson 2012). The analyst’s task is not merely to compute separate statistics for each group but to interpret the differences in light of the institutional processes, resource allocations, and historical patterns that produced them.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Subgroup analysis reveals who the system serves—and who it does not.</p>
+</blockquote>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<h3 id="meanmedian-confusion">Mean–Median Confusion</h3>
+
+<p>In right-skewed data, the mean exaggerates delays, costs, or risks, because a small number of extreme values pulls the average upward while the majority of observations cluster well below it. This issue parallels aggregated measures that conceal neighborhood-level disparities (Sampson 2012). When an analyst reports a mean completion time of 14 days for 311 infrastructure requests, a city manager may assume that most requests take roughly two weeks. In reality, the median might be 6 days, with a handful of stalled requests stretching past 60 days. Choosing the wrong measure of central tendency can lead to staffing plans calibrated for a “typical” case that does not actually exist.</p>
+
+<h3 id="ignoring-population-scale">Ignoring Population Scale</h3>
+
+<p>Comparing complaint counts across neighborhoods without accounting for population size risks
+serious misinterpretation. A neighborhood with 500 residents and 25 complaints has a far higher complaint rate than a neighborhood with 10{,}000 residents and 80 complaints, even though the second neighborhood produces more complaints in absolute terms. This issue is analogous to the cross-neighborhood comparisons in social mobility studies that must be adjusted for population composition (Chetty et al. 2016). Analysts should normalize counts—per capita, per household, or per service unit—before drawing conclusions about which areas are most affected.</p>
+
+<h3 id="assuming-normality">Assuming Normality</h3>
+
+<p>Public-sector data rarely follow a normal distribution. EMS response times, 311 completion times, and capital project durations typically exhibit right skew, with long tails driven by institutional bottlenecks and coordination failures. Relying on normal-theory summaries—such as reporting mean plus or minus one standard deviation as a “typical range”—leads to misguided thresholds and flawed evaluations that undercount extreme cases. Analysts should examine histograms and boxplots before selecting summary statistics, and should prefer robust measures such as the median and interquartile range when the data depart substantially from symmetry.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Many descriptive errors arise from assumptions imported from textbooks, not from reality.</p>
+</blockquote>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ul>
+  <li>
+    <p>Compute the mean, median, IQR, and standard deviation for completion times in the 311 dataset. 
+  Discuss why the median may more accurately capture typical experience in skewed service systems (City of Austin open data).</p>
+  </li>
+  <li>
+    <p>Create a histogram and describe its shape. 
+  Relate it to structural features of administrative data-generating processes (Einav &amp; Levin 2014).</p>
+  </li>
+  <li>
+    <p>Identify neighborhood-level differences in percentiles for response times. 
+  Connect these patterns to broader insights about spatial inequality (Sampson 2012).</p>
+  </li>
+  <li>
+    <p>Compare boxplots across multiple request categories. 
+  Explain how differences reflect institutional processes or resident behaviors.</p>
+  </li>
+  <li>Write a short memo interpreting outliers in one request category.
+  Discuss whether these outliers reflect operational failures, rare events, or structural issues highlighted in neighborhood research (Chetty et al. 2016).</li>
+  <li>Using the EMS response time data provided in this chapter’s worked example (Table for Counties A and B), open Excel and verify the mean, median, and standard deviation calculations. Then create a histogram for each county using the Chart tool. In two sentences, explain what the histogram reveals that the mean alone does not.</li>
+  <li>Download the voter turnout dataset from the <a href="../datasets">Course Datasets page</a>. In Excel, compute the mean, median, and IQR of turnout rates across all counties for a single election year. Create a boxplot. Identify any outlier counties and speculate (in one paragraph) about what might explain their unusual turnout rates.</li>
+</ul>
+
+<h2 id="sources-for-examples-in-this-chapter">Sources for Examples in This Chapter</h2>
+
+<ul>
+  <li>City of Austin 311 open data portal (City of Austin open data).</li>
+  <li>Research on administrative data interpretation (Einav &amp; Levin 2014).</li>
+  <li>Studies on neighborhood variation and spatial inequality (Sampson 2012; Chetty et al. 2016).</li>
+</ul>
+
+<h2 id="transition-to-chapter-four">Transition to Chapter Four</h2>
+
+<p>Descriptive statistics summarize what has happened; probability helps us reason about uncertainty
+and what might happen next. Chapter 4 introduces the foundations of
+probabilistic thinking and its role in administrative decision-making.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa3311/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Analytical Techniques for Public Administration</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 3311 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
