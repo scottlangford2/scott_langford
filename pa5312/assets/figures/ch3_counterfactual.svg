@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Horizontal bars of average 1978 earnings: treated $6,349, randomized control $4,555, CPS survey comparison $14,847. The experiment compares treated to the control (+$1,794); the naive comparison uses the CPS group and gets −$8,498.">
+  <style>
+    .kick { font: 600 11.5px "Helvetica Neue", Arial, sans-serif; letter-spacing: .08em; fill: #501214; }
+    .head { font: 700 20px "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; fill: #1a1a1a; }
+    .dek  { font: 400 13.5px "Helvetica Neue", Arial, sans-serif; fill: #5b5b5b; }
+    .rlab { font: 600 13px "Helvetica Neue", Arial, sans-serif; fill: #3a3a3a; }
+    .val  { font: 700 13px "Helvetica Neue", Arial, sans-serif; }
+    .ann  { font: 600 12.5px "Helvetica Neue", Arial, sans-serif; }
+    .src  { font: 400 11px "Helvetica Neue", Arial, sans-serif; fill: #9a9a9a; }
+  </style>
+
+  <rect x="24" y="14" width="34" height="5" fill="#501214"/>
+  <text x="24" y="44" class="kick">EVALUATION DESIGNS &#183; CASE C</text>
+  <text x="24" y="72" class="head">One missing number, two comparison groups</text>
+  <text x="24" y="94" class="dek">Average 1978 earnings ($). The effect depends entirely on which group stands in for the counterfactual.</text>
+
+  <!-- bars -->
+  <text x="182" y="139" text-anchor="end" class="rlab">Treated (observed)</text>
+  <rect x="192" y="126" width="184" height="24" fill="#501214"/>
+  <text x="384" y="144" class="val" fill="#501214">$6,349</text>
+
+  <text x="182" y="181" text-anchor="end" class="rlab">Randomized control</text>
+  <rect x="192" y="168" width="132" height="24" fill="#8f5a5c"/>
+  <text x="332" y="186" class="val" fill="#3d0e10">$4,555</text>
+
+  <text x="182" y="223" text-anchor="end" class="rlab">CPS survey sample</text>
+  <rect x="192" y="210" width="431" height="24" fill="#BEBEBE"/>
+  <text x="631" y="228" class="val" fill="#3a3a3a">$14,847</text>
+
+  <!-- annotations -->
+  <text x="24" y="278" class="ann" fill="#501214">Experiment (right): $6,349 &#8722; $4,555 = +$1,794 &#8212; credible</text>
+  <text x="24" y="300" class="ann" fill="#6b6b6b">Naive (wrong): $6,349 &#8722; $14,847 = &#8722;$8,498 &#8212; selection bias</text>
+
+  <text x="24" y="344" class="src">Source: LaLonde (1986); Dehejia &amp; Wahba (1999).</text>
+</svg>

@@ -27,7 +27,7 @@ If you're considering the [Texas State MPA](https://www.polisci.txst.edu/graduat
 
 ## For Undergraduates
 
-If you're in my section of PA 3311 (Analytical Techniques) or PA 4352 (Comparative Administration), the syllabus and course materials are the primary guide. The [PA 3311 Textbook](https://scottlangford2.github.io/pa3311-textbook/) is freely available online.
+If you're in my section of PA 3311 (Analytical Techniques) or PA 4352 (Comparative Administration), the syllabus and course materials are the primary guide. The [PA 3311 Textbook](https://scottlangford.com/pa3311/) is freely available online.
 
 ## Working With Me on Research
 

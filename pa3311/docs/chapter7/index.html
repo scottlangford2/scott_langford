@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 7 | Analytical Techniques for Public Administration</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 7" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 3311 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 3311 textbook — Texas State University" />
+<meta property="og:site_name" content="Analytical Techniques for Public Administration" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 7" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 3311 textbook — Texas State University","headline":"Chapter 7","url":"/pa3311/docs/chapter7/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa3311/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/pa3311/feed.xml" title="Analytical Techniques for Public Administration" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa3311/">Analytical Techniques for Public Administration</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa3311/docs/chapter1/">Chapter 1</a><a class="page-link" href="/pa3311/docs/chapter2/">Chapter 2</a><a class="page-link" href="/pa3311/docs/chapter3/">Chapter 3</a><a class="page-link" href="/pa3311/docs/chapter4/">Chapter 4</a><a class="page-link" href="/pa3311/docs/chapter5/">Chapter 5</a><a class="page-link" href="/pa3311/docs/chapter6/">Chapter 6</a><a class="page-link" href="/pa3311/docs/chapter7/">Chapter 7</a><a class="page-link" href="/pa3311/docs/chapter8/">Chapter 8</a><a class="page-link" href="/pa3311/docs/chapter9/">Chapter 9</a><a class="page-link" href="/pa3311/docs/datasets/">Datasets</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 7</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="paired-t-tests">Paired <em>t-Tests</em></h1>
+
+<blockquote>
+  <p><strong>Course dataset &amp; lab.</strong> Work this chapter’s techniques on our spine dataset — <a href="../datasets">Texas City Sales Panel</a>. Compare each city’s sales tax in <strong>2019 vs. 2023</strong> with a paired t-test (same cities, pre/post-COVID).</p>
+</blockquote>
+
+<h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+
+  <p><em>“Without data, you are just another person with an opinion.”</em></p>
+</blockquote>
+
+<p>W. Edwards Deming</p>
+
+<blockquote>
+
+  <p><em>“Comparison is the death of joy.”</em></p>
+</blockquote>
+
+<p>Mark Twain</p>
+
+<p>Deming reminds us that evidence must drive decisions; Twain reminds us that comparisons can mislead
+when made poorly. The paired <em>t</em>-test resolves both tensions by comparing two measurements taken
+on the <em>same</em> units—before and after a policy change, across two conditions, or across two time
+points. This design removes much of the noise caused by individual differences and isolates the
+effect of a treatment or intervention. In public administration, paired comparisons are among the
+most powerful and common tools for evaluating reforms, service improvements, and operational
+efficiency.</p>
+
+<h2 id="opening-case-austins-proposition-b-and-the-homeless-counts-that-could-not-agree">Opening Case: Austin’s Proposition B and the Homeless Counts That Could Not Agree</h2>
+
+<p>In May 2021, Austin voters passed Proposition B, reinstating a ban on public camping that had been relaxed two years earlier. This textbook takes no position on the merits of the policy itself; the case is included solely because the policy change created a natural analytical opportunity for a paired design. The city conducted point-in-time homeless counts in the same census tracts before and after the ban took effect. If the same geographic units were measured at two time points, any change in counts could be evaluated using within-unit comparisons.</p>
+
+<p>The results were ambiguous. Some tracts showed substantial declines in visible homelessness after the ban. Others showed little change, and a few showed increases. Advocates for the ban pointed to the tracts with declines as evidence that the policy “worked.” Opponents argued that the declines reflected displacement rather than resolution—people moved to less visible locations, wooded areas, or neighbouring jurisdictions—and that the counting methodology itself had changed between periods, with different volunteers, different routes, and different weather conditions affecting the tallies.</p>
+
+<p>This case presents a textbook paired design: the same units (census tracts) measured at two time points (before and after a policy change). The paired <em>t</em>-test is the natural tool for evaluating whether the average within-tract change is distinguishable from zero. But the case also illustrates the limits of the method: measurement error in point-in-time counts, the possibility of displacement rather than reduction, and the challenge of attributing change to a single intervention when multiple forces operate simultaneously. The analytical value of the example lies entirely in its research design structure, not in any judgment about the policy’s desirability.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>If the same 50 census tracts are counted before and after Proposition B, why is a paired <em>t</em>-test more appropriate than an independent <em>t</em>-test?</li>
+  <li>Suppose 35 of 50 tracts show lower counts after the ban. Does that necessarily mean the ban reduced homelessness—or could other explanations account for the change?</li>
+  <li>How does measurement error in point-in-time counts affect the reliability of the paired comparison?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Many of the most important questions in public administration involve <em>change over time</em> for the
+same units. A city manager may want to know whether average 311 completion times improved after a new workflow reform (City of Austin open data), or whether an EMS district responded faster after staffing increases (Texas DSHS EMS data). Inspectors and their supervisors ask whether inspection durations decreased after digital recordkeeping was introduced. Planners track whether census tracts experienced income growth from one ACS cycle to the next (U.S. Census ACS), and community development officials examine whether residents in a neighborhood saw improved service delivery after targeted investment. In every case, the analyst is comparing two measurements of the same unit—not two separate groups of units.</p>
+
+<p>These questions do not compare two independent groups; they compare two <em>measurements of the same
+units</em>. Ignoring this structure discards information, reduces power, and inflates noise—a point
+emphasized repeatedly in statistical literature (Gelman &amp; Hill 2007; Freedman 2007). A paired design eliminates variation between individuals by using each unit as its own control, dramatically increasing sensitivity to detect change, especially in small samples. When units vary widely at baseline—as neighborhoods, districts, and agencies almost always do—the gains from pairing can be substantial.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Paired tests measure <em>within-unit change</em>, not between-unit differences.</p>
+</blockquote>
+
+<h2 id="what-makes-a-paired-design-different">What Makes a Paired Design Different?</h2>
+
+<p>In an independent <em>t</em>-test (Chapter 6), Group A and Group B
+contain separate units. In a paired <em>t</em>-test, each observation in Period 1 has a natural partner
+in Period 2:</p>
+
+\[\text{Unit}_i^{(1)}\leftrightarrow\text{Unit}_i^{(2)}\]
+
+<p>Consider several examples of natural pairing in administrative data. A neighborhood’s average 311 request completion time before and after a workflow change forms a pair; the same EMS station’s response time early versus late in the year forms another. When the same inspector completes both paper and electronic forms, the two processing times are paired observations on the same individual. Similarly, the same census tract measured across two ACS survey cycles produces a natural pair of income estimates. In each case, the unit serves as its own baseline, and the analyst focuses on how much that unit changed rather than on how different two separate groups appear.</p>
+
+<p>This structure reflects the principle Gelman and Hill stress: inference improves when analysts
+respect the hierarchical and longitudinal structure of their data (Gelman &amp; Hill 2007).</p>
+
+<h2 id="the-paired-difference">The Paired Difference</h2>
+
+<p>The paired <em>t</em>-test converts two variables into a single set of <em>differences</em>:</p>
+
+\[D_i=X_{i,\text{after}}-X_{i,\text{before}}\]
+
+<p>The test evaluates whether the average change is zero:</p>
+
+\[H_0: \mu_D = 0
+\qquad \text{vs.} \qquad
+H_1: \mu_D \ne 0.\]
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> In the Proposition B case, $D_i$ represents the change in homeless count for census tract $i$: $D_i = \text{count}<em>{i,\text{after}} - \text{count}</em>{i,\text{before}}$. If the ban reduced visible homelessness, we would expect $\bar{D} &lt; 0$. The paired design is essential here because tracts differ enormously in baseline counts—a tract near downtown Austin might count 50 individuals while a suburban tract counts 3. Comparing aggregate before-and-after totals (an unpaired approach) would be dominated by the high-count tracts. The paired difference isolates within-tract change, giving equal analytical weight to each geographic unit.</p>
+</blockquote>
+
+<h3 id="worked-example-homeless-counts-before-and-after-proposition-b">Worked Example: Homeless Counts Before and After Proposition B</h3>
+
+<p>Consider point-in-time homeless counts for 8 census tracts before and after the camping ban:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tract</th>
+      <th>Before</th>
+      <th>After</th>
+      <th>$D_i$ (after − before)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>50</td>
+      <td>37</td>
+      <td>−13</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>12</td>
+      <td>10</td>
+      <td>−2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>30</td>
+      <td>21</td>
+      <td>−9</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>8</td>
+      <td>11</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>45</td>
+      <td>32</td>
+      <td>−13</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>9</td>
+      <td>8</td>
+      <td>−1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>35</td>
+      <td>24</td>
+      <td>−11</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>6</td>
+      <td>9</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Step 1: Compute the mean difference.</strong></p>
+
+\[\bar{D}=\frac{(-13)+(-2)+(-9)+3+(-13)+(-1)+(-11)+3}{8}=\frac{-43}{8}=-5.375\]
+
+<p><strong>Step 2: Compute the standard deviation of differences.</strong></p>
+
+\[s_D=\sqrt{\frac{\sum(D_i-\bar{D})^2}{n-1}}=6.48\]
+
+<p><strong>Step 3: Compute the $t$-statistic.</strong></p>
+
+\[t=\frac{\bar{D}}{s_D/\sqrt{n}}=\frac{-5.375}{6.48/\sqrt{8}}=\frac{-5.375}{2.29}=-2.35\]
+
+<p><strong>Step 4: Evaluate.</strong>
+With $df = 7$, the critical value for a two-tailed test at $\alpha = 0.05$ is approximately $\pm 2.36$. Our $t = -2.35$ falls just short of the threshold ($p \approx 0.051$). The result is borderline—suggestive of a decline but not conclusive at conventional significance levels. In Excel, use <code class="language-plaintext highlighter-rouge">=T.TEST(before_range, after_range, 2, 1)</code> for a two-tailed paired test.</p>
+
+<p><strong>Interpretation.</strong>
+The average tract-level count declined by about 5.4 individuals, but substantial variation across tracts (some increased, most decreased) means we cannot rule out chance at the 5% level.</p>
+
+<p><em>Figure: A histogram of the eight tract-level differences would show most tracts declining, with two small increases, clustered around the mean change of about −5.</em></p>
+
+<p>We then compute:</p>
+
+\[\bar{D} = \text{mean difference}, \qquad
+s_D = \text{standard deviation of differences}.\]
+
+<p>The <em>t</em>-statistic is:</p>
+
+\[t=\frac{\bar{D}}{s_D/\sqrt{n}}\]
+
+<p>This method removes between-unit variability, dramatically increasing statistical power—especially
+when units vary widely at baseline, as they often do in service performance data.</p>
+
+<p>Freedman notes that such within-unit adjustments often outperform more complex models when carefully
+applied (Freedman 2007).</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> The paired test focuses on <em>change</em>, not levels.</p>
+</blockquote>
+
+<h2 id="why-paired-designs-are-powerful">Why Paired Designs Are Powerful</h2>
+
+<p>Paired tests are more sensitive than independent tests for three interconnected reasons, each of which matters in the administrative settings where these tests are most commonly applied.</p>
+
+<h3 id="1-they-remove-baseline-variability">1. They remove baseline variability</h3>
+
+<p>Neighbourhoods differ enormously at baseline—in demographics, population density, infrastructure age, reporting patterns, and the capacity of local service providers (City of Austin open data). An independent comparison of two groups of neighborhoods would have to contend with all of this heterogeneity, which inflates the denominator of the test statistic and makes it harder to detect genuine change. By comparing each neighborhood to itself before and after a change, the paired design removes this between-unit heterogeneity entirely. The only variation that remains is within-unit change over time, which is typically much smaller and more directly relevant to the policy question.</p>
+
+<h3 id="2-they-reduce-error-variance">2. They reduce error variance</h3>
+
+<p>The variance of differences is almost always smaller than the variance of levels:</p>
+
+\[\text{Var}(D_i)&lt;\text{Var}(X_{i,\text{before}})+\text{Var}(X_{i,\text{after}})\]
+
+<p>This inequality holds whenever the before and after measurements are positively correlated—which is nearly always the case in administrative data, because a neighborhood that was slow last year tends to be slow this year as well. The reduction in variance translates directly into a larger <em>t</em>-statistic for the same mean difference, improving the test’s ability to detect real change even in small samples.</p>
+
+<h3 id="3-they-increase-interpretability">3. They increase interpretability</h3>
+
+<p>Differences provide a clearer causal story than comparing two separate groups—an insight echoed in the causal inference literature (Angrist &amp; Imbens 1996; Freedman 2007). When an analyst reports that the average neighborhood experienced a 2.3-minute improvement in response time, stakeholders can immediately grasp the magnitude and direction of change. By contrast, reporting that Group A’s mean was 8.1 minutes while Group B’s was 10.4 minutes invites questions about whether the groups were comparable to begin with. The within-unit framing of paired designs aligns naturally with the before-and-after logic that policymakers and managers use when evaluating reforms.</p>
+
+<p>These advantages make paired designs essential for policy evaluation, program assessment, and
+performance monitoring under OMB guidelines.</p>
+
+<h2 id="assumptions-of-the-paired-t-test">Assumptions of the Paired <em>t-Test</em></h2>
+
+<p>The paired <em>t</em>-test has fewer assumptions than its independent counterpart, but three remain
+critical:</p>
+
+<h3 id="1-differences-are-independently-sampled">1. Differences are independently sampled</h3>
+
+<p>Each unit’s change should not influence another unit’s change. In practice, this means that one neighborhood’s improvement in response time should not mechanically cause a neighboring area to improve or deteriorate. Independence can be violated when resources are reallocated across units—for example, if staffing gains at one EMS station come at the expense of another—or when geographic spillover effects operate, as when a crackdown on one block displaces activity to adjacent blocks. Analysts should consider whether the administrative process that generated the data creates dependencies among the paired differences.</p>
+
+<h3 id="2-differences-are-approximately-normal">2. Differences are approximately normal</h3>
+
+<p>Because the Central Limit Theorem applies to averages, moderately sized samples yield robust results even when individual differences are not perfectly normal (Ross 2014). However, administrative differences—particularly in skewed service metrics such as response times or processing durations—may depart substantially from normality in small samples. Graphical inspection in the spirit of Tukey’s exploratory data analysis is essential: a histogram or normal probability plot of the differences can reveal heavy tails, outliers, or asymmetry that would undermine the test’s validity. When normality is severely violated and the sample is small, nonparametric alternatives such as the Wilcoxon signed-rank test provide a more reliable inference.</p>
+
+<h3 id="3-matched-pairs-are-correctly-aligned">3. Matched pairs are correctly aligned</h3>
+
+<p>Misalignment creates misleading inferences, especially in multi-agency data systems where unit identifiers change over time. If a city reorganizes its EMS districts between the before and after periods, the “same” station number may refer to a different geographic area, rendering the paired comparison meaningless. Similarly, census tract boundaries are occasionally redrawn between decennial censuses, so tracts that share a FIPS code across two ACS cycles may not cover identical populations. Analysts must verify that the pairing variable genuinely links the same unit across both measurement occasions before computing differences.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> The paired test reduces assumptions—but makes data alignment essential.</p>
+</blockquote>
+
+<h2 id="effect-sizes-for-paired-data">Effect Sizes for Paired Data</h2>
+
+<p>Effect size quantifies the magnitude of change.<br />
+The most common measure is:</p>
+
+\[d=\frac{\bar{D}}{s_D}\]
+
+<p>Cohen’s <em>d</em> for paired designs.</p>
+
+<p>Interpretation depends on:</p>
+
+<ul>
+  <li>operational thresholds (e.g., minutes of EMS response time (Texas DSHS EMS data)),</li>
+  <li>measurement error (ACS margins of error (U.S. Census ACS)),</li>
+  <li>underlying variability in baseline service levels,</li>
+  <li>neighborhood context.</li>
+</ul>
+
+<p>Visualization principles emphasize showing effect sizes graphically to facilitate
+interpretation.</p>
+
+<h2 id="applications-in-public-administration">Applications in Public Administration</h2>
+
+<h3 id="1-before-and-after-workflow-reform-311-requests">1. Before-and-After Workflow Reform (311 Requests)</h3>
+
+<p>Paired tests evaluate whether the same request categories experienced meaningful improvement after
+a workflow redesign (City of Austin open data).</p>
+
+<h3 id="2-ems-response-time-improvements">2. EMS Response Time Improvements</h3>
+
+<p>If the same stations are tracked across periods, paired tests measure within-station change
+(Texas DSHS EMS data).</p>
+
+<h3 id="3-inspection-duration-before-and-after-digital-forms">3. Inspection Duration Before and After Digital Forms</h3>
+
+<p>This is one of the most common and clearest use cases for paired tests.</p>
+
+<h3 id="4-budget-processing-times-across-fiscal-years">4. Budget Processing Times Across Fiscal Years</h3>
+
+<p>If the same divisions or staff are followed longitudinally, paired tests isolate performance trends.</p>
+
+<h3 id="5-acs-income-changes-over-time-at-the-census-tract-level">5. ACS Income Changes Over Time at the Census Tract Level</h3>
+
+<p>Tracking tracts from one ACS cycle to another yields natural pairs, especially when using margins of
+error to quantify uncertainty (U.S. Census ACS).</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Paired tests answer “Did this unit change?” Independent tests answer “Are these units different?”</p>
+</blockquote>
+
+<h2 id="robustness-and-model-checking">Robustness and Model Checking</h2>
+
+<p>Following Gelman and Hill’s advice on hierarchical and longitudinal data (Gelman &amp; Hill 2007),
+paired-data diagnostics should examine:</p>
+
+<ul>
+  <li>histograms of differences,</li>
+  <li>symmetric vs. skewed difference distributions,</li>
+  <li>outliers (Anscombe’s warning about summary statistics),</li>
+  <li>missingness patterns across time,</li>
+  <li>department- or neighborhood-level clustering.</li>
+</ul>
+
+<p>Freedman cautions that statistical models must align with institutional realities
+(Freedman 2007).<br />
+Thus, analysts should verify that units are comparable across periods and that changes do not
+reflect shifts in reporting rather than operational improvement.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<h3 id="1-treating-paired-samples-as-independent">1. Treating paired samples as independent</h3>
+
+<p>Doing so discards within-unit information and reduces power.</p>
+
+<h3 id="2-ignoring-measurement-error-across-periods">2. Ignoring measurement error across periods</h3>
+
+<p>Census MOEs, administrative coding shifts, and system upgrades affect comparability
+(U.S. Census ACS).</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> The Proposition B homeless counts are vulnerable to exactly this pitfall. Point-in-time counts depend on volunteer availability, weather conditions, and route coverage—all of which may have differed between the pre- and post-ban counts. If the second count used fewer volunteers or occurred during inclement weather, the observed decline in counts might reflect measurement differences rather than a genuine reduction in homelessness. Analysts must assess whether the measurement instrument was held constant across periods before interpreting paired differences.</p>
+</blockquote>
+
+<h3 id="3-misaligned-pairs">3. Misaligned pairs</h3>
+
+<p>If units shift boundaries (e.g., station reorganizations), comparisons become invalid.</p>
+
+<h3 id="4-using-p-values-without-effect-sizes">4. Using <em>p-values without effect sizes</em></h3>
+
+<p>Overstating the certainty of a result is a common error.<br />
+Effect sizes clarify practical relevance.</p>
+
+<h3 id="5-ignoring-neighborhood-structure">5. Ignoring neighborhood structure</h3>
+
+<p>Differences may reflect broader inequality patterns rather than interventions.</p>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ul>
+  <li>
+    <p>Using 311 request data, compute paired differences for completion times before and after a
+        workflow reform. Interpret change in the context of administrative process variation
+        (City of Austin open data).</p>
+  </li>
+  <li>
+    <p>Evaluate EMS response times across two periods using a paired <em>t</em>-test.
+        Graph the distribution of differences in the spirit of Tukey’s exploratory data analysis.</p>
+  </li>
+  <li>
+    <p>Using ACS median income estimates from two five-year cycles for a tract, compute paired
+        differences and incorporate margins of error into interpretation (U.S. Census ACS).</p>
+  </li>
+  <li>
+    <p>For inspection durations, compare paper vs. digital processing for the same inspectors.
+        Assess effect size and robustness using graphical diagnostics.</p>
+  </li>
+  <li>Critically evaluate a paired comparison published by a public agency using GAO data-quality
+        criteria and Freedman’s cautions about model assumptions
+        (Freedman 2007).</li>
+  <li>Using the EMS response time dataset, identify stations that appear in both 2022 and 2023 data. Compute the paired difference in average response time for each station. In Excel, use the Data Analysis ToolPak to run a paired <em>t</em>-test. Report results and discuss whether any observed improvement (or decline) could reflect changes in measurement rather than true operational change.</li>
+</ul>
+
+<h2 id="transition-to-chapter-eight">Transition to Chapter Eight</h2>
+
+<p>Paired <em>t</em>-tests evaluate within-unit change over time or across conditions.<br />
+But administrators often need to compare more than two periods, more than two conditions, or multiple
+groups simultaneously.<br />
+Chapter 8 introduces regression analysis, the framework for modeling relationships among multiple variables simultaneously.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa3311/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Analytical Techniques for Public Administration</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 3311 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

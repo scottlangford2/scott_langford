@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 8 | Analytical Techniques for Public Administration</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 8" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 3311 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 3311 textbook — Texas State University" />
+<meta property="og:site_name" content="Analytical Techniques for Public Administration" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 8" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 3311 textbook — Texas State University","headline":"Chapter 8","url":"/pa3311/docs/chapter8/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa3311/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/pa3311/feed.xml" title="Analytical Techniques for Public Administration" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa3311/">Analytical Techniques for Public Administration</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa3311/docs/chapter1/">Chapter 1</a><a class="page-link" href="/pa3311/docs/chapter2/">Chapter 2</a><a class="page-link" href="/pa3311/docs/chapter3/">Chapter 3</a><a class="page-link" href="/pa3311/docs/chapter4/">Chapter 4</a><a class="page-link" href="/pa3311/docs/chapter5/">Chapter 5</a><a class="page-link" href="/pa3311/docs/chapter6/">Chapter 6</a><a class="page-link" href="/pa3311/docs/chapter7/">Chapter 7</a><a class="page-link" href="/pa3311/docs/chapter8/">Chapter 8</a><a class="page-link" href="/pa3311/docs/chapter9/">Chapter 9</a><a class="page-link" href="/pa3311/docs/datasets/">Datasets</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 8</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="regression-analysis">Regression Analysis</h1>
+
+<blockquote>
+  <p><strong>Course dataset &amp; lab.</strong> Work this chapter’s techniques on our spine dataset — <a href="../datasets">Texas City Sales Panel</a>. Regress <code class="language-plaintext highlighter-rouge">sales_tax_alloc</code> on <code class="language-plaintext highlighter-rouge">taxable_sales</code>, then add a second predictor; see omitted-variable bias.</p>
+</blockquote>
+
+<h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+
+  <p><em>“All models are wrong, but some are useful.”</em></p>
+</blockquote>
+
+<p>George Box</p>
+
+<blockquote>
+
+  <p><em>“The greatest value of a picture is when it forces us to notice what we never expected to see.”</em></p>
+</blockquote>
+
+<p>John Tukey (Tukey 1977)</p>
+
+<p>Regression is the backbone of modern quantitative analysis in public administration.<br />
+It is used to forecast demand, evaluate equity, estimate performance, analyze neighborhood
+variation, and assess policy impact. Yet, as Box warns, regression models are approximations.
+Their value depends on thoughtful construction, careful diagnostics, and an understanding of the
+administrative systems from which data arise (Freedman 2007; Einav &amp; Levin 2014).</p>
+
+<p>This chapter introduces both simple and multiple regression—tools that transform raw data into
+structured, interpretable relationships while respecting uncertainty (Chapter 5).</p>
+
+<h2 id="opening-case-what-determines-a-texas-citys-credit-rating">Opening Case: What Determines a Texas City’s Credit Rating?</h2>
+
+<p>When Texas cities need to build roads, expand water systems, or renovate public buildings, they typically issue municipal bonds. The interest rate they pay depends heavily on their credit rating—a score assigned by agencies like Moody’s and Standard &amp; Poor’s that reflects the city’s fiscal health and repayment capacity. In reporting on municipal finance across Texas, the Texas Tribune documented how mid-size cities with similar populations sometimes received markedly different ratings, translating into borrowing cost differences of millions of dollars over the life of a bond (Texas Tribune).</p>
+
+<p>The natural analytical question is: which fiscal variables best predict a city’s creditworthiness? Candidates include the general fund balance as a share of expenditures, total debt relative to revenue, revenue diversification (the degree to which a city relies on a single source like property tax versus a mix of sales tax, fees, and intergovernmental transfers), population growth trajectory, and pension funding levels. A simple regression of credit rating on any single predictor—say, debt-to-revenue ratio—might show a strong negative relationship. But omitting pension obligations or fund balance from the model could bias the coefficient, because cities with high debt loads sometimes also have strong reserves that mitigate risk.</p>
+
+<p>This case sets up the core machinery of regression analysis. The outcome variable (credit rating or borrowing cost spread) is continuous. The predictors are multiple and potentially correlated. Omitted variable bias, multicollinearity, and the interpretation of “holding other variables constant” are not abstract concerns—they are the difference between a useful fiscal model and a misleading one.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>Which fiscal variables would you include in a regression model to predict a Texas city’s credit rating—and why?</li>
+  <li>If a simple regression of credit rating on debt-to-revenue ratio shows a strong negative relationship, what omitted variables might bias this estimate?</li>
+  <li>How would you interpret a coefficient that says “each additional percentage point of fund balance ratio is associated with a 0.3-point improvement in credit rating, holding other factors constant”?</li>
+</ul>
+
+<h2 id="why-regression-matters-in-public-administration">Why Regression Matters in Public Administration</h2>
+
+<p>Public-sector questions often involve relationships among variables:</p>
+
+<ul>
+  <li>Do call volumes predict 311 service delays? (City of Austin open data)</li>
+  <li>Do staffing levels influence EMS response times? (Texas DSHS EMS data)</li>
+  <li>Do neighborhood characteristics explain disparities in service delivery?
+        (Sampson 2012; Chetty et al. 2016)</li>
+  <li>Do economic indicators forecast revenue collections? (BLS)</li>
+  <li>Does digital recordkeeping reduce inspection duration?</li>
+</ul>
+
+<p>Regression analysis quantifies these relationships and provides tools for inference, prediction,
+and explanation (Gelman &amp; Hill 2007; Hastie et al. 2009).</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Regression links descriptive statistics, probability, and causality.</p>
+</blockquote>
+
+<h2 id="simple-linear-regression">Simple Linear Regression</h2>
+
+<p>The simplest regression model describes the relationship between an outcome $Y$ and a predictor $X$:</p>
+
+\[Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i.\]
+
+<p>Ordinary least squares (OLS) estimates coefficients that minimize squared differences between observed and predicted values.</p>
+
+<p>Interpretation:</p>
+
+<ul>
+  <li>$\beta_0$ — expected $Y$ when $X=0$.</li>
+  <li>$\beta_1$ — expected change in $Y$ for a one-unit change in $X$.</li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+  <li>Each additional 311 call is associated with added delay (City of Austin open data).</li>
+  <li>Each additional EMS staff member reduces response time (Texas DSHS EMS data).</li>
+  <li>Higher neighborhood disadvantage predicts longer delays (Sampson 2012).</li>
+</ul>
+
+<p>Interpreting regression coefficients requires care.<br />
+Freedman emphasizes that regression is a descriptive method unless strong assumptions support causal
+claims (Freedman 2007).</p>
+
+<h2 id="the-error-term">The Error Term</h2>
+
+<p>The error term $\varepsilon_i$ captures:</p>
+
+<ul>
+  <li>randomness in administrative processes (Einav &amp; Levin 2014),</li>
+  <li>omitted variables (weather, seasonality),</li>
+  <li>measurement error (GAO; U.S. Census ACS),</li>
+  <li>institutional variation across neighborhoods (Sampson 2012).</li>
+</ul>
+
+<p>Understanding the error structure is key to credible modeling.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> Regression models what you include—and hides what you omit.</p>
+</blockquote>
+
+<h2 id="from-simple-to-multiple-regression">From Simple to Multiple Regression</h2>
+
+<p>Simple regression observes the slope of one predictor.<br />
+But public-sector outcomes rarely depend on a single factor.</p>
+
+<p>Multiple regression models allow simultaneous analysis of several predictors:</p>
+
+\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_k X_{ki} + \varepsilon_i.\]
+
+<p>This framework isolates the relationship between each predictor and $Y$ while adjusting for confounding variables, improves the precision of estimated effects by accounting for additional sources of variation, and supports both policy analysis and forecasting by incorporating the multiple factors that jointly determine public-sector outcomes.</p>
+
+<p>Gelman and Hill argue that multivariable models are essential for understanding complex,
+multilevel public-sector processes (Gelman &amp; Hill 2007).</p>
+
+<h2 id="interpreting-coefficients-in-multiple-regression">Interpreting Coefficients in Multiple Regression</h2>
+
+<p>Each coefficient $\beta_j$ represents:</p>
+
+\[\text{the expected change in } Y \text{ for a one-unit increase in } X_j, \text{ holding all other variables constant}.\]
+
+<p>Examples:</p>
+
+<ul>
+  <li>Controlling for weather and staffing, does call volume still predict 311 delays?</li>
+  <li>Holding distance constant, does EMS staffing reduce response time?</li>
+  <li>Controlling for income, does housing tenure predict neighborhood variation 
+        in delays? (Sampson 2012)</li>
+  <li>Controlling for economic indicators, does population growth predict revenue? (BLS)</li>
+</ul>
+
+<p>This “all else equal” interpretation is powerful—but can mislead if important variables are omitted
+(Freedman 2007).</p>
+
+<h2 id="omitted-variable-bias-ovb">Omitted Variable Bias (OVB)</h2>
+
+<p>Omitting relevant predictors biases coefficients:</p>
+
+\[\hat{\beta}_1 = \beta_1 + \underbrace{\beta_2\,\frac{\text{Cov}(X_1, X_2)}{\text{Var}(X_1)}}_{\text{bias term}}.\]
+
+<p>This occurs when:</p>
+
+<ul>
+  <li>workload and staffing correlate,</li>
+  <li>neighborhood disadvantage correlates with municipal investment (Sampson 2012),</li>
+  <li>economic conditions correlate with revenues (BLS).</li>
+</ul>
+
+<p>Angrist and Imbens’s identification framework stresses that interpretation demands attention to such
+sources of confounding (Angrist &amp; Imbens 1996).</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> In the Texas city credit rating case, a simple regression of credit rating on debt-to-revenue ratio might show a strong negative coefficient. But cities with high debt often issued that debt to fund infrastructure that boosted economic growth and tax revenue—and they may also maintain substantial reserve funds precisely because they are fiscally sophisticated borrowers. Omitting fund balance ratio and revenue growth from the model would bias the debt coefficient, making high debt appear more harmful to creditworthiness than it actually is when accompanied by strong fiscal management.</p>
+</blockquote>
+
+<h3 id="worked-example-credit-ratings-and-fiscal-variables">Worked Example: Credit Ratings and Fiscal Variables</h3>
+
+<blockquote>
+  <p><strong>On course data:</strong> fund balance isn’t available in free public data. To reproduce an omitted-variable-bias story on the course dataset, use the 2022 finance cross-section and regress <code class="language-plaintext highlighter-rouge">total_debt_os</code> on <code class="language-plaintext highlighter-rouge">total_taxes</code>, then add <code class="language-plaintext highlighter-rouge">population</code> — the tax coefficient drops sharply because taxes and population are highly correlated.</p>
+</blockquote>
+
+<p>Consider data on 10 Texas cities. The two regression models estimated from these data are summarized below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Predictor</th>
+      <th>Model 1 (simple)</th>
+      <th>Model 2 (multiple)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept</td>
+      <td>104.2</td>
+      <td>78.5</td>
+    </tr>
+    <tr>
+      <td>Debt/Revenue</td>
+      <td>−52.3</td>
+      <td>−28.1</td>
+    </tr>
+    <tr>
+      <td>Fund Balance</td>
+      <td>—</td>
+      <td>0.95</td>
+    </tr>
+    <tr>
+      <td>$R^2$</td>
+      <td>0.93</td>
+      <td>0.97</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Coefficients are taken from the two model equations below; the underlying 10-city dataset is not reproduced here.</em></p>
+
+<p><strong>Model 1: Simple regression.</strong>
+Regressing credit score on debt-to-revenue ratio alone:</p>
+
+\[\widehat{\text{Score}} = 104.2 - 52.3 \times \text{Debt/Revenue} \qquad R^2 = 0.93\]
+
+<p>Each 0.10 increase in debt-to-revenue is associated with a 5.2-point decline in credit score. This looks like a strong, clean result.</p>
+
+<p><strong>Model 2: Multiple regression.</strong>
+Adding fund balance ratio:</p>
+
+\[\widehat{\text{Score}} = 78.5 - 28.1 \times \text{Debt/Revenue} + 0.95 \times \text{Fund Balance} \qquad R^2 = 0.97\]
+
+<p>The debt coefficient <em>drops from $-52.3$ to $-28.1$</em>. Why? Because debt-to-revenue and fund balance are negatively correlated: cities with high debt often have lower reserves. In Model 1, the debt coefficient absorbed part of the fund balance effect. This is OVB in action.</p>
+
+<p><strong>Interpretation.</strong>
+The simple regression overstated the harm of debt by nearly a factor of two. After controlling for fund balance, high debt still predicts lower credit scores, but the relationship is substantially weaker. A city manager who relied on Model 1 to argue against <em>any</em> borrowing would be misled. In Excel, use <code class="language-plaintext highlighter-rouge">Data Analysis &gt; Regression</code> to fit both models and compare coefficients.</p>
+
+<p><em>Figure: Scatterplot of credit score against debt-to-revenue ratio, with the Model 1 and Model 2 fitted regression lines overlaid.</em></p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> If you ignore a relevant variable, your regression will not ignore it—it will distort other coefficients.</p>
+</blockquote>
+
+<h2 id="categorical-predictors-dummy-variables">Categorical Predictors (Dummy Variables)</h2>
+
+<p>Many public-sector predictors are categorical rather than continuous: a neighborhood is urban or rural, an inspection follows paper or digital procedures, a service request falls into one of several department categories, and a fiscal year either precedes or follows a policy reform. Regression requires numerical inputs, so analysts convert categorical variables into indicator (or “dummy”) variables that take the value 1 when a unit belongs to a category and 0 otherwise.</p>
+
+<p>The simplest case involves a binary predictor. Consider a model of EMS response time that includes an urban-rural indicator:</p>
+
+\[\text{Urban}_i =
+\begin{cases}
+1 &amp; \text{if urban}\\
+0 &amp; \text{if rural}
+\end{cases}\]
+
+<p>In the regression $Y_i = \beta_0 + \beta_1 \text{Urban}_i + \varepsilon_i$, the intercept $\beta_0$ represents the average response time for rural units (where $\text{Urban} = 0$), and $\beta_1$ represents the average difference in response time between urban and rural units. If $\beta_1 = -3.2$, urban stations respond 3.2 minutes faster on average. When additional predictors are included in a multiple regression, $\beta_1$ becomes the urban-rural difference <em>holding those other variables constant</em>—a critical distinction for equity analysis.</p>
+
+<p>When a categorical variable has more than two levels, analysts create one dummy variable for each category except one, which serves as the reference group. For example, if service requests fall into four categories—infrastructure, animal control, code compliance, and parks—the analyst creates three dummy variables and omits one category (say, infrastructure) as the baseline. Each coefficient then represents the average difference between that category and the reference category, controlling for other predictors. The choice of reference group does not affect the model’s overall fit or predictions, but it does determine how coefficients are interpreted, so analysts should choose a reference group that provides the most meaningful comparisons for the policy question at hand.</p>
+
+<p>Dummy variables are essential for equity analysis in public administration. By including neighborhood demographic indicators as categorical predictors, analysts can estimate whether service delivery differs across community types after accounting for workload, staffing, and other operational factors—an approach consistent with the frameworks developed by Sampson and Chetty for studying structural inequities across neighborhoods (Sampson 2012; Chetty et al. 2016). In Excel, dummy variables are created by adding columns of 0s and 1s to the dataset before running Data Analysis $&gt;$ Regression.</p>
+
+<h2 id="interactions">Interactions</h2>
+
+<p>In a standard multiple regression, each predictor has the same effect on the outcome regardless of the values of the other predictors. But in many public-sector settings, the effect of one variable depends on the level of another. Interactions allow the analyst to model this dependence explicitly.</p>
+
+<p>An interaction term is constructed by multiplying two predictors together and including the product as an additional variable in the regression:</p>
+
+\[Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_1X_2 + \varepsilon.\]
+
+<p>In this model, the effect of $X_1$ on $Y$ is no longer simply $\beta_1$; it is $\beta_1 + \beta_3 X_2$, which changes depending on the value of $X_2$. Similarly, the effect of $X_2$ on $Y$ is $\beta_2 + \beta_3 X_1$. The coefficient $\beta_3$ captures how much the effect of one predictor changes per unit increase in the other.</p>
+
+<p>Consider a concrete example. Suppose an EMS analyst models response time as a function of staffing level and call volume, with an interaction between the two. The model might yield $\beta_{\text{staffing}} = -2.0$, $\beta_{\text{volume}} = 0.8$, and $\beta_{\text{staffing} \times \text{volume}} = -0.15$. The interpretation is that each additional staff member reduces response time by 2.0 minutes at average call volume, but the reduction is even larger during high-volume periods (because $-0.15$ is negative, higher volume amplifies the benefit of staffing). This finding would be invisible in a model without the interaction term, which would estimate a single, averaged staffing effect regardless of demand conditions.</p>
+
+<p>Interactions can also involve categorical predictors. If the analyst includes a dummy variable for whether a department has adopted digital recordkeeping and interacts it with workload, the model estimates separate workload slopes for digitally equipped and non-digital departments. This directly answers the question: does digital adoption change how workload affects processing time?</p>
+
+<p>Interpreting interactions requires care. The individual coefficients $\beta_1$ and $\beta_2$ no longer represent “main effects” in the usual sense; they represent the effect of each variable when the other variable equals zero. If zero is not a meaningful value for the interacted variable (for example, if no station has zero call volume), the individual coefficients may not have a useful substantive interpretation on their own. Analysts should center continuous variables (subtract the mean) before creating interaction terms to make the individual coefficients more interpretable. In Excel, create the interaction by adding a new column that multiplies the two predictor columns, then include all three columns—the two original predictors and the product—in the regression.</p>
+
+<h2 id="model-fit-and-evaluation">Model Fit and Evaluation</h2>
+
+<p>Standard metrics:</p>
+
+<h3 id="1-r2">1. $R^2$</h3>
+
+<p>Proportion of variance explained by the model.<br />
+But $R^2$ always rises with additional predictors.</p>
+
+<h3 id="2-adjusted-r2">2. Adjusted $R^2$</h3>
+
+<p>Penalizes unnecessary predictors—more appropriate for comparing models.</p>
+
+<h3 id="3-information-criteria">3. Information Criteria</h3>
+
+<p>AIC, BIC—useful for model comparison.</p>
+
+<h3 id="4-prediction-error">4. Prediction Error</h3>
+
+<p>Cross-validation methods (introduced in Hastie et al. 2009) help assess
+generalizability.</p>
+
+<blockquote>
+
+  <p><strong>Briefing:</strong> A good model explains the data without memorizing it.</p>
+</blockquote>
+
+<h2 id="diagnostics-in-multiple-regression">Diagnostics in Multiple Regression</h2>
+
+<p>Regression output is only as trustworthy as the assumptions behind it. Diagnostics are the tools analysts use to check whether those assumptions hold—and to determine what to do when they do not. Skipping diagnostics is one of the most common and consequential errors in applied work (Freedman 2007; Wooldridge 2019). The following subsections describe each major diagnostic, explain what a good result looks like versus a problematic one, and offer practical guidance for administrative data.</p>
+
+<h3 id="residual-plots-and-heteroskedasticity">Residual Plots and Heteroskedasticity</h3>
+
+<p>After fitting a regression, the analyst should plot the residuals (observed $y$ minus predicted $\hat{y}$) against the predicted values. In a well-specified model, this plot shows a random scatter of points around zero with roughly constant vertical spread. If the spread of residuals increases or decreases systematically as the predicted value changes—a pattern called heteroskedasticity—then the standard errors are unreliable, and confidence intervals and $p$-values may be misleading. In administrative data, heteroskedasticity is common: larger cities generate more variable outcomes than smaller ones, and high-volume departments show more spread in completion times than low-volume ones. When heteroskedasticity is present, the analyst should use robust (heteroskedasticity-consistent) standard errors, which are available in Excel’s regression output by using add-ins or computing them manually (Stock &amp; Watson 2019). In the credit rating example, one would expect residuals to be larger for mid-range cities (where fiscal characteristics vary widely) than for the strongest or weakest performers.</p>
+
+<p><em>Figure: Residuals-versus-fitted plot illustrating a fan-shaped pattern characteristic of heteroskedasticity.</em></p>
+
+<h3 id="qq-plots-for-normality">QQ-Plots for Normality</h3>
+
+<p>A quantile-quantile (QQ) plot compares the distribution of residuals to the theoretical normal distribution. If residuals are approximately normal, the points fall close to a 45-degree line. Departures at the tails—points curving away from the line at the extremes—indicate heavy tails or skewness. While regression coefficients remain unbiased even when residuals are non-normal (provided the sample is large enough for the Central Limit Theorem to apply), confidence intervals and hypothesis tests based on the $t$-distribution assume approximate normality. In administrative data, non-normality is common because operational processes produce right-skewed distributions with occasional extreme values. When the QQ-plot reveals substantial departures, the analyst might consider transforming the dependent variable (e.g., using the natural logarithm of response time rather than response time itself) or relying on bootstrapped standard errors (Agresti 2018).</p>
+
+<h3 id="variance-inflation-factors-vif">Variance Inflation Factors (VIF)</h3>
+
+<p>Multicollinearity arises when two or more predictors are highly correlated, making it difficult to isolate the independent effect of each. The VIF quantifies this problem: a VIF of 1 indicates no collinearity, values between 1 and 5 are generally acceptable, and values above 10 signal serious concern (Wooldridge 2019). In the credit rating model, debt-to-revenue ratio and fund balance are negatively correlated (cities with high debt often have low reserves), which inflates both variables’ VIFs and widens their confidence intervals. When VIF is high, the analyst should consider dropping one of the correlated predictors, combining them into an index, or accepting that the individual coefficients are imprecise while the overall model fit ($R^2$) remains valid. In Excel, VIF can be computed by regressing each predictor on all other predictors and calculating $\text{VIF}_j = \frac{1}{1 - R_j^2}$.</p>
+
+<h3 id="outliers-and-leverage-points">Outliers and Leverage Points</h3>
+
+<p>Not all observations exert equal influence on the regression line. An outlier has an unusual $y$-value given its $x$-values; a high-leverage point has an unusual combination of $x$-values. A point that is both an outlier and high-leverage can disproportionately pull the regression line toward itself, distorting coefficients for the entire model (Anscombe 1973). In the credit rating analysis, Houston (the largest city by population) may exert substantial leverage simply because its fiscal characteristics are far from the average Texas city’s. The analyst should examine Cook’s distance (a combined measure of outlier status and leverage) and consider whether influential observations reflect genuine data or errors. Removing an observation should be a last resort, justified by substantive reasoning rather than statistical convenience.</p>
+
+<h3 id="nonlinearity">Nonlinearity</h3>
+
+<p>OLS regression assumes a linear relationship between each predictor and the outcome. Scatterplots of $y$ against each $x$ (and of residuals against each $x$) help detect nonlinear patterns (Cleveland 1993). If the relationship between debt ratio and credit score is not linear—for example, if credit scores decline slowly at low debt but rapidly at high debt—then a linear model will systematically over-predict at the extremes and under-predict in the middle. Remedies include adding polynomial terms (e.g., debt-ratio-squared), using logarithmic transformations, or fitting a piecewise linear model with different slopes above and below a threshold.</p>
+
+<h3 id="clustering-and-dependence">Clustering and Dependence</h3>
+
+<p>Administrative datasets often have hierarchical structure: schools within districts, neighborhoods within cities, months within years. When observations within a cluster are more similar to each other than to observations in other clusters, standard errors from OLS are too small, producing misleadingly narrow confidence intervals and artificially significant $p$-values (Gelman &amp; Hill 2007). Clustered standard errors (available in statistical software, though not directly in Excel’s Data Analysis ToolPak) adjust for this dependence. At minimum, the analyst should acknowledge the clustering structure and note that standard errors may be underestimated.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> In the credit rating model, a comprehensive diagnostic review would proceed as follows. First, plot residuals against predicted credit scores to check for heteroskedasticity—expect wider residuals for mid-range cities. Second, examine the QQ-plot; credit scores are bounded, so residuals may show light tails. Third, compute VIF for debt ratio and fund balance; if VIF exceeds 5, consider an index combining both. Fourth, check Cook’s distance for Houston, Dallas, and San Antonio, which may dominate the regression. Each diagnostic informs whether the model’s conclusions about fiscal predictors can be trusted—and what adjustments to make when they cannot.</p>
+</blockquote>
+
+<h2 id="applications-in-public-administration">Applications in Public Administration</h2>
+
+<h3 id="1-modeling-311-delays">1. Modeling 311 Delays</h3>
+
+<p>A city’s 311 system generates thousands of service requests per month, and regression provides the framework for understanding why some requests take days while others take weeks. An analyst might regress completion time on call volume per department, staffing levels during the relevant shift, time of day, request category, and neighborhood characteristics such as population density or housing age. The resulting model can reveal, for example, that each additional 50 requests in a department’s weekly queue is associated with a 1.4-day increase in average completion time, holding staffing constant. Such a finding gives a department director a concrete basis for requesting temporary staff during high-volume periods. Without regression, the director would be left arguing from anecdote rather than evidence (City of Austin open data).</p>
+
+<h3 id="2-ems-response-time-models">2. EMS Response Time Models</h3>
+
+<p>Emergency medical services operate under strict time constraints where minutes can determine patient outcomes, making regression an essential tool for identifying which operational factors drive performance. A multiple regression model might include distance from the nearest station to the incident, the number of paramedics on duty, call severity (as classified by the dispatcher), time of day, and day of week. Results from such a model could show that distance is the dominant predictor in rural counties while staffing levels matter more in urban settings where distances are short but call volumes are high. These findings inform resource allocation decisions: a county that discovers staffing is the binding constraint can focus on hiring, while one where distance dominates may benefit more from adding a satellite station (Texas DSHS EMS data).</p>
+
+<h3 id="3-equity-evaluation">3. Equity Evaluation</h3>
+
+<p>Regression is one of the most powerful tools available for detecting and documenting structural inequities in public service delivery. An analyst examining whether neighborhoods with higher poverty rates experience longer 311 completion times can regress completion time on poverty rate while controlling for request type, department workload, and seasonal demand. If the poverty-rate coefficient remains positive and statistically significant after these controls, the finding suggests that the disparity is not simply a byproduct of request mix or staffing cycles but may reflect deeper structural or operational patterns that warrant further investigation. Sampson’s research on neighborhood effects and Chetty’s work on spatial inequality both demonstrate that such disparities tend to persist across time and policy regimes, making regression-based equity audits a recurring need rather than a one-time exercise (Sampson 2012; Chetty et al. 2016).</p>
+
+<h3 id="4-budget-forecasting">4. Budget Forecasting</h3>
+
+<p>Municipal revenue depends on a web of economic indicators that interact in complex ways, and multiple regression allows budget analysts to model these relationships simultaneously. A forecasting model for sales tax revenue might include regional employment levels, consumer confidence indices, population growth, inflation rates, and seasonal indicators. By estimating how each predictor contributes to revenue while holding the others constant, the model produces forecasts that are more accurate and more transparent than single-indicator projections. A budget office that relies on population growth alone, for example, might overestimate revenue during a recession when employment drops even as the population continues to grow. The multiple regression approach forces the analyst to account for these competing forces explicitly (BLS).</p>
+
+<h3 id="5-administrative-process-improvement">5. Administrative Process Improvement</h3>
+
+<p>Regression helps administrators identify which operational changes actually improve efficiency and which are merely correlated with improvement. Consider an agency that recently adopted digital recordkeeping for building inspections. A regression of inspection duration on digital adoption (coded as a dummy variable), inspector experience, workload per inspector, building complexity, and shift schedule can isolate the effect of digital tools from confounding factors. If experienced inspectors adopted digital tools first, a simple before-and-after comparison would overstate the technology’s benefit by conflating it with inspector skill. The regression model separates these effects, potentially revealing that digital tools reduce inspection time by 12 minutes on average but that inspector experience has an even larger effect. Such findings help an agency decide whether to invest further in technology, in training, or in both (Einav &amp; Levin 2014; GAO).</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<h3 id="1-overinterpreting-coefficients">1. Overinterpreting Coefficients</h3>
+
+<p>A regression coefficient describes an association between a predictor and an outcome, not a causal effect. When an analyst reports that higher neighborhood poverty rates are associated with longer 311 completion times, this does not mean that poverty <em>causes</em> delays; poverty may be correlated with infrastructure age, staffing patterns, or reporting behavior, any of which could be the actual driver. Freedman emphasizes that causal claims require design-based arguments—randomization, natural experiments, or instrumental variables—that go well beyond what OLS regression alone provides (Freedman 2007). Analysts should use language such as “is associated with” or “predicts” rather than “causes” or “leads to” unless the research design supports stronger claims.</p>
+
+<h3 id="2-multicollinearity">2. Multicollinearity</h3>
+
+<p>When two or more predictors are highly correlated, the regression has difficulty separating their individual contributions, resulting in inflated standard errors and unstable coefficients. In the credit rating model, for example, debt-to-revenue ratio and fund balance ratio are strongly negatively correlated; including both in the model may produce large standard errors for each, even though the model as a whole fits well. Analysts should check VIFs and consider whether combining correlated predictors into an index or dropping one is more appropriate than retaining both with imprecise estimates.</p>
+
+<h3 id="3-ovb">3. OVB</h3>
+
+<p>When a relevant predictor is left out of the model, the coefficients on the included variables absorb its effect, producing biased estimates. This is not a minor technical concern; it can reverse the apparent direction of a relationship. If an analyst models EMS response time as a function of call volume alone but omits distance (which is correlated with both volume and response time), the call-volume coefficient will be biased in the direction of distance’s effect (Angrist &amp; Imbens 1996). The OVB formula introduced earlier in this chapter provides a way to anticipate the direction and magnitude of this distortion, and analysts should always ask what important variables their data do not contain.</p>
+
+<h3 id="4-incorrect-functional-form">4. Incorrect Functional Form</h3>
+
+<p>OLS assumes a linear relationship between each predictor and the outcome, but many administrative relationships are nonlinear. The effect of staffing on response time, for instance, may diminish at high staffing levels (adding the 20th paramedic helps less than adding the 5th), producing a curved relationship that a linear model will misrepresent. Tukey’s emphasis on exploratory data analysis—plotting residuals, examining scatterplots of each predictor against the outcome—helps detect such misspecification before it distorts conclusions (Tukey 1977). Remedies include logarithmic transformations, polynomial terms, or piecewise linear models.</p>
+
+<h3 id="5-ignoring-design-effects">5. Ignoring Design Effects</h3>
+
+<p>When regression models use data from complex survey designs—such as the ACS or BLS surveys—standard OLS standard errors are typically too small because they ignore the clustering, stratification, and weighting built into the survey design. An analyst who treats ACS tract-level estimates as simple observations without accounting for their margins of error will produce artificially narrow confidence intervals and overstate the precision of regression coefficients (U.S. Census ACS; BLS). At minimum, analysts should report the margins of error associated with their data sources and discuss how survey design limitations affect the reliability of their regression results.</p>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ul>
+  <li>
+    <p>Fit a simple regression of 311 delay on call volume.<br />
+        Extend to multiple regression with neighborhood disadvantage and staffing 
+        (City of Austin open data; Sampson 2012).</p>
+  </li>
+  <li>
+    <p>Model EMS response times using distance, staffing, and call severity.<br />
+        Conduct diagnostic checks (Texas DSHS EMS data; Tukey 1977).</p>
+  </li>
+  <li>
+    <p>Use ACS data to model tract-level income using education, unemployment, and housing 
+        characteristics (U.S. Census ACS).<br />
+        Interpret coefficients in light of margins of error.</p>
+  </li>
+  <li>
+    <p>Evaluate whether digital reforms reduce inspection time after adjusting for workload and 
+        staff experience (Einav &amp; Levin 2014; GAO).</p>
+  </li>
+  <li>Compare models using adjusted $R^2$ and discuss uncertainty using Manski’s framework
+        (Manski 2019).</li>
+  <li>Download the voter turnout dataset from the <a href="../datasets">Course Datasets page</a>. In Excel, use Data Analysis $&gt;$ Regression to regress county-level turnout rate on population size. Record the coefficient, $R^2$, and $p$-value. Then add a second predictor (election type, coded as 1 = general, 0 = primary). Compare the two models: How does the population coefficient change? What does this tell you about OVB?</li>
+</ul>
+
+<h2 id="transition-to-chapter-nine">Transition to Chapter Nine</h2>
+
+<p>Multiple regression allows analysts to model complex relationships among many variables.<br />
+But public-sector data often exhibit nested structures—residents in neighborhoods, officers in 
+precincts, units in districts.<br />
+Chapter 9 integrates all the tools developed in this course, which extend 
+regression to these rich administrative contexts.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa3311/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Analytical Techniques for Public Administration</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 3311 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+outcome,measure_age,program_pct,program_n,program_count,comparison_pct,comparison_n,comparison_count,source
+Graduated from a regular high school,40,65,58,38,45,65,29,Schweinhart et al. 2005
+Earned $20000 or more per year,40,60,58,35,40,65,26,Schweinhart et al. 2005
+Arrested five or more times,40,36,58,21,55,65,36,Schweinhart et al. 2005
+IQ of 90 or above,5,67,58,39,28,65,18,Schweinhart et al. 2005

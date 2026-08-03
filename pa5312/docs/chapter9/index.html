@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 9: Interrupted Time Series and Regression Discontinuity | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 9: Interrupted Time Series and Regression Discontinuity" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter9/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter9/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 9: Interrupted Time Series and Regression Discontinuity" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 9: Interrupted Time Series and Regression Discontinuity","url":"https://scottlangford2.github.io/pa5312/docs/chapter9/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 9: Interrupted Time Series and Regression Discontinuity</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“The regression discontinuity design has the attractive feature that the treatment assignment is known.”
+— Guido Imbens and Thomas Lemieux, <em>Journal of Econometrics</em> (2008)</p>
+</blockquote>
+
+<blockquote>
+  <p>“When the data have a structure, exploit the structure.”
+— adapted teaching maxim</p>
+</blockquote>
+
+<h2 id="opening-case-a-drinking-age-threshold-and-a-vote-center-interruption">Opening Case: A Drinking-Age Threshold and a Vote-Center Interruption</h2>
+
+<p>Consider two real evaluation problems that share nothing on the surface but call for the same family of tools. The first comes from one of the most-cited natural experiments in public health. In the United States, almost nothing about a person changes overnight when they turn 21 — except that it becomes legal to buy alcohol. Christopher Carpenter and Carleton Dobkin (2009) realized that this sharp age threshold is, in effect, an experiment: people who are 20 years and 11 months old are essentially identical to people who are 21 years and 1 month old, save for legal access to alcohol. Comparing mortality rates <em>just below</em> and <em>just above</em> the 21st birthday, they found a discrete jump in deaths — especially from motor-vehicle crashes, suicides, and alcohol-related causes — at exactly age 21. The cutoff did the work that randomization does in an experiment.</p>
+
+<p>The second problem is our own. A Texas county adopts countywide vote centers in a particular election year. Its turnout had been following some trajectory across prior presidential elections; the question is whether adoption <em>bent</em> that trajectory — produced a jump, a change in slope, or both — at the moment the policy took effect. There is no obvious comparison county the analysts fully trust, so they lean on the county’s own turnout history as the counterfactual: what would turnout have done had the prior trend simply continued?</p>
+
+<p>These two situations call for two distinct designs. The drinking-age threshold is the textbook setting for <strong>regression discontinuity (RDD)</strong>, which compares units on either side of an arbitrary cutoff. The vote-center adoption is a natural fit for <strong>interrupted time series (ITS)</strong>, which models whether the level and slope of an outcome changed at a known moment of intervention. Both rest on assumptions as specific as their geometry, and both can be built in Excel.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>How can a single series, interrupted at a known date, support a causal claim without any comparison group?</li>
+  <li>What does a cutoff on a running variable buy you, and why does it resemble a local experiment?</li>
+  <li>What are the identifying assumptions of each design, and what can each genuinely show?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Many of the most consequential public interventions arrive at a known moment (a law’s effective date, a campaign launch) or are assigned by a sharp rule (an eligibility score, a population threshold that triggers a mandate). When you can pin down that moment or that threshold, you gain causal leverage that ordinary regression cannot match — because the <em>timing</em> or the <em>rule</em> is plausibly unrelated to everything else driving the outcome. Interrupted time series and regression discontinuity are the two designs that exploit this structure. They are powerful precisely where difference-in-differences struggles: when there is no good comparison group, or when assignment follows a bright administrative line.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch9_its_rd.svg" alt="Two schematic panels: an interrupted time series with a level jump at the intervention, and a regression discontinuity with a jump at a cutoff." />
+<figcaption><span class="fig-label">Figure 9.1.</span> Two sharp designs. An interrupted time series looks for a break in a trend at the moment of intervention; a regression discontinuity compares units just above and just below a cutoff. Both approximate an experiment locally, and both require a sharp, non-manipulated rule.</figcaption>
+</figure>
+
+<h2 id="interrupted-time-series">Interrupted Time Series</h2>
+
+<h3 id="modeling-a-level-and-slope-change">Modeling a Level and Slope Change</h3>
+
+<p>Interrupted time series (ITS) uses the pre-intervention trajectory of an outcome as the counterfactual for the post-intervention period. Let \(T_t\) be a time counter (\(1, 2, 3, \ldots\)) running across all periods, let \(\text{Post}_t = 1\) after the intervention and 0 before, and let \(T^{*}_t\) count the periods since the intervention (0 before it, then \(1, 2, 3, \ldots\) after). The model is</p>
+
+\[Y_t = \beta_0 + \beta_1 T_t + \beta_2 \text{Post}_t + \beta_3 T^{*}_t + \varepsilon_t\]
+
+<p>where \(T^{*}_t\) counts periods since the intervention, <strong>restarting at 1</strong> in the first post-period (\(0,0,\ldots,0,1,2,3,\ldots\)). It is <em>not</em> the raw product \(T_t \times \text{Post}_t\): because \(T_t\) keeps counting from the start of the series, that product would jump to the intervention’s global time value (e.g., \(5,6,7\) rather than \(1,2,3\)) and would contaminate the level-change term \(\beta_2\). Each coefficient has a distinct interpretation:</p>
+
+<ul>
+  <li>\(\beta_0\): the outcome’s level at the start of the series (intercept).</li>
+  <li>\(\beta_1\): the <strong>pre-intervention slope</strong> — the trend that was already underway.</li>
+  <li>\(\beta_2\): the <strong>immediate level change</strong> at the moment of intervention (a jump or drop).</li>
+  <li>\(\beta_3\): the <strong>change in slope</strong> after the intervention — does the trend steepen, flatten, or reverse?</li>
+</ul>
+
+<p>The genius of ITS is that it tests two things at once: did the outcome shift suddenly (\(\beta_2\)), and did its trajectory change going forward (\(\beta_3\))? A program might cause a one-time drop with no change in trend, a trend change with no immediate jump, or both.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> ITS separates a level change from a slope change. Always report both \(\beta_2\) and \(\beta_3\) — a campaign that produces a temporary dip but no lasting trend change is a very different story from one that bends the long-run path.</p>
+</blockquote>
+
+<h3 id="identifying-assumptions-and-threats">Identifying Assumptions and Threats</h3>
+
+<p>ITS assumes that, absent the intervention, the pre-intervention trend would have continued unchanged. The central threat is a <strong>co-occurring event</strong> (history): anything else that happened at the same time as the intervention is indistinguishable from it. A classic real illustration is the federal 55-mph National Maximum Speed Limit imposed in 1974: highway fatalities dropped sharply that year, but the 1973–74 oil embargo cut driving at the same moment, so an ITS on fatalities alone cannot cleanly separate the speed limit from the fuel shock. For our case, if a high-profile contested statewide race coincided with a county’s vote-center adoption, ITS could not separate the policy from the election’s own mobilizing effect. Other threats include <strong>seasonality</strong> (many monthly series have strong seasonal swings that can masquerade as a slope change unless modeled), <strong>autocorrelation</strong> (errors in adjacent periods are correlated, which understates standard errors), and too few post-intervention periods to estimate a slope reliably. ITS also cannot rule out a gradual confounding trend that merely happens to coincide with the intervention date.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> ITS has no separate comparison group — the pre-period trend <em>is</em> the comparison. Its credibility rests entirely on the claim that nothing else changed at the same moment.</p>
+</blockquote>
+
+<h3 id="worked-example-a-vote-center-interruption-in-the-county-panel">Worked Example: A Vote-Center Interruption in the County Panel</h3>
+
+<p>We frame a single county’s vote-center adoption (Case B) as an interruption in its turnout series, using the <strong>Texas County Panel</strong>. Pick a county that adopted countywide vote centers in a known election year, and pull its turnout across the panel’s presidential elections (2000–2024). Lay the turnout values in column A (<code class="language-plaintext highlighter-rouge">turnout</code>, the outcome \(Y\)), with the election year in an adjacent column for reference. In column B, enter <code class="language-plaintext highlighter-rouge">time</code> as a simple counter <code class="language-plaintext highlighter-rouge">1, 2, 3, …</code> for the successive elections. In column C, enter <code class="language-plaintext highlighter-rouge">post</code>: 0 for elections before adoption and 1 from the adoption year onward (use <code class="language-plaintext highlighter-rouge">=IF(year&gt;=adopt_year,1,0)</code>). In column D, enter <code class="language-plaintext highlighter-rouge">time_post</code> (\(T^{*}_t\)) as a counter that restarts at 1 at adoption: <code class="language-plaintext highlighter-rouge">=IF(C2=1, N(D1)+1, 0)</code> — that is, if the row is a post-adoption election, take one more than the cell above; otherwise 0. This yields <code class="language-plaintext highlighter-rouge">0</code> before adoption and then <code class="language-plaintext highlighter-rouge">1, 2, 3, …</code> counting elections since adoption. (Do <strong>not</strong> use <code class="language-plaintext highlighter-rouge">=B2*C2</code>: multiplying the running time counter by <code class="language-plaintext highlighter-rouge">post</code> would give <code class="language-plaintext highlighter-rouge">5, 6, 7, …</code> instead of <code class="language-plaintext highlighter-rouge">1, 2, 3, …</code> and would bias the level-change coefficient.)</p>
+
+<p>Run <strong>Data → Data Analysis → Regression</strong> with <em>Input Y Range</em> = <code class="language-plaintext highlighter-rouge">turnout</code> and <em>Input X Range</em> = the three contiguous columns <code class="language-plaintext highlighter-rouge">time</code>, <code class="language-plaintext highlighter-rouge">post</code>, <code class="language-plaintext highlighter-rouge">time_post</code>. Excel returns a coefficient table with the four ITS terms. Read each one against its meaning rather than memorizing a number:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>What it estimates</th>
+      <th>How to read it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept (\(\beta_0\))</td>
+      <td>Turnout level at the start of the series</td>
+      <td>The baseline anchor at <code class="language-plaintext highlighter-rouge">time</code> = 1</td>
+    </tr>
+    <tr>
+      <td>time (\(\beta_1\))</td>
+      <td>Pre-adoption trend per election</td>
+      <td>Was turnout already rising or falling?</td>
+    </tr>
+    <tr>
+      <td>post (\(\beta_2\))</td>
+      <td>Immediate level change at adoption</td>
+      <td>A one-time jump or drop at the adoption year</td>
+    </tr>
+    <tr>
+      <td>time_post (\(\beta_3\))</td>
+      <td>Change in slope after adoption</td>
+      <td>Did the trend steepen, flatten, or reverse?</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The reading is a story in two parts: the sign and size of \(\beta_2\) tell you whether turnout <em>jumped</em> the first election after vote centers arrived, and \(\beta_3\) tells you whether the longer-run <em>trajectory</em> changed. A policy might cause a one-time bump with no lasting trend change, a gradual trend change with no immediate jump, or both. To visualize, plot <code class="language-plaintext highlighter-rouge">turnout</code> against <code class="language-plaintext highlighter-rouge">time</code> as a scatter, then add the fitted line; the line should show a kink at the adoption election. Because a single county has very few elections (at most seven in this panel), treat any post-adoption slope as imprecise — this is exactly the “too few post-periods” caution below.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case (Part 1):</strong> Report the county’s estimated level change (\(\beta_2\)) and slope change (\(\beta_3\)) at vote-center adoption, but flag two limits before anyone acts on it: with only a handful of elections the post-adoption slope is poorly pinned down, and any statewide swing in that same election (a presidential blowout, a registration drive) is baked into the estimate because ITS has no separate comparison group.</p>
+</blockquote>
+
+<h2 id="regression-discontinuity">Regression Discontinuity</h2>
+
+<h3 id="assignment-by-a-cutoff">Assignment by a Cutoff</h3>
+
+<p>Regression discontinuity (RDD) applies when treatment is assigned by whether a continuous <strong>running variable</strong> \(X\) crosses a known <strong>cutoff</strong> \(c\). Units with \(X \geq c\) get the program; units with \(X &lt; c\) do not. The key insight is that units just above and just below \(c\) are nearly identical — a person who just turned 21 is, on every other dimension, essentially the same as one a month short of 21 — yet one can legally buy alcohol and the other cannot. Near the cutoff, treatment is <strong>as good as randomly assigned</strong> (Imbens and Lemieux, 2008). Carpenter and Dobkin (2009) exploited exactly this with the minimum legal drinking age: plotting mortality against age in months, they documented a clear upward jump in deaths right at the 21st birthday, attributable to newly legal alcohol access. A second canonical example is Angrist and Lavy’s (1999) study of class size in Israeli schools, which used <strong>Maimonides’ rule</strong> — a centuries-old maximum of 40 students per class that forces a second class to open once enrollment crosses a multiple of 40. Crossing a multiple of 40 does not <em>deterministically</em> set class size (administrators keep some discretion), so the induced jumps at 41, 81, and 121 students are used as an <em>instrument</em> for class size rather than as a hard cutoff — a <strong>fuzzy</strong> regression discontinuity (defined below), the close cousin of the sharp design. With that caveat, Angrist and Lavy estimated the effect of smaller classes on test scores, finding that smaller classes raised achievement. The estimated effect in any RDD is the jump in the outcome exactly at the cutoff:</p>
+
+\[\hat{\tau}_{RDD} = \lim_{x \downarrow c} E[Y \mid X = x] - \lim_{x \uparrow c} E[Y \mid X = x]\]
+
+<p>In practice we fit a regression that allows a discontinuity at \(c\). Center the running variable as \(\tilde{X} = X - c\) so the cutoff sits at zero, define \(D = 1\) if \(X \geq c\), and fit a local linear model within a window (bandwidth) around the cutoff:</p>
+
+\[Y_i = \alpha_0 + \tau D_i + \gamma \tilde{X}_i + \delta \left( D_i \times \tilde{X}_i \right) + \varepsilon_i\]
+
+<p>Here \(\tau\) is the RDD effect — the vertical gap between the two fitted lines at \(\tilde{X} = 0\). The \(\gamma\) term lets the outcome trend with the running variable, and the interaction \(\delta\) lets the slope differ on either side of the cutoff.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> RDD estimates a <em>local</em> effect — the impact for units right at the cutoff. It says nothing about districts far above 60 percent or far below it. The price of its credibility is its narrow reach.</p>
+</blockquote>
+
+<h3 id="identifying-assumptions-and-threats-1">Identifying Assumptions and Threats</h3>
+
+<p>RDD’s core assumption is <strong>continuity</strong>: absent the program, the relationship between the outcome and the running variable would be smooth (continuous) at the cutoff, so any jump must be caused by the program. The drinking-age design is unusually clean here because no one can manipulate their own age to clear the threshold — a key reason the Carpenter–Dobkin result is so credible. Continuity breaks down when units <em>can</em> manipulate the running variable to land on the favorable side — for example, if a city could massage a reported figure to clear a threshold that triggers a benefit. The standard diagnostic is to check for <strong>bunching</strong>: plot a histogram of the running variable and look for a suspicious pile-up just above the cutoff (McCrary’s test formalizes this). A second threat is choosing a <strong>bandwidth</strong> that is too wide (pulling in dissimilar units and biasing the estimate) or too narrow (too few observations, huge standard errors). A third is any <strong>other rule</strong> that changes at the same cutoff, which would be confounded with the program.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> If units can choose which side of the cutoff to land on, RDD is dead. Always plot the density of the running variable and look for bunching at the threshold before trusting the estimate.</p>
+</blockquote>
+
+<h3 id="worked-example-a-population-mandate-cutoff-in-excel">Worked Example: A Population-Mandate Cutoff in Excel</h3>
+
+<p>Texas occasionally ties requirements to population thresholds. Suppose a fiscal-reporting mandate applies only to cities above 25,000 residents, and we use the <strong>Texas City Finance Panel</strong> (Case A) to estimate its effect on per-capita sales-tax revenue. The running variable is <code class="language-plaintext highlighter-rouge">population</code>, the cutoff is \(c = 25{,}000\), and we restrict to cities within a bandwidth (say 20,000–30,000). This is a <strong>sharp</strong> RD: the mandate applies to every city at or above 25,000 by law, so crossing the cutoff determines treatment with certainty. When a cutoff instead only <em>raises the probability</em> of treatment — some units above the line are exempt, some below comply — the design is a <strong>fuzzy</strong> RD, and the effect is recovered by dividing the jump in the outcome by the jump in the treatment rate at the cutoff (the instrument logic behind Maimonides’ rule above). Fuzzy RD needs tools beyond this Excel treatment; recognizing which kind you have is the essential first step.</p>
+
+<p>Build the columns: <code class="language-plaintext highlighter-rouge">revenue</code> (\(Y\)); <code class="language-plaintext highlighter-rouge">pop_centered</code> = <code class="language-plaintext highlighter-rouge">=population-25000</code>; <code class="language-plaintext highlighter-rouge">D</code> = <code class="language-plaintext highlighter-rouge">=IF(population&gt;=25000,1,0)</code>; and the interaction <code class="language-plaintext highlighter-rouge">D_x</code> = <code class="language-plaintext highlighter-rouge">=D * pop_centered</code>. Filter the sheet to the bandwidth window first. Then run <strong>Data → Data Analysis → Regression</strong> with <em>Input Y Range</em> = <code class="language-plaintext highlighter-rouge">revenue</code> and <em>Input X Range</em> = the three contiguous columns <code class="language-plaintext highlighter-rouge">D</code>, <code class="language-plaintext highlighter-rouge">pop_centered</code>, <code class="language-plaintext highlighter-rouge">D_x</code>. Read the four coefficients against their meaning:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>What it estimates</th>
+      <th>How to read it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept (\(\alpha_0\))</td>
+      <td>Outcome at the cutoff, just below it</td>
+      <td>Predicted revenue at <code class="language-plaintext highlighter-rouge">population</code> = 25,000 from below</td>
+    </tr>
+    <tr>
+      <td>D (\(\tau\))</td>
+      <td>The discontinuity at the cutoff</td>
+      <td><strong>The RDD effect</strong> — the jump in revenue at 25,000</td>
+    </tr>
+    <tr>
+      <td>pop_centered (\(\gamma\))</td>
+      <td>Slope in the running variable</td>
+      <td>How revenue trends with population within the window</td>
+    </tr>
+    <tr>
+      <td>D_x (\(\delta\))</td>
+      <td>Difference in slope above vs. below</td>
+      <td>Lets the two sides of the cutoff have different slopes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="language-plaintext highlighter-rouge">D</code> coefficient (\(\tau\)) is the estimated jump in per-capita revenue at the 25,000 threshold — the RDD effect, the vertical gap between the two fitted lines at the cutoff. Before trusting whatever value Excel returns, build a histogram of <code class="language-plaintext highlighter-rouge">population</code> near 25,000 (Excel: select the column, <strong>Insert → Statistic Chart → Histogram</strong>, set bin width) and confirm there is no bunching just above the line — just as the Carpenter–Dobkin design is trustworthy precisely because no one manipulates their age past 21. Then re-estimate with a narrower bandwidth (e.g., 22,000–28,000) to check that \(\tau\) is stable; a result that swings wildly with the bandwidth is fragile.</p>
+
+<blockquote>
+  <p><strong>Returning to the Case (Part 2):</strong> The drinking-age and class-size studies show the design at its most credible — a cutoff no one can game (age), or an old administrative rule that shifts treatment cleanly enough to serve as an instrument (Maimonides’ 40-student maximum, a <em>fuzzy</em> cutoff). For any Texas threshold mandate, the same recipe applies: center the running variable at the cutoff, define the treatment dummy, fit the local linear model, and — critically — check for bunching at the threshold before reporting the discontinuity as the program’s effect.</p>
+</blockquote>
+
+<h3 id="the-modern-rd-standard-a-readers-checklist">The Modern RD Standard: A Reader’s Checklist</h3>
+
+<p>The Excel recipe above teaches the <em>logic</em> of RDD — center the running variable, allow a jump, allow different slopes on each side. When you read a serious RD study, or commission one, professional practice has settled on a short list of things a credible design should do. You will not implement these in a spreadsheet; the tools live in Stata and R. But you should be able to look at a published RD figure and table and check the boxes.</p>
+
+<ul>
+  <li><strong>Local linear, not a high-order global polynomial.</strong> Early RD work sometimes fit a wiggly fourth- or fifth-degree curve across the whole range of the running variable and read the jump off where those curves met the cutoff. That practice is now discouraged, because a flexible global curve can manufacture or hide a jump depending on points far from the threshold. The standard is a simple straight line fit <em>locally</em>, using only observations near the cutoff (Calonico, Cattaneo, and Titiunik, 2014; Cattaneo, Idrobo, and Titiunik, 2020, 2024).</li>
+  <li><strong>A data-driven optimal bandwidth.</strong> Rather than eyeballing the window, modern methods pick the bandwidth by a formula that trades off bias (a wide window pulls in dissimilar units) against variance (a narrow window has too few observations). The bandwidth-sensitivity check in the worked example is the hand version of this idea.</li>
+  <li><strong>Robust, bias-corrected confidence intervals.</strong> Estimating right at a boundary introduces a subtle bias; the current standard reports confidence intervals that correct for it (Calonico, Cattaneo, and Titiunik, 2014). Expect the study to report a <em>range</em>, not just a point.</li>
+  <li><strong>A density (manipulation) check on the running variable.</strong> This is the formal version of the bunching histogram: a test for whether units piled up on the favorable side of the cutoff, which would mean they gamed their position and break the design (McCrary, 2008; Cattaneo, Jansson, and Ma, 2020).</li>
+</ul>
+
+<blockquote>
+  <p><strong>Briefing:</strong> When judging an RD study, look for four things: a local <em>straight-line</em> fit (not a high-order global polynomial), a data-driven bandwidth, robust bias-corrected confidence intervals, and a density test for manipulation at the cutoff. Their absence is a warning sign.</p>
+</blockquote>
+
+<h2 id="synthetic-control-building-a-comparison-unit-when-you-have-only-one">Synthetic Control: Building a Comparison Unit When You Have Only One</h2>
+
+<p>Difference-in-differences and its modern cousins assume you have a pool of comparison units. But some of the biggest policy questions involve a <em>single</em> treated unit — one state passes a law, one city launches a program — and no other unit is a convincing stand-in on its own. <strong>Synthetic control</strong>, introduced conceptually here for awareness rather than for Excel implementation, offers an ingenious answer: instead of picking one comparison unit, <em>build</em> one.</p>
+
+<p>The idea is to construct a <strong>“synthetic” comparison</strong> as a weighted average of the untreated units, choosing the weights so that the synthetic unit closely tracks the treated unit’s outcome <em>before</em> the policy took effect. If a synthetic California — some blend of other states — matches real California’s pre-policy trajectory well, then its <em>post</em>-policy path is a credible estimate of what California would have done without the policy, and the gap between real and synthetic California is the estimated effect. The canonical application is California’s Proposition 99, a 1988 tobacco-control law: Abadie (2021) reviews how a synthetic California, assembled from states that did not pass such laws, tracked actual cigarette sales closely before 1988 and then diverged after, implying the law reduced smoking. It is DiD’s spirit — compare a treated path to a constructed counterfactual — adapted to the one-treated-unit case. A newer hybrid, <strong>synthetic difference-in-differences</strong>, combines the weighting idea of synthetic control with the differencing logic of DiD (Arkhangelsky, Athey, Hirshberg, Imbens, and Wager, 2021).</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> When only one unit gets the policy, synthetic control <em>builds</em> a comparison from a weighted blend of untreated units matched to the treated unit’s pre-policy history — the California tobacco law is the textbook case. Know it exists; it is run in Stata or R, not Excel.</p>
+</blockquote>
+
+<h2 id="what-each-design-can-and-cannot-show">What Each Design Can and Cannot Show</h2>
+
+<p>ITS can show whether an outcome’s level and trend changed at a known moment, using the series’ own history as the counterfactual — but it cannot, on its own, separate the intervention from anything else that happened at the same time (the 55-mph limit and the oil embargo are the cautionary pair). RDD can show a credible <em>local</em> causal effect for units right at a cutoff, rivaling an experiment in that narrow band — Carpenter and Dobkin’s mortality jump at age 21 is the textbook case — but it cannot tell you the effect for units far from the threshold, and it collapses if units manipulate their position. Both are sharp tools for specific structures, not all-purpose estimators.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>ITS with too few post-periods.</strong> Estimating a post-intervention slope from three or four observations gives a number with no real precision — a live risk for the Case B county series, which has at most seven elections.</li>
+  <li><strong>Ignoring seasonality and autocorrelation in ITS.</strong> Monthly public-safety or fiscal series swing seasonally; an unmodeled cycle can masquerade as a slope change.</li>
+  <li><strong>Confounding the intervention with a co-occurring event.</strong> In ITS, anything else that changed on the same date is baked into the estimate — the 1974 speed limit could not be cleanly separated from the simultaneous oil embargo.</li>
+  <li><strong>Skipping the bunching check in RDD.</strong> If you never plot the density of the running variable, you cannot claim continuity.</li>
+  <li><strong>Extrapolating an RDD estimate far from the cutoff.</strong> The effect is local; do not report it as the program’s average effect for everyone.</li>
+  <li><strong>Non-contiguous X columns in the ToolPak.</strong> As always, the X variables must sit in adjacent columns.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>ITS setup (Case B).</strong> Using the county panel, pick a county that adopted countywide vote centers in a known year, construct the <code class="language-plaintext highlighter-rouge">time</code>, <code class="language-plaintext highlighter-rouge">post</code>, and <code class="language-plaintext highlighter-rouge">time_post</code> columns across its presidential elections, and run the ITS regression. Interpret \(\beta_2\) (level change) and \(\beta_3\) (slope change) in plain language, and note why the small number of elections limits precision.</li>
+  <li><strong>ITS visualization.</strong> Plot the county’s turnout series with a fitted line and mark the adoption election. In two sentences, describe whether the picture shows a level change, a slope change, both, or neither.</li>
+  <li><strong>RDD setup.</strong> Using the city finance panel and a population cutoff of 25,000, build <code class="language-plaintext highlighter-rouge">pop_centered</code>, <code class="language-plaintext highlighter-rouge">D</code>, and <code class="language-plaintext highlighter-rouge">D_x</code>, restrict to a bandwidth, and estimate \(\tau\). Report the discontinuity.</li>
+  <li><strong>Bunching check.</strong> Make a histogram of <code class="language-plaintext highlighter-rouge">population</code> near 25,000. State whether you see evidence of manipulation and what it would imply for the design — contrasting it with why age (Carpenter &amp; Dobkin 2009) cannot be manipulated.</li>
+  <li><strong>Bandwidth sensitivity.</strong> Re-run the RDD with a wider and a narrower bandwidth. Report how \(\tau\) changes and what that tells you about the estimate’s robustness.</li>
+</ol>
+
+<h2 id="transition-to-chapter-10">Transition to Chapter 10</h2>
+
+<p>Chapters 7 through 9 have built a ladder of evaluation designs — covariate-adjusted regression, difference-in-differences, interrupted time series, and regression discontinuity — each trading on a different assumption to approximate the experimental ideal. Chapter 10 steps back to weigh them against one another: given a particular program, a particular dataset, and a particular policy question, which design is most credible, and how do you communicate both the estimate and its limits to decision-makers who did not take this course? The methods are only as good as the honesty with which you report what they can and cannot prove.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -7,5 +7,5 @@ category: teaching
 
 An open-source online textbook for undergraduate public administration students learning research design, statistics, and applied data analysis. Built for PA 3311 at Texas State University but freely available to anyone.
 
-- **Live site:** [scottlangford2.github.io/pa3311-textbook](https://scottlangford2.github.io/pa3311-textbook/)
+- **Live site:** [scottlangford.com/pa3311](https://scottlangford.com/pa3311/)
 - **Source:** [github.com/scottlangford2/pa3311-textbook](https://github.com/scottlangford2/pa3311-textbook)

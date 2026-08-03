@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Chapter 7: Regression for Evaluation | Program Evaluation and Administrative Statistical Analysis</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Chapter 7: Regression for Evaluation" />
+<meta name="author" content="Dr. W. Scott Langford" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PA 5312 textbook — Texas State University" />
+<meta name="twitter:description" property="og:description" content="PA 5312 textbook — Texas State University" />
+<link rel="canonical" href="https://scottlangford2.github.io/pa5312/docs/chapter7/" />
+<meta property="og:url" content="https://scottlangford2.github.io/pa5312/docs/chapter7/" />
+<meta property="og:site_name" content="Program Evaluation and Administrative Statistical Analysis" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chapter 7: Regression for Evaluation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Dr. W. Scott Langford"},"description":"PA 5312 textbook — Texas State University","headline":"Chapter 7: Regression for Evaluation","url":"https://scottlangford2.github.io/pa5312/docs/chapter7/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/pa5312/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://scottlangford2.github.io/pa5312/feed.xml" title="Program Evaluation and Administrative Statistical Analysis" /><script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pa5312/">Program Evaluation and Administrative Statistical Analysis</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pa5312/docs/chapter1/">Ch 1</a><a class="page-link" href="/pa5312/docs/chapter2/">Ch 2</a><a class="page-link" href="/pa5312/docs/chapter3/">Ch 3</a><a class="page-link" href="/pa5312/docs/chapter4/">Ch 4</a><a class="page-link" href="/pa5312/docs/chapter5/">Ch 5</a><a class="page-link" href="/pa5312/docs/chapter6/">Ch 6</a><a class="page-link" href="/pa5312/docs/chapter7/">Ch 7</a><a class="page-link" href="/pa5312/docs/chapter8/">Ch 8</a><a class="page-link" href="/pa5312/docs/chapter9/">Ch 9</a><a class="page-link" href="/pa5312/docs/chapter10/">Ch 10</a><a class="page-link" href="/pa5312/docs/chapter11/">Ch 11</a><a class="page-link" href="/pa5312/docs/chapter12/">Ch 12</a><a class="page-link" href="/pa5312/docs/datasets/">Data</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Chapter 7: Regression for Evaluation</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="epigraphs">Epigraphs</h2>
+
+<blockquote>
+  <p>“All models are wrong, but some are useful.”
+— George E. P. Box</p>
+</blockquote>
+
+<blockquote>
+  <p>“Empirical work in economics is like detective work.”
+— Joshua Angrist and Jörn-Steffen Pischke, <em>Mostly Harmless Econometrics</em> (2009)</p>
+</blockquote>
+
+<h2 id="opening-case-explaining-county-turnout-in-texas-case-b">Opening Case: Explaining County Turnout in Texas (Case B)</h2>
+
+<p>As Texas counties weigh adopting countywide vote centers, your team is asked a deceptively simple question: what explains why some counties turn out to vote at higher rates than others? Before you can credibly estimate whether <em>vote centers</em> raise turnout, you need to understand the background factors that move turnout up or down on their own — income, education, and the like — so that you do not mistake a county’s prosperity for a policy’s effect. Using the <strong>Texas County Panel</strong> (Case B) filtered to the 2020 presidential election (254 counties), you set out to model turnout as a function of county characteristics.</p>
+
+<p>A first-year analyst runs the numbers and reports back, a little deflated: median household income and the percentage of adults with a bachelor’s degree together explain only about <strong>8 percent</strong> of the variation in county turnout (\(R^2 \approx 0.08\)). “The model barely fits,” she says. “Maybe demographics just don’t matter for turnout.” You read the result differently. A low \(R^2\) does not mean the coefficients are wrong, and — more important for what comes later — a <em>high</em> \(R^2\) would not have meant you had found a causal effect. Down the hall, a colleague modeling Case A’s economic-development sales tax has the opposite situation: regressing a city’s per-capita sales-tax allocation on its taxable sales yields an \(R^2\) of about <strong>0.94</strong> — a near-perfect fit — yet that tight fit reveals nothing about whether the <em>tax</em> caused anything. The two results, side by side, teach the lesson of this chapter: regression is a tool for adjustment and description, and its goodness of fit is a separate question from whether it has isolated a program’s effect.</p>
+
+<p>To use regression as an evaluation tool, you need to do more than predict turnout. You need to compare counties (or cities, or workers) that received a program to those that did not, <em>as if</em> they were similar on measured background characteristics. Regression is the workhorse for exactly that — and this chapter is equally clear about where it stops.</p>
+
+<p><strong>Guiding Questions</strong></p>
+
+<ul>
+  <li>What does it mean to “control for” a variable, and how does covariate adjustment change an estimated program effect?</li>
+  <li>How do we use a dummy variable for treatment inside a regression to estimate an adjusted effect?</li>
+  <li>Why is regression adjustment <em>not</em> the same thing as a randomized experiment, and what is omitted-variable bias?</li>
+</ul>
+
+<h2 id="why-this-chapter-matters">Why This Chapter Matters</h2>
+
+<p>Most program data you will ever encounter come from the world as it is, not from a controlled experiment. People select into programs; agencies target services to the neediest or the most promising; policies roll out where the politics allow. In all of these situations, the groups you are comparing differ in ways that have nothing to do with the program itself. Regression is the most common, most flexible, and most misunderstood tool for handling that problem. Used carefully, it lets you estimate a program effect that is adjusted for measured differences between groups. Used carelessly, it produces confident numbers that are simply wrong. The cautionary benchmark for this whole chapter is the National Supported Work (NSW) job-training experiment (Case C): its randomized estimate of the program’s effect on earnings was <strong>+$1,794</strong>, but a naive observational comparison to a survey sample yielded <strong>−$8,498</strong> — the sign flipped (LaLonde 1986; Dehejia &amp; Wahba 1999). Regression with controls, as we will see, narrows but does not close that gap. This chapter builds the tool from the ground up and is equally clear about where it stops.</p>
+
+<h2 id="from-the-regression-line-to-multiple-regression">From the Regression Line to Multiple Regression</h2>
+
+<h3 id="the-simple-regression-line">The Simple Regression Line</h3>
+
+<p>Start with one outcome and one predictor. Suppose \(Y\) is a county’s voter turnout rate and \(X\) is its median household income. The simple linear regression model is</p>
+
+\[Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i\]
+
+<p>where \(i\) indexes counties, \(\beta_0\) is the <strong>intercept</strong>, \(\beta_1\) is the <strong>slope</strong>, and \(\varepsilon_i\) is the error term capturing everything about turnout that income does not explain. Ordinary least squares (OLS) chooses the line that minimizes the sum of squared vertical distances between each point and the line:</p>
+
+\[\min_{\beta_0,\beta_1} \sum_{i=1}^{n} \left( Y_i - \beta_0 - \beta_1 X_i \right)^2\]
+
+<p>The <strong>slope</strong> \(\beta_1\) is the heart of the interpretation: a one-unit increase in \(X\) is associated with a \(\beta_1\)-unit change in \(Y\), on average. The <strong>intercept</strong> \(\beta_0\) is the predicted value of \(Y\) when \(X = 0\) — sometimes meaningful, often just a mathematical anchor.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> A regression slope is a comparison of conditional means. “For counties that differ by $10,000 in median income, predicted turnout differs by \(10{,}000 \times \beta_1\)” is the honest way to read it — an association, not yet a cause.</p>
+</blockquote>
+
+<h3 id="goodness-of-fit-r-squared">Goodness of Fit: R-squared</h3>
+
+<p>How much of the variation in \(Y\) does the line capture? The coefficient of determination is</p>
+
+\[R^2 = 1 - \frac{\sum_i (Y_i - \hat{Y}_i)^2}{\sum_i (Y_i - \bar{Y})^2}\]
+
+<p>where \(\hat{Y}_i\) is the predicted value and \(\bar{Y}\) is the sample mean. \(R^2\) ranges from 0 to 1 and reports the share of the variance in the outcome explained by the model. A high \(R^2\) does not mean you have found a causal effect, and a low \(R^2\) does not mean your estimated effect is wrong. For evaluation, the slope on the treatment variable matters far more than the overall fit.</p>
+
+<h3 id="multiple-regression-and-controlling-for">Multiple Regression and “Controlling For”</h3>
+
+<p>Now add more predictors. With \(k\) regressors,</p>
+
+\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_k X_{ki} + \varepsilon_i\]
+
+<p>The interpretation of each slope changes in a crucial way. Each \(\beta_j\) now measures the association between \(X_j\) and \(Y\) <strong>holding the other variables fixed</strong>. This is what “controlling for” means: \(\beta_1\) describes how \(Y\) differs across units that have the same values of \(X_2, \ldots, X_k\) but differ in \(X_1\). Algebraically, multiple regression first strips out the part of \(X_1\) that the other regressors can explain, and relates only the leftover variation to \(Y\). That is why we say the effect is “net of” or “adjusted for” the controls.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> “Controlling for” a variable means comparing units that look the same on that variable. It removes the part of the group difference that is explained by the measured controls — and only the part that is measured.</p>
+</blockquote>
+
+<h2 id="estimating-a-program-effect-with-a-treatment-dummy">Estimating a Program Effect with a Treatment Dummy</h2>
+
+<p>To turn regression into an evaluation tool, define a <strong>treatment indicator</strong> (dummy variable) \(D_i\) that equals 1 if unit \(i\) received the program and 0 otherwise. The model becomes</p>
+
+\[Y_i = \beta_0 + \tau D_i + \beta_1 X_{1i} + \cdots + \beta_k X_{ki} + \varepsilon_i\]
+
+<p>The coefficient \(\tau\) on the treatment dummy is the <strong>adjusted program effect</strong>: the average difference in the outcome between treated and untreated units that have the same values of the control variables \(X_1, \ldots, X_k\). Without controls, \(\tau\) would simply reproduce the raw difference in means. With controls, \(\tau\) answers a sharper question: among units that look alike on the things we measured, how much higher is the outcome for the treated group?</p>
+
+<p>This same machinery handles a <strong>binary</strong> outcome. When \(Y_i\) is coded 0/1 — did the child graduate (Perry, Case E), was the client employed — regressing it on a treatment dummy is a <em>linear probability model</em>, and \(\tau\) is read directly as a change in probability: it recovers exactly the <strong>risk difference</strong> of Chapter 5. Regressing Perry’s 0/1 graduation outcome on its treatment indicator, with no controls, returns \(\tau \approx 0.21\) — the same 21-percentage-point gap the two-proportion test found. Regression does not require a dollar-valued outcome; it simply lets you <em>add covariates</em> to a comparison you could already run.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> The treatment dummy’s coefficient \(\tau\) is your headline number. Report it with its standard error, and always say which covariates it is adjusted for — the adjustment set defines what the estimate means.</p>
+</blockquote>
+
+<h2 id="worked-example-modeling-county-turnout-in-the-county-panel">Worked Example: Modeling County Turnout in the County Panel</h2>
+
+<p>We model voter turnout as a function of county characteristics, using the <strong>Texas County Panel</strong> (Case B) filtered to the 2020 presidential election — 254 counties, one row each. Lay the data out in columns: column A <code class="language-plaintext highlighter-rouge">turnout</code> (the outcome \(Y\), expressed as a proportion), column B <code class="language-plaintext highlighter-rouge">income_1k</code> (median household income in $1,000s), column C <code class="language-plaintext highlighter-rouge">pct_ba</code> (percent of adults with a bachelor’s degree).</p>
+
+<p>Enable the <strong>Analysis ToolPak</strong> (File → Options → Add-ins → Manage Excel Add-ins → Go → check <em>Analysis ToolPak</em>). Then choose <strong>Data → Data Analysis → Regression</strong>. Set the <em>Input Y Range</em> to the <code class="language-plaintext highlighter-rouge">turnout</code> column (including the header) and the <em>Input X Range</em> to the two columns B:C together (the X variables must be contiguous). Check <em>Labels</em>, check <em>Confidence Level 95%</em>, and choose an output cell. Excel returns the regression table. The key portion looks like this (real estimates from the 2020 county cross-section):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Coefficient</th>
+      <th>Std. Error</th>
+      <th>t Stat</th>
+      <th>P-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intercept (\(\beta_0\))</td>
+      <td>0.425</td>
+      <td>0.018</td>
+      <td>23.6</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>income_1k (\(\beta_1\))</td>
+      <td>0.0017</td>
+      <td>0.0005</td>
+      <td>3.40</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <td>pct_ba (\(\beta_2\))</td>
+      <td>0.0022</td>
+      <td>0.0007</td>
+      <td>3.14</td>
+      <td>0.002</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The fitted model is</p>
+
+\[\widehat{\text{turnout}} = 0.425 + 0.0017 \times \text{income\_1k} + 0.0022 \times \text{pct\_ba}\]
+
+<p>with \(R^2 \approx 0.08\). Read the coefficients in the units of the data. The <code class="language-plaintext highlighter-rouge">income_1k</code> slope says that comparing two counties that differ by $1,000 in median household income but have the same education level, predicted turnout differs by about <strong>0.0017</strong> (0.17 of a percentage point); a $10,000 income gap maps to roughly <strong>1.7</strong> percentage points. The <code class="language-plaintext highlighter-rouge">pct_ba</code> slope says that a one-percentage-point increase in adults with a bachelor’s degree, holding income constant, is associated with about <strong>0.0022</strong> higher turnout. Both coefficients are distinguishable from zero (P-values of 0.001 and 0.002).</p>
+
+<p>The headline, though, is the <em>fit</em>: \(R^2 \approx 0.08\). Income and education together explain only about <strong>8 percent</strong> of the variation in county turnout. The lesson is twofold. First, a low \(R^2\) does <strong>not</strong> mean the model is wrong or the coefficients are meaningless — these two associations are real and precisely estimated; they simply leave most of the county-to-county variation in turnout (driven by political culture, competitiveness of races, mobilization, and much else) unexplained. Second, and more important for evaluation: adding a couple of demographic controls and noting that they “matter” does <strong>not</strong> purge a comparison of selection bias. We return to that warning below.</p>
+
+<p>For contrast, a colleague modeling Case A regresses each Texas city’s 2022 per-capita economic-development sales-tax allocation on its taxable sales and obtains predicted <code class="language-plaintext highlighter-rouge">sales_tax_alloc</code> \(\approx \$2{,}460{,}000 + 0.0057 \times \text{taxable\_sales}\), with \(R^2 \approx 0.94\). That is a near-mechanical fit — allocation is, by formula, a fixed fraction of taxable sales — and it illustrates the flip side of the lesson: an enormous \(R^2\) tells you the model predicts well, not that any variable <em>caused</em> anything. Goodness of fit and causal identification are different questions.</p>
+
+<p>To verify Excel’s slope by hand for a single regressor, recall that \(\hat{\beta}_1 = \text{SLOPE}(Y\text{-range}, X\text{-range})\) and \(\hat{\beta}_0 = \text{INTERCEPT}(Y\text{-range}, X\text{-range})\) reproduce the ToolPak’s simple-regression coefficients exactly. <code class="language-plaintext highlighter-rouge">=RSQ(Y,X)</code> returns the simple \(R^2\).</p>
+
+<blockquote>
+  <p><strong>Returning to the Case:</strong> Report to your team that income and education are each genuinely associated with county turnout, but together explain only about 8 percent of it — so a vote-center evaluation cannot lean on these covariates to “control away” the differences between adopting and non-adopting counties. To estimate the <em>policy’s</em> effect, you would add a vote-center treatment dummy and the best pre-treatment controls you have; but, as the next section warns, the controls you can name are never the whole story.</p>
+</blockquote>
+
+<h2 id="omitted-variable-bias-why-adjustment-is-not-an-experiment">Omitted-Variable Bias: Why Adjustment Is Not an Experiment</h2>
+
+<p>Regression controls only for variables you actually include. Anything that (a) affects the outcome and (b) differs systematically between treated and untreated units, but is left out of the model, contaminates the treatment coefficient. This is <strong>omitted-variable bias (OVB)</strong>. Formally, if the true model includes an omitted variable \(W\) with coefficient \(\gamma\), and you leave it out, the expected value of your treatment estimate is</p>
+
+\[E[\hat{\tau}] = \tau + \gamma \, \delta\]
+
+<p>where \(\delta\) is the slope from regressing the omitted \(W\) on the treatment \(D\) (and the included controls). The bias term \(\gamma\,\delta\) vanishes only if the omitted variable does not affect the outcome (\(\gamma = 0\)) or is unrelated to treatment given the controls (\(\delta = 0\)). The NSW job-training experiment (Case C) is the definitive demonstration. When LaLonde (1986) compared the program’s trainees to a survey comparison group — even adjusting for age, education, race, and prior earnings with regression — the estimate came out around <strong>−$8,498</strong>, implying the program <em>cut</em> earnings, against the experimental truth of <strong>+$1,794</strong> (Dehejia &amp; Wahba 1999). The omitted factors that sorted people into NSW (long-term welfare history, weak labor-market attachment, motivation) lowered earnings independently of the program and were concentrated in the trainee group, so the bias term swamped the real effect. Adding the controls you can measure narrowed the gap but did not fix the sign.</p>
+
+<blockquote>
+  <p><strong>Briefing:</strong> The sign of omitted-variable bias is the sign of \(\gamma \times \delta\). Ask of any leftover variable: does it raise the outcome, and is it more common in the treated group? If both point the same way, your estimate is biased upward. In NSW the omitted variables pointed <em>down</em>, which is why a real, beneficial program looked harmful.</p>
+</blockquote>
+
+<p>This is the deep reason regression adjustment is not equivalent to a randomized experiment. Randomization makes the treated and untreated groups statistically identical on <em>everything</em> — measured and unmeasured — so there are no systematically omitted variables. Regression can only balance the variables you can name and measure. Latent motivation, prior labor-market attachment, local economic shocks, and unrecorded eligibility rules all remain potential confounders. This is exactly why the Case B turnout model’s small set of controls — and its low \(R^2\) — cannot rescue a vote-center comparison from selection: the counties that adopt vote centers may differ from those that do not in ways income and education never capture. Shadish, Cook, and Campbell (2002) call this the central trade-off of observational work: you can adjust for what you observe, but you must argue, not assume, that nothing important is left out.</p>
+
+<figure class="fig">
+<img src="/pa5312/assets/figures/ch7_ovb.svg" alt="Path diagram: program X affects outcome Y, while an omitted confounder Z affects both, creating a back-door path." />
+<figcaption><span class="fig-label">Figure 7.1.</span> Omitted-variable bias. Regression estimates the effect of the program (X) on the outcome (Y), but an unmeasured confounder (Z) that affects both opens a back-door path. Controlling only for what you measured leaves Z in the estimate — which is why adjustment is not the same as randomization.</figcaption>
+</figure>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li><strong>Treating \(R^2\) as a measure of causal success.</strong> A model can have a high \(R^2\) and a hopelessly biased treatment coefficient (Case A’s allocation model fits at \(R^2 \approx 0.94\) yet identifies nothing causal), and a low \(R^2\) like Case B’s 0.08 does not make its real associations wrong. Judge the design, not the fit.</li>
+  <li><strong>Controlling for a post-treatment variable.</strong> If a control is itself affected by the program (a “bad control”), adjusting for it can absorb part of the very effect you are trying to measure. Use only covariates measured <em>before</em> treatment.</li>
+  <li><strong>Reading the intercept as meaningful when \(X=0\) is impossible.</strong> The 0.425 intercept in the Case B model is the predicted turnout “at zero income and zero college share” — a mathematical anchor, not a real county.</li>
+  <li><strong>Putting non-contiguous X columns into the ToolPak.</strong> Excel requires the X variables to sit in adjacent columns; rearrange your sheet first or the regression will silently use the wrong data.</li>
+  <li><strong>Claiming causation from adjustment alone.</strong> “Controlling for” is not “holding constant in an experiment.” State explicitly which confounders you could <em>not</em> address.</li>
+</ul>
+
+<h2 id="practice-and-application">Practice and Application</h2>
+
+<ol>
+  <li><strong>Simple regression by hand and by ToolPak.</strong> In the Case B county panel’s 2020 cross-section, regress <code class="language-plaintext highlighter-rouge">turnout</code> on <code class="language-plaintext highlighter-rouge">income_1k</code> using both <code class="language-plaintext highlighter-rouge">=SLOPE()</code>/<code class="language-plaintext highlighter-rouge">=INTERCEPT()</code> and the Data Analysis ToolPak. Confirm the coefficients match, and interpret the slope in one sentence in the units of the data.</li>
+  <li><strong>Adding a control.</strong> Add <code class="language-plaintext highlighter-rouge">pct_ba</code> to the model from Exercise 1 to reproduce the worked-example fit (\(\widehat{\text{turnout}} = 0.425 + 0.0017\,\text{income\_1k} + 0.0022\,\text{pct\_ba}\), \(R^2 \approx 0.08\)). Report how the income slope changes and explain, in terms of “controlling for,” why it moved.</li>
+  <li><strong>Treatment dummy.</strong> Create a dummy equal to 1 for counties above the median in <code class="language-plaintext highlighter-rouge">pct_ba</code> and 0 otherwise (a stand-in “treatment”). Regress turnout on the dummy alone, then add income and population as controls. Report the adjusted coefficient and its P-value, and explain why this is <em>not</em> a credible vote-center estimate.</li>
+  <li><strong>OVB reasoning (NSW).</strong> For the NSW job-training case (Case C), where the observational estimate was −$8,498 against the experimental +$1,794, name two plausible omitted variables. For each, state the likely sign of \(\gamma\) and of \(\delta\), and therefore the direction of the bias, and explain why the bias came out negative.</li>
+  <li><strong>Writing it up.</strong> In 150 words, write the methods note you would attach to a memo reporting the Case B turnout model, stating the estimated associations, the \(R^2 \approx 0.08\), and the limits of the design honestly.</li>
+</ol>
+
+<h2 id="transition-to-chapter-8">Transition to Chapter 8</h2>
+
+<p>Regression with controls is the best you can do when your only leverage is the variables you happened to measure. But there is a more powerful idea: if you can find a comparison group that, by the structure of how a policy rolled out, plausibly stands in for what the treated group <em>would have done</em> in the absence of the program, you can defend a causal claim far more credibly. Chapter 8 turns to quasi-experimental designs — pre/post comparisons, nonequivalent comparison groups, and the difference-in-differences strategy — that exploit the timing and geography of real Texas policy changes to get closer to the experimental ideal without a randomized trial.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pa5312/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Program Evaluation and Administrative Statistical Analysis</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Dr. W. Scott Langford</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>PA 5312 textbook — Texas State University</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
