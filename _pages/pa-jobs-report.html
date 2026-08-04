@@ -3,6 +3,9 @@ layout: archive
 title: "Public Administration Job Market"
 permalink: /pa-jobs-report/
 author_profile: true
+description: "A live, nightly-updated snapshot of the U.S. public administration & public policy job market — open academic faculty positions plus government & nonprofit public-service jobs, with data by sector, appointment type, and hiring-cycle timing."
+rss_feed: /pa-jobs.xml
+rss_feed_title: "PA Faculty Job Market — open positions"
 ---
 
 <style>
@@ -70,6 +73,34 @@ author_profile: true
   #pj-table .pj-link { padding-top:0.4rem; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "PA Faculty Job Market — Open Positions",
+  "description": "Nightly-updated dataset of open U.S. public administration & public policy faculty positions, plus related government & nonprofit public-service jobs — aggregate figures only, no individual data.",
+  "url": "https://scottlangford.com/pa-jobs-report/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Person",
+    "name": "W. Scott Langford, PhD",
+    "url": "https://scottlangford.com"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://scottlangford.com/files/pa_jobs_openings.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/rss+xml",
+      "contentUrl": "https://scottlangford.com/pa-jobs.xml"
+    }
+  ]
+}
+</script>
 
 <div class="pj-wrap" markdown="0">
 
