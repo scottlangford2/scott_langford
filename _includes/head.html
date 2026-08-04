@@ -6,6 +6,10 @@
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
+{% if page.rss_feed %}
+<link href="{{ page.rss_feed }}" type="application/rss+xml" rel="alternate" title="{{ page.rss_feed_title | default: page.title }}">
+{% endif %}
+
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
