@@ -10,6 +10,7 @@ author_profile: true
 ## Current and Former Advisees
 
 <ul>
+<li><strong>Brianna Mendez</strong> — Applied Research Project Committee, Texas State University, 2026–present</li>
 <li><strong>Christina Kattikatt</strong> — MPA Student, Texas State University, 2025–present</li>
 <li><strong>Dustin Miller</strong> — Assistant City Manager, Pampa, TX; MPA Student, West Texas A&M University, 2025</li>
 <li><strong>Khushi Wadhwani</strong> — Undergraduate Student, Arizona State University, 2024–2025</li>

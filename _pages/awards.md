@@ -10,6 +10,7 @@ author_profile: true
 ## Grants & Funded Research
 
 <ul>
+<li><strong>Town of Clayton Economic Mobility Study</strong> — Lookout Analytics, $37,346 total project (role: consultant; lead consultant: Jen Yip), 2026</li>
 <li><strong>Cost-Benefit Analysis for Clayton, NC</strong> — Lookout Analytics, $65,000 (awarded; in progress), 2025</li>
 <li><strong>We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition</strong> — Hammer Fund Travel Award, NARSC Annual Research Conference, $750 (2021); Graduate Student Transportation Grant, NARSC Annual Research Conference, $400 (2021)</li>
 <li><strong>Small Business Activity in Banking Deserts</strong> — Kenan Institute Frontiers of Entrepreneurship Small Grant, $10,000 (2018)</li>
@@ -28,6 +29,9 @@ author_profile: true
 ## Service & Editorial Roles
 
 <ul>
+<li><strong>Committee Member</strong> — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026</li>
+<li><strong>Discussant</strong> — APPAM Annual Research Conference, 2025</li>
+<li><strong>Selection Panelist</strong> — APPAM Equity and Inclusion Fellowship, 2025</li>
 <li><strong>Co-Principal Investigator</strong> — US Census Bureau, Federal Statistical Research Data Center, 2022–Present</li>
 <li><strong>Associate Editor</strong> — Academy of Management Annual Meeting, TIM Division, 2021</li>
 <li><strong>Senator, Public Policy</strong> — Graduate and Professional Student Federation, UNC Chapel Hill, 2019–2021</li>
