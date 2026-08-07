@@ -9,7 +9,7 @@ redirect_from:
 
 <p style="font-size: 1.1rem; color: #666; margin-top: -0.5rem; margin-bottom: 1.25rem; font-weight: 300;">Assistant Professor of Public Administration · Texas State University</p>
 
-<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1rem;">I study state and local public finance and economic development — how local governments absorb shocks and finance growth.</p>
+<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem;">I study state and local public finance and economic development — how local governments absorb shocks and finance growth.</p>
 
 ## About
 
