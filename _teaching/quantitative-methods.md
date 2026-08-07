@@ -10,14 +10,14 @@ location: "San Marcos, TX"
 
 Introductory and applied quantitative methods for undergraduate and graduate students in public administration and public policy. Covers research design, descriptive and inferential statistics, regression analysis, and applied data analysis using statistical software.
 
-**Texas State University**, 2025–2026 — Analytical Techniques (PA 3311, BA) · [Course textbook](https://scottlangford.com/pa3311/)<br>
+**Texas State University**, 2025–2026 — Analytical Techniques (PA 3311, BA), cross-listed as Quantitative Research in Political Science (PS 3315) · [Course textbook](https://scottlangford.com/pa3311/)<br>
 &nbsp;&nbsp;Spring 2026: [Syllabus](https://www.dropbox.com/scl/fi/o5socj3omhbie5xkyujla/PA_3311_Syllabus.pdf?rlkey=zu33wf01ploitvxc2typl8s0m&dl=0)<br>
 &nbsp;&nbsp;Fall 2025: [Syllabus](https://www.dropbox.com/scl/fi/tcs8a3lt34uxv81z9rnx6/PA3311_Syllabus_Fall_2025.pdf?rlkey=ey90ntl6jd6k2hmopjfg94t5t&dl=0)
 
-**Arizona State University**, 2024 — Applied Econometrics (PAD 5080, MPA/MPP/PhD)<br>
-&nbsp;&nbsp;Spring 2024: [Syllabus](https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=4v8b66l8bjyqnv3swkm3lw67j&dl=0)
+**Arizona State University**, 2023–2024 — Applied Econometrics (PAF 573, MPA/MPP/PhD)<br>
+&nbsp;&nbsp;Spring 2023 & 2024: [Syllabus](https://www.dropbox.com/s/2to1b6edu4nvzrf/PAF-573-Syllabus-Spring-2023.pdf?dl=0)
 
-**UNC Pembroke**, 2024 — Quantitative Methods (MPA)<br>
+**UNC Pembroke**, 2024 — Quantitative Analysis I (PAD 5080, MPA)<br>
 &nbsp;&nbsp;Fall 2024: [Syllabus](https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=4v8b66l8bjyqnv3swkm3lw67j&dl=0)
 
 **West Texas A&M**, 2025 — Statistics for Social and Criminological Research (POSC 6388, MPA)<br>
