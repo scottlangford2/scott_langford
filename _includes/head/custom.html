@@ -132,6 +132,34 @@
     hyphens: manual;
   }
 
+  /* Same problem in the PA Jobs stat tiles: the global rule matches
+     `body div`, so a two-line caption gets stretched ("Open   tenure-track").
+     Justification is for prose, not for short UI labels. */
+  .pj-tiles, .pj-tiles *,
+  .pj-tile, .pj-tile * {
+    text-align: left !important;
+    hyphens: manual;
+  }
+
+  /* The theme paints the mobile nav toggle with its default base colour, which
+     lands as a grey slab on the cream masthead. Make it read as part of the
+     palette: no fill, maroon bars. */
+  .greedy-nav button {
+    background-color: transparent !important;
+    color: var(--maroon) !important;
+  }
+  .greedy-nav button .navicon,
+  .greedy-nav button .navicon::before,
+  .greedy-nav button .navicon::after {
+    background-color: var(--maroon) !important;
+  }
+
+  /* "Contact & Links" sat at light grey on white. */
+  .author__urls-wrapper button {
+    color: var(--maroon) !important;
+    border-color: var(--hairline) !important;
+  }
+
   /* Headings — Iowan Old Style for h1, Helvetica Neue for h2/h3 as section labels */
   h1, .page__title {
     font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif !important;
