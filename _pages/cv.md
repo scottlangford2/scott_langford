@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;"><em>Last updated: {{ "now" | date: "%B %Y" }}.</em> &nbsp;·&nbsp; <a href="{{ '/files/Langford_CV.pdf' | relative_url }}">📄 Download PDF</a></p>
+<p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;"><em>Last updated: {{ site.data.cv.updated | date: "%B %-d, %Y" }}.</em> &nbsp;·&nbsp; <a href="{{ '/files/Langford_CV.pdf' | relative_url }}">📄 Download PDF</a></p>
 
 ## Interests
 * **Research:** Community & Economic Development; Public Finance; Entrepreneurship
