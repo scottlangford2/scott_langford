@@ -1,5 +1,5 @@
 ---
-title: "The NIH Childhood Adversity Portfolio: Unmet Needs, Emerging Challenges)."
+title: "The NIH Childhood Adversity Portfolio: Unmet Needs, Emerging Challenges."
 collection: research
 category: manuscripts
 metric: "2.4"
