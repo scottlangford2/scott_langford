@@ -74,7 +74,7 @@ author_profile: true
 <div class="pj-wrap" markdown="0">
 
 <p style="font-size:1.05em; color:#333; margin-top:-0.4em;">A live snapshot of the U.S. public administration &amp; public policy job market — academic faculty positions plus government &amp; nonprofit public-service jobs — what's open now, where, and where we sit in the hiring cycle. Refreshed from the project's data panel.</p>
-<p class="pj-asof">Last updated August 10, 2026 · 20:54 UTC · updates nightly · aggregate figures only, no individual data</p>
+<p class="pj-asof">Last updated August 10, 2026 · 20:57 UTC · updates nightly · aggregate figures only, no individual data</p>
 <p class="pj-tools"><a href="/files/pa_jobs_openings.csv">⬇ Download CSV</a><a href="/pa-jobs.xml">🔔 Subscribe (RSS)</a><a href="/files/pa_faculty_job_market_monthly.pdf">📄 Monthly brief (PDF)</a></p>
 
 <div class="pj-tiles">
@@ -91,7 +91,7 @@ author_profile: true
   <select id="pj-ftype" aria-label="Filter by job type"><option value="TT">Tenure-track (academic)</option><option value="ACAD">All academic faculty</option><option value="Government">Government</option><option value="Nonprofit">Nonprofit</option><option value="Research">Research / think tank</option><option value="">All open jobs</option></select>
   <select id="pj-fstate" aria-label="Filter by state"><option value="">All states</option><option value="AK">AK</option><option value="AL">AL</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="International">International</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option><option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option><option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NC">NC</option><option value="ND">ND</option><option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NV">NV</option><option value="NY">NY</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VA">VA</option><option value="VT">VT</option><option value="WA">WA</option><option value="WI">WI</option><option value="WY">WY</option></select>
   <select id="pj-fsub" aria-label="Filter by subspecialty"><option value="">All subspecialties</option><option value="General">General</option><option value="Health policy">Health policy</option><option value="Local government">Local government</option><option value="Policy analysis">Policy analysis</option></select>
-  <span class="pj-fcount"><b id="pj-count">616</b> shown</span>
+  <span class="pj-fcount"><b id="pj-count">29</b> shown</span>
 </div>
 <div class="pj-scroll">
 <table id="pj-table">
@@ -2522,7 +2522,7 @@ Build system: Claude Code (Anthropic).
   if(q&&P.get('q'))q.value=P.get('q');
   if(fs&&P.get('state'))fs.value=P.get('state');
   if(fu&&P.get('sub'))fu.value=P.get('sub');
-  if(ft)ft.value=P.get('type')!==null?P.get('type'):'';   /* default: All open jobs (full PA market) */
+  if(ft)ft.value=P.get('type')!==null?P.get('type'):'ACAD';   /* default: all academic PA/PP faculty */
   if(ff)ff.value=P.get('field')!==null?P.get('field'):'__PAPP__';
   function typeOk(r,ty){
     if(!ty)return true;
@@ -2557,7 +2557,7 @@ Build system: Claude Code (Anthropic).
     if(tileLbl)tileLbl.textContent=fv===''?'all fields':(fv==='__PAPP__'?'Public Admin / Policy':fv);
     var np=new URLSearchParams();
     if(t)np.set('q',t); if(st)np.set('state',st); if(su)np.set('sub',su);
-    if(ty)np.set('type',ty); if(fv!=='__PAPP__')np.set('field',fv);
+    if(ty!=='ACAD')np.set('type',ty); if(fv!=='__PAPP__')np.set('field',fv);
     history.replaceState(null,'',location.pathname+(np.toString()?'?'+np.toString():''));
   }
   [q,fs,fu,ft,ff].forEach(function(el){if(el){el.addEventListener('input',apply);el.addEventListener('change',apply);}});
