@@ -38,6 +38,7 @@ author_profile: true
 .pj-season { display:flex; align-items:flex-end; gap:0.35rem; height:120px; margin:0.4rem 0 0.3rem; }
 .pj-col { flex:1 1 auto; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
 .pj-colbar { width:70%; background:#c9c2b4; border-radius:3px 3px 0 0; min-height:2px; }
+.pj-colbar-tt { background:#9a6b70; }
 .pj-col.pj-now .pj-colbar { background:#501214; }
 .pj-mon { font-size:0.7em; color:#666; margin-top:0.25rem; }
 .pj-note { font-size:0.8em; color:#777; margin-top:1.8rem; border-top:1px solid #eee; padding-top:0.9rem; }
@@ -74,7 +75,7 @@ author_profile: true
 <div class="pj-wrap" markdown="0">
 
 <p style="font-size:1.05em; color:#333; margin-top:-0.4em;">A live snapshot of the U.S. public administration &amp; public policy job market — academic faculty positions plus government &amp; nonprofit public-service jobs — what's open now, where, and where we sit in the hiring cycle. Refreshed from the project's data panel.</p>
-<p class="pj-asof">Last updated August 11, 2026 · 12:45 UTC · updates nightly · aggregate figures only, no individual data</p>
+<p class="pj-asof">Last updated August 11, 2026 · 12:52 UTC · updates nightly · aggregate figures only, no individual data</p>
 <p class="pj-tools"><a href="/files/pa_jobs_openings.csv">⬇ Download CSV</a><a href="/pa-jobs.xml">🔔 Subscribe (RSS)</a><a href="/files/pa_faculty_job_market_monthly.pdf">📄 Monthly brief (PDF)</a></p>
 
 <div class="pj-tiles">
@@ -5468,6 +5469,7 @@ author_profile: true
 <p style="font-size:0.82em; color:#666;">Daily count of open PA/PP tenure-track postings, 2026-08-03 to 2026-08-11 (8 snapshots). Built from this dashboard's own nightly snapshots — the one time series free of the scrape-timing artifact.</p>
 
 <h2>Where we are in the hiring cycle</h2>
+<p style="font-size:0.9em; color:#444; margin:0 0 0.2rem;"><strong>All faculty roles</strong></p>
 <div class="pj-season">
       <div class="pj-col"><span class="pj-colbar" style="height:62%"></span><span class="pj-mon">Jan</span></div>
       <div class="pj-col"><span class="pj-colbar" style="height:40%"></span><span class="pj-mon">Feb</span></div>
@@ -5482,7 +5484,24 @@ author_profile: true
       <div class="pj-col"><span class="pj-colbar" style="height:35%"></span><span class="pj-mon">Nov</span></div>
       <div class="pj-col"><span class="pj-colbar" style="height:15%"></span><span class="pj-mon">Dec</span></div>
 </div>
-<p style="font-size:0.82em; color:#666;">Typical PA / PP posting volume by calendar month (pooled 2016–2025, n=253). The current month is highlighted. Volume peaks in <strong>summer (Jun–Aug, ~16% in August alone)</strong>, with a secondary winter–spring wave; <strong>May (2%) and December (2%)</strong> are the quiet months.</p>
+<p style="font-size:0.82em; color:#666;">Typical PA / PP posting volume, <em>all appointment types</em>, by calendar month (pooled from historical listings, n=253; current month highlighted). All-rank volume peaks in <strong>summer (Jun–Aug, ~16% in August)</strong> — largely adjunct and lecturer staffing for the fall term.</p>
+
+<p style="font-size:0.9em; color:#501214; margin:0.8rem 0 0.2rem;"><strong>Tenure-track only</strong> — the headline metric's own cycle</p>
+<div class="pj-season">
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:52%"></span><span class="pj-mon">Jan</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:24%"></span><span class="pj-mon">Feb</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:33%"></span><span class="pj-mon">Mar</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:0%"></span><span class="pj-mon">Apr</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:0%"></span><span class="pj-mon">May</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:19%"></span><span class="pj-mon">Jun</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:43%"></span><span class="pj-mon">Jul</span></div>
+      <div class="pj-col pj-now"><span class="pj-colbar pj-colbar-tt" style="height:100%"></span><span class="pj-mon">Aug</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:33%"></span><span class="pj-mon">Sep</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:10%"></span><span class="pj-mon">Oct</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:57%"></span><span class="pj-mon">Nov</span></div>
+      <div class="pj-col"><span class="pj-colbar pj-colbar-tt" style="height:10%"></span><span class="pj-mon">Dec</span></div>
+</div>
+<p style="font-size:0.82em; color:#666;">Tenure-track searches follow a <strong>different rhythm</strong> (n=80): they cluster in the <strong>fall (Aug–Nov, ~52%)</strong> as searches open for the academic year, with a <strong>January second round (~14%)</strong>, and go quiet in late spring (Apr–May). A modest tenure-track count in mid-summer is normal — the fall wave is just beginning.</p>
 
 <p class="pj-note">
 Generated from the <em>faculty_market_analysis</em> panel, which joins live faculty-posting data (NASPAA, AJO, Chronicle, Inside Higher Ed) to PhD-supply data (IPEDS, NSF SED) and program placement records. "Open" means a posting still appearing in our most recent crawl; postings are deduplicated across sources and each listing's state is cross-checked against institution and city references. Every figure is an aggregate over programs, institutions, or the market — no per-person identifier is published.
