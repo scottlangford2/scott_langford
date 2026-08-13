@@ -80,12 +80,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 # Order here is the order the sections render on /research/ and /cv/.
-# Published work leads; working papers follow.
+# Working papers lead; published work follows.
 research_category:
-  manuscripts:
-    title: 'Journal Articles'
   publications:
     title: 'Working Papers'
+  manuscripts:
+    title: 'Journal Articles'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
