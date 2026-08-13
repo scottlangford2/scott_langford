@@ -53,7 +53,11 @@
         {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
+    {% if post.collection == 'research' %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | strip_html | truncatewords: 45 }}</p>
+    {% else %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% endif %}
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
