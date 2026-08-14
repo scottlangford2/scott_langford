@@ -21,7 +21,9 @@ Active and recent coauthors, grouped by the line of work we share. Affiliations 
 
 **[Robert Hines](https://politicalscience.charlotte.edu/people/robert-hines/)** — Assistant Professor, Department of Political Science and Public Administration, UNC Charlotte. Public budgeting and financial management. Coauthor on the federal hazard mitigation work and lead author on the program-type cost-savings analysis.
 
-**Hina Chaudhry** and **Melanie Waddell** — Coauthors on the federal hazard mitigation assistance work, including *Do Federal Hazard Mitigation Assistance Grants Pay Off?* and the program-type cost-savings analysis.
+**Hina Chaudhry** — Doctoral student, Department of Political Science and Public Administration, UNC Charlotte. Lead author on *Do Federal Hazard Mitigation Assistance Grants Pay Off?*
+
+**[Melanie Waddell](http://www.melaniewaddell.com/)** — Doctoral candidate in Public Administration and Policy, School of Public and International Affairs, University of Georgia. Emergency management networks and the budgeting of disaster response. Coauthor on the federal hazard mitigation assistance work.
 
 **Christina Kattikatt** — MPA student, Texas State University. Coauthor on local government and data.
 
