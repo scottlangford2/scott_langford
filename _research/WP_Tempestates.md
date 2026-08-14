@@ -1,7 +1,7 @@
 ---
 title: 'Local Finance and Economic Resilience During Extreme Weather Events.'
 collection: research
-category: publications
+category: fiscal_resilience
 permalink: /research/WP_Tempestates
 excerpt: The economic costs incurred by extreme weather events are substantial and increasing. In this study, we demonstrate how community banks - a type of financial institution with strong local ties and customer relationships - mitigate these costs at the local level. We use an event study model to demonstrate that US counties with higher community bank market shares experience fewer employment losses through extreme weather events. We then use bank-level analyses to demonstrate the mechanism - the small business credit supply. Community banks maintain their lending following extreme weather events, while other banks reduce it. These findings provide novel evidence on how local financial institutions strengthen economic resilience through extreme weather events. As policymakers develop strategies to mitigate the effects of extreme weather events, local finance may be a solution.
 venue: 'Under Review'

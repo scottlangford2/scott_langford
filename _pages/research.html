@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-<p style="font-size: 1.05em; color: #1a1a1a; margin-top: 0.25em; margin-bottom: 0.75em;"><strong>I study state and local public finance, economic development, and how local institutions absorb economic shocks.</strong> My work uses applied econometrics on administrative data to evaluate the role of local financial institutions, entrepreneurship, and public-sector capacity in moderating the effects of crises — extreme weather, financial shocks, and the opioid epidemic, primarily — on regional economies. Substantively, I sit at the intersection of public administration, regional economics, and public health.</p>
+<p style="font-size: 1.05em; color: #1a1a1a; margin-top: 0.25em; margin-bottom: 0.75em;"><strong>I study how local governments and community organizations absorb shocks.</strong> Extreme weather, financial crises, and the opioid epidemic are the shocks; city and county governments, nonprofits, community banks, and small employers are the organizations. Across the three lines of work below the questions are the same administrative ones — which organizations fail and which survive, what the survivors cut in order to stay open, and whether the public programs meant to buffer these events actually do. I answer them with applied econometrics on administrative data I build from <a href="{{ '/data/' | relative_url }}">public records that were never designed to be read at scale</a>.</p>
 
 <p style="font-size: 0.9em; color: #555; margin: 0 0 1em;">
   <a href="{{site.author.googlescholar}}">Google Scholar</a>
@@ -19,28 +19,33 @@ author_profile: true
 <div style="background: #f5f2ed; border-left: 4px solid #501214; padding: 14px 18px; margin: 0 0 1.75em; border-radius: 4px;">
   <p style="margin: 0 0 0.4em; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: #501214;">Currently working on</p>
   <ul style="margin: 0; padding-left: 1.2em;">
-    <li>Minority-owned banks and community resilience to financial crises (with <a href="https://search.asu.edu/profile/4215976">M. Feldman</a> et al.)</li>
-    <li>Extreme weather and labor market outcomes by race and ethnicity</li>
+    <li>How extreme weather moves the balance sheets of city and county governments, using annual financial reports</li>
+    <li>What local governments talk about when they talk about data — measured across two million meeting records</li>
+    <li>Which nonprofits survive a disaster, and what the survivors give up to do it</li>
     <li>Cost-benefit analysis for the <a href="https://www.townofclaytonnc.org/">Town of Clayton, NC</a> (Lookout Analytics)</li>
   </ul>
 </div>
 
 <p style="font-size: 0.85em; color: #555; margin: 0 0 1em;"><em>“Citation Impact” is each journal’s two-year mean citedness (average citations per recent article), sourced from <a href="https://openalex.org">OpenAlex</a>.</em></p>
 
-<!-- New style rendering if publication categories are defined -->
+<!-- Grouped by research lane (see research_category in _config.yml). Within each
+     lane, peer-reviewed articles come first and unpublished work follows, each
+     block newest-first. Grouping by question would otherwise interleave the two
+     and cost the reader the published/in-progress read at a glance. -->
 {% if site.research_category %}
-  {% for category in site.research_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.research reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% for category in site.research_category %}
+    {% assign lane = site.research | where: "category", category[0] %}
+    {% if lane.size > 0 %}
+      <h2>{{ category[1].title }}</h2><hr />
+      {% assign lane_published = lane | where_exp: "p", "p.article" | sort: "date" | reverse %}
+      {% assign lane_inprogress = lane | where_exp: "p", "p.article != true" | sort: "date" | reverse %}
+      {% for post in lane_published %}
+        {% include archive-single.html %}
+      {% endfor %}
+      {% for post in lane_inprogress %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 {% else %}
   {% for post in site.research reversed %}

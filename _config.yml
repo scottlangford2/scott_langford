@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "W. Scott Langford, PhD"
 title_separator          : "-"
 name                     : &name "W. Scott Langford, PhD"
-description              : &description "Personal website of W. Scott Langford, PhD. Research, teaching, and applied analysis in state and local public finance and economic development."
+description              : &description "W. Scott Langford, PhD — Assistant Professor of Public Administration at Texas State University. How local governments and community organizations absorb shocks, studied with administrative data built from public records."
 url                      : "https://scottlangford.com" # the base hostname & protocol for your site
 baseurl                  : "" # served at the domain root via custom domain (no subpath)
 repository               : "scottlangford2/scott_langford"
@@ -80,12 +80,18 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 # Order here is the order the sections render on /research/ and /cv/.
-# Working papers lead; published work follows.
+# Grouped by question rather than by year: a reader should be able to see the
+# research program in one screen instead of reconstructing it from a date-sorted
+# list. Active lanes lead; pre-agenda work is clearly separated at the end.
 research_category:
-  publications:
-    title: 'Working Papers'
-  manuscripts:
-    title: 'Journal Articles'
+  fiscal_resilience:
+    title: 'Local Governments Under Fiscal Stress'
+  community_organizations:
+    title: 'Community Organizations and Local Economies'
+  credit_access:
+    title: 'Credit Access and Community Development'
+  earlier:
+    title: 'Earlier Work: Science and Health Policy'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

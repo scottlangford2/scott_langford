@@ -9,15 +9,19 @@ redirect_from:
 
 <p style="font-size: 1.1rem; color: #666; margin-top: -0.5rem; margin-bottom: 1.25rem; font-weight: 300;">Assistant Professor of Public Administration · Texas State University</p>
 
-<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem;">I study state and local public finance and economic development — how local governments absorb shocks and finance growth.</p>
+<p style="font-size: 1.15rem; font-style: italic; font-weight: 300; color: #333; line-height: 1.5; margin: 0 0 1.5rem;">I study how local governments and community organizations absorb shocks — which ones fail, which survive, and what the survivors give up to stay open.</p>
 
 ## About
 
-I am an assistant professor in the [Department of Political Science](https://www.polisci.txst.edu/) at [Texas State University](https://www.txst.edu/), in the [MPA program](https://www.polisci.txst.edu/graduate-programs/master-of-public-administration.html). I previously held a postdoctoral research fellowship in the [School of Public Affairs](https://spa.asu.edu/) at [Arizona State University](https://www.asu.edu/) and earned my PhD in [Public Policy](https://publicpolicy.unc.edu/) from [UNC Chapel Hill](https://www.unc.edu/).
+I am an assistant professor in the [Department of Political Science](https://www.polisci.txst.edu/) at [Texas State University](https://www.txst.edu/), where I teach in the [MPA program](https://www.polisci.txst.edu/graduate-programs/master-of-public-administration.html). I previously held a postdoctoral research fellowship in the [School of Public Affairs](https://spa.asu.edu/) at [Arizona State University](https://www.asu.edu/) and earned my PhD in [Public Policy](https://publicpolicy.unc.edu/) from [UNC Chapel Hill](https://www.unc.edu/).
 
-My research uses applied econometrics on administrative data to answer policy-relevant questions in state and local public finance. Substantively, I sit at the intersection of public administration and regional economics. Recent work has appeared in the *Journal of Business Venturing Insights*, *Economic Development Quarterly*, the *Journal of Regional Science*, and *JAMA Pediatrics*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
+My research asks how the organizations that hold a community together — city and county governments, nonprofits, community banks, small employers — hold up when something goes wrong. Extreme weather, financial crises, and the opioid epidemic are the shocks I study most. The questions are administrative ones: which organizations fail and which survive, what the survivors cut in order to stay open, and whether the public programs meant to buffer these events actually do.
 
-I also maintain the [**Academic Job Market Report**]({{ '/academic-job-market-report/' | relative_url }}) — a live, nightly-updated dashboard of open U.S. faculty positions across every academic field (public administration &amp; public policy as the default view), plus federal government, nonprofit, and policy think-tank public-service jobs.
+Answering them means building data that does not yet exist. Most of what governments and nonprofits disclose is technically public but practically unusable — buried in PDF financial statements, meeting minutes, and filings never designed to be read at scale. I assemble those documents into research datasets and analyze them with applied econometrics. [**More on the data**]({{ '/data/' | relative_url }}).
+
+Recent work has appeared in the *Journal of Regional Science*, *Economic Development Quarterly*, *Regional Studies*, and the *Journal of Business Venturing Insights*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
+
+I also build and maintain the [**Academic Job Market Report**]({{ '/academic-job-market-report/' | relative_url }}) as a service to the field — a nightly-updated public dashboard of open U.S. faculty positions across every academic discipline, with public administration and public policy as the default view, alongside federal, nonprofit, and policy think-tank public-service openings. It is free and requires no account. It exists because the postings a job seeker needs are scattered across hundreds of separate portals.
 
 I'm available for invited talks, consulting, and media inquiries — best reached by [email](mailto:scottlangford@txstate.edu).
 
