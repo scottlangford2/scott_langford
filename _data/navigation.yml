@@ -11,6 +11,9 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Data"
+    url: /data/
+
   - title: "Teaching"
     url: /teaching/
 

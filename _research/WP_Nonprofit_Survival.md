@@ -1,7 +1,7 @@
 ---
 title: 'The Effect of Extreme Weather Events on Nonprofit Survival.'
 collection: research
-category: publications
+category: community_organizations
 permalink: /research/WP_Nonprofit_Survival
 excerpt: 'This paper examines how extreme weather events affect the survival of nonprofit organizations.'
 venue: 'Work in Progress'
