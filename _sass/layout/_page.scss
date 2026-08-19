@@ -399,12 +399,3 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
-
-/* justified body copy — .archive is the layout every content page uses,
-   .page__content covers posts and collection singles */
-.archive > p,
-.page__content > p {
-  text-align: justify;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-}
