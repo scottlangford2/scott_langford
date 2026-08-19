@@ -132,6 +132,16 @@
     hyphens: manual;
   }
 
+  /* A title line immediately followed by its detail list is a label, not
+     prose — on the CV these are talk/paper titles above their venue list,
+     and a wrapped one stretched to the full column. Structural rather than
+     hand-tagged so new entries inherit it; the only paragraphs on the site
+     followed by a <ul> are these. */
+  .archive p:has(+ ul),
+  .page__content p:has(+ ul) {
+    text-align: left !important;
+  }
+
   /* List items are usually short entries, not prose — a wrapped CV line
      ("Research: Community & Economic Development; Public Finance; ...")
      stretches into gaping word spaces. Ragged-right reads far better.
