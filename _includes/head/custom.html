@@ -132,6 +132,17 @@
     hyphens: manual;
   }
 
+  /* Same problem in the author card: the name inherits justify from
+     .author__content (matched by `body div`) and stretches to
+     "W.   Scott" when it wraps on narrow screens. Identity labels and
+     link rows are not prose. */
+  .author__name, .author__name *,
+  .author__bio, .author__bio *,
+  .author__urls, .author__urls li, .author__urls * {
+    text-align: left !important;
+    hyphens: manual;
+  }
+
   /* Same problem in the PA Jobs stat tiles: the global rule matches
      `body div`, so a two-line caption gets stretched ("Open   tenure-track").
      Justification is for prose, not for short UI labels. */
