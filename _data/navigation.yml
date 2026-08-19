@@ -11,16 +11,13 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Data"
-    url: /data/
-
   - title: "Teaching"
     url: /teaching/
 
   - title: "Job Market Report"
     url: /academic-job-market-report/
 
-  - title: "Replication"
+  - title: "Data & Replication"
     url: /replication/
 
   - title: "Talks"
