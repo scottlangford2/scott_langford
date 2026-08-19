@@ -132,6 +132,14 @@
     hyphens: manual;
   }
 
+  /* List items are usually short entries, not prose — a wrapped CV line
+     ("Research: Community & Economic Development; Public Finance; ...")
+     stretches into gaping word spaces. Ragged-right reads far better.
+     Near-invisible on wide screens, where most entries fit one line. */
+  li {
+    text-align: left !important;
+  }
+
   /* Headings are labels, not prose. A wrapped title inherits justify from
      its container and stretches every line but the last — measured on
      mobile: a 3-line paper title padded out to the full column width. */
