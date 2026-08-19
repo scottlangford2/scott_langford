@@ -62,6 +62,9 @@
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
