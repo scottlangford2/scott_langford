@@ -17,7 +17,7 @@ I am an assistant professor in the [Department of Political Science](https://www
 
 My research asks how the organizations that hold a community together — city and county governments, nonprofits, community banks, small employers — hold up when something goes wrong. Extreme weather, financial crises, and the opioid epidemic are the shocks I study most. The questions are administrative ones: which organizations fail and which survive, what the survivors cut in order to stay open, and whether the public programs meant to buffer these events actually do.
 
-Answering them means building data that does not yet exist. Most of what governments and nonprofits disclose is technically public but practically unusable — buried in PDF financial statements, meeting minutes, and filings never designed to be read at scale. I assemble those documents into research datasets and analyze them with applied econometrics. [**More on the data**]({{ '/data/' | relative_url }}).
+Answering them means building data that does not yet exist. Most of what governments and nonprofits disclose is technically public but practically unusable — buried in PDF financial statements, meeting minutes, and filings never designed to be read at scale. I assemble those documents into research datasets and analyze them with applied econometrics. [**More on the data**]({{ '/replication/' | relative_url }}).
 
 Recent work has appeared in the *Journal of Regional Science*, *Economic Development Quarterly*, *Regional Studies*, and the *Journal of Business Venturing Insights*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
 
