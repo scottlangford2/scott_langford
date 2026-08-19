@@ -9,7 +9,7 @@ author_profile: true
 
 Writing for non-academic audiences, op-eds, handbook chapters, media coverage, and other outputs beyond peer-reviewed journal articles.
 
-## Media coverage
+## Media Coverage
 
 [**Wall Street Journal**](https://www.wsj.com/articles/as-black-owned-banks-steadily-fade-away-investors-step-in-to-form-one-6b386c2d) — *"As Black-Owned Banks Steadily Fade Away, Investors Step In to Form One."* Cites *"Let Us Put Our Moneys Together:" Minority-Owned Banks and Resilience to Crises* (working paper with Berger, Feldman, and Roman) on the role of minority depository institutions during the Global Financial Crisis and COVID-19.
 
