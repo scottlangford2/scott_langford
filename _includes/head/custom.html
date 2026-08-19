@@ -132,6 +132,16 @@
     hyphens: manual;
   }
 
+  /* Headings are labels, not prose. A wrapped title inherits justify from
+     its container and stretches every line but the last — measured on
+     mobile: a 3-line paper title padded out to the full column width. */
+  h1, h2, h3, h4, h5, h6,
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+  .page__title, .archive__item-title {
+    text-align: left !important;
+    hyphens: manual;
+  }
+
   /* Same problem in the author card: the name inherits justify from
      .author__content (matched by `body div`) and stretches to
      "W.   Scott" when it wraps on narrow screens. Identity labels and
