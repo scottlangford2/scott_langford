@@ -57,12 +57,12 @@ redirect_from:
 {% endfor %}
 
 ## Works in Progress
-* Hines, R, Grandage, AJ, Chaudhry, H, Langford, WS, Waddell, M. Cost-Savings in Hazard Mitigation: The Impact of Program Type.
+* Langford, WS, Hines, R, Grandage, AJ, Chaudhry, H, Waddell, M. Cost-Savings in Hazard Mitigation: The Impact of Program Type.
 * Langford, WS, Feldman, MP. Minority-Owned Bank Failures and Their Local Economic Consequences.
 * Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
 * Petach, L, Langford, WS. Banking Deregulation and Carbon Emissions: Evidence from US States.
 * Langford, WS, Singla, AG. The Effect of Access to Local Finance on Local Government Finance.
-* Langford, WS, Lozano Rojas, F. The Effect of Extreme Weather Events on Local Tax Revenue.
+* Langford, WS. The Effect of Extreme Weather Events on Local Tax Revenue.
 * Kattikatt, C, Rangarajan, N, Langford, WS. Local Government and Data.
 
 ## Other Writing
@@ -138,6 +138,7 @@ redirect_from:
   * Principal Investigator: <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Daniel P. Gitterman</a>
 
 ## Leadership Experience, Awards, and Professional Service
+* **Founder/Administrator** — [Academic Job Market Report]({{ '/academic-job-market-report/' | relative_url }}), a free public dashboard of open faculty and public-service positions, 2026-Present
 * **Committee Member** — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026
 * **Discussant** — APPAM Annual Research Conference, 2025
 * **Selection Panelist** — APPAM Equity and Inclusion Fellowship, 2025
