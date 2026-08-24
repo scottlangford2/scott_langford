@@ -29,6 +29,7 @@ author_profile: true
 ## Service & Editorial Roles
 
 <ul>
+<li><strong>Founder/Administrator</strong> — <a href="{{ '/academic-job-market-report/' | relative_url }}">Academic Job Market Report</a>, a free public dashboard of open faculty and public-service positions, 2026–Present</li>
 <li><strong>Committee Member</strong> — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026</li>
 <li><strong>Discussant</strong> — APPAM Annual Research Conference, 2025</li>
 <li><strong>Selection Panelist</strong> — APPAM Equity and Inclusion Fellowship, 2025</li>
