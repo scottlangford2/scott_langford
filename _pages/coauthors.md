@@ -50,3 +50,5 @@ Active and recent coauthors, grouped by the line of work we share. Affiliations 
 **[Shelby R. Steuart](https://shelbyrsteuart.com/)** — University of Maryland, Health Policy and Management. Coauthor on extreme weather and the distribution of opioids and opioid use disorder medications.
 
 **[Daniel P. Gitterman](https://gitterman.web.unc.edu/)** — UNC Chapel Hill, Department of Public Policy. Coauthor on pediatric research and federal funding.
+
+**William W. Hay Jr.** — University of Colorado School of Medicine, Neonatology (retired); Chief Medical Officer, Astarte Medical. Coauthor on the NIH pediatric research portfolio papers and the childhood adversity work.

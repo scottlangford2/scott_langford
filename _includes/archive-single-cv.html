@@ -36,6 +36,15 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
+    {% comment %}Status badge for unpublished work only. `article` is the
+    published flag (see archive-single.html); when it is unset, `venue` carries
+    the status string - "Revise and Resubmit", "Under Review", and so on.
+    Published entries already name the journal in the citation, so they get no
+    badge. Guarded to the research collection because teaching entries reuse
+    this include and put the institution in `venue`.{% endcomment %}
+    {% if post.collection == 'research' and post.article != true and post.venue %}
+      <p class="page__meta"><i>{{ post.venue }}</i></p>
+    {% endif %}
     {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}{% if post.metric %} [Citation Impact: {{ post.metric }}]{% endif %}</p> {% endif %}
     </li>
  </article>
