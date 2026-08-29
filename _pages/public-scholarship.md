@@ -24,7 +24,7 @@ Writing for non-academic audiences, op-eds, handbook chapters, media coverage, a
 
 ## Policy-Facing Publications
 
-<a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. **The National Institute of Health and Responding to New Forms of Childhood Adversity.** *Children's Health Care*, 2022.
+<a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. **The National Institute of Health and Responding to New Forms of Childhood Adversity.** *Children's Health Care*, 2022.
 
 ## Open-Source Teaching Materials
 

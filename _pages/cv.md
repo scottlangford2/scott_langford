@@ -38,7 +38,7 @@ redirect_from:
 * **The Snowball Effect of Federal Research Funding** — Hammer Fund Travel Award (APPAM Annual Research Conference, $500), 2018
 
 ## Technical Skills
-* STATA, Tableau, ArcGIS, Qualtrics, LaTeX, R, Python
+* Stata, Tableau, ArcGIS, Qualtrics, LaTeX, R, Python
 
 ## Professional Affiliations
 * Association for Public Policy Analysis and Management (APPAM)
@@ -57,16 +57,14 @@ redirect_from:
 {% endfor %}
 
 ## Works in Progress
-* Langford, WS, Hines, R, Grandage, AJ, Chaudhry, H, Waddell, M. Cost-Savings in Hazard Mitigation: The Impact of Program Type.
-* Langford, WS, Feldman, MP. Minority-Owned Bank Failures and Their Local Economic Consequences.
-* Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
-* Petach, L, Langford, WS. Banking Deregulation and Carbon Emissions: Evidence from US States.
+* Langford, WS. Extracting Local Government Financial Data with Large Language Models.
+* Langford, WS. Employment Outcomes in the Public Administration Academic Job Market.
 * Langford, WS, Singla, AG. The Effect of Access to Local Finance on Local Government Finance.
-* Langford, WS. The Effect of Extreme Weather Events on Local Tax Revenue.
 * Kattikatt, C, Rangarajan, N, Langford, WS. Local Government and Data.
+* Langford, WS, Peters, V, Sanders, M. Extreme Weather and Employment: Differential Effects Across Race and Ethnicity.
 
 ## Other Writing
-* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, <a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/5772">Hay Jr., WW</a>, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.7]
+* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.7]
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Bailey, AN, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed, AS</a>, Langford, WS. Combine Water, Grain, Hops, Yeast and Get - Jobs. *News and Observer (Raleigh, NC)* (2019)
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Langford, WS. Knowledge Spillovers Informed by Network Theory and Social Network Analysis. *Handbook of Regional Science*. (ed) Fischer, M, Capello, R. (2019)
 
