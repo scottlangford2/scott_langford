@@ -34,7 +34,7 @@ empirical setting for a statistical question.
 The basketball loyalties (men's and women's both) are UNC
 Chapel Hill and UNC Wilmington; the football loyalty is now
 Texas State, which is genuinely good and getting better. I keep a list of books I am
-working through and a longer list of books I would like to be.
+working through and a longer list of books I would like to get to.
 
 If you want to get in touch or flag a correction, the
 inbox is open:

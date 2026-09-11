@@ -6,7 +6,8 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% comment %}Home page: page.title is the name, so appending site.title doubled it.{% endcomment %}
+{% if page.title and page.url != "/" %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 

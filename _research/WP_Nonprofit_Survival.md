@@ -6,5 +6,5 @@ permalink: /research/WP_Nonprofit_Survival
 excerpt: 'This paper examines how extreme weather events affect the survival of nonprofit organizations.'
 venue: 'Work in Progress'
 date: 2025-01-05
-citation: 'Chen X, Langford WS. The Effect of Extreme Weather Events on Nonprofit Survival. Available Upon Request.'
+citation: 'Langford WS, Chen X. The Effect of Extreme Weather Events on Nonprofit Survival. Available Upon Request.'
 ---

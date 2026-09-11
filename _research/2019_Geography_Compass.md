@@ -11,4 +11,3 @@ venue: '<a href="https://compass.onlinelibrary.wiley.com/journal/17498198">Geogr
 paperurl: 'https://compass.onlinelibrary.wiley.com/doi/abs/10.1111/gec3.12462'
 citation: '<a href="https://itif.org/person/adams-nager/">Nager AB</a>, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed AS</a>, Langford WS. Catching the Whale: A Comparison of Place Promotion Strategies Through the Lens of Amazon HQ2. <a href="https://compass.onlinelibrary.wiley.com/journal/17498198">Geography Compass</a>. (2019)'
 ---
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.

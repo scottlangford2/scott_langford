@@ -12,8 +12,8 @@ redirect_from:
 <p style="font-size: 0.9em; color: #666; margin-top: -0.5em; margin-bottom: 1.5em;"><em>Last updated: {{ site.data.cv.updated | date: "%B %-d, %Y" }}.</em> &nbsp;·&nbsp; <a href="{{ '/files/Langford_CV.pdf' | relative_url }}">📄 Download PDF</a></p>
 
 ## Interests
-* **Research:** Community & Economic Development; Public Finance; Entrepreneurship
-* **Teaching:** Public Policy & Administration; Budgeting & Financial Management; Econometric & Statistical Analysis
+* **Research:** Economic Development; Public and Nonprofit Finance
+* **Teaching:** Policy Analysis and Program Evaluation; Quantitative Methods; Public and Nonprofit Finance and Budgeting
 
 ## Education
 * Ph.D in Public Policy, University of North Carolina, Chapel Hill, 2022
@@ -30,12 +30,14 @@ redirect_from:
   * Arizona State University
   * School of Public Affairs
 
-## Funding
-* **Town of Clayton Economic Mobility Study** — Lookout Analytics (Consultant; Lead Consultant: Jen Yip; total project $37,346), 2026
-* **Cost-Benefit Analysis for Clayton, NC** — Lookout Analytics (Lead Consultant; awarded; in progress; $65,000), 2025
+## Research Funding
 * **We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition** — Hammer Fund Travel Award (NARSC Annual Research Conference, $750); Graduate Student Transportation Grant (NARSC Annual Research Conference, $400), 2021
 * **Small Business Activity in Banking Deserts** — Kenan Institute Frontiers of Entrepreneurship Small Grant ($10,000), 2018
 * **The Snowball Effect of Federal Research Funding** — Hammer Fund Travel Award (APPAM Annual Research Conference, $500), 2018
+
+## Applied Research & Consulting
+* **Town of Clayton Economic Mobility Study** — Lookout Analytics (Consultant; Lead Consultant: Jen Yip; total project $37,346), 2026
+* **Cost-Benefit Analysis for Clayton, NC** — Lookout Analytics (Lead Consultant; awarded; in progress; $65,000), 2025
 
 ## Technical Skills
 * Stata, Tableau, ArcGIS, Qualtrics, LaTeX, R, Python
@@ -57,11 +59,18 @@ redirect_from:
 {% endfor %}
 
 ## Works in Progress
-* Langford, WS. Extracting Local Government Financial Data with Large Language Models.
+* Langford, WS. The Effect of Extreme Weather Events on Local Tax Revenue and Reserves.
+* Langford, WS, Chen, X. The Effect of Extreme Weather Events on Nonprofit Survival.
+* Langford, WS, Hines, R, Grandage, AJ, Chaudhry, H, Waddell, M. Do Hazard Mitigation Grants Pay Off? From Identification to Policy.
+* Chaudhry, H, Grandage, AJ, Hines, R, Langford, WS, Waddell, M. Cost-Savings in Hazard Mitigation: The Impact of Program Type.
 * Langford, WS. Employment Outcomes in the Public Administration Academic Job Market.
 * Langford, WS, Singla, AG. The Effect of Access to Local Finance on Local Government Finance.
 * Kattikatt, C, Rangarajan, N, Langford, WS. Local Government and Data.
 * Langford, WS, Peters, V, Sanders, M. Extreme Weather and Employment: Differential Effects Across Race and Ethnicity.
+* Petach, L, Langford, WS. Banking Deregulation and Carbon Emissions: Evidence from US States.
+* Langford, WS. Extracting Local Government Financial Data with Large Language Models.
+* Langford, WS, Feldman, MP. Minority-Owned Bank Failures and Their Local Economic Consequences.
+* Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
 
 ## Other Writing
 * <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.7]
@@ -124,7 +133,7 @@ redirect_from:
 * APPAM Annual Research Conference
 
 ## Professional Experience
-* **Co-Principal Investigator** — US Census Bureau, Federal Statistical Research Data Center, 2022-Present
+* **Co-Principal Investigator** — US Census Bureau, Federal Statistical Research Data Center, 2022-2026
   * Title: The Roles of the Opioid and COVID Crises in Entrepreneurship and Innovation
   * Co-Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
 * **Research Associate** — CREATE-Kenan Institute of Private Enterprise, 2019-2022
@@ -140,7 +149,7 @@ redirect_from:
 * **Committee Member** — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026
 * **Discussant** — APPAM Annual Research Conference, 2025
 * **Selection Panelist** — APPAM Equity and Inclusion Fellowship, 2025
-* **Special Sworn Status** — US Census Bureau, 2023-Present
+* **Special Sworn Status** — US Census Bureau, 2023-2026
 * **Associate Editor** — Academy of Management (AoM) Annual Meeting - TIM Division, 2021
 * **Elected Member** — Frank Porter Graham Honor Society, UNC, 2021
 * **Emerging Scholar** — Community Banking in the 21st Century Research Conference, 2020

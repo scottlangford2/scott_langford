@@ -1,6 +1,6 @@
 # Dataset build scripts — PA 3311 / PS 3315
 
-Reproducible code that generates the course datasets in [`../data/`](../data).
+Reproducible code that generates the course datasets in [`../data/`](../data/DATA_SOURCES.md).
 
 | Script | Output | Description |
 |---|---|---|
@@ -23,4 +23,4 @@ python3 validate.py        # 19 integrity checks on both outputs (exit 0 = all p
 ```
 
 Data provenance and licensing: see [`../data/DATA_SOURCES.md`](../data/DATA_SOURCES.md).
-Each script downloads the Census file to `scripts/_raw/` on first run and writes its CSV/XLSX to the current directory. The canonical copies committed to the repo live in [`../data/`](../data); local rebuild outputs are git-ignored.
+Each script downloads the Census file to `scripts/_raw/` on first run and writes its CSV/XLSX to the current directory. The canonical copies committed to the repo live in [`../data/`](../data/DATA_SOURCES.md); local rebuild outputs are git-ignored.
