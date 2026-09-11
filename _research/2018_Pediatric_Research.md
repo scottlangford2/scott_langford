@@ -11,4 +11,3 @@ venue: '<a href="https://www.nature.com/pr/">Pediatric Research</a>'
 paperurl: 'https://www.nature.com/articles/s41390-018-0035-7'
 citation: '<a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman DP</a>, Langford WS, Hay Jr WW. The Uncertain Fate of the National Institutes of Health Pediatric Research Portfolio. <a href="https://www.nature.com/pr/">Pediatric Research</a>. (2018)'
 ---
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.

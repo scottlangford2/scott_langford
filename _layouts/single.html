@@ -36,6 +36,17 @@ layout: default
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.collection == 'talks' %}
+          <p><i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}</p>
+        {% elsif page.collection == 'research' %}
+          {% comment %}Mirror _includes/archive-single.html: only items flagged
+          `article` are published; for working papers `venue` is a status label
+          and `date` is a sort-order placeholder, so show neither as a date.{% endcomment %}
+          {% if page.article %}
+          <p>Published in <i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}{% if page.metric %} &middot; Citation Impact: {{ page.metric }}{% endif %}</p>
+          {% else %}
+          <p><i>{{ page.venue }}</i></p>
+          {% endif %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
@@ -45,6 +56,10 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.collection == 'research' and page.excerpt %}
+          <h2>Abstract</h2>
+          {{ page.excerpt | markdownify }}
+        {% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
@@ -80,7 +95,9 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
+        {% comment %}Research items use `category` for the /research/ theme groups;
+        the raw slug adds nothing on the paper page.{% endcomment %}
+        {% unless page.collection == 'research' %}{% include page__taxonomy.html %}{% endunless %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

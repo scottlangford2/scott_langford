@@ -19,7 +19,7 @@ My research asks how the organizations that hold a community together — city a
 
 Answering them means building data that does not yet exist. Most of what governments and nonprofits disclose is technically public but practically unusable — buried in PDF financial statements, meeting minutes, and filings never designed to be read at scale. I assemble those documents into research datasets and analyze them with applied econometrics. [**More on the data**]({{ '/replication/' | relative_url }}).
 
-Recent work has appeared in the *Journal of Regional Science*, *Economic Development Quarterly*, *Regional Studies*, and the *Journal of Business Venturing Insights*. My independent research has been funded by the [Kenan Institute for Private Enterprise](https://kenaninstitute.unc.edu/).
+Recent work has appeared in the *Journal of Regional Science*, *Economic Development Quarterly*, *Regional Studies*, and the *Journal of Business Venturing Insights*. My independent research has been funded by the [Kenan Institute of Private Enterprise](https://kenaninstitute.unc.edu/).
 
 I also build and maintain the [**Academic Job Market Report**]({{ '/academic-job-market-report/' | relative_url }}) as a service to the field — a nightly-updated public dashboard of open U.S. faculty positions across every academic discipline, with public administration and public policy as the default view, alongside federal, nonprofit, and policy think-tank public-service openings. It is free and requires no account. It exists because the postings a job seeker needs are scattered across hundreds of separate portals.
 

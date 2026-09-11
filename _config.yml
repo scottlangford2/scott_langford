@@ -22,7 +22,7 @@ repository               : "scottlangford2/scott_langford"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ChatGPT_Portrait.png"
+  avatar           : "langford_headshot.jpg"
   name             : "W. Scott Langford, PhD"
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor"
@@ -148,7 +148,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "og-default.png"  # 1200x630 social-share card
-og_description           : "Assistant Professor of Public Administration at Texas State University. Public finance, economic development, and the institutional plumbing of fast-growing places."
+og_description           : "Assistant Professor of Public Administration at Texas State University. I study how local governments and community organizations absorb shocks — which ones fail, which survive, and what the survivors give up to stay open."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

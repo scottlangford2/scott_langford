@@ -184,6 +184,26 @@
     hyphens: manual;
   }
 
+  /* Phones: a ~340px column is too narrow for justification - it opens
+     large gaps between words (the home subtitle read "Assistant    Professor
+     of    Public"). Same selector list as the global justify rule above, so
+     only text that rule justified goes ragged-right; desktop is unchanged. */
+  @media (max-width: 600px) {
+    body, body p, body li, body div, body span,
+    .page__content, .page__content p, .page__content li,
+    .archive__item-excerpt,
+    article, article p, article li,
+    blockquote, blockquote p,
+    .sidebar, .sidebar p, .sidebar li,
+    .author__urls, .author__urls li,
+    .page__footer, .page__footer p, .page__footer li,
+    .masthead p,
+    .archive__subtitle {
+      text-align: left !important;
+      hyphens: manual;
+    }
+  }
+
   /* The theme paints the mobile nav toggle with its default base colour, which
      lands as a grey slab on the cream masthead. Make it read as part of the
      palette: no fill, maroon bars. */
