@@ -146,6 +146,7 @@ redirect_from:
 
 ## Leadership Experience, Awards, and Professional Service
 * **Founder/Administrator** — [Academic Job Market Report]({{ '/academic-job-market-report/' | relative_url }}), a free public dashboard of open faculty and public-service positions, 2026-Present
+* **Vice President** — CENTEX Chapter, American Society for Public Administration (ASPA), 2026-Present
 * **Committee Member** — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026
 * **Discussant** — APPAM Annual Research Conference, 2025
 * **Selection Panelist** — APPAM Equity and Inclusion Fellowship, 2025
@@ -153,7 +154,7 @@ redirect_from:
 * **Associate Editor** — Academy of Management (AoM) Annual Meeting - TIM Division, 2021
 * **Elected Member** — Frank Porter Graham Honor Society, UNC, 2021
 * **Emerging Scholar** — Community Banking in the 21st Century Research Conference, 2020
-* **Senator, Public Policy** — Graduate and Professional Student Federation (GPSF), UNC, 2019-2021
+* **Co-Senator, Public Policy** — Graduate and Professional Student Federation (GPSF), UNC, 2019-2021
 * **Finance Committee Member** — GPSF, 2020-2021
 * **Vice President - Internal Affairs** — Science Policy and Advocacy Group, UNC, 2015-2016
 * **Ambassador** — DNA Day NC, 2015-2016
