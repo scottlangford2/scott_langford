@@ -7,6 +7,11 @@
   for the morning research brief. No cookies, no local storage, no IP stored --
   the Worker hashes the address with a salt that rotates daily.
 
+  It also exposes window.siteBeacon(path, event) so a page can record something
+  a pageview cannot see -- the PA-jobs dashboard uses it for CSV/RSS/PDF clicks,
+  since those are fetches of static files that run no JavaScript. The function
+  is absent when the visitor opted out, so callers must guard.
+
   NOTE: this theme's layout minifies HTML onto ONE line, which turns any `//`
   comment into a comment over the whole rest of the script. Block comments only.
 {% endcomment %}
@@ -18,21 +23,27 @@
         host.indexOf('.local') === host.length - 6) { return; }
     if (navigator.doNotTrack === '1' || window.doNotTrack === '1') { return; }
 
-    var payload = JSON.stringify({
-      p: location.pathname + location.search,
-      r: document.referrer || ''
-    });
     var url = '{{ site.analytics.beacon_url }}/hit';
 
-    try {
-      /* A text/plain Blob keeps this a CORS-simple request (no preflight)
-         and survives the page unloading. */
-      var blob = new Blob([payload], { type: 'text/plain' });
-      if (!(navigator.sendBeacon && navigator.sendBeacon(url, blob))) {
-        fetch(url, { method: 'POST', body: payload, keepalive: true,
-                     headers: { 'Content-Type': 'text/plain' } });
-      }
-    } catch (e) { /* analytics must never break the page */ }
+    function send(path, event) {
+      try {
+        var payload = JSON.stringify({
+          p: path || (location.pathname + location.search),
+          r: document.referrer || '',
+          e: event || ''
+        });
+        /* A text/plain Blob keeps this a CORS-simple request (no preflight)
+           and survives the page unloading. */
+        var blob = new Blob([payload], { type: 'text/plain' });
+        if (!(navigator.sendBeacon && navigator.sendBeacon(url, blob))) {
+          fetch(url, { method: 'POST', body: payload, keepalive: true,
+                       headers: { 'Content-Type': 'text/plain' } });
+        }
+      } catch (e) { /* analytics must never break the page */ }
+    }
+
+    window.siteBeacon = send;
+    send();
   })();
 </script>
 {% endif %}
