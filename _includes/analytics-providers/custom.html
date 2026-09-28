@@ -1,16 +1,22 @@
 <!-- start custom analytics snippet -->
 {% if site.analytics.beacon_url %}
+{% comment %}
+  Visitor beacon for scottlangford.com. GitHub Pages gives no server logs, so
+  one small POST per pageview goes to a Cloudflare Worker, which records the
+  network organization behind the request (university, employer, ISP, crawler)
+  for the morning research brief. No cookies, no local storage, no IP stored --
+  the Worker hashes the address with a salt that rotates daily.
+
+  NOTE: this theme's layout minifies HTML onto ONE line, which turns any `//`
+  comment into a comment over the whole rest of the script. Block comments only.
+{% endcomment %}
 <script>
-  // Visitor beacon for scottlangford.com. GitHub Pages gives no server logs,
-  // so one small POST per pageview goes to a Cloudflare Worker, which records
-  // the network organization behind the request (university, employer, ISP,
-  // crawler) for the morning research brief. No cookies, no local storage, no
-  // IP stored — the Worker hashes the address with a salt that rotates daily.
   (function () {
     var host = location.hostname;
+    /* local Jekyll previews */
     if (host === 'localhost' || host === '127.0.0.1' || host === '' ||
-        host.endsWith('.local')) return;            // local Jekyll previews
-    if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+        host.indexOf('.local') === host.length - 6) { return; }
+    if (navigator.doNotTrack === '1' || window.doNotTrack === '1') { return; }
 
     var payload = JSON.stringify({
       p: location.pathname + location.search,
@@ -19,8 +25,8 @@
     var url = '{{ site.analytics.beacon_url }}/hit';
 
     try {
-      // A text/plain Blob keeps this a CORS-simple request (no preflight) and
-      // survives the page unloading.
+      /* A text/plain Blob keeps this a CORS-simple request (no preflight)
+         and survives the page unloading. */
       var blob = new Blob([payload], { type: 'text/plain' });
       if (!(navigator.sendBeacon && navigator.sendBeacon(url, blob))) {
         fetch(url, { method: 'POST', body: payload, keepalive: true,
