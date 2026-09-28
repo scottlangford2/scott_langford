@@ -162,9 +162,13 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
+  # "custom" renders _includes/analytics-providers/custom.html: a cookie-free
+  # beacon posting each pageview to the Cloudflare Worker in ~/site-beacon.
+  # Leave beacon_url empty to switch collection off without touching templates.
+  beacon_url             : "https://scottlangford-beacon.southbound35.workers.dev"
 
 
 # Reading Files
