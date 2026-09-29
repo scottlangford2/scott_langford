@@ -226,11 +226,23 @@
     }
 
     #theme-toggle {
-      a {
+      a,
+      .theme-toggle__button {
         width: 25px;
         display: flex;
         justify-content: center;
         cursor: pointer;
+      }
+
+      /* Strip the browser's default button chrome so the toggle keeps the same
+         appearance it had as an anchor, while staying keyboard-focusable. */
+      .theme-toggle__button {
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        line-height: inherit;
       }
     }
 
