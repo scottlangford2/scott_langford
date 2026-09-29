@@ -25,7 +25,6 @@ author_profile: true
 ## Honors & Recognition
 
 <ul>
-<li><strong>Special Sworn Status</strong> — US Census Bureau, 2023–2026</li>
 <li><strong>Elected Member</strong> — Frank Porter Graham Honor Society, UNC Chapel Hill, 2021</li>
 <li><strong>Emerging Scholar</strong> — Community Banking in the 21st Century Research Conference, 2020</li>
 <li><strong>Eagle Scout Award</strong> — Boy Scouts of America, 2006</li>
@@ -39,7 +38,7 @@ author_profile: true
 <li><strong>Committee Member</strong> — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026</li>
 <li><strong>Discussant</strong> — APPAM Annual Research Conference, 2025</li>
 <li><strong>Selection Panelist</strong> — APPAM Equity and Inclusion Fellowship, 2025</li>
-<li><strong>Co-Principal Investigator</strong> — US Census Bureau, Federal Statistical Research Data Center, 2022–2026</li>
+<li><strong>Co-Principal Investigator</strong> — US Census Bureau, Federal Statistical Research Data Center, 2022–2026 (Special Sworn Status, 2023–2026)</li>
 <li><strong>Associate Editor</strong> — Academy of Management Annual Meeting, TIM Division, 2021</li>
 <li><strong>Co-Senator, Public Policy</strong> — Graduate and Professional Student Federation, UNC Chapel Hill, 2019–2021</li>
 </ul>

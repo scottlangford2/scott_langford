@@ -136,6 +136,7 @@ redirect_from:
 * **Co-Principal Investigator** — US Census Bureau, Federal Statistical Research Data Center, 2022-2026
   * Title: The Roles of the Opioid and COVID Crises in Entrepreneurship and Innovation
   * Co-Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
+  * Special Sworn Status, US Census Bureau (2023-2026)
 * **Research Associate** — CREATE-Kenan Institute of Private Enterprise, 2019-2022
 * **Research Assistant** — North Carolina Entrepreneurship Data Initiative, 2020
   * Principal Investigator: <a href="https://search.asu.edu/profile/4215976">Maryann P. Feldman</a>
@@ -150,7 +151,6 @@ redirect_from:
 * **Committee Member** — Ph.D. in Public Administration Exploratory Committee, Texas State University, 2026
 * **Discussant** — APPAM Annual Research Conference, 2025
 * **Selection Panelist** — APPAM Equity and Inclusion Fellowship, 2025
-* **Special Sworn Status** — US Census Bureau, 2023-2026
 * **Associate Editor** — Academy of Management (AoM) Annual Meeting - TIM Division, 2021
 * **Elected Member** — Frank Porter Graham Honor Society, UNC, 2021
 * **Emerging Scholar** — Community Banking in the 21st Century Research Conference, 2020
