@@ -23,7 +23,7 @@ Active and recent coauthors, grouped by the line of work we share. Affiliations 
 
 **Hina Chaudhry** — Doctoral student, Department of Political Science and Public Administration, UNC Charlotte. Lead author on *Do Federal Hazard Mitigation Assistance Grants Pay Off?*
 
-**[Melanie Waddell](http://www.melaniewaddell.com/)** — Doctoral candidate in Public Administration and Policy, School of Public and International Affairs, University of Georgia. Emergency management networks and the budgeting of disaster response. Coauthor on the federal hazard mitigation assistance work.
+**[Melanie Waddell](https://spia.uga.edu/directory/?search=Waddell)** — Doctoral candidate in Public Administration and Policy, School of Public and International Affairs, University of Georgia. Emergency management networks and the budgeting of disaster response. Coauthor on the federal hazard mitigation assistance work.
 
 **Christina Kattikatt** — MPA student, Texas State University. Coauthor on local government and data.
 
