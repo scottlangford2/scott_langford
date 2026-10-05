@@ -16,7 +16,7 @@ Introductory and applied quantitative methods for undergraduate and graduate stu
 &nbsp;&nbsp;Fall 2025: [Syllabus](https://www.dropbox.com/scl/fi/tcs8a3lt34uxv81z9rnx6/PA3311_Syllabus_Fall_2025.pdf?rlkey=ey90ntl6jd6k2hmopjfg94t5t&dl=0)
 
 **Arizona State University**, 2023–2024 — Applied Econometrics (PAF 573, MPA/MPP/PhD)<br>
-&nbsp;&nbsp;Spring 2023 & 2024: [Syllabus](https://www.dropbox.com/s/2to1b6edu4nvzrf/PAF-573-Syllabus-Spring-2023.pdf?dl=0)
+&nbsp;&nbsp;Spring 2023 &amp; 2024
 
 **UNC Pembroke**, 2024 — Quantitative Analysis I (PAD 5080, MPA)<br>
 &nbsp;&nbsp;Fall 2024: [Syllabus](https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=4v8b66l8bjyqnv3swkm3lw67j&dl=0)
