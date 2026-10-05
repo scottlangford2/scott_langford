@@ -211,7 +211,14 @@
 
       &:first-child {
         font-weight: bold;
-        text-wrap: wrap;
+        /* Keep the site title on one line. Before greedy-nav's JS runs, every
+           link sits in .visible-links and this table-cell is squeezed below the
+           title's natural width (226px -> 121px), wrapping "W. Scott Langford,
+           PhD" onto three lines and making the masthead 109px tall instead of
+           60px -- visible as a jolt on every page load. `text-wrap` overrides
+           the `white-space: nowrap` set in _masthead.scss, so the fix has to
+           live here. */
+        text-wrap: nowrap;
 
         a {
           margin-left: 0;
