@@ -73,7 +73,7 @@ redirect_from:
 * Deming, K, Langford, WS. Discontinuities in the PPP Fee Structure.
 
 ## Other Writing
-* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.7]
+* <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. The National Institute of Health and Responding to New Forms of Childhood Adversity. *Children's Health Care* (2022) [Citation Impact: 0.8]
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Bailey, AN, <a href="https://poole.ncsu.edu/people/asreed2/">Lowe Reed, AS</a>, Langford, WS. Combine Water, Grain, Hops, Yeast and Get - Jobs. *News and Observer (Raleigh, NC)* (2019)
 * <a href="https://search.asu.edu/profile/4215976">Feldman, MP</a>, Langford, WS. Knowledge Spillovers Informed by Network Theory and Social Network Analysis. *Handbook of Regional Science*. (ed) Fischer, M, Capello, R. (2019)
 
