@@ -47,7 +47,7 @@ public administration and public policy courses — what they cover, what they a
 they are assessed — built by reading publicly posted syllabi and describing them
 <strong>by course</strong>.</p>
 
-<p class="cr-asof">Last updated 2026-10-12 · 15:19 UTC · updates nightly</p>
+<p class="cr-asof">Last updated 2026-10-12 · 15:25 UTC · updates nightly</p>
 <p class="cr-tools"><a href="/files/pa_course_report.csv">⬇ Download the course data (CSV)</a><a href="#cr-method">📋 Method &amp; limits</a><a href="#cr-submit">✉ Contribute a syllabus</a></p>
 
 <div class="cr-note">
@@ -145,7 +145,31 @@ The document goes to private storage with no public address; it is
 named, and no instructor name is recorded from a contribution. You get a withdrawal link
 that deletes the file outright, not just a flag.
 </p>
-<p style="font-size:0.9em;margin-bottom:0"><a href="mailto:scottlangford@lookoutanalytics.com?subject=PA%20syllabus%20contribution">Email a syllabus →</a></p>
+<form id="cr-form" method="post" enctype="multipart/form-data"
+      action="https://pa-syllabus-intake.southbound35.workers.dev/submit" style="margin-top:0.8rem">
+  <div class="cr-ctl" style="margin-bottom:0.5rem">
+    <input name="institution" placeholder="Institution" required aria-label="Institution">
+    <input name="course_code" placeholder="Course code (e.g. PADM 6120)" required aria-label="Course code">
+  </div>
+  <div class="cr-ctl" style="margin-bottom:0.5rem">
+    <input name="course_title" placeholder="Course title" required aria-label="Course title">
+    <input name="term" placeholder="Term (e.g. Fall 2026)" aria-label="Term">
+  </div>
+  <div class="cr-ctl" style="margin-bottom:0.5rem">
+    <input type="email" name="contact" placeholder="Your email (optional — only to confirm and let you withdraw)" aria-label="Email, optional" style="flex:1 1 320px">
+  </div>
+  <div class="cr-ctl" style="margin-bottom:0.5rem">
+    <input type="file" name="file" accept=".pdf,.doc,.docx,.rtf,.txt" required aria-label="Syllabus file">
+  </div>
+  <label style="display:block;font-size:0.84em;line-height:1.45;margin:0.4rem 0 0.6rem">
+    <input type="checkbox" name="consent" value="yes" required>
+    I teach this course or am otherwise entitled to share this syllabus, and I understand
+    the document will not be published, linked or shared.
+  </label>
+  <button type="submit" style="font-size:0.9em;padding:0.4rem 0.9rem;border-radius:5px;
+          border:1px solid #2f4f2f;background:#2f4f2f;color:#fff;cursor:pointer">Send syllabus</button>
+  <p id="cr-form-msg" style="font-size:0.86em;margin:0.6rem 0 0" role="status"></p>
+</form>
 </div>
 
 <h3 class="cr-h" id="cr-method">Method &amp; limits</h3>
