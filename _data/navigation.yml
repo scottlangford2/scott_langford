@@ -17,6 +17,9 @@ main:
   - title: "Job Market Report"
     url: /academic-job-market-report/
 
+  - title: "Syllabus Library"
+    url: /pa-syllabi/
+
   - title: "Replication"
     url: /replication/
 
