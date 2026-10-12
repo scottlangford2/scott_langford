@@ -1,0 +1,53 @@
+---
+layout: archive
+title: "Your Booking"
+permalink: /schedule/manage/
+author_profile: true
+sitemap: false
+---
+
+{% include base_path %}
+
+<style>
+.sc-wrap{max-width:720px;font-size:0.96em}
+.sc-note{font-size:0.88em;line-height:1.55;padding:0.75rem 0.95rem;border-radius:6px;margin:0 0 1rem}
+.sc-err{background:#fdf4f4;border-left:3px solid #a3242a;color:#6d1b1f}
+.sc-warn{background:#fdfaf3;border-left:3px solid #9a7b2f;color:#6a5420}
+.sc-ok{background:#f4f8f4;border-left:3px solid #3f6b42;color:#2c4d2e}
+.sc-card{border:1px solid #dcdce0;border-radius:8px;padding:1.1rem 1.2rem;background:#fbfbfc;margin:0 0 1.2rem}
+.sc-card h3{margin:0 0 0.7rem;font-size:1.05em;color:#501214}
+.sc-card dl{display:grid;grid-template-columns:auto 1fr;gap:0.3rem 0.9rem;font-size:0.9em;margin:0}
+.sc-card dt{font-weight:700;color:#666}
+.sc-card dd{margin:0}
+.sc-cancelled dd,.sc-cancelled dt{color:#999}
+.sc-actions{display:flex;flex-wrap:wrap;gap:0.6rem;margin:1.2rem 0}
+.sc-btn{font:inherit;font-size:0.92em;padding:0.45rem 1.05rem;border-radius:6px;cursor:pointer;
+ border:1px solid #501214;background:#fff;color:#501214;font-weight:700}
+.sc-btn:hover:not(:disabled){background:#fbf7f7}
+.sc-btn-danger{border-color:#a3242a;color:#a3242a}
+.sc-btn-danger:hover:not(:disabled){background:#fdf4f4}
+.sc-btn:disabled{opacity:0.5;cursor:default}
+.sc-h{font-size:0.78em;letter-spacing:0.07em;text-transform:uppercase;color:#888;
+ font-weight:700;margin:1.4rem 0 0.6rem;padding-bottom:0.3rem;border-bottom:1px solid #ececef}
+.sc-day{border:1px solid #e6e6e8;border-radius:8px;padding:0.7rem 0.9rem;margin:0 0 0.55rem}
+.sc-day-l{font-weight:700;font-size:0.9em;margin:0 0 0.5rem;color:#333}
+.sc-slots{display:flex;flex-wrap:wrap;gap:0.4rem}
+.sc-slot{font:inherit;font-size:0.86em;padding:0.35rem 0.7rem;border:1px solid #cfcfd4;
+ background:#fff;border-radius:5px;cursor:pointer;font-variant-numeric:tabular-nums}
+.sc-slot:hover{border-color:#501214;color:#501214}
+.sc-spin{font-size:0.86em;color:#888;font-style:italic}
+.sc-muted{font-size:0.85em;color:#777;line-height:1.5}
+.sc-hide{display:none}
+</style>
+
+<div class="sc-wrap" id="sc-manage" data-endpoint="{{ site.schedule_url }}">
+  <div id="sc-m-boot" class="sc-spin">Looking up your booking…</div>
+  <div id="sc-m-body" class="sc-hide"></div>
+  <div id="sc-m-slots"></div>
+  <p class="sc-muted" id="sc-m-foot">
+    Anything else, just email
+    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+  </p>
+</div>
+
+<script src="{{ base_path }}/assets/js/schedule-manage.js" defer></script>

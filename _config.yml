@@ -171,6 +171,14 @@ analytics:
   beacon_url             : "https://scottlangford-beacon.southbound35.workers.dev"
 
 
+# Scheduling
+# The booking page at /schedule/ talks to the Cloudflare Worker in
+# ~/schedule-worker, which owns availability and holds the bookings. Leave
+# schedule_url empty to take the page offline without touching templates: it
+# then renders the email fallback instead of a calendar.
+schedule_url             : "https://scottlangford-schedule.southbound35.workers.dev"
+
+
 # Reading Files
 include:
   - .htaccess
