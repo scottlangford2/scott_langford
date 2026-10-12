@@ -29,6 +29,7 @@ I'm available for invited talks, consulting, and media inquiries — best reache
 
 **Email:** [scottlangford@txstate.edu](mailto:scottlangford@txstate.edu)<br>
 **Office:** Trauth Huffman Hall 355, Texas State University, San Marcos, TX<br>
-**Office hours:** Tuesdays & Thursdays, 2:00–4:00 p.m.
+**Office hours:** Tuesdays & Thursdays, 2:00–4:00 p.m.<br>
+**Meetings:** [schedule a time]({{ '/schedule/' | relative_url }})
 
 For something less formal: [a little about me]({{ '/personal/' | relative_url }}).

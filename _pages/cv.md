@@ -31,6 +31,7 @@ redirect_from:
   * School of Public Affairs
 
 ## Research Funding
+* **Reading the Public Record: A Live, Public Pipeline for Government and Nonprofit Data** — Texas State Research Enhancement Program ($12,000), under review, 2026
 * **We're Not in Dreamland Anymore: How Regional Opioid Use Rates Affect Industrial Composition** — Hammer Fund Travel Award (NARSC Annual Research Conference, $750); Graduate Student Transportation Grant (NARSC Annual Research Conference, $400), 2021
 * **Small Business Activity in Banking Deserts** — Kenan Institute Frontiers of Entrepreneurship Small Grant ($10,000), 2018
 * **The Snowball Effect of Federal Research Funding** — Hammer Fund Travel Award (APPAM Annual Research Conference, $500), 2018
@@ -40,7 +41,8 @@ redirect_from:
 * **Cost-Benefit Analysis for Clayton, NC** — Lookout Analytics (Lead Consultant; awarded; in progress; $65,000), 2025
 
 ## Technical Skills
-* Stata, Tableau, ArcGIS, Qualtrics, LaTeX, R, Python
+* Stata, R, Python, SQL, Git, LaTeX, ArcGIS, Tableau, Qualtrics
+* *Methods:* applied econometrics; building research datasets from unstructured public documents, including large-language-model extraction
 
 ## Professional Affiliations
 * Association for Public Policy Analysis and Management (APPAM)

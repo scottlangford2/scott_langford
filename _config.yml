@@ -36,7 +36,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=MUskjdAAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : # URL
+  orcid            : "https://orcid.org/0000-0002-7565-4135"
   semantic         : # URL
   pubmed           : # URL
   researchgate     : # URL
@@ -134,6 +134,13 @@ atom_feed:
 
 
 # SEO Related
+# To verify in Google Search Console: add scottlangford.com as a URL-prefix
+# property at search.google.com/search-console, choose the HTML-tag method, and
+# paste ONLY the content="..." value below (not the whole tag). Pushing it makes
+# _includes/seo.html emit the meta tag; then click Verify.
+# Search Console does NOT backfill — it serves data only from the point of
+# verification forward, so the sooner this is set, the longer the history.
+# jekyll-sitemap already publishes /sitemap.xml, and robots.txt references it.
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :

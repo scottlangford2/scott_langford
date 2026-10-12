@@ -17,8 +17,13 @@ main:
   - title: "Job Market Report"
     url: /academic-job-market-report/
 
-  - title: "Replication"
-    url: /replication/
+  # Replication is reachable from the "See also" row on /research/ and stays in
+  # the sitemap. It held a top-level slot while listing one entry whose code is
+  # "available on request" - which oversold the page, and made a seven-item bar
+  # that pushed CV into the overflow menu below ~1100px. Restore the slot once
+  # the page lists code somebody can actually download.
+  # - title: "Replication"
+  #   url: /replication/
 
   - title: "Talks"
     url: /talks/
@@ -26,8 +31,12 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Schedule"
-    url: /schedule/
+  # Scheduling is offered in the Contact block on the homepage rather than the
+  # nav bar: it is something a reader wants once they have decided to get in
+  # touch, not a destination they browse to, and a seventh item pushes CV into
+  # the overflow menu below ~1100px.
+  # - title: "Schedule"
+  #   url: /schedule/
 
   # - title: "CV"
   #   url: /cv-json/

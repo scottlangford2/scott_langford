@@ -26,6 +26,6 @@ Writing for non-academic audiences, op-eds, handbook chapters, media coverage, a
 
 <a href="https://publicpolicy.unc.edu/person/gitterman-daniel-p/">Gitterman, D</a>, Hay Jr., WW, Langford, WS. **The National Institute of Health and Responding to New Forms of Childhood Adversity.** *Children's Health Care*, 2022.
 
-## Open-Source Teaching Materials
+## Open-Access Teaching Materials
 
 [**PA 3311 Textbook: Analytical Techniques for Public Administration**](https://scottlangford.com/pa3311/) — Open-access online textbook for undergraduate public administration research methods.
