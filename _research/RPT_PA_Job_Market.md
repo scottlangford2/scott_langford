@@ -11,6 +11,6 @@ citation: 'Langford WS. PA Faculty Job Market Report. Texas State University. Ca
 
 The report series is built on the same posting archive that drives the live [Academic Job Market Report]({{ '/academic-job-market-report/' | relative_url }}) dashboard, which updates nightly and is free to use without an account.
 
-**Latest monthly edition:** [PA Faculty Job Market: Candidate Pulse]({{ '/files/pa_faculty_job_market_monthly.pdf' | relative_url }}) (PDF)
+**Latest monthly edition:** [PA Faculty Job Market: Candidate Pulse]({{ '/academic-job-market-report/monthly/' | relative_url }}) — read on the web, or [download the PDF]({{ '/files/pa_faculty_job_market_monthly.pdf' | relative_url }})
 
 **Open postings data:** [current openings]({{ '/files/pa_jobs_openings.csv' | relative_url }}) (CSV)
