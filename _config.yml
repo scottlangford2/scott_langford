@@ -141,7 +141,7 @@ atom_feed:
 # Search Console does NOT backfill — it serves data only from the point of
 # verification forward, so the sooner this is set, the longer the history.
 # jekyll-sitemap already publishes /sitemap.xml, and robots.txt references it.
-google_site_verification :
+google_site_verification : "LYJdrWKR4SDcCSMWB1VQx7AsuC_oYKamXn_fqOuVV3o"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
