@@ -19,7 +19,7 @@ Introductory and applied quantitative methods for undergraduate and graduate stu
 &nbsp;&nbsp;Spring 2023 &amp; 2024
 
 **UNC Pembroke**, 2024 — Quantitative Analysis I (PAD 5080, MPA)<br>
-&nbsp;&nbsp;Fall 2024: [Syllabus](https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=4v8b66l8bjyqnv3swkm3lw67j&dl=0)
+&nbsp;&nbsp;Fall 2024: [Syllabus](https://www.dropbox.com/scl/fi/g8mu1smtaj5kfv4b5tnnj/Syllabus_PAD5080_update.pdf?rlkey=nja4ty6v3gno9ubajc5k6m2q7&dl=0)
 
 **West Texas A&M**, 2025 — Statistics for Social and Criminological Research (POSC 6388, MPA)<br>
 &nbsp;&nbsp;Spring 2025: [Syllabus](https://www.dropbox.com/scl/fi/64qscttx0mvmbcig5h8rb/Syllabus_POSC6388.pdf?rlkey=w7pbbs23l4j2cywwnibh2gcvz&dl=0)
