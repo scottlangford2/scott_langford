@@ -122,9 +122,16 @@
       b.type = "button";
       b.className = "sc-type";
       b.setAttribute("aria-pressed", "false");
+      /* Say who a restricted type is for on the button itself. Finding out
+         only at the email field means picking a time first and being turned
+         away after, which reads as a broken page rather than a rule. */
+      var doms = t.requireEmailDomain || [];
       b.innerHTML =
         '<span class="sc-type-l">' + text(t.label) + "</span>" +
-        '<span class="sc-type-b">' + text(t.blurb) + "</span>";
+        '<span class="sc-type-b">' + text(t.blurb) + "</span>" +
+        (doms.length
+          ? '<span class="sc-type-r">Needs a ' + text(doms.join(" or ")) + " address</span>"
+          : "");
       b.addEventListener("click", function () { chooseType(t); });
       el.types.appendChild(b);
     });
@@ -144,7 +151,8 @@
     el.orgField.classList[t.askOrg ? "remove" : "add"]("sc-hide");
     el.org.required = !!t.askOrg;
     el.emailHint.textContent = (t.requireEmailDomain && t.requireEmailDomain.length)
-      ? "Use your " + t.requireEmailDomain.join(" or ") + " address."
+      ? "This type is for my students and advisees, so it needs your "
+        + t.requireEmailDomain.join(" or ") + " address."
       : "";
 
     loadSlots();
@@ -294,7 +302,7 @@
   /* --------------------------------------------------------- step three -- */
 
   var ERRORS = {
-    email_domain: "That meeting type needs a university address.",
+    email_domain: "That meeting type needs an address at my own university.",
     email_invalid: "That email address does not look right.",
     name_required: "Please give your name.",
     org_required: "Please say which organization you are with.",
@@ -332,7 +340,7 @@
         d = d.toLowerCase();
         return host === d || host.indexOf("." + d, host.length - d.length - 1) !== -1;
       });
-      if (!fits) return failForm("Please use your " + domains.join(" or ") + " address.");
+      if (!fits) return failDomain(state.type);
     }
 
     state.busy = true;
@@ -364,6 +372,7 @@
         return;
       }
       var code = r.body && r.body.error;
+      if (code === "email_domain") return failDomain(state.type);
       failForm(ERRORS[code] || "That did not go through. Please try again, or email me.");
 
       /* A conflict means the list is out of date; fetch the truth again. */
@@ -381,6 +390,43 @@
       failForm("Could not reach the booking service. Please email me.");
     });
   });
+
+  /* The one refusal where the visitor has done nothing wrong: their address
+     is perfectly good, it is just the wrong door. Saying only that the address
+     is unsuitable sends a colleague at another university away thinking the
+     page is broken — which is exactly what happened before this existed. Name
+     the type that IS open to them and let them switch in one click; chooseType
+     leaves the name, email and organization fields filled, so nothing typed is
+     lost. */
+  function failDomain(t) {
+    var doms = (t.requireEmailDomain || []).join(" or ");
+    var open = state.types.filter(function (x) {
+      return !x.requireEmailDomain || !x.requireEmailDomain.length;
+    });
+    var html = "<strong>" + text(t.label) + "</strong> is for my students and " +
+      "advisees, so it needs a " + text(doms) + " address.";
+    if (open.length) {
+      html += '<div class="sc-switch-row">Somewhere else? ';
+      open.forEach(function (x, i) {
+        html += (i ? " or " : "") +
+          '<button type="button" class="sc-switch" data-key="' + text(x.key) +
+          '">' + text(x.label) + "</button>";
+      });
+      html += (open.length > 1 ? " are" : " is") +
+        " open to everyone — your details are kept.</div>";
+    }
+    notice(el.formErr, "sc-err", html);
+    var btns = el.formErr.querySelectorAll(".sc-switch");
+    Array.prototype.forEach.call(btns, function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-key");
+        for (var j = 0; j < state.types.length; j++) {
+          if (state.types[j].key === key) { chooseType(state.types[j]); return; }
+        }
+      });
+    });
+    el.formErr.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
 
   function failForm(msg) {
     notice(el.formErr, "sc-err", text(msg));
