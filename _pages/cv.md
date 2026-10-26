@@ -165,6 +165,7 @@ redirect_from:
 ## Advising and Mentorship
 * **Mir Tebrak Hossain** — Current: PhD Student, Baruch College, CUNY, 2026-present
 * **Brianna Mendez** — Applied Research Project Committee, Texas State University, 2026-present
+* **Hannah Kriese** — Comprehensive Exam Committee, Texas State University, 2026-present
 * **Christina Kattikatt** — Current: MPA Student, Texas State University, 2025-present
 * **Dustin Miller** — Assistant City Manager, Pampa, TX; MPA Student, West Texas A&M University, 2025
 * **Khushi Wadhwani** — Current: Undergraduate Student, Arizona State University, 2024-2025
