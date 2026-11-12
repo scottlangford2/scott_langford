@@ -1,4 +1,4 @@
-/* Data source finder for /data-sources/.
+/* Data source finder for /teaching/data-sources/.
    Reads the source list (with topics/units/easy tags from _data/data_sources.yml)
    from the #ds-data JSON block and ranks sources against three answers.
    Block comments only: see the minified-HTML note for this site. */
