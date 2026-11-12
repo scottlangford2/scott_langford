@@ -32,6 +32,10 @@ If you're considering the [Texas State MPA](https://www.polisci.txst.edu/graduat
 
 If you're in my section of PA 3311 (Analytical Techniques) or PA 3350 (Public Policy Process), the syllabus and course materials are the primary guide. The [PA 3311 Textbook](https://scottlangford.com/pa3311/) is freely available online.
 
+## Finding Data
+
+For a class project, applied research project, or thesis, start with my list of [free public data sources]({{ base_path }}/data-sources/): Census, government finance, nonprofits, employment, disasters, health, and elections.
+
 ## Working With Me on Research
 
 I am generally open to collaborating with students on projects in state and local public finance (Texas, North Carolina, and comparative), economic development and entrepreneurship, extreme weather and community resilience, and applied econometrics on administrative data. If you have an idea that fits, send me an email with a short description of what you're thinking about.

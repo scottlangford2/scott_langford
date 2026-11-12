@@ -1,0 +1,27 @@
+---
+layout: archive
+title: "Data Sources for Students"
+permalink: /data-sources/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p style="font-size: 0.95em; color: #555; margin-top: -0.5em; margin-bottom: 1.5em;">Free, public data for class projects, applied research projects, and theses in public administration and policy. All of these can be used without paying for access. See also: <a href="{{ '/students/' | relative_url }}">For Students</a></p>
+
+<p><strong>Before you download anything,</strong> figure out the unit of observation you need (person, organization, city, county, state) and the years you need. Then read the source's documentation or codebook first: most mistakes in student projects come from a definition that changed between years, not from the analysis.</p>
+
+<p style="font-size: 0.95em;">Jump to:
+{% for g in site.data.data_sources %}<a href="#{{ g.group | slugify }}">{{ g.group }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+</p>
+
+{% for g in site.data.data_sources %}
+<h2 id="{{ g.group | slugify }}">{{ g.group }}</h2>
+<ul>
+{% for s in g.sources %}
+<li><a href="{{ s.url }}"><strong>{{ s.name }}</strong></a> — {{ s.desc }}{% if s.note %} <em>{{ s.note }}</em>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+<p style="font-size: 0.9em; color: #555; margin-top: 2em;">Links checked November 2026. If one is broken or you know a source that belongs here, email <a href="mailto:scottlangford@txstate.edu">scottlangford@txstate.edu</a>.</p>
