@@ -1,110 +1,205 @@
 # Curated public data sources for students. Rendered by _pages/data-sources.html.
 # Free sources only. Each entry: name, url, desc (what it is + unit/level),
-# optional note (registration, quirks). Links checked 2026-11-12. bls.gov,
-# fema.gov, cdc.gov and taxpolicycenter.org return 403 to curl but load in a browser.
+# optional note (registration, quirks).
+# Finder tags (used by assets/js/data-finder.js): topics = finance nonprofits
+# economy disasters environment health politics sports arts cities general;
+# units = people orgs places countries events; easy = has a point-and-click
+# web tool, so a beginner can explore it without downloading files.
+# Links checked 2026-11-12. bls.gov, fema.gov, cdc.gov and taxpolicycenter.org
+# return 403 to curl but load in a browser.
 - group: "Start Here: Portals and Archives"
   sources:
     - name: "data.census.gov"
+      topics: [general, economy, cities]
+      units: [places]
+      easy: true
       url: "https://data.census.gov"
       desc: "The Census Bureau's main search tool: American Community Survey, decennial census, and economic surveys, down to the tract level."
     - name: "IPUMS"
+      topics: [general, economy]
+      units: [people, places]
+      easy: false
       url: "https://www.ipums.org"
       desc: "Harmonized census and survey microdata (IPUMS USA, CPS) plus historical tables and boundary files (NHGIS)."
       note: "Free registration."
     - name: "FRED"
+      topics: [general, economy]
+      units: [places, countries]
+      easy: true
       url: "https://fred.stlouisfed.org"
       desc: "Federal Reserve Bank of St. Louis time series: national, state, and many county and metro indicators, with easy downloads."
     - name: "ICPSR"
+      topics: [general, politics, health, arts]
+      units: [people]
+      easy: false
       url: "https://www.icpsr.umich.edu"
       desc: "Archive of social science datasets with codebooks. Texas State has institutional access."
     - name: "Harvard Dataverse"
+      topics: [general]
+      units: [people, orgs, places]
+      easy: false
       url: "https://dataverse.harvard.edu"
       desc: "Replication data and original datasets deposited by researchers."
     - name: "Data.gov"
+      topics: [general, environment]
+      units: [places, orgs]
+      easy: false
       url: "https://data.gov"
       desc: "Catalog of federal agency datasets."
     - name: "Texas Open Data Portal"
+      topics: [general, cities]
+      units: [places, orgs]
+      easy: true
       url: "https://data.texas.gov"
       desc: "State agency datasets for Texas."
 
 - group: "State and Local Public Finance"
   sources:
     - name: "Census of Governments and Annual Survey of State and Local Government Finances"
+      topics: [finance]
+      units: [places]
+      easy: false
       url: "https://www.census.gov/programs-surveys/gov-finances.html"
       desc: "Revenue, spending, debt, and assets for states, counties, cities, school districts, and special districts."
     - name: "Government Finance Database"
+      topics: [finance]
+      units: [places]
+      easy: false
       url: "https://my.willamette.edu/site/mba/public-datasets"
       desc: "The Census government finance files cleaned into a consistent local-government panel back to 1967 (Pierson, Hand, and Thompson)."
     - name: "Fiscally Standardized Cities"
+      topics: [finance, cities]
+      units: [places]
+      easy: true
       url: "https://www.lincolninst.edu/data/fiscally-standardized-cities/"
       desc: "Lincoln Institute data that makes city finances comparable by adding in overlapping county, school, and special-district spending."
     - name: "Urban-Brookings Tax Policy Center State and Local Finance Data"
+      topics: [finance]
+      units: [places]
+      easy: true
       url: "https://state-local-finance-data.taxpolicycenter.org"
       desc: "Query tool for Census finance data by state and level of government."
     - name: "EMMA (Municipal Securities Rulemaking Board)"
+      topics: [finance]
+      units: [orgs]
+      easy: true
       url: "https://emma.msrb.org"
       desc: "Official statements, annual financial reports, and trade prices for municipal bonds."
     - name: "Federal Audit Clearinghouse"
+      topics: [finance, nonprofits]
+      units: [orgs]
+      easy: false
       url: "https://www.fac.gov"
       desc: "Single Audit filings for governments and nonprofits that spend $750,000+ in federal awards: findings, opinions, and federal programs."
     - name: "USAspending.gov"
+      topics: [finance]
+      units: [orgs, places]
+      easy: true
       url: "https://www.usaspending.gov"
       desc: "Federal contracts, grants, and loans by recipient and place."
     - name: "Texas Comptroller Transparency"
+      topics: [finance, cities]
+      units: [places]
+      easy: true
       url: "https://comptroller.texas.gov/transparency/"
       desc: "Texas local government debt, sales tax allocations, property tax data, and state spending."
 
 - group: "Nonprofits"
   sources:
     - name: "IRS Exempt Organizations Business Master File"
+      topics: [nonprofits]
+      units: [orgs]
+      easy: false
       url: "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf"
       desc: "Every registered tax-exempt organization, with address, NTEE code, and most recent revenue and assets."
     - name: "IRS Form 990 Series Downloads"
+      topics: [nonprofits]
+      units: [orgs]
+      easy: false
       url: "https://www.irs.gov/charities-non-profits/form-990-series-downloads"
       desc: "Electronically filed Form 990 returns: detailed financials, compensation, and governance."
     - name: "National Center for Charitable Statistics"
+      topics: [nonprofits]
+      units: [orgs]
+      easy: false
       url: "https://nccs.urban.org"
       desc: "Urban Institute's cleaned nonprofit panels built from IRS data."
     - name: "ProPublica Nonprofit Explorer"
+      topics: [nonprofits]
+      units: [orgs]
+      easy: true
       url: "https://projects.propublica.org/nonprofits/"
       desc: "Searchable Form 990 data and filings for individual organizations. Good for case studies."
 
 - group: "Economy, Employment, and Banking"
   sources:
     - name: "BLS Local Area Unemployment Statistics"
+      topics: [economy]
+      units: [places]
+      easy: true
       url: "https://www.bls.gov/lau/"
       desc: "Monthly labor force and unemployment for states, counties, and metro areas."
     - name: "BLS Quarterly Census of Employment and Wages"
+      topics: [economy]
+      units: [places]
+      easy: false
       url: "https://www.bls.gov/cew/"
       desc: "Establishments, employment, and wages by county and industry."
     - name: "County Business Patterns"
+      topics: [economy]
+      units: [places]
+      easy: false
       url: "https://www.census.gov/programs-surveys/cbp.html"
       desc: "Annual establishment counts and payroll by county, ZIP code, and industry."
     - name: "LEHD (Quarterly Workforce Indicators and OnTheMap)"
+      topics: [economy]
+      units: [places]
+      easy: true
       url: "https://lehd.ces.census.gov"
       desc: "Hiring, separations, and earnings by worker demographics; where people live versus where they work."
     - name: "BEA Regional Data"
+      topics: [economy]
+      units: [places]
+      easy: true
       url: "https://apps.bea.gov/regional/"
       desc: "Personal income and GDP by state, county, and metro area."
     - name: "FDIC BankFind Suite"
+      topics: [economy]
+      units: [orgs]
+      easy: true
       url: "https://banks.data.fdic.gov/bankfind-suite/"
       desc: "Bank branches, financials, and failures."
     - name: "HMDA Data"
+      topics: [economy, cities]
+      units: [people, places]
+      easy: false
       url: "https://ffiec.cfpb.gov"
       desc: "Mortgage applications and lending decisions, down to the census tract."
     - name: "Opportunity Insights"
+      topics: [economy, cities]
+      units: [places]
+      easy: true
       url: "https://opportunityinsights.org/data/"
       desc: "Economic mobility measures by county, commuting zone, and tract."
 
 - group: "Disasters, Hazards, and the Environment"
   sources:
     - name: "OpenFEMA"
+      topics: [disasters, finance]
+      units: [events, places]
+      easy: false
       url: "https://www.fema.gov/about/openfema/data-sets"
       desc: "Disaster declarations, Public Assistance, Hazard Mitigation, Individual Assistance, and flood insurance claims."
     - name: "NOAA Storm Events Database"
+      topics: [disasters, environment]
+      units: [events]
+      easy: true
       url: "https://www.ncei.noaa.gov/access/storm-events-database/"
       desc: "Event-level records of storms and other severe weather with dates, locations, damages, and casualties."
     - name: "FEMA National Risk Index (in RAPT)"
+      topics: [disasters, environment]
+      units: [places]
+      easy: true
       url: "https://www.fema.gov/emergency-managers/practitioners/resilience-analysis-and-planning-tool"
       desc: "Expected loss, social vulnerability, and community resilience scores for 18 natural hazards by county and tract."
       note: "The standalone National Risk Index site was retired in 2025; its data now sits in FEMA's Resilience Analysis and Planning Tool."
@@ -112,36 +207,66 @@
 - group: "Health, Elections, and Local Governance"
   sources:
     - name: "CDC WONDER"
+      topics: [health]
+      units: [places]
+      easy: true
       url: "https://wonder.cdc.gov"
       desc: "Mortality and other public health data by county and cause."
     - name: "County Health Rankings"
+      topics: [health]
+      units: [places]
+      easy: true
       url: "https://www.countyhealthrankings.org"
       desc: "County-level health outcomes and the factors behind them, compiled from many sources."
     - name: "MIT Election Data and Science Lab"
+      topics: [politics]
+      units: [places]
+      easy: false
       url: "https://electionlab.mit.edu/data"
       desc: "Election returns by state, county, and precinct."
     - name: "LocalView"
+      topics: [politics, cities]
+      units: [events]
+      easy: false
       url: "https://doi.org/10.7910/DVN/NJTBEM"
       desc: "Transcripts of thousands of local government meetings posted to YouTube."
 
 - group: "Sports"
   sources:
     - name: "Lahman Baseball Database"
+      topics: [sports]
+      units: [people]
+      easy: false
       url: "https://sabr.org/lahman-database/"
       desc: "Major League Baseball batting, pitching, fielding, and salary data by player and season, back to 1871."
     - name: "Retrosheet"
+      topics: [sports]
+      units: [events]
+      easy: false
       url: "https://www.retrosheet.org"
       desc: "Game logs and play-by-play for Major League Baseball games going back more than a century."
     - name: "nflverse"
+      topics: [sports]
+      units: [events, people]
+      easy: false
       url: "https://github.com/nflverse/nflverse-data"
       desc: "NFL play-by-play, rosters, and schedules from 1999 on, as ready-to-load files."
     - name: "Knight-Newhouse College Athletics Database"
+      topics: [sports, finance]
+      units: [orgs]
+      easy: true
       url: "https://knightnewhousedata.org"
       desc: "Athletics revenue, spending, and student-fee and institutional subsidies at public Division I universities."
     - name: "Equity in Athletics Data Analysis"
+      topics: [sports]
+      units: [orgs]
+      easy: true
       url: "https://ope.ed.gov/athletics/"
       desc: "U.S. Department of Education data on athletes, coaches, revenue, and expenses by college, sport, and gender."
     - name: "FiveThirtyEight Data"
+      topics: [sports, politics, general]
+      units: [events, people]
+      easy: true
       url: "https://github.com/fivethirtyeight/data"
       desc: "The data behind FiveThirtyEight's stories on sports, politics, and pop culture."
       note: "Archived; no longer updated."
@@ -149,97 +274,181 @@
 - group: "Arts, Culture, and Media"
   sources:
     - name: "National Archive of Data on Arts and Culture"
+      topics: [arts]
+      units: [people]
+      easy: false
       url: "https://www.icpsr.umich.edu/sites/nadac/home"
       desc: "ICPSR collection of arts and culture datasets, including national surveys of arts participation."
     - name: "NEA Arts Data Profiles"
+      topics: [arts]
+      units: [places]
+      easy: true
       url: "https://www.arts.gov/impact/research/arts-data-profile-series"
       desc: "National Endowment for the Arts summaries and tables on arts participation, artists, and the arts economy."
     - name: "BEA Arts and Cultural Production Satellite Account"
+      topics: [arts, economy]
+      units: [places]
+      easy: true
       url: "https://www.bea.gov/data/special-topics/arts-and-culture"
       desc: "How much arts and culture add to GDP and employment, nationally and by state."
     - name: "IMLS Museum Data Files"
+      topics: [arts]
+      units: [orgs]
+      easy: false
       url: "https://www.imls.gov/research-evaluation/data/museum-data-files"
       desc: "A list of U.S. museums, zoos, aquariums, and historic sites with location and type."
     - name: "The Met Open Access"
+      topics: [arts]
+      units: [events]
+      easy: false
       url: "https://github.com/metmuseum/openaccess"
       desc: "Catalog records for hundreds of thousands of artworks at the Metropolitan Museum of Art: artist, date, medium, origin."
 
 - group: "Politics and Public Opinion"
   sources:
     - name: "American National Election Studies"
+      topics: [politics]
+      units: [people]
+      easy: false
       url: "https://electionstudies.org"
       desc: "Surveys of voters' attitudes and behavior in every presidential election since 1948."
       note: "Free registration."
     - name: "Cooperative Election Study"
+      topics: [politics]
+      units: [people]
+      easy: false
       url: "https://cces.gov.harvard.edu"
       desc: "A very large national election survey, big enough to compare states and congressional districts."
     - name: "Pew Research Center Datasets"
+      topics: [politics, general]
+      units: [people]
+      easy: false
       url: "https://www.pewresearch.org/datasets/"
       desc: "The survey data behind Pew's reports on politics, religion, technology, and social trends."
       note: "Free registration."
     - name: "Federal Election Commission"
+      topics: [politics]
+      units: [people, orgs]
+      easy: true
       url: "https://www.fec.gov/data/"
       desc: "Contributions to and spending by federal candidates, parties, and PACs."
     - name: "DIME (Database on Ideology, Money in Politics, and Elections)"
+      topics: [politics]
+      units: [people]
+      easy: false
       url: "https://data.stanford.edu/dime"
       desc: "Campaign contributions and ideology scores for candidates and donors in federal and state elections."
     - name: "Voteview"
+      topics: [politics]
+      units: [people, events]
+      easy: true
       url: "https://voteview.com"
       desc: "Every roll-call vote in the history of Congress, with ideology scores for every member."
     - name: "Comparative Agendas Project"
+      topics: [politics]
+      units: [events, countries]
+      easy: true
       url: "https://www.comparativeagendas.net"
       desc: "Bills, hearings, budgets, and speeches coded by policy topic over decades, for the U.S. and other countries."
 
 - group: "Environment, Climate, and Energy"
   sources:
     - name: "EPA Outdoor Air Quality Data"
+      topics: [environment, health]
+      units: [places]
+      easy: true
       url: "https://www.epa.gov/outdoor-air-quality-data"
       desc: "Daily readings from air pollution monitors across the country."
     - name: "EPA Toxics Release Inventory"
+      topics: [environment]
+      units: [orgs]
+      easy: true
       url: "https://www.epa.gov/toxics-release-inventory-tri-program"
       desc: "Toxic chemical releases reported by industrial facilities, by facility and year."
     - name: "NOAA Climate Data Online"
+      topics: [environment, disasters]
+      units: [places]
+      easy: true
       url: "https://www.ncei.noaa.gov/cdo-web/"
       desc: "Daily temperature, rainfall, and other weather observations from stations nationwide."
     - name: "USGS Water Data"
+      topics: [environment]
+      units: [places]
+      easy: false
       url: "https://waterdata.usgs.gov"
       desc: "Streamflow, groundwater levels, and water quality from monitoring sites."
     - name: "U.S. Energy Information Administration"
+      topics: [environment, economy]
+      units: [places, orgs]
+      easy: true
       url: "https://www.eia.gov"
       desc: "Energy production, prices, use, and emissions by state and by power plant."
     - name: "Our World in Data"
+      topics: [environment, health, general]
+      units: [countries]
+      easy: true
       url: "https://ourworldindata.org"
       desc: "Country-level datasets and charts on climate, energy, health, poverty, and more."
 
 - group: "Cities, Schools, and Everyday Life"
   sources:
     - name: "FBI Crime Data Explorer"
+      topics: [cities]
+      units: [places, orgs]
+      easy: true
       url: "https://cde.ucr.cjis.gov"
       desc: "Crimes and arrests reported by local law enforcement agencies."
     - name: "NHTSA Fatality Analysis Reporting System"
+      topics: [cities]
+      units: [events]
+      easy: false
       url: "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars"
       desc: "Every fatal traffic crash in the U.S. since 1975, with details on vehicles, people, and conditions."
     - name: "Eviction Lab"
+      topics: [cities, economy]
+      units: [places]
+      easy: true
       url: "https://evictionlab.org"
       desc: "Eviction filings by county and neighborhood, with weekly tracking for some cities."
     - name: "Zillow Research Data"
+      topics: [cities, economy]
+      units: [places]
+      easy: true
       url: "https://www.zillow.com/research/data/"
       desc: "Monthly home values and rents by ZIP code, city, and metro area."
     - name: "USDA Food Environment Atlas"
+      topics: [cities, health]
+      units: [places]
+      easy: true
       url: "https://www.ers.usda.gov/data-products/food-environment-atlas/"
       desc: "County data on grocery store access, restaurants, food prices, and food assistance."
     - name: "NCES Common Core of Data"
+      topics: [cities]
+      units: [orgs]
+      easy: false
       url: "https://nces.ed.gov/ccd/"
       desc: "Every public school and district in the U.S.: enrollment, staff, and finances."
     - name: "Urban Institute Education Data Portal"
+      topics: [cities]
+      units: [orgs]
+      easy: true
       url: "https://educationdata.urban.org"
       desc: "School, district, and college data from many federal sources in one query tool."
     - name: "College Scorecard"
+      topics: [cities]
+      units: [orgs]
+      easy: true
       url: "https://collegescorecard.ed.gov/data/"
       desc: "Cost, graduation rates, debt, and graduates' earnings by college and field of study."
     - name: "City of Austin Open Data"
+      topics: [cities]
+      units: [events, places]
+      easy: true
       url: "https://data.austintexas.gov"
       desc: "311 calls, permits, police incidents, budgets, and more for Austin."
     - name: "NYC Open Data"
+      topics: [cities]
+      units: [events, places]
+      easy: true
       url: "https://opendata.cityofnewyork.us"
       desc: "Thousands of New York City datasets, from 311 complaints to restaurant inspections to street trees."

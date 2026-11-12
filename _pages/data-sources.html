@@ -11,6 +11,31 @@ author_profile: true
 
 <p><strong>Before you download anything,</strong> figure out the unit of observation you need (person, organization, city, county, state) and the years you need. Then read the source's documentation or codebook first: most mistakes in student projects come from a definition that changed between years, not from the analysis.</p>
 
+<style>
+.ds-box{border:1px solid #d8d2c8;border-radius:6px;padding:1em 1.2em;margin:1.5em 0 2em;background:rgba(80,18,20,0.03)}
+.ds-box h2{margin-top:0;border:0}
+.ds-q{border:0;padding:0;margin:0 0 1em}
+.ds-q legend{font-weight:bold;margin-bottom:.4em;font-size:.95em}
+.ds-opt,.ds-reset{font:inherit;font-size:.82em;margin:0 .35em .4em 0;padding:.35em .75em;border:1px solid #b9b1a5;border-radius:14px;text-align:left;background:#fff;color:#333;cursor:pointer}
+.ds-opt:hover{border-color:#501214}
+.ds-opt[aria-pressed="true"]{background:#501214;border-color:#501214;color:#fff}
+.ds-reset{border-style:dashed;color:#666}
+.ds-res-title{font-size:1em;margin:1em 0 .4em}
+.ds-res{margin-top:0}
+.ds-res li{margin:.5em 0}
+.ds-desc{font-size:.88em;color:#555}
+.ds-tag{display:inline-block;font-size:.7em;margin-left:.5em;padding:.05em .5em;border-radius:3px;background:#e8e2d6;color:#444;vertical-align:middle}
+.ds-hint{font-size:.88em;color:#666}
+</style>
+
+<div class="ds-box">
+<h2 id="finder">Not sure where to start?</h2>
+<p style="font-size:.92em">Answer three questions and get a short list of sources that fit your project.</p>
+<div id="ds-finder"><p class="ds-hint">The finder needs JavaScript. The full list is below.</p></div>
+</div>
+<script type="application/json" id="ds-data">{{ site.data.data_sources | jsonify }}</script>
+<script src="{{ base_path }}/assets/js/data-finder.js" defer></script>
+
 <p style="font-size: 0.95em;">Jump to:
 {% for g in site.data.data_sources %}<a href="#{{ g.group | slugify }}">{{ g.group }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
 </p>
