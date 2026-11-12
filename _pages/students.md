@@ -34,7 +34,7 @@ If you're in my section of PA 3311 (Analytical Techniques) or PA 3350 (Public Po
 
 ## Finding Data
 
-For a class project, applied research project, or thesis, start with my list of [free public data sources]({{ base_path }}/data-sources/): Census, government finance, nonprofits, employment, disasters, health, and elections.
+For a class project, applied research project, or thesis, start with my list of [free public data sources]({{ base_path }}/data-sources/): government finance, nonprofits, the economy, disasters, sports, the arts, politics, the environment, and cities and schools.
 
 ## Working With Me on Research
 
