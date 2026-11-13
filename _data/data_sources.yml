@@ -1,6 +1,7 @@
 # Curated public data sources for students. Rendered by _pages/data-sources.html.
 # Free sources only. Each entry: name, url, desc (what it is + unit/level),
-# optional note (registration, quirks).
+# question (a starter research question the source can answer),
+# optional note (registration, quirks); texas: true for Texas-specific sources.
 # Finder tags (used by assets/js/data-finder.js): topics = finance nonprofits
 # economy disasters environment health politics sports arts cities general;
 # units = people orgs places countries events; easy = has a point-and-click
@@ -9,446 +10,640 @@
 # return 403 to curl but load in a browser.
 - group: "Start Here: Portals and Archives"
   sources:
-    - name: "data.census.gov"
-      topics: [general, economy, cities]
-      units: [places]
-      easy: true
-      url: "https://data.census.gov"
-      desc: "The Census Bureau's main search tool: American Community Survey, decennial census, and economic surveys, down to the tract level."
-    - name: "IPUMS"
-      topics: [general, economy]
-      units: [people, places]
-      easy: false
-      url: "https://www.ipums.org"
-      desc: "Harmonized census and survey microdata (IPUMS USA, CPS) plus historical tables and boundary files (NHGIS)."
-      note: "Free registration."
-    - name: "FRED"
-      topics: [general, economy]
-      units: [places, countries]
-      easy: true
-      url: "https://fred.stlouisfed.org"
-      desc: "Federal Reserve Bank of St. Louis time series: national, state, and many county and metro indicators, with easy downloads."
-    - name: "ICPSR"
-      topics: [general, politics, health, arts]
-      units: [people]
-      easy: false
-      url: "https://www.icpsr.umich.edu"
-      desc: "Archive of social science datasets with codebooks. Texas State has institutional access."
-    - name: "Harvard Dataverse"
-      topics: [general]
-      units: [people, orgs, places]
-      easy: false
-      url: "https://dataverse.harvard.edu"
-      desc: "Replication data and original datasets deposited by researchers."
-    - name: "Data.gov"
-      topics: [general, environment]
-      units: [places, orgs]
-      easy: false
-      url: "https://data.gov"
-      desc: "Catalog of federal agency datasets."
-    - name: "Texas Open Data Portal"
-      topics: [general, cities]
-      units: [places, orgs]
-      easy: true
-      url: "https://data.texas.gov"
-      desc: "State agency datasets for Texas."
+  - name: "data.census.gov"
+    url: "https://data.census.gov"
+    desc: "The Census Bureau's main search tool: American Community Survey, decennial census, and economic surveys, down to the tract level."
+    question: "Which Texas counties have the highest share of households without a car?"
+    topics: ["general", "economy", "cities"]
+    units: ["places"]
+    easy: true
+  - name: "IPUMS"
+    url: "https://www.ipums.org"
+    desc: "Harmonized census and survey microdata (IPUMS USA, CPS) plus historical tables and boundary files (NHGIS)."
+    question: "How has the share of young adults living with their parents changed since 1980?"
+    note: "Free registration."
+    topics: ["general", "economy"]
+    units: ["people", "places"]
+    easy: false
+  - name: "FRED"
+    url: "https://fred.stlouisfed.org"
+    desc: "Federal Reserve Bank of St. Louis time series: national, state, and many county and metro indicators, with easy downloads."
+    question: "How did unemployment in your metro area compare to the nation during the 2020 recession?"
+    topics: ["general", "economy"]
+    units: ["places", "countries"]
+    easy: true
+  - name: "ICPSR"
+    url: "https://www.icpsr.umich.edu"
+    desc: "Archive of social science datasets with codebooks. Texas State has institutional access."
+    question: "Find a survey on your topic and look at how it worded its questions before you write your own."
+    topics: ["general", "politics", "health", "arts"]
+    units: ["people"]
+    easy: false
+  - name: "Harvard Dataverse"
+    url: "https://dataverse.harvard.edu"
+    desc: "Replication data and original datasets deposited by researchers."
+    question: "Find the replication data for a published article you like and try to reproduce one of its tables."
+    topics: ["general"]
+    units: ["people", "orgs", "places"]
+    easy: false
+  - name: "Data.gov"
+    url: "https://data.gov"
+    desc: "Catalog of federal agency datasets."
+    question: "Which federal agencies collect data on your topic, and how far back does it go?"
+    topics: ["general", "environment"]
+    units: ["places", "orgs"]
+    easy: false
+
+- group: "Texas"
+  sources:
+  - name: "Texas Comptroller Transparency"
+    url: "https://comptroller.texas.gov/transparency/"
+    desc: "Texas local government debt, sales tax allocations, property tax data, and state spending."
+    question: "How did sales tax revenue in San Marcos change compared to nearby cities over the past decade?"
+    topics: ["finance", "cities"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "Texas Academic Performance Reports (TEA)"
+    url: "https://tea.texas.gov/school-and-district-leaders/accountability/academic-accountability/performance-reporting/texas-academic-performance-reports"
+    desc: "Test scores, attendance, graduation, staff, and student demographics for every Texas school, district, and region."
+    question: "Do Texas districts with more economically disadvantaged students have lower STAAR passing rates?"
+    topics: ["cities"]
+    units: ["orgs"]
+    easy: true
+    texas: true
+  - name: "TEA PEIMS Financial Data"
+    url: "https://tea.texas.gov/about-tea/state-funding/state-funding-reports-and-data/peims-financial-data-downloads"
+    desc: "Budgeted and actual revenue and spending for every Texas school district, by function and fund."
+    question: "How does instructional spending per student vary between small and large Texas school districts?"
+    topics: ["finance", "cities"]
+    units: ["orgs"]
+    easy: false
+    texas: true
+  - name: "Texas Demographic Center"
+    url: "https://demographics.texas.gov"
+    desc: "The state's official population estimates and projections for Texas counties and cities."
+    question: "Which Texas counties are projected to grow fastest by 2050?"
+    topics: ["general", "economy", "cities"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "Texas Open Data Portal"
+    url: "https://data.texas.gov"
+    desc: "State agency datasets for Texas."
+    question: "Which Texas state agencies publish data on your topic, and how often do they update it?"
+    topics: ["general", "cities"]
+    units: ["places", "orgs"]
+    easy: true
+    texas: true
+  - name: "Texas Secretary of State Election Results"
+    url: "https://www.sos.state.tx.us/elections/historical/index.shtml"
+    desc: "Results, turnout, and voter registration for Texas elections, statewide and by county."
+    question: "How did your county vote in the last three governor's races compared to the state as a whole?"
+    topics: ["politics"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "Texas Ethics Commission Campaign Finance"
+    url: "https://www.ethics.state.tx.us/search/cf/"
+    desc: "Contributions to and spending by Texas state candidates, officeholders, and PACs."
+    question: "Who are the largest donors to your state representative?"
+    topics: ["politics"]
+    units: ["people", "orgs"]
+    easy: true
+    texas: true
+  - name: "Texas Legislature Online"
+    url: "https://capitol.texas.gov"
+    desc: "Every bill filed in the Texas Legislature, with authors, committee actions, votes, and text."
+    question: "How many bills on your topic were filed last session, and how many passed?"
+    topics: ["politics"]
+    units: ["events"]
+    easy: true
+    texas: true
+  - name: "Texas Labor Market Information (TWC)"
+    url: "https://texaslmi.com"
+    desc: "Texas Workforce Commission data on employment, unemployment, wages, and industries by county and metro area."
+    question: "Which industries added the most jobs in the Austin–Round Rock–San Marcos metro since 2020?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "TCEQ Air Monitoring"
+    url: "https://www.tceq.texas.gov/airquality/monops"
+    desc: "Readings from Texas air quality monitors, including ozone and particulate matter."
+    question: "Do ozone levels in Houston exceed federal standards more often in summer than in winter?"
+    topics: ["environment", "health"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "Water Data for Texas"
+    url: "https://www.waterdatafortexas.org"
+    desc: "Daily reservoir levels, groundwater, and drought conditions across Texas (Texas Water Development Board)."
+    question: "How full were Texas reservoirs during the 2011 drought compared to today?"
+    topics: ["environment", "disasters"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "ERCOT Grid Information"
+    url: "https://www.ercot.com/gridinfo"
+    desc: "Electricity demand, generation by fuel type, and prices on the Texas power grid."
+    question: "How high did electricity demand climb on the hottest days of last summer, and what supplied it?"
+    topics: ["environment", "economy"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "Railroad Commission of Texas Data Sets"
+    url: "https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/"
+    desc: "Oil and gas wells, drilling permits, production, and pipelines in Texas."
+    question: "How has the number of new drilling permits in the Permian Basin changed since 2015?"
+    topics: ["environment", "economy"]
+    units: ["orgs", "places"]
+    easy: false
+    texas: true
+  - name: "Texas Higher Education Accountability System"
+    url: "https://www.txhigheredaccountability.org"
+    desc: "Enrollment, graduation rates, costs, and outcomes for Texas public colleges and universities."
+    question: "How do six-year graduation rates differ across Texas public universities?"
+    topics: ["cities"]
+    units: ["orgs"]
+    easy: true
+    texas: true
+  - name: "Texas DSHS Center for Health Statistics"
+    url: "https://www.dshs.texas.gov/center-health-statistics"
+    desc: "Births, deaths, hospital discharges, and other health statistics for Texas counties."
+    question: "How do teen birth rates differ between urban and rural Texas counties?"
+    topics: ["health"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "TDHCA Housing Resource Center"
+    url: "https://www.tdhca.texas.gov/housing-resource-center"
+    desc: "Texas housing needs, affordability, and assisted housing data from the state housing agency."
+    question: "Where in Texas are low-income renters most burdened by housing costs?"
+    topics: ["cities", "economy"]
+    units: ["places"]
+    easy: true
+    texas: true
+  - name: "City of San Antonio Open Data"
+    url: "https://data.sanantonio.gov"
+    desc: "311 calls, building permits, code enforcement, budgets, and more for San Antonio."
+    question: "Where in San Antonio are new building permits concentrated?"
+    topics: ["cities"]
+    units: ["events", "places"]
+    easy: true
+    texas: true
+  - name: "City of Austin Open Data"
+    url: "https://data.austintexas.gov"
+    desc: "311 calls, permits, police incidents, budgets, and more for Austin."
+    question: "Which Austin neighborhoods generate the most 311 calls, and what are they about?"
+    topics: ["cities"]
+    units: ["events", "places"]
+    easy: true
+    texas: true
 
 - group: "State and Local Public Finance"
   sources:
-    - name: "Census of Governments and Annual Survey of State and Local Government Finances"
-      topics: [finance]
-      units: [places]
-      easy: false
-      url: "https://www.census.gov/programs-surveys/gov-finances.html"
-      desc: "Revenue, spending, debt, and assets for states, counties, cities, school districts, and special districts."
-    - name: "Government Finance Database"
-      topics: [finance]
-      units: [places]
-      easy: false
-      url: "https://my.willamette.edu/site/mba/public-datasets"
-      desc: "The Census government finance files cleaned into a consistent local-government panel back to 1967 (Pierson, Hand, and Thompson)."
-    - name: "Fiscally Standardized Cities"
-      topics: [finance, cities]
-      units: [places]
-      easy: true
-      url: "https://www.lincolninst.edu/data/fiscally-standardized-cities/"
-      desc: "Lincoln Institute data that makes city finances comparable by adding in overlapping county, school, and special-district spending."
-    - name: "Urban-Brookings Tax Policy Center State and Local Finance Data"
-      topics: [finance]
-      units: [places]
-      easy: true
-      url: "https://state-local-finance-data.taxpolicycenter.org"
-      desc: "Query tool for Census finance data by state and level of government."
-    - name: "EMMA (Municipal Securities Rulemaking Board)"
-      topics: [finance]
-      units: [orgs]
-      easy: true
-      url: "https://emma.msrb.org"
-      desc: "Official statements, annual financial reports, and trade prices for municipal bonds."
-    - name: "Federal Audit Clearinghouse"
-      topics: [finance, nonprofits]
-      units: [orgs]
-      easy: false
-      url: "https://www.fac.gov"
-      desc: "Single Audit filings for governments and nonprofits that spend $750,000+ in federal awards: findings, opinions, and federal programs."
-    - name: "USAspending.gov"
-      topics: [finance]
-      units: [orgs, places]
-      easy: true
-      url: "https://www.usaspending.gov"
-      desc: "Federal contracts, grants, and loans by recipient and place."
-    - name: "Texas Comptroller Transparency"
-      topics: [finance, cities]
-      units: [places]
-      easy: true
-      url: "https://comptroller.texas.gov/transparency/"
-      desc: "Texas local government debt, sales tax allocations, property tax data, and state spending."
+  - name: "Census of Governments and Annual Survey of State and Local Government Finances"
+    url: "https://www.census.gov/programs-surveys/gov-finances.html"
+    desc: "Revenue, spending, debt, and assets for states, counties, cities, school districts, and special districts."
+    question: "How does the share of local revenue from property taxes vary across states?"
+    topics: ["finance"]
+    units: ["places"]
+    easy: false
+  - name: "Government Finance Database"
+    url: "https://my.willamette.edu/site/mba/public-datasets"
+    desc: "The Census government finance files cleaned into a consistent local-government panel back to 1967 (Pierson, Hand, and Thompson)."
+    question: "How has city spending on police changed relative to parks since 1990?"
+    topics: ["finance"]
+    units: ["places"]
+    easy: false
+  - name: "Fiscally Standardized Cities"
+    url: "https://www.lincolninst.edu/data/fiscally-standardized-cities/"
+    desc: "Lincoln Institute data that makes city finances comparable by adding in overlapping county, school, and special-district spending."
+    question: "How does total spending per resident in Austin compare to Dallas once schools and counties are counted?"
+    topics: ["finance", "cities"]
+    units: ["places"]
+    easy: true
+  - name: "Urban-Brookings Tax Policy Center State and Local Finance Data"
+    url: "https://state-local-finance-data.taxpolicycenter.org"
+    desc: "Query tool for Census finance data by state and level of government."
+    question: "Which states rely most on sales taxes, and has that changed since 2000?"
+    topics: ["finance"]
+    units: ["places"]
+    easy: true
+  - name: "EMMA (Municipal Securities Rulemaking Board)"
+    url: "https://emma.msrb.org"
+    desc: "Official statements, annual financial reports, and trade prices for municipal bonds."
+    question: "Pull the official statement for your city's latest bond issue: what is the money for, and what interest rate did it pay?"
+    topics: ["finance"]
+    units: ["orgs"]
+    easy: true
+  - name: "Federal Audit Clearinghouse"
+    url: "https://www.fac.gov"
+    desc: "Single Audit filings for governments and nonprofits that spend $750,000+ in federal awards: findings, opinions, and federal programs."
+    question: "Which kinds of local governments most often get audit findings on their federal grants?"
+    topics: ["finance", "nonprofits"]
+    units: ["orgs"]
+    easy: false
+  - name: "USAspending.gov"
+    url: "https://www.usaspending.gov"
+    desc: "Federal contracts, grants, and loans by recipient and place."
+    question: "How much federal grant money went to your county last year, and from which agencies?"
+    topics: ["finance"]
+    units: ["orgs", "places"]
+    easy: true
 
 - group: "Nonprofits"
   sources:
-    - name: "IRS Exempt Organizations Business Master File"
-      topics: [nonprofits]
-      units: [orgs]
-      easy: false
-      url: "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf"
-      desc: "Every registered tax-exempt organization, with address, NTEE code, and most recent revenue and assets."
-    - name: "IRS Form 990 Series Downloads"
-      topics: [nonprofits]
-      units: [orgs]
-      easy: false
-      url: "https://www.irs.gov/charities-non-profits/form-990-series-downloads"
-      desc: "Electronically filed Form 990 returns: detailed financials, compensation, and governance."
-    - name: "National Center for Charitable Statistics"
-      topics: [nonprofits]
-      units: [orgs]
-      easy: false
-      url: "https://nccs.urban.org"
-      desc: "Urban Institute's cleaned nonprofit panels built from IRS data."
-    - name: "ProPublica Nonprofit Explorer"
-      topics: [nonprofits]
-      units: [orgs]
-      easy: true
-      url: "https://projects.propublica.org/nonprofits/"
-      desc: "Searchable Form 990 data and filings for individual organizations. Good for case studies."
+  - name: "IRS Exempt Organizations Business Master File"
+    url: "https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf"
+    desc: "Every registered tax-exempt organization, with address, NTEE code, and most recent revenue and assets."
+    question: "How many nonprofits per 1,000 residents does each Texas county have?"
+    topics: ["nonprofits"]
+    units: ["orgs"]
+    easy: false
+  - name: "IRS Form 990 Series Downloads"
+    url: "https://www.irs.gov/charities-non-profits/form-990-series-downloads"
+    desc: "Electronically filed Form 990 returns: detailed financials, compensation, and governance."
+    question: "How does nonprofit CEO pay rise with organization size?"
+    topics: ["nonprofits"]
+    units: ["orgs"]
+    easy: false
+  - name: "National Center for Charitable Statistics"
+    url: "https://nccs.urban.org"
+    desc: "Urban Institute's cleaned nonprofit panels built from IRS data."
+    question: "Did the number of nonprofits in your state grow faster than its population over the last 20 years?"
+    topics: ["nonprofits"]
+    units: ["orgs"]
+    easy: false
+  - name: "ProPublica Nonprofit Explorer"
+    url: "https://projects.propublica.org/nonprofits/"
+    desc: "Searchable Form 990 data and filings for individual organizations. Good for case studies."
+    question: "Compare revenue and executive pay at three food banks in your region."
+    topics: ["nonprofits"]
+    units: ["orgs"]
+    easy: true
 
 - group: "Economy, Employment, and Banking"
   sources:
-    - name: "BLS Local Area Unemployment Statistics"
-      topics: [economy]
-      units: [places]
-      easy: true
-      url: "https://www.bls.gov/lau/"
-      desc: "Monthly labor force and unemployment for states, counties, and metro areas."
-    - name: "BLS Quarterly Census of Employment and Wages"
-      topics: [economy]
-      units: [places]
-      easy: false
-      url: "https://www.bls.gov/cew/"
-      desc: "Establishments, employment, and wages by county and industry."
-    - name: "County Business Patterns"
-      topics: [economy]
-      units: [places]
-      easy: false
-      url: "https://www.census.gov/programs-surveys/cbp.html"
-      desc: "Annual establishment counts and payroll by county, ZIP code, and industry."
-    - name: "LEHD (Quarterly Workforce Indicators and OnTheMap)"
-      topics: [economy]
-      units: [places]
-      easy: true
-      url: "https://lehd.ces.census.gov"
-      desc: "Hiring, separations, and earnings by worker demographics; where people live versus where they work."
-    - name: "BEA Regional Data"
-      topics: [economy]
-      units: [places]
-      easy: true
-      url: "https://apps.bea.gov/regional/"
-      desc: "Personal income and GDP by state, county, and metro area."
-    - name: "FDIC BankFind Suite"
-      topics: [economy]
-      units: [orgs]
-      easy: true
-      url: "https://banks.data.fdic.gov/bankfind-suite/"
-      desc: "Bank branches, financials, and failures."
-    - name: "HMDA Data"
-      topics: [economy, cities]
-      units: [people, places]
-      easy: false
-      url: "https://ffiec.cfpb.gov"
-      desc: "Mortgage applications and lending decisions, down to the census tract."
-    - name: "Opportunity Insights"
-      topics: [economy, cities]
-      units: [places]
-      easy: true
-      url: "https://opportunityinsights.org/data/"
-      desc: "Economic mobility measures by county, commuting zone, and tract."
+  - name: "BLS Local Area Unemployment Statistics"
+    url: "https://www.bls.gov/lau/"
+    desc: "Monthly labor force and unemployment for states, counties, and metro areas."
+    question: "Which Texas counties had the highest unemployment during the 2020 pandemic, and how fast did they recover?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: true
+  - name: "BLS Quarterly Census of Employment and Wages"
+    url: "https://www.bls.gov/cew/"
+    desc: "Establishments, employment, and wages by county and industry."
+    question: "How have average weekly wages in restaurants changed in your county since 2015?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: false
+  - name: "County Business Patterns"
+    url: "https://www.census.gov/programs-surveys/cbp.html"
+    desc: "Annual establishment counts and payroll by county, ZIP code, and industry."
+    question: "Which counties gained or lost the most grocery stores between 2010 and 2020?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: false
+  - name: "LEHD (Quarterly Workforce Indicators and OnTheMap)"
+    url: "https://lehd.ces.census.gov"
+    desc: "Hiring, separations, and earnings by worker demographics; where people live versus where they work."
+    question: "Where do the people who work in San Marcos live?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: true
+  - name: "BEA Regional Data"
+    url: "https://apps.bea.gov/regional/"
+    desc: "Personal income and GDP by state, county, and metro area."
+    question: "How has income per person in your county changed relative to the state since 2000?"
+    topics: ["economy"]
+    units: ["places"]
+    easy: true
+  - name: "FDIC BankFind Suite"
+    url: "https://banks.data.fdic.gov/bankfind-suite/"
+    desc: "Bank branches, financials, and failures."
+    question: "How many bank branches closed in your county over the last decade?"
+    topics: ["economy"]
+    units: ["orgs"]
+    easy: true
+  - name: "HMDA Data"
+    url: "https://ffiec.cfpb.gov"
+    desc: "Mortgage applications and lending decisions, down to the census tract."
+    question: "Are mortgage denial rates higher in some neighborhoods of your city than others, among applicants with similar incomes?"
+    topics: ["economy", "cities"]
+    units: ["people", "places"]
+    easy: false
+  - name: "Opportunity Insights"
+    url: "https://opportunityinsights.org/data/"
+    desc: "Economic mobility measures by county, commuting zone, and tract."
+    question: "In which Texas counties do children from low-income families have the best chances of moving up?"
+    topics: ["economy", "cities"]
+    units: ["places"]
+    easy: true
 
 - group: "Disasters, Hazards, and the Environment"
   sources:
-    - name: "OpenFEMA"
-      topics: [disasters, finance]
-      units: [events, places]
-      easy: false
-      url: "https://www.fema.gov/about/openfema/data-sets"
-      desc: "Disaster declarations, Public Assistance, Hazard Mitigation, Individual Assistance, and flood insurance claims."
-    - name: "NOAA Storm Events Database"
-      topics: [disasters, environment]
-      units: [events]
-      easy: true
-      url: "https://www.ncei.noaa.gov/access/storm-events-database/"
-      desc: "Event-level records of storms and other severe weather with dates, locations, damages, and casualties."
-    - name: "FEMA National Risk Index (in RAPT)"
-      topics: [disasters, environment]
-      units: [places]
-      easy: true
-      url: "https://www.fema.gov/emergency-managers/practitioners/resilience-analysis-and-planning-tool"
-      desc: "Expected loss, social vulnerability, and community resilience scores for 18 natural hazards by county and tract."
-      note: "The standalone National Risk Index site was retired in 2025; its data now sits in FEMA's Resilience Analysis and Planning Tool."
+  - name: "OpenFEMA"
+    url: "https://www.fema.gov/about/openfema/data-sets"
+    desc: "Disaster declarations, Public Assistance, Hazard Mitigation, Individual Assistance, and flood insurance claims."
+    question: "How much Public Assistance money went to Texas counties after Hurricane Harvey?"
+    topics: ["disasters", "finance"]
+    units: ["events", "places"]
+    easy: false
+  - name: "NOAA Storm Events Database"
+    url: "https://www.ncei.noaa.gov/access/storm-events-database/"
+    desc: "Event-level records of storms and other severe weather with dates, locations, damages, and casualties."
+    question: "Which Texas counties have had the most flash floods since 2000?"
+    topics: ["disasters", "environment"]
+    units: ["events"]
+    easy: true
+  - name: "FEMA National Risk Index (in RAPT)"
+    url: "https://www.fema.gov/emergency-managers/practitioners/resilience-analysis-and-planning-tool"
+    desc: "Expected loss, social vulnerability, and community resilience scores for 18 natural hazards by county and tract."
+    question: "Which natural hazard poses the greatest expected loss to your county?"
+    note: "The standalone National Risk Index site was retired in 2025; its data now sits in FEMA's Resilience Analysis and Planning Tool."
+    topics: ["disasters", "environment"]
+    units: ["places"]
+    easy: true
 
 - group: "Health, Elections, and Local Governance"
   sources:
-    - name: "CDC WONDER"
-      topics: [health]
-      units: [places]
-      easy: true
-      url: "https://wonder.cdc.gov"
-      desc: "Mortality and other public health data by county and cause."
-    - name: "County Health Rankings"
-      topics: [health]
-      units: [places]
-      easy: true
-      url: "https://www.countyhealthrankings.org"
-      desc: "County-level health outcomes and the factors behind them, compiled from many sources."
-    - name: "MIT Election Data and Science Lab"
-      topics: [politics]
-      units: [places]
-      easy: false
-      url: "https://electionlab.mit.edu/data"
-      desc: "Election returns by state, county, and precinct."
-    - name: "LocalView"
-      topics: [politics, cities]
-      units: [events]
-      easy: false
-      url: "https://doi.org/10.7910/DVN/NJTBEM"
-      desc: "Transcripts of thousands of local government meetings posted to YouTube."
+  - name: "CDC WONDER"
+    url: "https://wonder.cdc.gov"
+    desc: "Mortality and other public health data by county and cause."
+    question: "How have drug overdose deaths in Texas changed since 2010?"
+    topics: ["health"]
+    units: ["places"]
+    easy: true
+  - name: "County Health Rankings"
+    url: "https://www.countyhealthrankings.org"
+    desc: "County-level health outcomes and the factors behind them, compiled from many sources."
+    question: "Do counties with more primary care doctors per resident have fewer preventable hospital stays?"
+    topics: ["health"]
+    units: ["places"]
+    easy: true
+  - name: "MIT Election Data and Science Lab"
+    url: "https://electionlab.mit.edu/data"
+    desc: "Election returns by state, county, and precinct."
+    question: "Which counties shifted most between the 2016 and 2024 presidential elections?"
+    topics: ["politics"]
+    units: ["places"]
+    easy: false
+  - name: "LocalView"
+    url: "https://doi.org/10.7910/DVN/NJTBEM"
+    desc: "Transcripts of thousands of local government meetings posted to YouTube."
+    question: "How often do city councils discuss housing affordability, and has that increased?"
+    topics: ["politics", "cities"]
+    units: ["events"]
+    easy: false
 
 - group: "Sports"
   sources:
-    - name: "Lahman Baseball Database"
-      topics: [sports]
-      units: [people]
-      easy: false
-      url: "https://sabr.org/lahman-database/"
-      desc: "Major League Baseball batting, pitching, fielding, and salary data by player and season, back to 1871."
-    - name: "Retrosheet"
-      topics: [sports]
-      units: [events]
-      easy: false
-      url: "https://www.retrosheet.org"
-      desc: "Game logs and play-by-play for Major League Baseball games going back more than a century."
-    - name: "nflverse"
-      topics: [sports]
-      units: [events, people]
-      easy: false
-      url: "https://github.com/nflverse/nflverse-data"
-      desc: "NFL play-by-play, rosters, and schedules from 1999 on, as ready-to-load files."
-    - name: "Knight-Newhouse College Athletics Database"
-      topics: [sports, finance]
-      units: [orgs]
-      easy: true
-      url: "https://knightnewhousedata.org"
-      desc: "Athletics revenue, spending, and student-fee and institutional subsidies at public Division I universities."
-    - name: "Equity in Athletics Data Analysis"
-      topics: [sports]
-      units: [orgs]
-      easy: true
-      url: "https://ope.ed.gov/athletics/"
-      desc: "U.S. Department of Education data on athletes, coaches, revenue, and expenses by college, sport, and gender."
-    - name: "FiveThirtyEight Data"
-      topics: [sports, politics, general]
-      units: [events, people]
-      easy: true
-      url: "https://github.com/fivethirtyeight/data"
-      desc: "The data behind FiveThirtyEight's stories on sports, politics, and pop culture."
-      note: "Archived; no longer updated."
+  - name: "Lahman Baseball Database"
+    url: "https://sabr.org/lahman-database/"
+    desc: "Major League Baseball batting, pitching, fielding, and salary data by player and season, back to 1871."
+    question: "How did the gap between the highest and the typical MLB salary change from 1985 to 2016?"
+    topics: ["sports"]
+    units: ["people"]
+    easy: false
+  - name: "Retrosheet"
+    url: "https://www.retrosheet.org"
+    desc: "Game logs and play-by-play for Major League Baseball games going back more than a century."
+    question: "Do teams win more often at home, and has home-field advantage shrunk over time?"
+    topics: ["sports"]
+    units: ["events"]
+    easy: false
+  - name: "nflverse"
+    url: "https://github.com/nflverse/nflverse-data"
+    desc: "NFL play-by-play, rosters, and schedules from 1999 on, as ready-to-load files."
+    question: "How often do NFL coaches go for it on fourth down now compared to 2010?"
+    topics: ["sports"]
+    units: ["events", "people"]
+    easy: false
+  - name: "Knight-Newhouse College Athletics Database"
+    url: "https://knightnewhousedata.org"
+    desc: "Athletics revenue, spending, and student-fee and institutional subsidies at public Division I universities."
+    question: "How much do students pay through fees to support athletics at Texas public universities?"
+    topics: ["sports", "finance"]
+    units: ["orgs"]
+    easy: true
+  - name: "Equity in Athletics Data Analysis"
+    url: "https://ope.ed.gov/athletics/"
+    desc: "U.S. Department of Education data on athletes, coaches, revenue, and expenses by college, sport, and gender."
+    question: "How does spending per athlete on men's and women's teams compare across colleges?"
+    topics: ["sports"]
+    units: ["orgs"]
+    easy: true
+  - name: "FiveThirtyEight Data"
+    url: "https://github.com/fivethirtyeight/data"
+    desc: "The data behind FiveThirtyEight's stories on sports, politics, and pop culture."
+    question: "Pick the data behind a story you remember and try to recreate one of its charts."
+    note: "Archived; no longer updated."
+    topics: ["sports", "politics", "general"]
+    units: ["events", "people"]
+    easy: true
 
 - group: "Arts, Culture, and Media"
   sources:
-    - name: "National Archive of Data on Arts and Culture"
-      topics: [arts]
-      units: [people]
-      easy: false
-      url: "https://www.icpsr.umich.edu/sites/nadac/home"
-      desc: "ICPSR collection of arts and culture datasets, including national surveys of arts participation."
-    - name: "NEA Arts Data Profiles"
-      topics: [arts]
-      units: [places]
-      easy: true
-      url: "https://www.arts.gov/impact/research/arts-data-profile-series"
-      desc: "National Endowment for the Arts summaries and tables on arts participation, artists, and the arts economy."
-    - name: "BEA Arts and Cultural Production Satellite Account"
-      topics: [arts, economy]
-      units: [places]
-      easy: true
-      url: "https://www.bea.gov/data/special-topics/arts-and-culture"
-      desc: "How much arts and culture add to GDP and employment, nationally and by state."
-    - name: "IMLS Museum Data Files"
-      topics: [arts]
-      units: [orgs]
-      easy: false
-      url: "https://www.imls.gov/research-evaluation/data/museum-data-files"
-      desc: "A list of U.S. museums, zoos, aquariums, and historic sites with location and type."
-    - name: "The Met Open Access"
-      topics: [arts]
-      units: [events]
-      easy: false
-      url: "https://github.com/metmuseum/openaccess"
-      desc: "Catalog records for hundreds of thousands of artworks at the Metropolitan Museum of Art: artist, date, medium, origin."
+  - name: "National Archive of Data on Arts and Culture"
+    url: "https://www.icpsr.umich.edu/sites/nadac/home"
+    desc: "ICPSR collection of arts and culture datasets, including national surveys of arts participation."
+    question: "How does attendance at live arts events differ by age and education?"
+    topics: ["arts"]
+    units: ["people"]
+    easy: false
+  - name: "NEA Arts Data Profiles"
+    url: "https://www.arts.gov/impact/research/arts-data-profile-series"
+    desc: "National Endowment for the Arts summaries and tables on arts participation, artists, and the arts economy."
+    question: "How does arts participation in Texas compare to the national average?"
+    topics: ["arts"]
+    units: ["places"]
+    easy: true
+  - name: "BEA Arts and Cultural Production Satellite Account"
+    url: "https://www.bea.gov/data/special-topics/arts-and-culture"
+    desc: "How much arts and culture add to GDP and employment, nationally and by state."
+    question: "How large is the arts economy in Texas compared to other big states?"
+    topics: ["arts", "economy"]
+    units: ["places"]
+    easy: true
+  - name: "IMLS Museum Data Files"
+    url: "https://www.imls.gov/research-evaluation/data/museum-data-files"
+    desc: "A list of U.S. museums, zoos, aquariums, and historic sites with location and type."
+    question: "Which Texas counties have no museum at all?"
+    topics: ["arts"]
+    units: ["orgs"]
+    easy: false
+  - name: "The Met Open Access"
+    url: "https://github.com/metmuseum/openaccess"
+    desc: "Catalog records for hundreds of thousands of artworks at the Metropolitan Museum of Art: artist, date, medium, origin."
+    question: "In which decades did the museum acquire the most works from each region of the world?"
+    topics: ["arts"]
+    units: ["events"]
+    easy: false
 
 - group: "Politics and Public Opinion"
   sources:
-    - name: "American National Election Studies"
-      topics: [politics]
-      units: [people]
-      easy: false
-      url: "https://electionstudies.org"
-      desc: "Surveys of voters' attitudes and behavior in every presidential election since 1948."
-      note: "Free registration."
-    - name: "Cooperative Election Study"
-      topics: [politics]
-      units: [people]
-      easy: false
-      url: "https://cces.gov.harvard.edu"
-      desc: "A very large national election survey, big enough to compare states and congressional districts."
-    - name: "Pew Research Center Datasets"
-      topics: [politics, general]
-      units: [people]
-      easy: false
-      url: "https://www.pewresearch.org/datasets/"
-      desc: "The survey data behind Pew's reports on politics, religion, technology, and social trends."
-      note: "Free registration."
-    - name: "Federal Election Commission"
-      topics: [politics]
-      units: [people, orgs]
-      easy: true
-      url: "https://www.fec.gov/data/"
-      desc: "Contributions to and spending by federal candidates, parties, and PACs."
-    - name: "DIME (Database on Ideology, Money in Politics, and Elections)"
-      topics: [politics]
-      units: [people]
-      easy: false
-      url: "https://data.stanford.edu/dime"
-      desc: "Campaign contributions and ideology scores for candidates and donors in federal and state elections."
-    - name: "Voteview"
-      topics: [politics]
-      units: [people, events]
-      easy: true
-      url: "https://voteview.com"
-      desc: "Every roll-call vote in the history of Congress, with ideology scores for every member."
-    - name: "Comparative Agendas Project"
-      topics: [politics]
-      units: [events, countries]
-      easy: true
-      url: "https://www.comparativeagendas.net"
-      desc: "Bills, hearings, budgets, and speeches coded by policy topic over decades, for the U.S. and other countries."
+  - name: "American National Election Studies"
+    url: "https://electionstudies.org"
+    desc: "Surveys of voters' attitudes and behavior in every presidential election since 1948."
+    question: "Has trust in the federal government fallen among both parties since the 1960s?"
+    note: "Free registration."
+    topics: ["politics"]
+    units: ["people"]
+    easy: false
+  - name: "Cooperative Election Study"
+    url: "https://cces.gov.harvard.edu"
+    desc: "A very large national election survey, big enough to compare states and congressional districts."
+    question: "How do views on immigration differ between Texas Republicans and Republicans in other states?"
+    topics: ["politics"]
+    units: ["people"]
+    easy: false
+  - name: "Pew Research Center Datasets"
+    url: "https://www.pewresearch.org/datasets/"
+    desc: "The survey data behind Pew's reports on politics, religion, technology, and social trends."
+    question: "How do younger and older Americans differ in where they get their news?"
+    note: "Free registration."
+    topics: ["politics", "general"]
+    units: ["people"]
+    easy: false
+  - name: "Federal Election Commission"
+    url: "https://www.fec.gov/data/"
+    desc: "Contributions to and spending by federal candidates, parties, and PACs."
+    question: "What share of your U.S. representative's money came from small donors?"
+    topics: ["politics"]
+    units: ["people", "orgs"]
+    easy: true
+  - name: "DIME (Database on Ideology, Money in Politics, and Elections)"
+    url: "https://data.stanford.edu/dime"
+    desc: "Campaign contributions and ideology scores for candidates and donors in federal and state elections."
+    question: "Are Texas state legislators more ideologically extreme than legislators in other states?"
+    topics: ["politics"]
+    units: ["people"]
+    easy: false
+  - name: "Voteview"
+    url: "https://voteview.com"
+    desc: "Every roll-call vote in the history of Congress, with ideology scores for every member."
+    question: "How has the ideological gap between the parties in Congress changed since 1950?"
+    topics: ["politics"]
+    units: ["people", "events"]
+    easy: true
+  - name: "Comparative Agendas Project"
+    url: "https://www.comparativeagendas.net"
+    desc: "Bills, hearings, budgets, and speeches coded by policy topic over decades, for the U.S. and other countries."
+    question: "Which policy topics got more congressional hearings over time, and which got fewer?"
+    topics: ["politics"]
+    units: ["events", "countries"]
+    easy: true
 
 - group: "Environment, Climate, and Energy"
   sources:
-    - name: "EPA Outdoor Air Quality Data"
-      topics: [environment, health]
-      units: [places]
-      easy: true
-      url: "https://www.epa.gov/outdoor-air-quality-data"
-      desc: "Daily readings from air pollution monitors across the country."
-    - name: "EPA Toxics Release Inventory"
-      topics: [environment]
-      units: [orgs]
-      easy: true
-      url: "https://www.epa.gov/toxics-release-inventory-tri-program"
-      desc: "Toxic chemical releases reported by industrial facilities, by facility and year."
-    - name: "NOAA Climate Data Online"
-      topics: [environment, disasters]
-      units: [places]
-      easy: true
-      url: "https://www.ncei.noaa.gov/cdo-web/"
-      desc: "Daily temperature, rainfall, and other weather observations from stations nationwide."
-    - name: "USGS Water Data"
-      topics: [environment]
-      units: [places]
-      easy: false
-      url: "https://waterdata.usgs.gov"
-      desc: "Streamflow, groundwater levels, and water quality from monitoring sites."
-    - name: "U.S. Energy Information Administration"
-      topics: [environment, economy]
-      units: [places, orgs]
-      easy: true
-      url: "https://www.eia.gov"
-      desc: "Energy production, prices, use, and emissions by state and by power plant."
-    - name: "Our World in Data"
-      topics: [environment, health, general]
-      units: [countries]
-      easy: true
-      url: "https://ourworldindata.org"
-      desc: "Country-level datasets and charts on climate, energy, health, poverty, and more."
+  - name: "EPA Outdoor Air Quality Data"
+    url: "https://www.epa.gov/outdoor-air-quality-data"
+    desc: "Daily readings from air pollution monitors across the country."
+    question: "Which Texas metro areas have the most unhealthy air quality days each year?"
+    topics: ["environment", "health"]
+    units: ["places"]
+    easy: true
+  - name: "EPA Toxics Release Inventory"
+    url: "https://www.epa.gov/toxics-release-inventory-tri-program"
+    desc: "Toxic chemical releases reported by industrial facilities, by facility and year."
+    question: "Which facilities in your county release the most toxic chemicals?"
+    topics: ["environment"]
+    units: ["orgs"]
+    easy: true
+  - name: "NOAA Climate Data Online"
+    url: "https://www.ncei.noaa.gov/cdo-web/"
+    desc: "Daily temperature, rainfall, and other weather observations from stations nationwide."
+    question: "How many days above 100°F did your city have each summer since 1980?"
+    topics: ["environment", "disasters"]
+    units: ["places"]
+    easy: true
+  - name: "USGS Water Data"
+    url: "https://waterdata.usgs.gov"
+    desc: "Streamflow, groundwater levels, and water quality from monitoring sites."
+    question: "How low did the San Marcos River's flow fall during the last drought?"
+    topics: ["environment"]
+    units: ["places"]
+    easy: false
+  - name: "U.S. Energy Information Administration"
+    url: "https://www.eia.gov"
+    desc: "Energy production, prices, use, and emissions by state and by power plant."
+    question: "How fast has wind and solar's share of Texas electricity grown since 2010?"
+    topics: ["environment", "economy"]
+    units: ["places", "orgs"]
+    easy: true
+  - name: "Our World in Data"
+    url: "https://ourworldindata.org"
+    desc: "Country-level datasets and charts on climate, energy, health, poverty, and more."
+    question: "Do richer countries emit more carbon per person, and is that changing?"
+    topics: ["environment", "health", "general"]
+    units: ["countries"]
+    easy: true
 
 - group: "Cities, Schools, and Everyday Life"
   sources:
-    - name: "FBI Crime Data Explorer"
-      topics: [cities]
-      units: [places, orgs]
-      easy: true
-      url: "https://cde.ucr.cjis.gov"
-      desc: "Crimes and arrests reported by local law enforcement agencies."
-    - name: "NHTSA Fatality Analysis Reporting System"
-      topics: [cities]
-      units: [events]
-      easy: false
-      url: "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars"
-      desc: "Every fatal traffic crash in the U.S. since 1975, with details on vehicles, people, and conditions."
-    - name: "Eviction Lab"
-      topics: [cities, economy]
-      units: [places]
-      easy: true
-      url: "https://evictionlab.org"
-      desc: "Eviction filings by county and neighborhood, with weekly tracking for some cities."
-    - name: "Zillow Research Data"
-      topics: [cities, economy]
-      units: [places]
-      easy: true
-      url: "https://www.zillow.com/research/data/"
-      desc: "Monthly home values and rents by ZIP code, city, and metro area."
-    - name: "USDA Food Environment Atlas"
-      topics: [cities, health]
-      units: [places]
-      easy: true
-      url: "https://www.ers.usda.gov/data-products/food-environment-atlas/"
-      desc: "County data on grocery store access, restaurants, food prices, and food assistance."
-    - name: "NCES Common Core of Data"
-      topics: [cities]
-      units: [orgs]
-      easy: false
-      url: "https://nces.ed.gov/ccd/"
-      desc: "Every public school and district in the U.S.: enrollment, staff, and finances."
-    - name: "Urban Institute Education Data Portal"
-      topics: [cities]
-      units: [orgs]
-      easy: true
-      url: "https://educationdata.urban.org"
-      desc: "School, district, and college data from many federal sources in one query tool."
-    - name: "College Scorecard"
-      topics: [cities]
-      units: [orgs]
-      easy: true
-      url: "https://collegescorecard.ed.gov/data/"
-      desc: "Cost, graduation rates, debt, and graduates' earnings by college and field of study."
-    - name: "City of Austin Open Data"
-      topics: [cities]
-      units: [events, places]
-      easy: true
-      url: "https://data.austintexas.gov"
-      desc: "311 calls, permits, police incidents, budgets, and more for Austin."
-    - name: "NYC Open Data"
-      topics: [cities]
-      units: [events, places]
-      easy: true
-      url: "https://opendata.cityofnewyork.us"
-      desc: "Thousands of New York City datasets, from 311 complaints to restaurant inspections to street trees."
+  - name: "FBI Crime Data Explorer"
+    url: "https://cde.ucr.cjis.gov"
+    desc: "Crimes and arrests reported by local law enforcement agencies."
+    question: "How does your city's reported property crime rate compare to similar-sized cities?"
+    topics: ["cities"]
+    units: ["places", "orgs"]
+    easy: true
+  - name: "NHTSA Fatality Analysis Reporting System"
+    url: "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars"
+    desc: "Every fatal traffic crash in the U.S. since 1975, with details on vehicles, people, and conditions."
+    question: "Are fatal crashes in Texas more common at night, on weekends, or on rural roads?"
+    topics: ["cities"]
+    units: ["events"]
+    easy: false
+  - name: "Eviction Lab"
+    url: "https://evictionlab.org"
+    desc: "Eviction filings by county and neighborhood, with weekly tracking for some cities."
+    question: "Did eviction filings rise faster in counties where rents grew most?"
+    topics: ["cities", "economy"]
+    units: ["places"]
+    easy: true
+  - name: "Zillow Research Data"
+    url: "https://www.zillow.com/research/data/"
+    desc: "Monthly home values and rents by ZIP code, city, and metro area."
+    question: "How much faster did rents grow in Austin than in San Antonio since 2015?"
+    topics: ["cities", "economy"]
+    units: ["places"]
+    easy: true
+  - name: "USDA Food Environment Atlas"
+    url: "https://www.ers.usda.gov/data-products/food-environment-atlas/"
+    desc: "County data on grocery store access, restaurants, food prices, and food assistance."
+    question: "Are counties with fewer grocery stores per resident more likely to have high obesity rates?"
+    topics: ["cities", "health"]
+    units: ["places"]
+    easy: true
+  - name: "NCES Common Core of Data"
+    url: "https://nces.ed.gov/ccd/"
+    desc: "Every public school and district in the U.S.: enrollment, staff, and finances."
+    question: "How has the number of students per teacher changed in Texas districts over the past decade?"
+    topics: ["cities"]
+    units: ["orgs"]
+    easy: false
+  - name: "Urban Institute Education Data Portal"
+    url: "https://educationdata.urban.org"
+    desc: "School, district, and college data from many federal sources in one query tool."
+    question: "How have enrollment and spending per student changed in your school district since 2010?"
+    topics: ["cities"]
+    units: ["orgs"]
+    easy: true
+  - name: "College Scorecard"
+    url: "https://collegescorecard.ed.gov/data/"
+    desc: "Cost, graduation rates, debt, and graduates' earnings by college and field of study."
+    question: "Which majors at Texas public universities lead to the highest earnings a few years after graduation?"
+    topics: ["cities"]
+    units: ["orgs"]
+    easy: true
+  - name: "NYC Open Data"
+    url: "https://opendata.cityofnewyork.us"
+    desc: "Thousands of New York City datasets, from 311 complaints to restaurant inspections to street trees."
+    question: "Which restaurant inspection violations are most common, and do they differ by borough?"
+    topics: ["cities"]
+    units: ["events", "places"]
+    easy: true

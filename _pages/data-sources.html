@@ -28,11 +28,13 @@ author_profile: true
 .ds-desc{font-size:.88em;color:#555}
 .ds-tag{display:inline-block;font-size:.7em;margin-left:.5em;padding:.05em .5em;border-radius:3px;background:#e8e2d6;color:#444;vertical-align:middle}
 .ds-hint{font-size:.88em;color:#666}
+.ds-try{font-size:.85em;color:#501214;margin-top:.15em}
+.ds-list-try{display:block;font-size:.88em;color:#501214;margin-top:.15em}
 </style>
 
 <div class="ds-box">
 <h2 id="finder">Not sure where to start?</h2>
-<p style="font-size:.92em">Answer three questions and get a short list of sources that fit your project.</p>
+<p style="font-size:.92em">Answer four quick questions and get a short list of sources that fit your project, each with a question you could start with.</p>
 <div id="ds-finder"><p class="ds-hint">The finder needs JavaScript. The full list is below.</p></div>
 </div>
 <script type="application/json" id="ds-data">{{ site.data.data_sources | jsonify }}</script>
@@ -46,7 +48,7 @@ author_profile: true
 <h2 id="{{ g.group | slugify }}">{{ g.group }}</h2>
 <ul>
 {% for s in g.sources %}
-<li><a href="{{ s.url }}"><strong>{{ s.name }}</strong></a> — {{ s.desc }}{% if s.note %} <em>{{ s.note }}</em>{% endif %}</li>
+<li><a href="{{ s.url }}"><strong>{{ s.name }}</strong></a> — {{ s.desc }}{% if s.note %} <em>{{ s.note }}</em>{% endif %}{% if s.question %}<span class="ds-list-try"><strong>Try:</strong> {{ s.question }}</span>{% endif %}</li>
 {% endfor %}
 </ul>
 {% endfor %}

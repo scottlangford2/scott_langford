@@ -39,6 +39,10 @@
       ['easy', 'Explore it on a website first'],
       ['files', 'Download a spreadsheet or data file'],
       ['any', 'Either is fine']
+    ]},
+    { key: 'texas', label: '4. Is your project about Texas?', options: [
+      ['yes', 'Yes, show Texas sources first'],
+      ['no', 'No']
     ]}
   ];
   var UNIT_WORDS = { people: 'people', orgs: 'organizations', places: 'places',
@@ -61,7 +65,9 @@
     if (u && u !== 'any') { sc += s.units.indexOf(u) >= 0 ? 6 : -4; }
     if (k === 'easy') { sc += s.easy ? 3 : -2; }
     if (k === 'files') { sc += s.easy ? 0 : 1; }
-    return sc;
+    if (answers.texas === 'yes') { sc += s.texas ? 8 : 0; }
+    if (answers.texas === 'no') { sc += s.texas ? -5 : 0; }
+    return Math.max(sc, 0);
   }
 
   function renderResults(box) {
@@ -88,11 +94,21 @@
       var a = el('a', null, r.s.name);
       a.href = r.s.url;
       li.appendChild(a);
+      if (r.s.texas) { li.appendChild(el('span', 'ds-tag', 'Texas')); }
       if (r.s.easy) { li.appendChild(el('span', 'ds-tag', 'web tool')); }
       li.appendChild(el('div', 'ds-desc', r.s.desc + (r.s.note ? ' ' + r.s.note : '')));
+      if (r.s.question) {
+        var q = el('div', 'ds-try');
+        q.appendChild(el('strong', null, 'Try: '));
+        q.appendChild(document.createTextNode(r.s.question));
+        li.appendChild(q);
+      }
       ul.appendChild(li);
     });
     box.appendChild(ul);
+    if (answers.texas === 'yes' && !shown.some(function (r) { return r.s.texas; })) {
+      box.appendChild(el('p', 'ds-hint', 'There is no Texas-only source on this topic yet. The national sources above include Texas.'));
+    }
     if (ranked.length > shown.length) {
       box.appendChild(el('p', 'ds-hint', (ranked.length - shown.length) +
         ' more sources on this topic are in the full list below.'));
