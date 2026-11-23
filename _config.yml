@@ -264,6 +264,11 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
+  # private family-history page: keep it out of the sitemap
+  - scope:
+      path: "family-c1fdd9465b"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""
